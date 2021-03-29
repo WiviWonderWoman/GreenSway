@@ -4,6 +4,7 @@ body {
     background-color: black;
     color: cornsilk;
     font-family: sans-serif;
+    font-size: 1,5em;
 }
 
 header, main, footer {
@@ -15,7 +16,7 @@ header, main, footer {
     justify-content: center;
     border: cornsilk solid 2px;
     border-radius: 10px;
-    text-align: center;
+    
 }
 
 header h1{ 
@@ -27,12 +28,12 @@ header h1{
 }
 img {
     margin: auto;
-    width: 80%;
+    width: 90%;
+    padding: 10px;
 }
 #intro {
-    
-    width: 50%;
-    
+    width: 100%;
+    padding: 0;
 }
 
 div {

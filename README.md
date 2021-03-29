@@ -23,7 +23,6 @@ My SPA product idea from business plan to MVP.
  
 ### När app.html öppnas i en webbläsare ska följande hända...
 - [ ] Från sidan ska texten "Hello World" skrivas ut. Detta kan hårdkodas, men sidan ska finnas.
-- [ ] Beskrivning
 
 ## Kravlista för rapporten. 
 ### Svara på följande frågor i din inlämnade pdf-fil, varje fråga ska besvaras under sin egna rubrik:

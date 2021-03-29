@@ -1,4 +1,98 @@
 body {
+    margin: 0;
+    padding: 0;
     background-color: black;
-    color: white;
+    color: cornsilk;
+    font-family: sans-serif;
+}
+
+header, main, footer {
+    width: 80%;
+    background-color: darkslategray;
+    margin: auto;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    justify-content: center;
+    border: cornsilk solid 2px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+header h1{ 
+    margin: auto;   
+    font-family: 'Tangerine', cursive;
+    font-size: 5em;
+    justify-content: center;
+    display: flex; 
+}
+img {
+    margin: auto;
+    width: 80%;
+}
+#intro {
+    
+    width: 50%;
+    
+}
+
+div {
+    margin: auto;
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    justify-content: center;
+}
+.flex.container {
+    margin: auto;
+    margin-bottom: 10px;
+    display: flex; 
+    justify-content: center;
+}
+.nav-list{
+    
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.nav-list li {
+    flex-grow: 1;
+    list-style: none;
+} 
+ 
+.nav-list button{
+    margin: 5px;
+    border: cornsilk solid 2px;
+    border-radius: 10%;
+    background-color:darkslategray;
+    color: cornsilk;
+    font-family: 'Amatic SC';
+    font-size: 1em;
+    text-decoration: none;
+}
+.nav-list li button:hover {
+    font-size: 2em;
+    background-color: cornsilk;
+    color: darkslategray;
+}
+
+.nav-list a {
+    color: cornsilk;
+    font-family: 'Amatic SC';
+    text-decoration: none;
+}
+
+.nav-list a:hover {
+    background-color: cornsilk;
+    color: black;
+}
+#copy {
+    font-size: 10px;
+    text-align: center;
+}
+/*almost like a logo*/
+#copy  span {
+    font-family: 'Tangerine', cursive;
+    font-size: x-large;
 }

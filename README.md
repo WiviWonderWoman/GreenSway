@@ -9,7 +9,7 @@ My SPA product idea from business plan to MVP.
 - [ ] Ditt länkade källkodsprojekt ska om möjligt vara privat så att endast lärare (viktor) och du har tillgång till att se och ändra i projektet.
 - [x] I ditt källkodsprojekt ska två filer index.html samt app.html finnas tillgänglig.
 - [x] Inga andra html filer får finnas i källkodsprojektet.
-- [ ] Filen index.html ska innehålla alternativt länka till både CSS och Javascript kod i källkoden.
+- [x] Filen index.html ska innehålla alternativt länka till både CSS och Javascript kod i källkoden.
  
 ### När index.html öppnas i en webbläsare ska följande kunna hända...
 - [x] Innehållet ska vara indelad i en html-elementen: header, footer & main. 

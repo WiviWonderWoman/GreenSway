@@ -4,8 +4,9 @@ My SPA product idea from business plan to MVP.
 # Inlämningsuppgift 1: Planering och förutsättningar
 
 ## Kravlista för källkodsprojektet
-- [ ] Din inlämning på Canvas ska bestå av en PDF fil (rapport), rapporten ska innehålla namnet på uppgiften + ditt namn.
-- [ ] Bifoga i din rapport en länk där källkoden är tillgänglig, det ska gå att se och granska koden enligt övriga krav.
+- [ ] Din inlämning på Canvas ska bestå av en PDF fil (rapport), 
+- [x] rapporten ska innehålla namnet på uppgiften + ditt namn.
+- [x] Bifoga i din rapport en länk där källkoden är tillgänglig, det ska gå att se och granska koden enligt övriga krav.
 - [ ] Ditt länkade källkodsprojekt ska om möjligt vara privat så att endast lärare (viktor) och du har tillgång till att se och ändra i projektet.
 - [x] I ditt källkodsprojekt ska två filer index.html samt app.html finnas tillgänglig.
 - [x] Inga andra html filer får finnas i källkodsprojektet.
@@ -28,7 +29,7 @@ My SPA product idea from business plan to MVP.
 
 ## Kravlista för rapporten. 
 ### Svara på följande frågor i din inlämnade pdf-fil, varje fråga ska besvaras under sin egna rubrik:
-- [ ] Vilken är din valda metod och teknik för källkodshantering?
-- [ ] Förklara och motivera hur du har valt att arbeta med din källkod under den fortsatta kursen. Var tydlig med att motivera valet av både teknik (git) och metod (hur du tänkt arbeta)
-- [ ] Hur påverkar användningen av Javascript moduler kodens struktur?
+- [x] Vilken är din valda metod och teknik för källkodshantering?
+- [x] Förklara och motivera hur du har valt att arbeta med din källkod under den fortsatta kursen. Var tydlig med att motivera valet av både teknik (git) och metod (hur du tänkt arbeta)
+- [x] Hur påverkar användningen av Javascript moduler kodens struktur?
 

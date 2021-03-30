@@ -1,6 +1,6 @@
 import {showBuisnessPlan} from './index/business-plan.js';
-import { showProductIdea } from "./index/product-idea.js";
-import { showContactInformation } from "./index/contact-information.js";
+import {showProductIdea} from "./index/product-idea.js";
+import {showContactInformation} from "./index/contact-information.js";
 
 export const main = document.getElementById('main');
 
@@ -9,8 +9,7 @@ const ideaBtn = document.getElementById('idea');
 const contactBtn = document.getElementById('contact');
 
 planBtn.addEventListener('click', () => {
-    showBuisnessPlan();
-    
+    showBuisnessPlan();  
 })
 ideaBtn.addEventListener('click', () => {
     showProductIdea();
@@ -18,7 +17,3 @@ ideaBtn.addEventListener('click', () => {
 contactBtn.addEventListener('click', () => {
     showContactInformation();
 })
-
-
-
-

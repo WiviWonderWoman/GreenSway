@@ -13,15 +13,15 @@ My SPA product idea from business plan to MVP.
  
 ### När index.html öppnas i en webbläsare ska följande kunna hända...
 - [x] Innehållet ska vara indelad i en html-elementen: header, footer & main. 
-- [ ] Main ska kunna visa upp 3 olika "vyer" av innehåll via utförandet av JavaScript-kod.
+- [x] Main ska kunna visa upp 3 olika "vyer" av innehåll via utförandet av JavaScript-kod.
 - [x] Det skall finnas en navigationsmeny i headern med tre stycken knappar. 
-- [-] Vid klick på en knapp skall respektive "vy" i main-elementet visas. 
+- [x] Vid klick på en knapp skall respektive "vy" i main-elementet visas. 
 - [x] En av vyerna ska beskriva i korthet din affärsplan du skapade i kursen Affärsmannaskap för IT.
-- [ ] En annan sida ska i beskriva din projektidé - den prototyp du vill bygga i kursen.
-- [ ] Den sista sidan ska ha valfritt innehåll, men gärna kopplat till din projektidé. Exempelvis dina kontaktuppgifter.
+- [x] En annan sida ska i beskriva din projektidé - den prototyp du vill bygga i kursen.
+- [x] Den sista sidan ska ha valfritt innehåll, men gärna kopplat till din projektidé. Exempelvis dina kontaktuppgifter.
 - [x] Från index.html ska man någonstans kunna följa en länk till filen app.html.
 - [x] Då användaren hovrar över en av knapparna i navigationsmenyn skall den bli större. Detta skall göras via CSS.
-- [-] Koden för att rita ut de tre vyerna vara uppdelade i varsina (3 olika) JavaScript-moduler.
+- [x] Koden för att rita ut de tre vyerna vara uppdelade i varsina (3 olika) JavaScript-moduler.
  
 ### När app.html öppnas i en webbläsare ska följande hända...
 - [x] Från sidan ska texten "Hello World" skrivas ut. Detta kan hårdkodas, men sidan ska finnas.

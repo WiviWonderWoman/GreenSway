@@ -4,32 +4,29 @@ body {
     background-color: black;
     color: cornsilk;
     font-family: sans-serif;
-    font-size: 1,5em;
+    font-size: 125%;
 }
 
 header, main, footer {
     width: 80%;
-    background-color: darkslategray;
+    background-color: rgb(6, 51, 17);
     margin: auto;
     margin-top: 2%;
     margin-bottom: 2%;
     justify-content: center;
     border: cornsilk solid 2px;
     border-radius: 10px;
-    
 }
 
-header h1{ 
-    margin: auto;   
-    font-family: 'Tangerine', cursive;
-    font-size: 5em;
-    justify-content: center;
-    display: flex; 
+header h1{
+    font-family: 'Tangerine';
+    font-size: 800%;
+    color:rgb(51, 255, 0);
 }
 img {
     margin: auto;
     width: 90%;
-    padding: 10px;
+    padding: 2%;
 }
 #intro {
     width: 100%;
@@ -46,12 +43,24 @@ div {
 }
 .flex.container {
     margin: auto;
-    margin-bottom: 10px;
-    display: flex; 
-    justify-content: center;
+    display: flex;
+}
+.contact {
+    margin: auto;
+    font-family: 'Amatic SC';
+    font-size: 200%;
+}
+h1, h2 {
+    margin: auto;
+    font-family: 'Amatic SC';
+    font-size: 200%;
+    text-align: center;
+}
+ul {
+    list-style-image: url("https://mdn.mozillademos.org/files/11981/starsolid.gif");
+    list-style-image: linear-gradient(to left bottom, green, rgb(51, 255, 0));
 }
 .nav-list{
-    
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -60,40 +69,57 @@ div {
 .nav-list li {
     flex-grow: 1;
     list-style: none;
-} 
- 
+}
+
 .nav-list button{
-    margin: 5px;
+    margin: 2%;
     border: cornsilk solid 2px;
     border-radius: 10%;
-    background-color:darkslategray;
+    background-color:rgb(31, 141, 3);
     color: cornsilk;
     font-family: 'Amatic SC';
-    font-size: 1em;
+    font-size: 2em;
     text-decoration: none;
 }
 .nav-list li button:hover {
-    font-size: 2em;
+    transform: scale(2, 1);
+    transform-origin: left;
     background-color: cornsilk;
-    color: darkslategray;
+    color: rgb(31, 141, 3);
+    border-color: rgb(31, 141, 3);
 }
 
 .nav-list a {
     color: cornsilk;
     font-family: 'Amatic SC';
     text-decoration: none;
+    justify-content: center;
+    text-align: center;
 }
 
 .nav-list a:hover {
     background-color: cornsilk;
-    color: black;
+    color: rgb(31, 141, 3);
 }
 #copy {
-    font-size: 10px;
     text-align: center;
 }
-/*almost like a logo*/
 #copy  span {
     font-family: 'Tangerine', cursive;
-    font-size: x-large;
+    font-size: xx-large;
+    color:rgb(51, 255, 0);
+}
+i {
+    border: cornsilk solid 2px;
+    border-radius: 10%;
+    background-color:rgb(31, 141, 3);
+    color: cornsilk;
+    font-size: 400%;
+    flex-grow: 1;
+    list-style: none;
+}
+.nav-list i:hover {
+    background-color: cornsilk;
+    color: rgb(47, 216, 5);
+    border-color: rgb(31, 141, 3);
 }

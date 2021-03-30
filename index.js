@@ -2,6 +2,7 @@ import {showBuisnessPlan} from './index/business-plan.js';
 import {showProductIdea} from "./index/product-idea.js";
 import {showContactInformation} from "./index/contact-information.js";
 
+
 export const main = document.getElementById('main');
 
 const planBtn = document.getElementById('plan');
@@ -17,3 +18,4 @@ ideaBtn.addEventListener('click', () => {
 contactBtn.addEventListener('click', () => {
     showContactInformation();
 })
+

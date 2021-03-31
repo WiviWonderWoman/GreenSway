@@ -8,6 +8,7 @@ My SPA product idea from business plan to MVP.
 - [x] rapporten ska innehålla namnet på uppgiften + ditt namn.
 - [x] Bifoga i din rapport en länk där källkoden är tillgänglig, det ska gå att se och granska koden enligt övriga krav.
 - [x] Ditt länkade källkodsprojekt ska om möjligt vara privat så att endast lärare (viktor) och du har tillgång till att se och ändra i projektet.
+
 - [x] I ditt källkodsprojekt ska två filer index.html samt app.html finnas tillgänglig.
 - [x] Inga andra html filer får finnas i källkodsprojektet.
 - [x] Filen index.html ska innehålla alternativt länka till både CSS och Javascript kod i källkoden.

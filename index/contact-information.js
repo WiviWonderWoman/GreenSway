@@ -1,8 +1,8 @@
-import { main } from "../index.js";
+import { main } from "./index.js";
 
 export function showContactInformation() {
   
-    const file = './index/files/GreenSway-Affärsplan.pdf';
+    const file = './files/GreenSway-Affärsplan.pdf';
 
     main.innerHTML = `<div><h1>Intresserad av att veta mera?<br>Kul!<br>Klicka på ikonerna för att:</h1></div>
     <div class="flex-container"> 

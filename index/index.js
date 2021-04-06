@@ -1,6 +1,6 @@
-import {showBuisnessPlan} from './index/business-plan.js';
-import {showProductIdea} from "./index/product-idea.js";
-import {showContactInformation} from "./index/contact-information.js";
+import {showBuisnessPlan} from './business-plan.js';
+import {showProductIdea} from "./product-idea.js";
+import {showContactInformation} from "./contact-information.js";
 
 
 export const main = document.getElementById('main');

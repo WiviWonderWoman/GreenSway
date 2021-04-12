@@ -2,8 +2,8 @@ import { main } from "./index.js";
 
 export function showProductIdea() {
 
-    const image1 = './index/images/pexels-markus-spiske-1089438.jpg';
-    const image2 = './index/images/pexels-ready-made-3850452.jpg';
+    const image1 = './src/index/images/pexels-markus-spiske-1089438.jpg';
+    const image2 = './src/index/images/pexels-ready-made-3850452.jpg';
 
     main.innerHTML = `<div><h1>Produktidé</h1></div> 
     <div class="flex.container">

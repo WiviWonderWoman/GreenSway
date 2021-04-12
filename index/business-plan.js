@@ -2,10 +2,10 @@ import { main } from "./index.js";
 
 export function showBuisnessPlan() {
 
-    const image1 = './images/pexels-artem-beliaikin-1122868.jpg';
-    const image2 = './images/pexels-sora-shimazaki-5669602.jpg';
-    const image3 = './images/before.png';
-    const image4 = './images/after.png';
+    const image1 = './index/images/pexels-artem-beliaikin-1122868.jpg';
+    const image2 = './index/images/pexels-sora-shimazaki-5669602.jpg';
+    const image3 = './index/images/before.png';
+    const image4 = './index/images/after.png';
 
     main.innerHTML = `<div><h1>Affärsplan</h1></div>    
     <div class="flex.container">

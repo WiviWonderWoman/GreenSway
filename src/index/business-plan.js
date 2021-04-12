@@ -1,12 +1,11 @@
 import { main } from "./index.js";
+import image1 from './images/pexels-artem-beliaikin-1122868.jpg';
+import image2 from './images/pexels-sora-shimazaki-5669602.jpg';
+import image3 from './images/before.png';
+import image4 from './images/after.png';
 
 export function showBuisnessPlan() {
-
-    const image1 = './src/index/images/pexels-artem-beliaikin-1122868.jpg';
-    const image2 = './src/index/images/pexels-sora-shimazaki-5669602.jpg';
-    const image3 = './src/index/images/before.png';
-    const image4 = './src/index/images/after.png';
-
+    
     main.innerHTML = `<div><h1>Affärsplan</h1></div>    
     <div class="flex.container">
         <div><p>Jag kallar min idé GreenSway.<br><br> Green som kan associeras med både miljö och med pengar och ”sway” (eng.) med betydelse: svänga eller inflytande. Namnet beskriver vad jag vill åstadkomma med min lösning eftersom det handlar om att återställa balansen gällande ansvar för kostnader och miljöpåverkan genom att ge individen större inflytande.</p></div>

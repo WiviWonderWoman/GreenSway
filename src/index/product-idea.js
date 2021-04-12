@@ -1,9 +1,8 @@
 import { main } from "./index.js";
+import image1 from './images/pexels-markus-spiske-1089438.jpg';
+import image2 from './images/pexels-ready-made-3850452.jpg';
 
 export function showProductIdea() {
-
-    const image1 = './src/index/images/pexels-markus-spiske-1089438.jpg';
-    const image2 = './src/index/images/pexels-ready-made-3850452.jpg';
 
     main.innerHTML = `<div><h1>Produktidé</h1></div> 
     <div class="flex.container">

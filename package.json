@@ -1,0 +1,28 @@
+{
+  "name": "green-sway",
+  "version": "1.0.0",
+  "description": "My SPA product idea from business plan to MVP.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "parcel index.html --open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WiviWonderWoman/GreenSway.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/WiviWonderWoman/GreenSway/issues"
+  },
+  "homepage": "https://github.com/WiviWonderWoman/GreenSway#readme",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.5"
+  },
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  }
+}

@@ -8,11 +8,11 @@ export default class Logo extends React.Component {
 
     handelClick(){
         console.log('Klick på GreenSway');
-        return (
-            ReactDOM.render(<UserButton />, document.getElementById("root"))
-
-        );
+        
+        let root = document.getElementById("root")
+        ReactDOM.render(<UserButton />, root);
     }
+    
     render() {
         console.log('Inuti Logo');
         return(

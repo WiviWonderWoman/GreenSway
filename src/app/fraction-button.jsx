@@ -1,24 +1,17 @@
 import React from "react";
-import { FractionDataService } from './services/fraction-data-services.js'
+import './app.css';
+
 export default class FractionButton extends React.Component {
 
     handleClick(key) {
-        console.log('Inuti handleClick: klick på FractionButton: ' + key );
+        console.log('Klick på ' + key );
     }
 
     render() {
         console.log('Inuti FractionButton');
-        let fractionDataService = new FractionDataService();
-        fractionDataService.loadData();
-        let allFractions = fractionDataService.allFractions;
 
-        let allBtn = [];
-        
-        allFractions.forEach(element => {
-            let btn = <li key={element.id} onClick={() => this.handleClick(btn.key)}><button className={element.id}>{element.source}</button></li>;
-            console.log(btn.key)
-            allBtn.push(btn);
-        });
-        return allBtn;
+        return (
+            this.props.fractions.map((f) => <li key={f.id} onClick={() => this.handleClick(f.id)}><button className={f.id}>{f.source}</button></li>)
+        );
     }
 }

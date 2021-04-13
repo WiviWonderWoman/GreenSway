@@ -5,22 +5,27 @@ import AdminStatistics from './admin-statistics.jsx';
 
 export default class UserButton extends React.Component {
 
-    handelClick(source) {
-        console.log('Klick på ' + source + '-button')
-        if (source === 'användare') {
-            ReactDOM.render(<NavBar />, document.getElementById("root"))
+    handelClick(key) {
+
+        console.log('Klick på ' + key + '-button');
+        let root = document.getElementById("root");
+
+        if (key === 'admin') {
+            ReactDOM.render(<AdminStatistics/>, root);
         } 
-        else {
-            ReactDOM.render(<AdminStatistics/>, document.getElementById("root"))
+
+        else if (key === 'user') {
+            ReactDOM.render(<NavBar />, root);
         }
     }
+    
     render () {
         console.log('Inuti UserButton');
         return(
             <div>
-                <button onClick={() => this.handelClick('användare')}>Användare</button>
-                <button onClick={() => this.handelClick('admin')}>Admin</button>   
+                <button key="user" onClick={() => this.handelClick('user')}>Användare</button>
+                {this.props.clicked === true ? <button key="admin" className="clicked">Admin</button> : <button key="admin" onClick={() => this.handelClick('admin')}>Admin</button> }
             </div>   
-        )
+        );
     }
 }

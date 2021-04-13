@@ -14,6 +14,5 @@ export class FractionDataService {
             let fraction = new Fraction(f.id, f.source, f.price)
             this.allFractions.push(fraction);
         }
-        console.log(this.allFractions);
     }
 }

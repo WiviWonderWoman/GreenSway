@@ -1,5 +1,6 @@
 import React from "react";
 import './app.css';
+import FractionButton from "./fraction-button";
 
 export default class NavList extends React.Component {
 
@@ -8,10 +9,7 @@ export default class NavList extends React.Component {
 
         return(
             <ul className="nav-list">
-                <li>list-test</li>
-                <li>list-test</li>
-                <li>list-test</li>
-                <li>list-test</li>
+                <FractionButton/>
             </ul>
         )
     }

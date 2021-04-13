@@ -1,5 +1,7 @@
 import React from "react";
 import './app.css';
+import NavList from "./nav-list";
+
 
 export default class NavBar extends React.Component {
     render () {
@@ -7,7 +9,7 @@ export default class NavBar extends React.Component {
 
         return(
             <nav className="flex.container">
-                <p>NAV-BAR</p>
+                <NavList/>
             </nav>
         )
     }

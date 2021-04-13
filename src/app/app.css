@@ -22,6 +22,20 @@
     font-size: calc(10px + 2vmin);
     color: white;
 }
+.flex.container {
+  margin: auto;
+  display: flex;
+}
+.nav-list{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.nav-list li {
+  flex-grow: 1;
+  list-style: none;
+}
 .container {
     margin: auto;
     position:relative;

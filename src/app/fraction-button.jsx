@@ -2,8 +2,8 @@ import React from "react";
 import { FractionDataService } from './services/fraction-data-services.js'
 export default class FractionButton extends React.Component {
 
-    handleClick() {
-        console.log('Klick på FractionButton. Inuti handleClick.');
+    handleClick(key) {
+        console.log('Inuti handleClick: klick på FractionButton: ' + key );
     }
 
     render() {

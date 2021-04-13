@@ -9,7 +9,6 @@ export default class App extends React.Component {
         return(
             <div>
                 <Logo />
-                <h1>HEY from app.jsx!</h1>
             </div>
         )
     }

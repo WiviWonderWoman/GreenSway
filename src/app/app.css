@@ -22,6 +22,20 @@
     font-size: calc(10px + 2vmin);
     color: white;
 }
+.flex.container {
+  margin: auto;
+  display: flex;
+}
+.nav-list{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.nav-list li {
+  flex-grow: 1;
+  list-style: none;
+}
 .container {
     margin: auto;
     position:relative;
@@ -60,6 +74,7 @@ button {
     border: solid 1px black;
     border-radius: 10px;
     box-shadow: none;
+    background-color:#282c34;
     color: white;
     padding: 15px ;
     text-align: center;
@@ -73,8 +88,61 @@ button {
 button:hover {
     /* width: 250px; */
     color: black;
+    background-color: rgb(7, 196, 7);
     /* font-size: 18px; */
     text-align: center;
     font-weight: bold;
     box-shadow: 0 2px 8px 0 rgb(250, 247, 247), 0 1px 10px 0 rgb(250, 247, 247);
+}
+.rw01 {
+    background-color: darkred; 
+
+}
+.rw01:hover {
+    background-color:rgb(245, 47, 40);
+    
+}
+
+.ow01 {
+    background-color: #4CAF50; 
+}
+.ow01:hover {
+    background-color: rgba(99, 255, 9, 0.959);
+}
+
+.cp01 {
+    background-color: navy;
+}
+.cp01:hover {
+    background-color: rgb(51, 104, 250);
+}
+
+.pp01 {
+    background-color: orangered; 
+}
+.pp01:hover {
+    background-color: orange;
+}
+
+.mp01 {
+    background-color: rgb(56, 55, 55); 
+}
+.mp01:hover {
+    background-color: gray;
+}
+
+.gp01 {
+    background-color: rgba(245, 245, 245, 0.425); 
+    opacity: 70%;
+}
+.gp01:hover {
+    background-color:whitesmoke;
+    opacity: 100%;
+}
+
+.n01 {
+    background-color: rgb(51, 22, 18); 
+}
+.n01:hover {
+    background-color: rgb(122, 108, 78);
 }

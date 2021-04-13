@@ -60,6 +60,7 @@ button {
     border: solid 1px black;
     border-radius: 10px;
     box-shadow: none;
+    background-color:#282c34;
     color: white;
     padding: 15px ;
     text-align: center;
@@ -73,6 +74,7 @@ button {
 button:hover {
     /* width: 250px; */
     color: black;
+    background-color: rgb(7, 196, 7);
     /* font-size: 18px; */
     text-align: center;
     font-weight: bold;

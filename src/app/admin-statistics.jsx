@@ -1,5 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import './app.css';
 import UserButton from './user-button.jsx';
 
 export default class AdminStatistics extends React.Component {
@@ -14,9 +15,10 @@ export default class AdminStatistics extends React.Component {
     componentWillUnmount() {
         clearInterval(this.timer);
       }
-
+      
     redirect() {
-        ReactDOM.render(<UserButton/>, document.getElementById("root"))
+        let root = document.getElementById("root");
+        ReactDOM.render(<UserButton clicked={true}/>, root);
     }
 
     render() {

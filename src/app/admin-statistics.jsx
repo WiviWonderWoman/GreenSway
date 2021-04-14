@@ -5,10 +5,25 @@ import UserButton from './user-button.jsx';
 
 export default class AdminStatistics extends React.Component {
 
+    constructor() {
+        super();
+        this.state = {
+            isClicked: false
+        };
+    }
+
+    handleClick() {
+        console.log('Admin handleClick');
+
+        this.setState({
+            isClicked: !this.state.isClicked
+        });
+    }
+
     componentDidMount() {
         this.timer = setInterval(
             () => this.redirect(),
-            2000
+            5000
         );
     }
 
@@ -23,7 +38,9 @@ export default class AdminStatistics extends React.Component {
 
     render() {
         return (
-            <h1>ADMIN-SIDA KOMMER SNART!</h1>
+            <div>
+                {this.state.isClicked === true ? <h1 className="clicked" onClick={() => this.handleClick()}>OTÅLIG??</h1> : <h1 onClick={() => this.handleClick()}>ADMIN-SIDA KOMMER SNART!</h1>}
+            </div>
         );
     }
 }

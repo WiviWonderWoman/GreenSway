@@ -1,5 +1,4 @@
-<<<<<<< HEAD
- # GreenSway
+# GreenSway
 🟢 My SPA product idea from business plan to MVP.🟢
 
 1. klona ner repot från GitHub :octocat:
@@ -15,11 +14,6 @@
 
 Troligtvis öppnas **[localhost: 1234](http://localhost:1234)**(/index.html) automatiskt i din förvalda webbläsare, du kommer vidare till app via länken i nav-baren eller lägg till: **/app.html** i webbläsarens adressfönster.
 __________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
-
-=======
-# GreenSway
-My SPA product idea from business plan to MVP.
->>>>>>> parent of b5f5e98 (Update README.md)
 
 # Inlämningsuppgift 2: The proof of concept
 

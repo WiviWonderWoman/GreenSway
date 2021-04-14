@@ -1,7 +1,7 @@
 import React from "react";
 import './app.css';
 import FractionButton from "./fraction-button";
-import { FractionDataService } from "./services/fraction-data-services";
+import { FractionDataService } from "../services/fraction-data-services";
 
 export default class NavList extends React.Component {
 

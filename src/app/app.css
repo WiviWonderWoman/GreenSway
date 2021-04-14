@@ -63,7 +63,24 @@ body {
   background-color: rgb(7, 196, 7);
   /* color: black; */
 }
-
+.userForm {
+  margin: auto;
+  padding: 10px;
+  justify-content: center;
+  margin: 2em auto;
+  border: cornsilk solid 1px;
+  padding: 1em;
+}
+.form-group {
+  font-size: 1.5em;
+  justify-content: center;
+  text-align: center;
+}
+input {
+  font-size: 1em;
+  width: 100%;
+  border-radius: 10px;
+}
 button {
   width: 200px;
   border: solid 1px black;
@@ -95,12 +112,12 @@ button:hover {
   margin: auto;
   text-align: center;
 }
-/* .clicked:hover {
+.clicked:hover {
   background-color: rgb(32, 2, 2);
   color: gray;
   font-weight: normal;
   box-shadow: none;
-} */
+}
 .rw01 {
   background-color: darkred; 
   border: solid 1px black;

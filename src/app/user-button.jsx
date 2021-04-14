@@ -5,23 +5,46 @@ import AdminStatistics from './admin-statistics.jsx';
 
 export default class UserButton extends React.Component {
 
-    handelClick(key) {
+    constructor(props) {
+        super(props);
 
-        console.log('Klick på ' + key + '-button');
+        this.state = {
+            update: false
+        };
+    }
+
+    shouldComponentUpdate(nextProps, nextState) {
+
+        if (this.state.update === false) {
+            return false;
+        }
+    }
+
+    handelClick(key) {
+        // save user name to localStorage
+        // save key to localStorage
+
+        // console.log('Klick på ' + key + '-button');
+
+        this.setState({
+            update: true
+        })
         
         let root = document.getElementById("root");
 
+        // remove 
         if (key === 'admin') {
-            ReactDOM.render(<AdminStatistics/>, root);
+            
+            ReactDOM.render(<AdminStatistics username={this.props.username}/>, root);
         } 
 
         else if (key === 'user') {
-            ReactDOM.render(<NavBar />, root);
+            ReactDOM.render(<NavBar username={this.props.username}/>, root);
         }
     }
     
     render () {
-        console.log('Inuti UserButton');
+        // console.log('Inuti UserButton');
         return(
             <div>
                 <button key="user" onClick={() => this.handelClick('user')}>Användare</button>

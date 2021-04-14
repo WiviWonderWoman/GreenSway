@@ -6,15 +6,20 @@ import UserButton from './user-button.jsx';
 
 export default class Logo extends React.Component {
 
+    // check localStorage
+
     handelClick(){
-        console.log('Klick på GreenSway');
+        // console.log('Klick på GreenSway');
         
+        // conditional rendering depending on localStorage
+        // UserForm
+        // AdminStatistics OR NavBar
         let root = document.getElementById("root")
         ReactDOM.render(<UserButton />, root);
     }
     
     render() {
-        console.log('Inuti Logo');
+        // console.log('Inuti Logo');
         return(
             <div className="container">
                 <img src={logo} className="App-logo" alt="recycle-logo"/>

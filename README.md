@@ -1,17 +1,18 @@
  # GreenSway
 🟢 My SPA product idea from business plan to MVP.🟢
 
-* klona ner repot från GitHub :octocat:
-* öppna i din kodeditor :computer:
-* kör ```npm ci ``` i terminalen 
-* följt av ```npm start``` följande medelande visas: 
+1. klona ner repot från GitHub :octocat:
+2. öppna i din kodeditor :computer:
+3. kör ```npm ci ``` i terminalen 
+4. följt av ```npm start``` följande medelande visas: 
  > ```green-sway@1.0.0 start
  > parcel index.html --open
- > Server running at [localhost: 1234] (http://localhost:1234) 
+ > Server running at http://localhost:1234 
  > ✨  Built in ??ms.
-* 🚀 That´s it!  ✨
 
-Troligtvis öppnas **localhost:1234/index.html** automatiskt i din förvalda webbläsare, du kommer vidare till app via länken i nav-baren eller lägg till: **/app.html** i webbläsarens adressfönster.
+5. 🚀 That´s it!  ✨
+
+Troligtvis öppnas **[localhost: 1234](http://localhost:1234)**(/index.html) automatiskt i din förvalda webbläsare, du kommer vidare till app via länken i nav-baren eller lägg till: **/app.html** i webbläsarens adressfönster.
 __________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
 
 

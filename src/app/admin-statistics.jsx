@@ -39,7 +39,7 @@ export default class AdminStatistics extends React.Component {
     render() {
         return (
             <div>
-                {this.state.isClicked === true ? <h1 className="clicked" onClick={() => this.handleClick()}>OTÅLIG??</h1> : <h1 onClick={() => this.handleClick()}>ADMIN-SIDA KOMMER SNART!</h1>}
+                {this.state.isClicked === true ? <div className="admin"><h1 onClick={() => this.handleClick()}>OTÅLIG??</h1><p >Kunde du inte låte bli...</p></div> : <div className="admin"><h1 onClick={() => this.handleClick()}>ADMIN-SIDA KOMMER SNART!</h1><p>(klicka inte ;))</p></div>}
             </div>
         );
     }

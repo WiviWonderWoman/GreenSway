@@ -7,8 +7,8 @@
 * följt av ```npm start``` följande medelande visas: 
  > ```green-sway@1.0.0 start
  > parcel index.html --open
- > Server running at``` http://localhost:1234 
- > ```✨  Built in ??ms.```
+ > Server running at [localhost: 1234] (http://localhost:1234) 
+ > ✨  Built in ??ms.
 * 🚀 That´s it!  ✨
 
 Troligtvis öppnas **localhost:1234/index.html** automatiskt i din förvalda webbläsare, du kommer vidare till app via länken i nav-baren eller lägg till: **/app.html** i webbläsarens adressfönster.

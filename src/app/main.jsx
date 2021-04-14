@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import './app.css';
-import App from './components/app.jsx';
+import App from './app.jsx';
 
 console.log('Inuti Main');
 

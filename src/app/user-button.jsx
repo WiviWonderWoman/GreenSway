@@ -8,6 +8,7 @@ export default class UserButton extends React.Component {
     handelClick(key) {
 
         console.log('Klick på ' + key + '-button');
+        
         let root = document.getElementById("root");
 
         if (key === 'admin') {

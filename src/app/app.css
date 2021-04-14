@@ -1,26 +1,26 @@
 @media (prefers-reduced-motion: no-preference) {
-    .App-logo {
-      animation: App-logo-spin infinite 20s linear;
-    }
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
   }
+}
 
-  @keyframes App-logo-spin {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(360deg);
-    }
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
   }
-  body {
-    background-color: #282c34;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
+  to {
+    transform: rotate(360deg);
+  }
+}
+body {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
 }
 .flex.container {
   margin: auto;
@@ -37,122 +37,204 @@
   list-style: none;
 }
 .container {
-    margin: auto;
-    position:relative;
-    width: 100%;
-    max-width: 400px;
-  }
+  margin: auto;
+  position:relative;
+  width: 100%;
+  max-width: 400px;
+}
+
+.container img {
+  width: 100%;
+  height: auto;
+}
+
+.container .btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color:#282c34;
+  /* color: white; */
+  font-size: 25px;
+  padding: 16px 30px;
+  border: none;
   
-  .container img {
-    width: 100%;
-    height: auto;
-  }
-  
-  .container .btn {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    background-color:#282c34;
-    /* color: white; */
-    font-size: 25px;
-    padding: 16px 30px;
-    border: none;
-    
-    border-radius: 5px;
-    text-align: center;
-  }
-  
-  .container .btn:hover {
-    background-color: rgb(7, 196, 7);
-    /* color: black; */
-  }
+  border-radius: 5px;
+  text-align: center;
+}
+
+.container .btn:hover {
+  background-color: rgb(7, 196, 7);
+  /* color: black; */
+}
 
 button {
-    width: 200px;
-    border: solid 1px black;
-    border-radius: 10px;
-    box-shadow: none;
-    background-color:#282c34;
-    color: white;
-    padding: 15px ;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 10px;
-    cursor: pointer;
+  width: 200px;
+  border: solid 1px black;
+  border-radius: 10px;
+  box-shadow: none;
+  background-color: #282c34;
+  color: white;
+  padding: 15px ;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 10px;
+  cursor: pointer;
 }
-
 button:hover {
-    /* width: 250px; */
-    color: black;
-    background-color: rgb(7, 196, 7);
-    /* font-size: 18px; */
-    text-align: center;
-    font-weight: bold;
-    box-shadow: 0 2px 8px 0 rgb(250, 247, 247), 0 1px 10px 0 rgb(250, 247, 247);
+  background-color: rgb(7, 196, 7);
+  color: black;
+  text-align: center;
+  font-weight: bold;
+  box-shadow: 0 2px 8px 0 rgb(250, 247, 247), 0 1px 10px 0 rgb(250, 247, 247);
 }
 .clicked {
-    background-color: rgb(32, 2, 2);
-    color: gray;
+  background-color: rgb(32, 2, 2);
+  color: gray;
 }
 .clicked:hover {
-    background-color: rgb(32, 2, 2);
-    color: gray;
-    font-weight: normal;
-    box-shadow: none;
+  background-color: rgb(32, 2, 2);
+  color: gray;
+  font-weight: normal;
+  box-shadow: none;
 }
 .rw01 {
-    background-color: darkred; 
+  background-color: darkred; 
+  border: solid 1px black;
+  border-radius: 10px;
+  box-shadow: none;
+  padding: 15px ;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 10px;
+  cursor: pointer;
 
 }
 .rw01:hover {
-    background-color:rgb(245, 47, 40);
-    
+  background-color:rgb(245, 47, 40);
+  color: black;
+  text-align: center;
+  box-shadow: 0 2px 8px 0 rgb(250, 247, 247), 0 1px 10px 0 rgb(250, 247, 247);
+  
 }
 
 .ow01 {
-    background-color: #4CAF50; 
+  background-color: #4CAF50; 
+  border: solid 1px black;
+  border-radius: 10px;
+  box-shadow: none;
+  padding: 15px ;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 10px;
+  cursor: pointer;
 }
 .ow01:hover {
-    background-color: rgba(99, 255, 9, 0.959);
+  background-color: rgba(99, 255, 9, 0.959);
+  color: black;
+  text-align: center;
+  box-shadow: 0 2px 8px 0 rgb(250, 247, 247), 0 1px 10px 0 rgb(250, 247, 247);
 }
 
 .cp01 {
-    background-color: navy;
+  background-color: navy;
+  border: solid 1px black;
+  border-radius: 10px;
+  box-shadow: none;
+  padding: 15px ;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 10px;
+  cursor: pointer;
 }
 .cp01:hover {
-    background-color: rgb(51, 104, 250);
+  background-color: rgb(51, 104, 250);
+  color: black;
+  text-align: center;
+  box-shadow: 0 2px 8px 0 rgb(250, 247, 247), 0 1px 10px 0 rgb(250, 247, 247);
 }
 
 .pp01 {
-    background-color: orangered; 
+  background-color: orangered; 
+  border: solid 1px black;
+  border-radius: 10px;
+  box-shadow: none;
+  padding: 15px ;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 10px;
+  cursor: pointer;
 }
 .pp01:hover {
-    background-color: orange;
+  background-color: orange;
+  color: black;
+  text-align: center;
+  box-shadow: 0 2px 8px 0 rgb(250, 247, 247), 0 1px 10px 0 rgb(250, 247, 247);
 }
 
 .mp01 {
-    background-color: rgb(56, 55, 55); 
+  background-color: rgb(56, 55, 55); 
+  border: solid 1px black;
+  border-radius: 10px;
+  box-shadow: none;
+  padding: 15px ;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 10px;
+  cursor: pointer;
 }
 .mp01:hover {
-    background-color: gray;
+  background-color: gray;
+  color: black;
+  text-align: center;
+  box-shadow: 0 2px 8px 0 rgb(250, 247, 247), 0 1px 10px 0 rgb(250, 247, 247);
 }
 
 .gp01 {
-    background-color: rgba(245, 245, 245, 0.425); 
-    opacity: 70%;
+  background-color: rgba(245, 245, 245, 0.425); 
+  opacity: 70%;
+  border: solid 1px black;
+  border-radius: 10px;
+  box-shadow: none;
+  padding: 15px ;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 10px;
+  cursor: pointer;
 }
 .gp01:hover {
-    background-color:whitesmoke;
-    opacity: 100%;
+  background-color:whitesmoke;
+  opacity: 100%;
+  color: black;
+  text-align: center;
+  box-shadow: 0 2px 8px 0 rgb(250, 247, 247), 0 1px 10px 0 rgb(250, 247, 247);
 }
 
 .n01 {
-    background-color: rgb(51, 22, 18); 
+  background-color: rgb(51, 22, 18); 
+  border: solid 1px black;
+  border-radius: 10px;
+  box-shadow: none;
+  padding: 15px ;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 10px;
+  cursor: pointer;
 }
 .n01:hover {
-    background-color: rgb(122, 108, 78);
+  background-color: rgb(122, 108, 78);
+  color: black;
+  text-align: center;
+  box-shadow: 0 2px 8px 0 rgb(250, 247, 247), 0 1px 10px 0 rgb(250, 247, 247);
 }
+

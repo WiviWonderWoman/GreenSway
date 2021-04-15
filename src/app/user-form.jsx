@@ -18,15 +18,14 @@ export default class UserForm extends React.Component {
     handleUsernameChange = (event) => {
         this.setState({
             username: event.target.value
-        })
-        // console.log('handleUsernameChange: ' + this.state.username)
+        })// console.log('handleUsernameChange: ' + this.state.username)
     }
 
     handleUserClick(key) {
         this.setState({
             clicked: true
         })
-        console.log(key);
+        // console.log(key);
         if (key === 'admin') {
             this.setState({
                 isAdmin: true
@@ -36,7 +35,6 @@ export default class UserForm extends React.Component {
     }
 
     render() {
-
         return( 
             <div className="userForm ">
                 <div className="form-group">
@@ -51,16 +49,13 @@ export default class UserForm extends React.Component {
                         <label>och ditt namn:</label>
                     </div>
                     <div className="form-group">
-                        <input  type="text" 
-                                value={this.state.username}
-                                onChange={this.handleUsernameChange}/>
+                        <input  type="text" value={this.state.username} onChange={this.handleUsernameChange}/>
                     </div> 
                     <div className="form-group">
                         <button  onClick={this.componentWillUnmount()}>SPARA</button>
                     </div>
                 </form>
             </div> 
-
         );
     }
 

@@ -1,48 +1,42 @@
 import React from "react";
 import './app.css';
+import App from "./app";
 
 export default class AdminStatistics extends React.Component {
 
-    constructor() {
-        super();
-        this.state = {
-            isClicked: false
-        };
-    }
+    // constructor() {
+    //     super();
 
-    // handleClick() {
-
-       
     // }
 
-    componentDidMount() {
-        this.timer = setInterval(
-            () => this.redirect(),
-            5000
-        );
-    }
+    // componentDidMount() {
+        
+    //     this.timer = setInterval(
+    //         () => this.redirect(),
+    //         5000
+    //     );
+    // }
 
-    componentWillUnmount() {
-        clearInterval(this.timer);
-      }
+    // componentWillUnmount() {
+    //     clearInterval(this.timer);
+    // }
       
-    redirect() {
-        console.log('redirect');
-        this.setState({
-            isClicked: !this.state.isClicked
-        });
-        // let root = document.getElementById("root");
-        // ReactDOM.render(<UserButton clicked={true}/>, root);
-    }
+    // redirect() {
+    //     console.log('redirect');
+    //     this.setState({
+    //         isClicked: true
+    //     });
+        
+    // }
 
     render() { 
 
         // console.log('AdminStatistics: ' + this.props.user.username)
+        {/* <div className="admin"><h1 >OTÅLIG?? {this.props.username}!</h1><p >Kunde du inte låta bli...</p></div>  */}
         return (
-            <div>
-                {this.state.isClicked === true ? 
-                <div className="admin"><h1 >OTÅLIG?? {this.props.username}!</h1><p >Kunde du inte låta bli...</p></div> : 
-                <div className="admin"><h1>Välkommen {this.props.username}!</h1><h1 >ADMIN-SIDA KOMMER SNART!</h1><p>(klicka inte ;))</p></div>}
+            <div className="admin">
+                <h1>Välkommen {this.props.username}!</h1>
+                <h2 >ADMIN-SIDA KOMMER SNART!</h2>
             </div>
         );
     }

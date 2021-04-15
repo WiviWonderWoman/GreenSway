@@ -22,6 +22,9 @@ body {
   font-size: calc(10px + 2vmin);
   color: white;
 }
+header {
+  height: 20%;
+}
 .flex.container {
   margin: auto;
   display: flex;
@@ -39,8 +42,8 @@ body {
 .container {
   margin: auto;
   position:relative;
-  width: 100%;
-  /* max-width: 400px; */
+  /* width: 100%; */
+  max-width: 400px;
 }
 .container img {
   width: 100%;
@@ -61,7 +64,39 @@ body {
 }
 .container .btn:hover {
   background-color: rgb(7, 196, 7);
-  /* color: black; */
+}
+.container .btn2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: rgb(7, 196, 7);
+  font-size: 25px;
+  padding: 16px 30px;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  width: 300px;
+  
+}
+.container .btn2:hover {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: rgb(7, 196, 7);
+  color: white;
+  font-size: 25px;
+  padding: 16px 30px;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  font-weight: normal;
+  box-shadow: none;
+  width: 300px;
+  cursor: default;
 }
 .userForm {
   margin: auto;

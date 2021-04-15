@@ -1,20 +1,15 @@
 
 export class UserServices {
 
-    constructor() {
-        
-    }
-
     checkLocalStorage() {
-        if(localStorage.getItem('username') !== null) {
+        if(localStorage.getItem('username') !== null || undefined) {
+
             let username = JSON.parse(localStorage.getItem('username'));
             let role = JSON.parse(localStorage.getItem('role'));
-            console.log(username, role);
             let user = { username: username, role: role}
             return user;
         }
         else {
-
             return null;
         }
     }
@@ -26,8 +21,12 @@ export class UserServices {
     }
 
     saveUserRole(key) {
-        console.log('UserServices saveUserRole(): ' + key);
+        // console.log('UserServices saveUserRole(): ' + key);
         localStorage.setItem('role', JSON.stringify(key))
-        console.log('localStorage: ',localStorage)
+        // console.log('localStorage: ',localStorage)
+    }
+
+    clearLocalStorage() {
+        localStorage.clear();
     }
 }

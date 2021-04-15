@@ -1,7 +1,5 @@
 import React from "react";
-import ReactDOM from "react-dom";
 import './app.css';
-import UserButton from './user-button.jsx';
 
 export default class AdminStatistics extends React.Component {
 
@@ -12,13 +10,10 @@ export default class AdminStatistics extends React.Component {
         };
     }
 
-    handleClick() {
-        // console.log('Admin handleClick');
+    // handleClick() {
 
-        this.setState({
-            isClicked: !this.state.isClicked
-        });
-    }
+       
+    // }
 
     componentDidMount() {
         this.timer = setInterval(
@@ -32,18 +27,24 @@ export default class AdminStatistics extends React.Component {
       }
       
     redirect() {
-        let root = document.getElementById("root");
-        ReactDOM.render(<UserButton clicked={true}/>, root);
+        console.log('redirect');
+        this.setState({
+            isClicked: !this.state.isClicked
+        });
+        // let root = document.getElementById("root");
+        // ReactDOM.render(<UserButton clicked={true}/>, root);
     }
 
-    render() {
+    render() { 
+
+        // console.log('AdminStatistics: ' + this.props.user.username)
         return (
             <div>
-                <h1>Välkommen {this.props.username}!</h1>
                 {this.state.isClicked === true ? 
-                <div className="admin"><h1 onClick={() => this.handleClick()}>OTÅLIG??</h1><p >Kunde du inte låte bli...</p></div> : 
-                <div className="admin"><h1 onClick={() => this.handleClick()}>ADMIN-SIDA KOMMER SNART!</h1><p>(klicka inte ;))</p></div>}
+                <div className="admin"><h1 >OTÅLIG?? {this.props.username}!</h1><p >Kunde du inte låta bli...</p></div> : 
+                <div className="admin"><h1>Välkommen {this.props.username}!</h1><h1 >ADMIN-SIDA KOMMER SNART!</h1><p>(klicka inte ;))</p></div>}
             </div>
         );
     }
+
 }

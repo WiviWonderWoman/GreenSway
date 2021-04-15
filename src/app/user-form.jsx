@@ -1,6 +1,6 @@
 import React from "react";
 import './app.css';
-import { UserServices } from "./services/user-services";
+
 import UserButton from "./user-button";
 
 export default class UserForm extends React.Component {
@@ -11,8 +11,7 @@ export default class UserForm extends React.Component {
 
         this.state = {
             clicked: false,
-            username: '',
-            userService: new UserServices()
+            username: ''
         };
     }
 
@@ -25,27 +24,27 @@ export default class UserForm extends React.Component {
     }
 
     handelClick() {
-
         console.log('handelClick: ' + this.state.username)
-         
-        this.state.userService.saveUsername(this.state.username);
+        
+        this.props.userServices.saveUsername(this.state.username);
+        // this.props.username = this.state.username;
 
          this.setState({
              clicked: true
          })
     }
-
+    
     render() {
 
         return( this.state.clicked === true ? 
-            <div className="userForm ">
+            <>
                 <div className="form-group">
                     <label>och din roll:</label>
                 </div>
                 <div className="form-group">
-                    <UserButton  username={this.state.username} userService={this.state.userService}/>
+                    <UserButton  username={this.state.username} role={this.props.role} userServices={this.props.userServices}/>
                 </div>
-            </div>
+            </>
             :
             <div className="userForm ">
                 <form>

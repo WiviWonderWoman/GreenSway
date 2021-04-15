@@ -10,11 +10,10 @@ export default class App extends React.Component {
         console.log('Inuti App');
         return(
             <div>
-                <Logo />
+                <Logo username={this.props.username} role={this.props.role} userServices={this.props.userServices}/>
                 {/* move to logo */}
             </div>
         );
     }
 }
 
- 

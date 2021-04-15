@@ -7,16 +7,9 @@ export default class UserButton extends React.Component {
 
     constructor(props) {
         super(props);
-
         this.state = {
-            update: false
-        };
-    }
-
-    shouldComponentUpdate(nextProps, nextState) {
-
-        if (this.state.update === false) {
-            return false;
+            clicked: false,
+            isAdmin: false
         }
     }
 
@@ -24,33 +17,32 @@ export default class UserButton extends React.Component {
         // save user name to localStorage
         // save key to localStorage
         // console.log('Från UserButton: ', this.props.userService)
-        console.log('key');
-        this.props.userService.saveUserRole(key);
         this.setState({
-            update: true
+            clicked: true
         })
-        
-        let root = document.getElementById("root");
-
-        // remove 
+        console.log(key);
         if (key === 'admin') {
-            
-            ReactDOM.render(<AdminStatistics username={this.props.username}/>, root);
-        } 
-
-        else if (key === 'user') {
-            ReactDOM.render(<NavBar username={this.props.username}/>, root);
+            this.setState({
+                isAdmin: true
+            })
         }
+        // 
+        this.props.userServices.saveUserRole(key);
     }
     
     render () {
         // console.log('Inuti UserButton');
-        console.log(this.props.userService)
+        console.log(this.props.userServices)
         return(
+            this.state.clicked === false ?
             <div>
                 <button key="user" onClick={() => this.handelClick('user')}>Användare</button>
-                {this.props.clicked === true ? <button key="admin" className="clicked">Admin</button> : <button key="admin" onClick={() => this.handelClick('admin')}>Admin</button> }
-            </div>   
+                <button key="admin" onClick={() => this.handelClick('admin')}>Admin</button> 
+            </div> 
+            : 
+            this.state.isAdmin === true ? <AdminStatistics username={this.props.username} role={this.props.role}/> 
+            : 
+            <NavBar username={this.props.username} role={this.props.role}/>  
         );
     }
 }

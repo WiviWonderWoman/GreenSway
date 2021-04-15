@@ -14,7 +14,7 @@ export default class NavList extends React.Component {
 
         return(
             <>
-                <h1>Välkommen {this.props.username}!</h1>
+            <h1>Välkommen {this.props.username}!</h1>
                 <ul className="nav-list">
                     <FractionButton fractions={allFractions}/>
                 </ul>

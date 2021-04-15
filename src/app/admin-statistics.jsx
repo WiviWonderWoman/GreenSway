@@ -1,46 +1,44 @@
 import React from "react";
-import ReactDOM from "react-dom";
 import './app.css';
-import UserButton from './user-button.jsx';
+import App from "./app";
 
 export default class AdminStatistics extends React.Component {
 
-    constructor() {
-        super();
-        this.state = {
-            isClicked: false
-        };
-    }
+    // constructor() {
+    //     super();
 
-    handleClick() {
-        console.log('Admin handleClick');
+    // }
 
-        this.setState({
-            isClicked: !this.state.isClicked
-        });
-    }
+    // componentDidMount() {
+        
+    //     this.timer = setInterval(
+    //         () => this.redirect(),
+    //         5000
+    //     );
+    // }
 
-    componentDidMount() {
-        this.timer = setInterval(
-            () => this.redirect(),
-            5000
-        );
-    }
-
-    componentWillUnmount() {
-        clearInterval(this.timer);
-      }
+    // componentWillUnmount() {
+    //     clearInterval(this.timer);
+    // }
       
-    redirect() {
-        let root = document.getElementById("root");
-        ReactDOM.render(<UserButton clicked={true}/>, root);
-    }
+    // redirect() {
+    //     console.log('redirect');
+    //     this.setState({
+    //         isClicked: true
+    //     });
+        
+    // }
 
-    render() {
+    render() { 
+
+        // console.log('AdminStatistics: ' + this.props.user.username)
+        {/* <div className="admin"><h1 >OTÅLIG?? {this.props.username}!</h1><p >Kunde du inte låta bli...</p></div>  */}
         return (
-            <div>
-                {this.state.isClicked === true ? <div className="admin"><h1 onClick={() => this.handleClick()}>OTÅLIG??</h1><p >Kunde du inte låte bli...</p></div> : <div className="admin"><h1 onClick={() => this.handleClick()}>ADMIN-SIDA KOMMER SNART!</h1><p>(klicka inte ;))</p></div>}
+            <div className="admin">
+                <h1>Välkommen {this.props.username}!</h1>
+                <h2 >ADMIN-SIDA KOMMER SNART!</h2>
             </div>
         );
     }
+
 }

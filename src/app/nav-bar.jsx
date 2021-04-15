@@ -1,17 +1,21 @@
 import React from "react";
 import './app.css';
-import NavList from "./nav-list";
-
+import FractionButton from "./fraction-button";
 
 export default class NavBar extends React.Component {
 
+    
     render () {
-        console.log('Inuti NavBar');
-
         return(
-            <nav className="flex.container">
-                <NavList/>
-            </nav>
+            <>
+                <h1>Välkommen {this.props.username}!</h1>
+                <nav className="flex.container">
+                    <ul className="nav-list">
+                        <FractionButton fractions={this.props.fractions}/>
+                    </ul>
+                </nav>
+            </>
         );
     }
+
 }

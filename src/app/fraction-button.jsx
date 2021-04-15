@@ -11,15 +11,13 @@ export default class FractionButton extends React.Component {
     }
 
     handleClick(key) {
-        console.log('FractionButtons handleClick. Klick på ' + key );
-
+        // console.log('FractionButtons handleClick. Klick på ' + key );
         this.setState({
             isClicked: !this.state.isClicked
         });
     }
 
     render() {
-        console.log('Inuti FractionButton');
 
         return (
             this.props.fractions.map((element) => this.state.isClicked === true ? 

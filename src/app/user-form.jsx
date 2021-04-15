@@ -1,6 +1,5 @@
 import React from "react";
-import './app.css';
-
+import "./app.css";
 import UserButton from "./user-button";
 
 export default class UserForm extends React.Component {
@@ -18,7 +17,8 @@ export default class UserForm extends React.Component {
     handleUsernameChange = (event) => {
         this.setState({
             username: event.target.value
-        })// console.log('handleUsernameChange: ' + this.state.username)
+        })
+        // console.log('handleUsernameChange: ' + this.state.username)
     }
 
     handleUserClick(key) {

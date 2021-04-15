@@ -7,13 +7,14 @@ export default class App extends React.Component {
 
     
     render() {
-        // console.log('Inuti App');
+        console.log('Inuti App');
         return(
             <div>
                 <Logo />
                 {/* move to logo */}
-                <UserForm />
             </div>
         );
     }
 }
+
+ 

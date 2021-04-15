@@ -23,7 +23,7 @@ export default class UserButton extends React.Component {
     handelClick(key) {
         // save user name to localStorage
         // save key to localStorage
-
+        console.log(this.props.userService)
         // console.log('Klick på ' + key + '-button');
 
         this.setState({
@@ -45,6 +45,7 @@ export default class UserButton extends React.Component {
     
     render () {
         // console.log('Inuti UserButton');
+        console.log(this.props.userService)
         return(
             <div>
                 <button key="user" onClick={() => this.handelClick('user')}>Användare</button>

@@ -23,9 +23,9 @@ export default class UserButton extends React.Component {
     handelClick(key) {
         // save user name to localStorage
         // save key to localStorage
-        console.log(this.props.userService)
-        // console.log('Klick på ' + key + '-button');
-
+        // console.log('Från UserButton: ', this.props.userService)
+        console.log('key');
+        this.props.userService.saveUserRole(key);
         this.setState({
             update: true
         })

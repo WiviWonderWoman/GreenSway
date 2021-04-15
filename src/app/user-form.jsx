@@ -59,7 +59,7 @@ export default class UserForm extends React.Component {
                     </div> 
                 </form>
                 <div className="form-group">
-                    <button  onClick={() => this.handelClick()} />
+                    <button  onClick={() => this.handelClick()}>SPARA</button>
                 </div>
             </div>
         );

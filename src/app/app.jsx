@@ -3,7 +3,6 @@ import "./app.css";
 import Logo from "./logo";
 import UserForm from "./user-form";
 import NavBar from "./nav-bar";
-import AdminStatistics from "./admin-statistics";
 
 export default class App extends React.Component {
 
@@ -20,7 +19,7 @@ export default class App extends React.Component {
     handleClick() {
         // console.log('Klick på GreenSway');
         if (this.props.username !==  undefined) {
-            console.log('App username: ', this.props.username)
+            // console.log('App username: ', this.props.username)
             this.setState({
                 newUser: false
             })
@@ -57,7 +56,9 @@ export default class App extends React.Component {
                 <UserForm  userServices={this.props.userServices} fractions={this.props.fractions}/> 
                 : 
                 this.state.isAdmin === true ? 
-                <AdminStatistics username={this.props.username} role={this.props.role}/> 
+                <>
+                <NavBar username={this.props.username} role={this.props.role} fractions={this.props.fractions}/>
+                </> 
                 : 
                 <NavBar username={this.props.username} role={this.props.role} fractions={this.props.fractions}/>}
              </main> 

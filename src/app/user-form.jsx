@@ -10,14 +10,15 @@ export default class UserForm extends React.Component {
         this.state = {
             clicked: false,
             isAdmin: false,
-            username: ''
+            username: '',
         };
     }
 
     handleUsernameChange = (event) => {
-        this.setState({
-            username: event.target.value
-        })
+
+       this.setState({        
+        username: event.target.value
+        })       
         // console.log('handleUsernameChange: ' + this.state.username)
     }
 
@@ -40,10 +41,16 @@ export default class UserForm extends React.Component {
                 <div className="form-group">
                     <label>Vänligen ange din roll:</label>
                 </div>
+                {this.state.clicked === true ?
+                <div className="form-group">
+                    <UserButton className="clicked" text={'Användare'} />
+                    <UserButton className="clicked" text={'Admin'} /> 
+                </div> 
+                : 
                 <div className="form-group">
                     <UserButton onClick={() => this.handleUserClick('user')} key={'user'} text={'Användare'} />
-                    <UserButton onClick={() => this.handleUserClick('admin')} key={'admin'} text={'Admin'} />
-                </div>
+                    <UserButton onClick={() => this.handleUserClick('admin')} key={'admin'} text={'Admin'} /> 
+                </div>}
                 <form>
                     <div className="form-group">
                         <label>och ditt namn:</label>
@@ -52,7 +59,7 @@ export default class UserForm extends React.Component {
                         <input  type="text" value={this.state.username} onChange={this.handleUsernameChange}/>
                     </div> 
                     <div className="form-group">
-                        <button  onClick={this.componentWillUnmount()}>SPARA</button>
+                        <button  onClick={this.componentWillUnmount()}>SPARA</button> 
                     </div>
                 </form>
             </div> 
@@ -60,6 +67,10 @@ export default class UserForm extends React.Component {
     }
 
     componentWillUnmount() {
-        this.props.userServices.saveUsername(this.state.username);
+        console.log('username: ', this.state.username);
+        if (this.state.username !== "" ) {
+            this.props.userServices.saveUsername(this.state.username);
+        }
+        console.log('localStorage: ', localStorage);
     }
 }

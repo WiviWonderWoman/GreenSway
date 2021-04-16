@@ -25,6 +25,14 @@ body {
 header {
   height: 20%;
 }
+#copy {
+  text-align: center;
+}
+#copy  span {
+  font-family: 'Tangerine', cursive;
+  font-size: xx-large;
+  color:rgb(51, 255, 0);
+}
 .flex.container {
   margin: auto;
   display: flex;

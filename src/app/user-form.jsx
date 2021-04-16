@@ -9,13 +9,12 @@ export default class UserForm extends React.Component {
 
         this.state = {
             clicked: false,
-            isAdmin: false,
             username: '',
+            role: ''
         };
     }
 
     handleUsernameChange = (event) => {
-
        this.setState({        
         username: event.target.value
         })       
@@ -24,15 +23,18 @@ export default class UserForm extends React.Component {
 
     handleUserClick(key) {
         this.setState({
-            clicked: true
+            clicked: true,
+            role: key
         })
         // console.log(key);
-        if (key === 'admin') {
-            this.setState({
-                isAdmin: true
-            })
+    }
+
+    saveUser() {
+        if (this.state.username !== "" && this.state.role !== "") {
+            this.props.userServices.saveUsername(this.state.username);
+            this.props.userServices.saveUserRole(this.state.role);
         }
-        this.props.userServices.saveUserRole(key);
+        // console.log('localStorage: ', localStorage);
     }
 
     render() {
@@ -59,18 +61,10 @@ export default class UserForm extends React.Component {
                         <input  type="text" value={this.state.username} onChange={this.handleUsernameChange}/>
                     </div> 
                     <div className="form-group">
-                        <button  onClick={this.componentWillUnmount()}>SPARA</button> 
+                        <button  onClick={() => this.saveUser()}>SPARA</button> 
                     </div>
                 </form>
             </div> 
         );
-    }
-
-    componentWillUnmount() {
-        console.log('username: ', this.state.username);
-        if (this.state.username !== "" ) {
-            this.props.userServices.saveUsername(this.state.username);
-        }
-        console.log('localStorage: ', localStorage);
     }
 }

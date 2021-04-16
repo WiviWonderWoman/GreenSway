@@ -23,8 +23,4 @@ export class UserServices {
         localStorage.setItem('role', JSON.stringify(key))
         // console.log('localStorage: ',localStorage)
     }
-
-    // clearLocalStorage() {
-    //     localStorage.clear();
-    // }
 }

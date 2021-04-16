@@ -138,20 +138,26 @@ button:hover {
   font-weight: bold;
   box-shadow: 0 2px 8px 0 rgb(250, 247, 247), 0 1px 10px 0 rgb(250, 247, 247);
 }
-.clicked {
-  background-color: rgb(32, 2, 2);
-  color: gray;
-}
 .admin {
   color: darkred;
   margin: auto;
   text-align: center;
+}
+.user {
+  color:  rgb(7, 196, 7);
+  margin: auto;
+  text-align: center;
+}
+.clicked {
+  background-color: rgb(32, 2, 2);
+  color: gray;
 }
 .clicked:hover {
   background-color: rgb(32, 2, 2);
   color: gray;
   font-weight: normal;
   box-shadow: none;
+  cursor: default;
 }
 .rw01 {
   background-color: darkred; 

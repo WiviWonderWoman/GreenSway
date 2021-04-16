@@ -3,6 +3,7 @@ import "./app.css";
 import Logo from "./logo";
 import UserForm from "./user-form";
 import NavBar from "./nav-bar";
+import Content from "./content";
 
 export default class App extends React.Component {
 
@@ -27,7 +28,7 @@ export default class App extends React.Component {
             if (this.props.role !==  undefined) {
 
                 if (this.props.role === 'admin') {
-                    console.log('App role: ', this.props.role)
+                    // console.log('App role: ', this.props.role)
                     this.setState({
                         isAdmin: true
                     })
@@ -42,30 +43,27 @@ export default class App extends React.Component {
     render() {
         // console.log('Inuti App.');
         return(
+            this.state.clicked === true ?
             <>
-            {this.state.clicked === true ?
-            <header>
-                <Logo text={'GreenSway'} className={'btn2'} />
-            </header> :
+                <header>
+                    <Logo text={'GreenSway'} className={'btn2'} />
+                </header> 
+                <Content>
+                {
+                this.state.newUser === true ? 
+                    <UserForm  userServices={this.props.userServices} fractions={this.props.fractions}/> 
+                : 
+                    <NavBar username={this.props.username} role={this.props.role} fractions={this.props.fractions}/>
+                }
+                </Content>
+            </> 
+            :
+            <>
             <header>
                 <Logo text={'Klicka här!'} className={'btn'} onClick={() => this.handleClick()} username={this.props.username} role={this.props.role} userServices={this.props.userServices} fractions={this.props.fractions}/>
-            </header>}
-            {this.state.clicked === true ? 
-             <main>
-             {this.state.newUser === true ? 
-                <UserForm  userServices={this.props.userServices} fractions={this.props.fractions}/> 
-                : 
-                this.state.isAdmin === true ? 
-                <>
-                <NavBar username={this.props.username} role={this.props.role} fractions={this.props.fractions}/>
-                </> 
-                : 
-                <NavBar username={this.props.username} role={this.props.role} fractions={this.props.fractions}/>}
-             </main> 
-             : 
-             <main></main>}
+            </header>
+            <Content/>
             </>
         );
     }
 }
-

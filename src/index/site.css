@@ -38,6 +38,8 @@ div {
     justify-content: center;
 }
 .flex.container {
+    flex-shrink: 0;
+    -webkit-flex-shrink: 0;
     margin: auto;
     display: flex;
 }

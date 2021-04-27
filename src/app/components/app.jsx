@@ -4,6 +4,7 @@ import Logo from "./logo";
 import UserForm from "./user-form";
 import NavBar from "./nav-bar";
 import Content from "./content";
+import Caller from "../services/API/users/caller";
 
 export default class App extends React.Component {
 
@@ -13,13 +14,31 @@ export default class App extends React.Component {
             clicked: false,
             newUser: true,
             isAdmin: false,
-            redirected: false
+            redirected: false,
+            user: {}
         }
     }
 
+    getNewUser() {
+        Caller.get(`?email`, {})
+    .then(res => {
+        const newUser = res.data[0];
+        console.log('newUser: ',newUser);
+        this.setState({
+            user: newUser
+        })
+        console.log('state.user: ',this.state.user);
+    })
+    .catch(error => console.log(error));
+    }
+    
+    componentDidMount() {
+        this.getNewUser();
+    } 
+    
     handleClick() {
         // console.log('Klick på GreenSway');
-        if (this.props.username !==  undefined) {
+        if (this.props.username !==  '') {
             // console.log('App username: ', this.props.username)
             this.setState({
                 newUser: false
@@ -51,7 +70,7 @@ export default class App extends React.Component {
                 <Content>
                 {
                 this.state.newUser === true ? 
-                    <UserForm  userServices={this.props.userServices} fractions={this.props.fractions}/> 
+                    <UserForm user={this.state.user} userServices={this.props.userServices} fractions={this.props.fractions}/> 
                 : 
                     <NavBar username={this.props.username} role={this.props.role} fractions={this.props.fractions}/>
                 }

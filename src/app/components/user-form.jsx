@@ -1,6 +1,7 @@
 import React from "react";
 // import "./app.css";
 import UserButton from "./user-button";
+import Caller from "../services/API/users/caller";
 
 export default class UserForm extends React.Component {
     
@@ -16,10 +17,23 @@ export default class UserForm extends React.Component {
 
     handleUsernameChange = (event) => {
        this.setState({        
-        username: event.target.value
-        })       
-        // console.log('handleUsernameChange: ' + this.state.username)
+        username: event.target.value,
+        // user: { email: event.target.value}
+        }) 
+        this.setUserEmail(this.props.user.id, this.state.username);  
+        // console.log('handleUsernameChange: ' + this.props.user)
     }
+
+    setUserEmail(id, email) {
+        Caller.patch(`/${id}`, {email: email})
+        .then(res => {
+          const data = res.data;
+          console.log('PATCH: ',data);
+        })
+        .catch((error) => {
+          console.log('PATCH: ',error)
+        });
+      }
 
     handleUserClick(key) {
         this.setState({
@@ -55,7 +69,7 @@ export default class UserForm extends React.Component {
                 </div>}
                 <form>
                     <div className="form-group">
-                        <label>och ditt namn:</label>
+                        <label>och ditt användarnamn (email):</label>
                     </div>
                     <div className="form-group">
                         <input  type="text" value={this.state.username} onChange={this.handleUsernameChange}/>

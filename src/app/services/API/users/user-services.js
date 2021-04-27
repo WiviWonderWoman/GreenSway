@@ -2,6 +2,7 @@
 export class UserServices {
 
     checkLocalStorage() {
+        
         if(localStorage.getItem('username') !== null || undefined) {
 
             let username = JSON.parse(localStorage.getItem('username'));
@@ -13,7 +14,7 @@ export class UserServices {
             return null;
         }
     }
-
+    
     saveUsername(username) {
         localStorage.setItem('username', JSON.stringify(username))
         // console.log('localStorage: ',localStorage)

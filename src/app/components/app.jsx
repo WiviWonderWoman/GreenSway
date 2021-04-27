@@ -81,9 +81,9 @@ export default class App extends React.Component {
         // console.log('Klick på GreenSway');
         if (this.props.username !==  undefined) {
             // console.log('App username: ', this.props.username)
-            this.setState({
-                newUser: false
-            })
+            // this.setState({
+            //     newUser: false
+            // })
             if (this.state.role === 'admin') {
                 // console.log('App role: ', this.props.role)
                     this.setState({
@@ -112,7 +112,7 @@ export default class App extends React.Component {
         return(
             this.state.clicked === true ?
             <>
-            <Header  clicked={this.state.clicked}/>
+            <Header  clicked={this.state.clicked} />
                 <Content>
                 {
                 this.state.newUser === true ? 

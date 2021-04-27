@@ -1,5 +1,6 @@
 import React from "react";
 import Logo from "./logo";
+import Menu from "./menu";
 
 export default class Header extends React.Component {
 
@@ -13,6 +14,7 @@ export default class Header extends React.Component {
             <> {this.props.clicked === true ?
             <header>
                 <Logo text={'GreenSway'} className={'btn2'} />
+                <Menu/>
             </header> 
             :
             <header>

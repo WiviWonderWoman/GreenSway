@@ -1,5 +1,4 @@
 import React from "react";
-import "./app.css";
 
 export default class FractionButton extends React.Component {
 

@@ -1,5 +1,5 @@
 import React from "react";
-import "./app.css";
+// import "./app.css";
 import FractionButton from "./fraction-button";
 
 export default class NavBar extends React.Component {

@@ -18,9 +18,7 @@ export default class UserForm extends React.Component {
     handleUsernameChange = (event) => {
        this.setState({        
         username: event.target.value,
-        // user: { email: event.target.value}
         }) 
-        this.setUserEmail(this.props.user.id, this.state.username);  
         // console.log('handleUsernameChange: ' + this.props.user)
     }
 
@@ -45,8 +43,14 @@ export default class UserForm extends React.Component {
 
     saveUser() {
         if (this.state.username !== "" && this.state.role !== "") {
-            this.props.userServices.saveUsername(this.state.username);
-            this.props.userServices.saveUserRole(this.state.role);
+
+            this.props.userServices.saveUser(this.props.user, this.state.username, this.state.role);
+
+            this.setUserEmail(this.props.user, this.state.username);
+
+            const role = this.state.role;
+            const email = this.state.username;
+            this.props.handleUpdate(role, email);
         }
         // console.log('localStorage: ', localStorage);
     }
@@ -67,7 +71,6 @@ export default class UserForm extends React.Component {
                     <UserButton onClick={() => this.handleUserClick('user')} key={'user'} text={'Användare'} />
                     <UserButton onClick={() => this.handleUserClick('admin')} key={'admin'} text={'Admin'} /> 
                 </div>}
-                <form>
                     <div className="form-group">
                         <label>och ditt användarnamn (email):</label>
                     </div>
@@ -77,7 +80,6 @@ export default class UserForm extends React.Component {
                     <div className="form-group">
                         <button  onClick={() => this.saveUser()}>SPARA</button> 
                     </div>
-                </form>
             </div> 
         );
     }

@@ -5,24 +5,23 @@ import App from "./components/app";
 import { UserServices } from "./services/API/users/user-services";
 import { FractionDataService } from "./services/fraction-data-services";
 
-
-const userServices = new UserServices();
-
 const fractionDataService = new FractionDataService();
 fractionDataService.loadData();
 let allFractions = fractionDataService.allFractions;
 // console.log(allFractions);
+
+const userServices = new UserServices();
 const user = userServices.checkLocalStorage();
 let username;
 let role;
-let newUser;
+let id;
+
 if (user !== null || undefined) {
     username =  user.username;
     role = user.role;
-} else {
-    username = '';
-    role = 'user';
+    id = user.id;
 }
-// console.log(username, role);
+// console.log('From localStorage i App: ', id, username, role);
+
 let root = document.getElementById("root");
-ReactDOM.render(<App username={username} role={role} userServices={userServices} fractions={allFractions} />, root);
+ReactDOM.render(<App id={id} username={username} role={role} userServices={userServices} fractions={allFractions} />, root);

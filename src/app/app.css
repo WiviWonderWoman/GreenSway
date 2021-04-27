@@ -53,6 +53,11 @@ header {
   /* width: 100%; */
   max-width: 400px;
 }
+.mini-container {
+  margin: auto;
+  position:relative;
+  max-width: 200px;
+}
 .container img {
   width: 100%;
   height: auto;
@@ -80,12 +85,12 @@ header {
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   background-color: rgb(7, 196, 7);
-  font-size: 25px;
-  padding: 16px 30px;
+  font-size: 15px;
+  /* padding: 10px 30px; */
   border: none;
   border-radius: 5px;
   text-align: center;
-  width: 300px;
+  width: 100px;
   
 }
 .container .btn2:hover {
@@ -96,14 +101,14 @@ header {
   -ms-transform: translate(-50%, -50%);
   background-color: rgb(7, 196, 7);
   color: white;
-  font-size: 25px;
-  padding: 16px 30px;
+  font-size: 15px;
+  /* padding: 16px 30px; */
   border: none;
   border-radius: 5px;
   text-align: center;
   font-weight: normal;
   box-shadow: none;
-  width: 300px;
+  width: 100px;
   cursor: default;
 }
 .userForm {

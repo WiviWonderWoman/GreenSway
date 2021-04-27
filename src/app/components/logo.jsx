@@ -6,10 +6,18 @@ export default class Logo extends React.Component {
 
     render() {
         return(
-                <div className="container">
+            this.props.className === 'mini-container' ?
+            <div className={this.props.className}>
+                <div className="container"> 
                     <img src={logo} className="App-logo" alt="recycle-logo"/>
-                    <button className={this.props.className} onClick={this.props.onClick}>{this.props.text}</button>
-                </div> 
+                    {/* <button className={this.props.className} onClick={this.props.onClick}>{this.props.text}</button> */}
+                </div>
+            </div> 
+            :
+            <div className="container"> 
+                 <img src={logo} className="App-logo" alt="recycle-logo"/>
+                 <button className={this.props.className} onClick={this.props.onClick}>{this.props.text}</button>
+            </div>
         )
     }
 }

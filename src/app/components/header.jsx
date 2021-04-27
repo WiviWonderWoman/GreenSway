@@ -13,7 +13,7 @@ export default class Header extends React.Component {
         return(
             <> {this.props.clicked === true ?
             <header>
-                <Logo text={'GreenSway'} className={'btn2'} />
+                <Logo text={'GreenSway'} className={'mini-container'} />
                 <Menu/>
             </header> 
             :

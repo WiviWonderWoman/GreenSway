@@ -4,6 +4,7 @@ import NavBar from "./nav-bar";
 import Content from "./content";
 import Caller from "../domain/users/caller";
 import Header from "./header";
+import Overview from "./overview";
 
 export default class App extends React.Component {
 
@@ -80,10 +81,10 @@ export default class App extends React.Component {
     handleClick() {
         // console.log('Klick på GreenSway');
         if (this.props.username !==  undefined) {
-            // console.log('App username: ', this.props.username)
-            // this.setState({
-            //     newUser: false
-            // })
+            console.log('App username: ', this.props.username)
+            this.setState({
+                newUser: false
+            })
             if (this.state.role === 'admin') {
                 // console.log('App role: ', this.props.role)
                     this.setState({
@@ -112,13 +113,16 @@ export default class App extends React.Component {
         return(
             this.state.clicked === true ?
             <>
-            <Header  clicked={this.state.clicked} />
+            <Header clicked={this.state.clicked} />
                 <Content>
                 {
                 this.state.newUser === true ? 
                     <UserForm handleUpdate={(email) => this.handleUpdate(email)} user={this.state.userId} userServices={this.props.userServices} fractions={this.props.fractions}/> 
                 : 
+                    <>
+                    <Overview/>
                     <NavBar username={this.state.email} role={this.state.role} fractions={this.props.fractions}/>
+                    </>
                 }
                 </Content>
             </> 

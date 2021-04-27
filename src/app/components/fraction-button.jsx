@@ -1,18 +1,21 @@
 import React from "react";
+import Table from "./table";
 
 export default class FractionButton extends React.Component {
 
     constructor() {
         super();
         this.state = {
-            isClicked: false
+            isClicked: false,
+            
         };
     }
-
+     //TODO: lift up state to nav-bar
     handleClick(key) {
         // console.log('FractionButtons handleClick. Klick på ' + key );
         this.setState({
-            isClicked: !this.state.isClicked
+            isClicked: !this.state.isClicked,
+            source: key
         });
     }
 
@@ -24,9 +27,10 @@ export default class FractionButton extends React.Component {
             );
         }
         return (
-            this.props.fractions.map((element) => this.state.isClicked === true ? 
-            <li key={element.id} onClick={() => this.handleClick(element.id)}><div className={element.id}><p>Förbrukning</p><p>{element.source}</p></div></li> :  
-            <li key={element.id} onClick={() => this.handleClick(element.id)}><button className={element.id}>{element.source}</button></li>)
+            this.props.fractions.map((element) => this.state.isClicked === true ?
+            <li key={element.id} onClick={() => this.handleClick(element.source)}><div className={element.id}><p>Förbrukning</p><p>{element.source}</p></div></li>
+            :  
+            <li key={element.id} onClick={() => this.handleClick(element.source)}><button className={element.id}>{element.source}</button></li>)
         );
     }
 }

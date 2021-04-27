@@ -1,5 +1,6 @@
 import React from "react";
 import FractionButton from "./fraction-button";
+import Table from "./table";
 
 export default class NavBar extends React.Component {
 
@@ -22,15 +23,19 @@ export default class NavBar extends React.Component {
         return(
             this.state.isAdmin !== true ?
             <>
-            <div className="user">
-                    <h1>Välkommen {this.props.username}!</h1>
-                </div>
                 <nav className="flex.container">
                     <ul className="nav-list">
                         {this.props.children}
                         <FractionButton fractions={this.props.fractions}/>
                     </ul>
                 </nav>
+                <div className="user">
+                    <h1>Välkommen {this.props.username}!</h1>
+                </div>
+                {/* TODO: conditinal if clicked - pass the source to Table */}
+                <div>
+                    <Table/>
+                </div>
             </>
             :
             <>

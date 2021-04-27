@@ -1,5 +1,5 @@
-import {fractions} from "../data/fraction-data.js";
-import {Fraction} from "../models/fraction.js";
+import {fractions} from "./fraction-data.js";
+import {Fraction} from "./fraction.js";
 
 export class FractionDataService {
 

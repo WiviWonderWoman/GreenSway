@@ -3,7 +3,7 @@ import Logo from "./logo";
 import UserForm from "./user-form";
 import NavBar from "./nav-bar";
 import Content from "./content";
-import Caller from "../services/API/users/caller";
+import Caller from "../domain/users/caller";
 
 export default class App extends React.Component {
 
@@ -106,7 +106,7 @@ export default class App extends React.Component {
         })
         // console.log('App state email: ',this.state.email);
     }
-
+    
     render() {
         // console.log('Inuti App.');
         return(

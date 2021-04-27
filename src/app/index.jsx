@@ -2,8 +2,8 @@ import React from "react";
 import ReactDOM from "react-dom";
 import './app.css';
 import App from "./components/app";
-import { UserServices } from "./services/API/users/user-services";
-import { FractionDataService } from "./services/fraction-data-services";
+import { UserServices } from "./domain/users/user-services";
+import { FractionDataService } from "./domain/fractions/fraction-data-services";
 
 const fractionDataService = new FractionDataService();
 fractionDataService.loadData();

@@ -1,9 +1,9 @@
 import React from "react";
-import Logo from "./logo";
 import UserForm from "./user-form";
 import NavBar from "./nav-bar";
 import Content from "./content";
 import Caller from "../domain/users/caller";
+import Header from "./header";
 
 export default class App extends React.Component {
 
@@ -112,9 +112,7 @@ export default class App extends React.Component {
         return(
             this.state.clicked === true ?
             <>
-                <header>
-                    <Logo text={'GreenSway'} className={'btn2'} />
-                </header> 
+            <Header  clicked={this.state.clicked}/>
                 <Content>
                 {
                 this.state.newUser === true ? 
@@ -126,9 +124,7 @@ export default class App extends React.Component {
             </> 
             :
             <>
-            <header>
-                <Logo text={'Klicka här!'} className={'btn'} onClick={() => this.handleClick()} username={this.state.email} role={this.state.role} userServices={this.props.userServices} fractions={this.props.fractions}/>
-            </header>
+            <Header handleClick={() => this.handleClick()} clicked={this.state.clicked}/>
             <Content/>
             </>
         );

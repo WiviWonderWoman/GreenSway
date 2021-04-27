@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import './app.css';
-import App from "./app";
+import App from "./components/app";
 import { UserServices } from "./services/user-services";
 import { FractionDataService } from "./services/fraction-data-services";
 

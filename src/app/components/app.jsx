@@ -109,6 +109,15 @@ export default class App extends React.Component {
     }
     
     render() {
+        const chartData = {
+            organic: this.state.organic,
+            newspaper: this.state.newspaper,
+            cardboard: this.state.cardboard,
+            glas: this.state.glas,
+            plastic: this.state.plastic,
+            metal: this.state.metal,
+            residual: this.state.residual,
+        }
         // console.log('Inuti App.');
         return(
             this.state.clicked === true ?
@@ -120,7 +129,7 @@ export default class App extends React.Component {
                     <UserForm handleUpdate={(email) => this.handleUpdate(email)} user={this.state.userId} userServices={this.props.userServices} fractions={this.props.fractions}/> 
                 : 
                     <>
-                    <Overview/>
+                    <Overview data={chartData}/>
                     <NavBar username={this.state.email} role={this.state.role} fractions={this.props.fractions}/>
                     </>
                 }

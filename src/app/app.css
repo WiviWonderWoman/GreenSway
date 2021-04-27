@@ -25,6 +25,10 @@ body {
 header {
   height: 20%;
 }
+/* main {
+  width: 100%;
+  align-items: center;
+} */
 #copy {
   text-align: center;
 }
@@ -171,6 +175,13 @@ button:hover {
   font-weight: normal;
   box-shadow: none;
   cursor: default;
+}
+.pie-chart {
+  margin: auto;
+  position:relative;
+  width: 50%;
+  /* max-width: 50%; */
+  background-color: cornsilk;
 }
 .rw01 {
   background-color: darkred; 

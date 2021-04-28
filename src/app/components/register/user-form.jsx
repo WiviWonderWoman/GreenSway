@@ -1,5 +1,4 @@
 import React from "react";
-// import "./app.css";
 import UserButton from "./user-button";
 import Caller from "../../domain/users/caller";
 
@@ -26,7 +25,10 @@ export default class UserForm extends React.Component {
         Caller.patch(`/${id}`, {email: email})
         .then(res => {
           const data = res.data;
-          console.log('PATCH: ',data);
+        //   console.log('USERFORM email: ', data.email);
+          this.props.handleUpdate(data.email);
+        //   console.log('PATCH: ',data);
+          
         })
         .catch((error) => {
           console.log('PATCH: ',error)
@@ -47,10 +49,6 @@ export default class UserForm extends React.Component {
             this.props.userServices.saveUser(this.props.user, this.state.username, this.state.role);
 
             this.setUserEmail(this.props.user, this.state.username);
-
-            const role = this.state.role;
-            const email = this.state.username;
-            this.props.handleUpdate(role, email);
         }
         // console.log('localStorage: ', localStorage);
     }

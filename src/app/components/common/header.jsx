@@ -14,7 +14,8 @@ export default class Header extends React.Component {
             <> {this.props.clicked === true ?
             <header>
                 <Logo text={'GreenSway'} className={'mini-container'} />
-                <Menu username={this.props.username}/>
+                <Menu chartData={this.props.chartData} username={this.props.username} role={this.props.role} fractions={this.props.fractions}/>
+                
             </header> 
             :
             <header>

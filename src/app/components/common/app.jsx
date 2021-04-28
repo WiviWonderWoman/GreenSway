@@ -1,11 +1,8 @@
 import React from "react";
 import UserForm from "../register/user-form";
-import NavBar from "../details/nav-bar";
-import KeyId from "../key-id/key-id";
 import Caller from "../../domain/users/caller";
 import Header from "./header";
 import Footer from "./footer";
-import Overview from "../overview/overview";
 
 export default class App extends React.Component {
 
@@ -97,18 +94,18 @@ export default class App extends React.Component {
             clicked: true
         }) 
     }
-    //TODO: email updated before nav-bar
-    handleUpdate(role, email) {
-        // console.log('App received email: ',email);
+
+    handleUpdate(email) {
+        console.log('App received email: ',email);
         this.setState({
             email: email,
             clicked: false,
             newUser: false,
-            role: role
+            role: 'user'
         })
         // console.log('App state email: ',this.state.email);
     }
-    
+
     render() {
         const chartData = {
             organic: this.state.organic,
@@ -123,18 +120,18 @@ export default class App extends React.Component {
         return(
             this.state.clicked === true ?
             <>
-            <Header username={this.state.email} clicked={this.state.clicked} />
                 {
                 this.state.newUser === true ? 
+                <>
                     <UserForm handleUpdate={(email) => this.handleUpdate(email)} user={this.state.userId} userServices={this.props.userServices} fractions={this.props.fractions}/> 
+                    <Footer />
+                </>
                 : 
-                    <>
-                    <Overview data={chartData}/>
-                    <NavBar username={this.state.email} role={this.state.role} fractions={this.props.fractions}/>
-                    <KeyId/>
-                    </>
+                <>
+                    <Header chartData={chartData} username={this.state.email} role={this.state.role} fractions={this.props.fractions} clicked={this.state.clicked}/>
+                    <Footer />
+                </>
                 }
-                <Footer />
             </> 
             :
             <>

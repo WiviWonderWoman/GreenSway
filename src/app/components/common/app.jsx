@@ -9,7 +9,7 @@ export default class App extends React.Component {
     constructor() {
         super();
         this.state = {
-            clicked: false,
+            // clicked: false,
             newUser: true,
             isAdmin: false,
             redirected: false,
@@ -69,7 +69,8 @@ export default class App extends React.Component {
     
     componentDidMount() {
         if(this.props.id !== undefined) {
-            console.log('this.props.id: ', this.props.id)
+            console.log('GET URL: ',this.props.location); 
+            // console.log('this.props.id: ', this.props.id)
             this.getUser(this.props.id);
         } else {
             this.getNewUser();
@@ -99,7 +100,7 @@ export default class App extends React.Component {
         console.log('App received email: ',email);
         this.setState({
             email: email,
-            clicked: false,
+            clicked: true,
             newUser: false,
             role: 'user'
         })
@@ -116,28 +117,32 @@ export default class App extends React.Component {
             metal: this.state.metal,
             residual: this.state.residual,
         }
+        let name;
+        if(this.props.username !== undefined) {
+            name = this.props.username;
+        } else {
+            name = this.state.email;
+        }
         // console.log('Inuti App.');
         return(
-            this.state.clicked === true ?
+            this.state.newUser !== true ? 
             <>
-                {
-                this.state.newUser === true ? 
-                <>
-                    <UserForm handleUpdate={(email) => this.handleUpdate(email)} user={this.state.userId} userServices={this.props.userServices} fractions={this.props.fractions}/> 
-                    <Footer />
-                </>
-                : 
-                <>
-                    <Header chartData={chartData} username={this.state.email} role={this.state.role} fractions={this.props.fractions} clicked={this.state.clicked}/>
-                    <Footer />
-                </>
-                }
-            </> 
+                <Header id={this.state.userId} chartData={chartData} username={name} role={this.state.role} fractions={this.props.fractions} clicked={this.state.clicked}/>
+                <Footer />
+            </>
+            : this.state.clicked !== true ?
+            <>
+                <Header handleClick={() => this.handleClick()} clicked={this.state.clicked}/>
+                <Footer />
+            </>
             :
             <>
-            <Header handleClick={() => this.handleClick()} clicked={this.state.clicked}/>
-            <Footer />
+                <UserForm handleUpdate={(email) => this.handleUpdate(email)} user={this.state.userId} userServices={this.props.userServices} fractions={this.props.fractions}/> 
+                <Footer />
             </>
+                
+                
+           
         );
     }
 }

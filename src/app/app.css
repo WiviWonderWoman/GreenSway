@@ -25,10 +25,18 @@ body {
 header {
   height: 20%;
 }
-/* main {
-  width: 100%;
-  align-items: center;
-} */
+i {
+  /* border: cornsilk solid 2px; */
+  border-radius: 10%;
+  /* background-color:rgb(31, 141, 3); */
+  color: rgba(99, 255, 9, 0.959);
+  font-size: 1000%;
+  /* flex-grow: 1;
+  list-style: none; */
+}
+.intro {
+  float: right;
+}
 #copy {
   text-align: center;
 }

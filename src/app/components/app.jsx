@@ -122,7 +122,7 @@ export default class App extends React.Component {
         return(
             this.state.clicked === true ?
             <>
-            <Header clicked={this.state.clicked} />
+            <Header username={this.state.email} clicked={this.state.clicked} />
                 <Content>
                 {
                 this.state.newUser === true ? 
@@ -131,6 +131,14 @@ export default class App extends React.Component {
                     <>
                     <Overview data={chartData}/>
                     <NavBar username={this.state.email} role={this.state.role} fractions={this.props.fractions}/>
+                    <div className="container">
+                        <i className="fas fa-key" />
+                        <div className="user">
+                            <h1>Digital Nyckel</h1>
+                            <p>Kommer innom kort.</p>
+                        </div>
+                    </div>
+                    
                     </>
                 }
                 </Content>

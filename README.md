@@ -20,6 +20,8 @@ ________________________________________________________________________________
 ### [axios](https://www.npmjs.com/package/axios)
 
 ### [react-minimal-pie-chart](https://www.npmjs.com/package/react-minimal-pie-chart)
+
+### [react-router-dom](https://www.npmjs.com/package/react-router-dom)
 ________________________________________________________________________________________________________________________________________________________________________________
 ## Tjänster
 ### [retool](https://retool.com/api-generator/)

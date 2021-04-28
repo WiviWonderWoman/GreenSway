@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../images/recycle.png";
+import logo from "../../images/recycle.png";
 // import "./app.css";
 
 export default class Logo extends React.Component {

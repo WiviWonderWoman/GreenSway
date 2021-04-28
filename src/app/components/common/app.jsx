@@ -1,11 +1,11 @@
 import React from "react";
-import UserForm from "./user-form";
-import NavBar from "./nav-bar";
-import Content from "./content";
-import Caller from "../domain/users/caller";
+import UserForm from "../register/user-form";
+import NavBar from "../details/nav-bar";
+import KeyId from "../key-id/key-id";
+import Caller from "../../domain/users/caller";
 import Header from "./header";
 import Footer from "./footer";
-import Overview from "./overview";
+import Overview from "../overview/overview";
 
 export default class App extends React.Component {
 
@@ -124,7 +124,6 @@ export default class App extends React.Component {
             this.state.clicked === true ?
             <>
             <Header username={this.state.email} clicked={this.state.clicked} />
-                <Content>
                 {
                 this.state.newUser === true ? 
                     <UserForm handleUpdate={(email) => this.handleUpdate(email)} user={this.state.userId} userServices={this.props.userServices} fractions={this.props.fractions}/> 
@@ -132,23 +131,14 @@ export default class App extends React.Component {
                     <>
                     <Overview data={chartData}/>
                     <NavBar username={this.state.email} role={this.state.role} fractions={this.props.fractions}/>
-                    <div className="container">
-                        <i className="fas fa-key" />
-                        <div className="user">
-                            <h1>Digital Nyckel</h1>
-                            <p>Kommer innom kort.</p>
-                        </div>
-                    </div>
-                    
+                    <KeyId/>
                     </>
                 }
-                </Content>
                 <Footer />
             </> 
             :
             <>
             <Header handleClick={() => this.handleClick()} clicked={this.state.clicked}/>
-            <Content/>
             <Footer />
             </>
         );

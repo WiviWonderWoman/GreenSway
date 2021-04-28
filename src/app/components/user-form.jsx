@@ -35,7 +35,7 @@ export default class UserForm extends React.Component {
 
     handleUserClick(key) {
         this.setState({
-            clicked: true,
+            // clicked: true,
             role: key
         })
         // console.log(key);
@@ -63,13 +63,14 @@ export default class UserForm extends React.Component {
                 </div>
                 {this.state.clicked === true ?
                 <div className="form-group">
-                    <UserButton className="clicked" text={'Användare'} />
+                    {/* <UserButton className="clicked" text={'Användare'} /> */}
                     <UserButton className="clicked" text={'Admin'} /> 
                 </div> 
                 : 
                 <div className="form-group">
                     <UserButton onClick={() => this.handleUserClick('user')} key={'user'} text={'Användare'} />
-                    <UserButton onClick={() => this.handleUserClick('admin')} key={'admin'} text={'Admin'} /> 
+                    <UserButton className="clicked" text={'Admin'} /> 
+                    {/* <UserButton onClick={() => this.handleUserClick('admin')} key={'admin'} text={'Admin'} />  */}
                 </div>}
                     <div className="form-group">
                         <label>och ditt användarnamn (email):</label>

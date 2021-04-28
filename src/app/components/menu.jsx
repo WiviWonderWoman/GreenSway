@@ -1,14 +1,14 @@
 import React from "react";
-import NavBar from "./nav-bar";
 
 export default class Menu extends React.Component {
 
     render() {
         return(
             <nav className="flex.container">
-                <button>Registrera</button>
                 <button>Översikt</button>
                 <button>Detaljer</button>
+                <button>Nyckel</button>
+                <span className="intro">VÄLKOMMEN: {this.props.username} !</span>
             </nav>
         )
     }

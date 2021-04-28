@@ -26,9 +26,10 @@ export default class FractionButton extends React.Component {
                 <li key={element.id} ><button className={'clicked'}>{element.source}</button></li>)
             );
         }
+        // TODO: conditinal if clicked - pass the source to Table
         return (
             this.props.fractions.map((element) => this.state.isClicked === true ?
-            <li key={element.id} onClick={() => this.handleClick(element.source)}><div className={element.id}><p>Förbrukning</p><p>{element.source}</p></div></li>
+            <li key={element.id} onClick={() => this.handleClick(element.source)}><div className={element.id}><p>Förbrukning</p><p>{element.source}</p><Table/></div></li>
             :  
             <li key={element.id} onClick={() => this.handleClick(element.source)}><button className={element.id}>{element.source}</button></li>)
         );

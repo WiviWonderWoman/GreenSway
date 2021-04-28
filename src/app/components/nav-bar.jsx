@@ -32,10 +32,10 @@ export default class NavBar extends React.Component {
                 <div className="user">
                     <h1>Välkommen {this.props.username}!</h1>
                 </div>
-                {/* TODO: conditinal if clicked - pass the source to Table */}
+                {/* 
                 <div>
                     <Table/>
-                </div>
+                </div> */}
             </>
             :
             <>

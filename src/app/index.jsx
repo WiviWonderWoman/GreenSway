@@ -13,15 +13,15 @@ let allFractions = fractionDataService.allFractions;
 const userServices = new UserServices();
 const user = userServices.checkLocalStorage();
 let username;
-let role;
+// let role;
 let id;
 
 if (user !== null || undefined) {
     username =  user.username;
-    role = user.role;
+    // role = user.role;
     id = user.id;
 }
 // console.log('From localStorage i App: ', id, username, role);
 
 let root = document.getElementById("root");
-ReactDOM.render(<App id={id} username={username} role={role} userServices={userServices} fractions={allFractions} />, root);
+ReactDOM.render(<App id={id} username={username} role={'user'} userServices={userServices} fractions={allFractions} />, root);

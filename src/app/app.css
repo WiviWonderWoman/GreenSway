@@ -36,6 +36,7 @@ i {
 }
 .intro {
   float: right;
+  color:  rgb(7, 196, 7);
 }
 #copy {
   text-align: center;

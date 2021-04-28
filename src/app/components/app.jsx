@@ -4,6 +4,7 @@ import NavBar from "./nav-bar";
 import Content from "./content";
 import Caller from "../domain/users/caller";
 import Header from "./header";
+import Footer from "./footer";
 import Overview from "./overview";
 
 export default class App extends React.Component {
@@ -85,12 +86,12 @@ export default class App extends React.Component {
             this.setState({
                 newUser: false
             })
-            if (this.state.role === 'admin') {
-                // console.log('App role: ', this.props.role)
-                    this.setState({
-                    isAdmin: true
-                })
-            }
+            // if (this.state.role === 'admin') {
+            //     // console.log('App role: ', this.props.role)
+            //         this.setState({
+            //         isAdmin: true
+            //     })
+            // }
         }
         this.setState({
             clicked: true
@@ -142,11 +143,13 @@ export default class App extends React.Component {
                     </>
                 }
                 </Content>
+                <Footer />
             </> 
             :
             <>
             <Header handleClick={() => this.handleClick()} clicked={this.state.clicked}/>
             <Content/>
+            <Footer />
             </>
         );
     }

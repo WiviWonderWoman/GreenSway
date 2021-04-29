@@ -43,7 +43,8 @@ export default class Menu extends React.Component {
                             <Overview chartData={this.props.chartData}/>
                         </Route>
                         <Route path={`/details/${this.props.id}`}>
-                            <Details username={this.props.username} role={this.props.role} fractions={this.props.fractions}/>
+                            <Details username={this.props.username} role={this.props.role} />
+                            {/* fractions={this.props.fractions} */}
                         </Route>
                         <Route path={`/key-id/${this.props.id}`}>
                             <KeyId/>

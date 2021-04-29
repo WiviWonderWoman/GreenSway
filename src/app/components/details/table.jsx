@@ -1,5 +1,5 @@
 import React from "react";
-import Caller from "../../utils/caller";
+import Caller from "../services/caller";
 
 export default class Table extends React.Component {
 

@@ -36,7 +36,7 @@ export default class Menu extends React.Component {
                 </nav>
                 <main>
                     <Switch>
-                        <Route exact path={`/home/${id}`} component={Home}>
+                        <Route exact path={`/home/${id}`}>
                             <Home/>
                         </Route>
                         <Route exact path={`/overview/${id}`}>

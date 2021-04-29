@@ -9,7 +9,7 @@ export default class App extends React.Component {
     constructor() {
         super();
         this.state = {
-            // clicked: false,
+            clicked: false,
             newUser: true,
             redirected: false,
             userId: 0,
@@ -70,19 +70,19 @@ export default class App extends React.Component {
         if(this.props.id !== undefined) {
             // console.log('this.props.id: ', this.props.id)
             this.getUser(this.props.id);
+            this.setState({
+                newUser: false
+            })
         } else {
             this.getNewUser();
+            this.setState({
+                newUser: true
+            })
         }
     } 
     
     handleClick() {
         // console.log('Klick på GreenSway');
-        if (this.props.username !==  undefined) {
-            console.log('App username: ', this.props.username)
-            this.setState({
-                newUser: false
-            })
-        }
         this.setState({
             clicked: true
         }) 
@@ -92,7 +92,7 @@ export default class App extends React.Component {
         console.log('App received email: ',email);
         this.setState({
             email: email,
-            clicked: true,
+            // clicked: true,
             newUser: false,
         })
         // console.log('App state email: ',this.state.email);
@@ -115,22 +115,42 @@ export default class App extends React.Component {
             name = this.state.email;
         }
         // console.log('Inuti App.');
-        return(
-            this.state.newUser !== true ? 
+        if(this.state.newUser === true && this.state.clicked === false) {
+            return(
             <>
-                <Header id={this.state.userId} chartData={chartData} username={name} clicked={this.state.clicked}/>
+                <Header handleClick={() => this.handleClick()} id={this.state.userId} chartData={chartData} username={name} clicked={this.state.clicked}/>
                 <Footer />
             </>
-            : this.state.clicked !== true ?
-            <>
-                <Header handleClick={() => this.handleClick()} clicked={this.state.clicked}/>
-                <Footer />
-            </>
-            :
-            <>
-                <UserForm handleUpdate={(email) => this.handleUpdate(email)} user={this.state.userId} userServices={this.props.userServices} /> 
-                <Footer />
-            </>
-        );
+            )
+        }
+        else if (this.state.newUser === true && this.state.clicked === true) {
+            return(
+                <>
+                    <UserForm handleUpdate={(email) => this.handleUpdate(email)} user={this.state.userId} userServices={this.props.userServices} /> 
+                    <Footer />
+                </>
+            )
+        }
+        else if (this.state.newUser !== true) {
+            return(
+                <>
+                    <Header  id={this.state.userId} chartData={chartData} username={name} newUser={this.state.newUser}/>
+                    <Footer />
+                </>
+            )
+        }
+        // return(
+        //     // this.state.clicked !== true ?
+        //     this.state.newUser !== true ? 
+            
+        //     :
+            
+        //     // :
+        //     // <>
+        //     //     <Header id={this.state.userId} chartData={chartData} username={name} clicked={this.state.clicked}/>
+        //     //     <Footer />
+        //     // </>
+            
+        // );
     }
 }

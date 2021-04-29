@@ -3,7 +3,6 @@ import ReactDOM from "react-dom";
 import './app.css';
 import App from "./components/common/app";
 import { UserServices } from "./utils/user-services";
-import { HashRouter } from "react-router-dom";
 
 const userServices = new UserServices();
 const user = userServices.checkLocalStorage();

@@ -19,8 +19,7 @@ export default class Home extends React.Component {
             this.setState({
                 email: user.email
             })
-            // console.log('OLD state.user: ',this.state.userId);
-            })
+        })
         .catch(error => console.log(error));
     }
 
@@ -28,7 +27,7 @@ export default class Home extends React.Component {
         const param = window.location.hash;
         const splitted = param.split("/");
         console.log(splitted);
-        this.getUser(splitted[2])
+        this.getUser(splitted[2]);
     }
 
     render() {
@@ -37,6 +36,6 @@ export default class Home extends React.Component {
                 <h1>Innehåll under utveckling.</h1>
                 <p>Tack för ditt tålamod {this.state.email}</p>
             </div>
-        )
+        );
     }
 }

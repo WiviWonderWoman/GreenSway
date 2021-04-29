@@ -10,33 +10,24 @@ export default class NavBar extends React.Component {
         this.state= {
             fraction: {},
             isClicked: false
-            // ,
-            // isAdmin: false
         }
     }
-    // TODO: conditinal if clicked - pass the source to Table
     handleClick(source) {
-        console.log('NavBars handleClick. SOURCE ' + source);
-
+        // console.log('NavBars handleClick. SOURCE ' + source);
         const fractionDataService = new FractionDataService();
         const fraction = fractionDataService.getFractionBySource(source)
-
-        console.log('NavBArs handleClick. FRACTION ' + fraction);
+        // console.log('NavBars handleClick. FRACTION ' + fraction);
         this.setState({
             isClicked: true,
             fraction: fraction
-            // source: source
         });
     }
 
+    //TODO: get chart data ???
     componentDidMount() {
 
-        // if (this.props.role === 'admin') {
-        //     this.setState({
-        //         isAdmin: true
-        //     })
-        // }
     }
+
     render () {
         return(
             this.state.isClicked !== true ?
@@ -45,7 +36,6 @@ export default class NavBar extends React.Component {
                     <ul className="nav-list">
                         {this.props.children}
                         <FractionButton onClick={(source) => this.handleClick(source)}/>
-                        {/* fractions={this.props.fractions} */}
                     </ul>
                 </nav>
             </>
@@ -55,29 +45,12 @@ export default class NavBar extends React.Component {
                     <ul className="nav-list">
                         {this.props.children}
                         <FractionButton onClick={(source) => this.handleClick(source)}/>
-                        {/* fractions={this.props.fractions} */}
                     </ul>
                 </nav>
-                {/* <div className="user">
-                    <h1>Välkommen {this.props.username}!</h1>
-                </div> */}
-                
                 <div>
                     <Table fraction={this.state.fraction}/>
                 </div> 
             </>
-            // :
-            // <>
-            //     <div className="admin">
-            //         <h1>Välkommen {this.props.username}!</h1>
-            //     </div>
-            //     <nav className="flex.container">
-            //         <ul className="nav-list">
-            //             {this.props.children}
-            //             <FractionButton className="clicked" fractions={this.props.fractions}/>
-            //         </ul>
-            //     </nav>
-            // </>
         );
     }
 }

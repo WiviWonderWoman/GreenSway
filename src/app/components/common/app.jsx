@@ -1,6 +1,6 @@
 import React from "react";
-import UserForm from "../register/user-form";
-import Caller from "../../domain/users/caller";
+import UserForm from "./register/user-form";
+import Caller from "../../utils/caller";
 import Header from "./header";
 import Footer from "./footer";
 
@@ -68,7 +68,6 @@ export default class App extends React.Component {
     
     componentDidMount() {
         if(this.props.id !== undefined) {
-            console.log('GET URL: ',this.props.location); 
             // console.log('this.props.id: ', this.props.id)
             this.getUser(this.props.id);
         } else {
@@ -132,9 +131,6 @@ export default class App extends React.Component {
                 <UserForm handleUpdate={(email) => this.handleUpdate(email)} user={this.state.userId} userServices={this.props.userServices} /> 
                 <Footer />
             </>
-                
-                
-           
         );
     }
 }

@@ -36,8 +36,9 @@ Med användare (hushåll) främst för att få slumpade värden för "förbrukni
 Anropas från 
 #### app.jsx 
 * för att hämta användaren, ```GET(/id)``` 
-* eller ny användare (första med tom email, jag ser till att det finns ett antal att testa på), ```GET(?email)```#### PS: Ni får gärna "städa upp" ✔️ era registrerade emails efterhand, tex via Postman (```PATCH(/id, {email: ""})```), tack! 🤗 D.S 
-* sparar förbruknings-data och skicka neråt till PieChart (för att möjliggöra animering)
+* eller ny användare (första med tom email, jag ser till att det finns ett antal att testa på), ```GET(?email)```
+#### PS: Ni får gärna "städa upp" ✔️ era registrerade emails efterhand, tex via Postman (```PATCH(/id, {email: ""})```), tack! 🤗 D.S 
+* sparar även förbruknings-data och skicka neråt till PieChart (för att möjliggöra animering)
 #### user-form.jsx
 * för att uppdatera email på den nya användaren, ```PATCH(/id, {email: email})``` 
 #### table.jsx

@@ -1,6 +1,6 @@
 import React from "react";
 import UserForm from "./register/user-form";
-import Caller from "../services/caller";
+import Caller from "../../services/caller";
 import Header from "./header";
 import Footer from "./footer";
 
@@ -108,13 +108,14 @@ export default class App extends React.Component {
             metal: this.state.metal,
             residual: this.state.residual,
         }
+        
         let name;
         if(this.props.username !== undefined) {
             name = this.props.username;
         } else {
             name = this.state.email;
         }
-        // console.log('Inuti App.');
+
         if(this.state.newUser === true && this.state.clicked === false) {
             return(
             <>
@@ -139,18 +140,5 @@ export default class App extends React.Component {
                 </>
             )
         }
-        // return(
-        //     // this.state.clicked !== true ?
-        //     this.state.newUser !== true ? 
-            
-        //     :
-            
-        //     // :
-        //     // <>
-        //     //     <Header id={this.state.userId} chartData={chartData} username={name} clicked={this.state.clicked}/>
-        //     //     <Footer />
-        //     // </>
-            
-        // );
     }
 }

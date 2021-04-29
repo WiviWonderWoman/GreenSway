@@ -1,37 +1,49 @@
 import React from "react";
-import Table from "./table";
+
+import { FractionDataService } from "./fractions/fraction-data-services";
 
 export default class FractionButton extends React.Component {
 
+    
     constructor() {
         super();
         this.state = {
-            isClicked: false,
-            
+            // isClicked: false,
+            // allFractions: []
         };
     }
-     //TODO: lift up state to nav-bar
-    handleClick(key) {
-        // console.log('FractionButtons handleClick. Klick på ' + key );
-        this.setState({
-            isClicked: !this.state.isClicked,
-            source: key
-        });
+    componentDidMount() {
+        
+
+    }
+    handleClick(source) {
+        // console.log('FractionButtons handleClick. Klick på ' + source );
+        
+        // this.setState({
+        //     isClicked: !this.state.isClicked,
+        // });
+        
+        this.props.onClick(source)
     }
 
     render() {
+        
+        // console.log(allFractions);
         // if (this.props.className === 'clicked') {
         //     return (
         //         this.props.fractions.map((element) =>   
         //         <li key={element.id} ><button className={'clicked'}>{element.source}</button></li>)
         //     );
         // }
-        // TODO: conditinal if clicked - pass the source to Table
+        const fractionDataService = new FractionDataService();
+        fractionDataService.loadData();
+        const allFractions = fractionDataService.allFractions;
         return (
-            this.props.fractions.map((element) => this.state.isClicked === true ?
-            <li key={element.id} onClick={() => this.handleClick(element.source)}><div className={element.id}><p>Förbrukning</p><p>{element.source}</p><Table/></div></li>
-            :  
-            <li key={element.id} onClick={() => this.handleClick(element.source)}><button className={element.id}>{element.source}</button></li>)
+            // this.state.isClicked !== true ?
+            //  <Table/> : <></>
+            allFractions.map((element) => 
+            // <li key={element.id} onClick={() => this.handleClick(element.source)}><div className={element.id}><p>Förbrukning</p><p>{element.name}</p><Table/></div></li>
+            <li key={element.id} onClick={() => this.handleClick(element.source)}><button className={element.id}>{element.name}</button></li>)
         );
     }
 }

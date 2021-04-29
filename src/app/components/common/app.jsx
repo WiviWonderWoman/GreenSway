@@ -127,7 +127,8 @@ export default class App extends React.Component {
         return(
             this.state.newUser !== true ? 
             <>
-                <Header id={this.state.userId} chartData={chartData} username={name} role={this.state.role} fractions={this.props.fractions} clicked={this.state.clicked}/>
+                <Header id={this.state.userId} chartData={chartData} username={name} role={this.state.role}  clicked={this.state.clicked}/>
+                {/* fractions={this.props.fractions} */}
                 <Footer />
             </>
             : this.state.clicked !== true ?
@@ -137,7 +138,8 @@ export default class App extends React.Component {
             </>
             :
             <>
-                <UserForm handleUpdate={(email) => this.handleUpdate(email)} user={this.state.userId} userServices={this.props.userServices} fractions={this.props.fractions}/> 
+                <UserForm handleUpdate={(email) => this.handleUpdate(email)} user={this.state.userId} userServices={this.props.userServices} /> 
+                {/* fractions={this.props.fractions} */}
                 <Footer />
             </>
                 

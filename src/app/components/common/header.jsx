@@ -14,12 +14,14 @@ export default class Header extends React.Component {
             <> {this.props.clicked === true ?
             <header>
                 <Logo text={'GreenSway'} className={'mini-container'} />
-                <Menu id={this.props.id} chartData={this.props.chartData} username={this.props.username} role={this.props.role} fractions={this.props.fractions}/>
+                <Menu id={this.props.id} chartData={this.props.chartData} username={this.props.username} role={this.props.role} />
+                {/* fractions={this.props.fractions} */}
                 
             </header> 
             :
             <header>
-                <Logo text={'Klicka här!'} className={'btn'} onClick={this.props.handleClick} username={this.props.username} role={this.props.role} userServices={this.props.userServices} fractions={this.props.fractions}/>
+                <Logo text={'Klicka här!'} className={'btn'} onClick={this.props.handleClick} username={this.props.username} role={this.props.role} userServices={this.props.userServices} />
+                {/* fractions={this.props.fractions} */}
             </header>}
             </>
         )

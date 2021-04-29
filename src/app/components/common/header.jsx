@@ -11,7 +11,7 @@ export default class Header extends React.Component {
 
     render() {
         return(
-            <> {this.props.clicked === true ?
+            <> {this.props.clicked === true || this.props.newUser === false ?
             <header>
                 <Logo text={'GreenSway'} className={'mini-container'} />
                 <Menu id={this.props.id} chartData={this.props.chartData} username={this.props.username} />    

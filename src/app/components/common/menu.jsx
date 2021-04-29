@@ -36,16 +36,16 @@ export default class Menu extends React.Component {
                 </nav>
                 <main>
                     <Switch>
-                        <Route path={`/home/${id}`}>
+                        <Route exact path={`/home/${id}`} component={Home}>
                             <Home/>
                         </Route>
-                        <Route path={`/overview/${id}`}>
+                        <Route exact path={`/overview/${id}`}>
                             <Overview chartData={this.props.chartData}/>
                         </Route>
-                        <Route path={`/details/${id}`}>
+                        <Route exact path={`/details/${id}`}>
                             <Details username={this.props.username} />
                         </Route>
-                        <Route path={`/key-id/${id}`}>
+                        <Route exact path={`/key-id/${id}`}>
                             <KeyId/>
                         </Route>
                     </Switch>

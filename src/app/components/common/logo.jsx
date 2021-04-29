@@ -9,7 +9,6 @@ export default class Logo extends React.Component {
             <div className={this.props.className}>
                 <div className="container"> 
                     <img src={logo} className="App-logo" alt="recycle-logo"/>
-                    {/* <button className={this.props.className} onClick={this.props.onClick}>{this.props.text}</button> */}
                 </div>
             </div> 
             :

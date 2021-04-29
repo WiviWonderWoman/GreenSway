@@ -6,11 +6,9 @@ export default class UserForm extends React.Component {
     
     constructor(props) {
         super(props);
-
         this.state = {
             clicked: false,
             username: '',
-            role: ''
         };
     }
 
@@ -28,20 +26,11 @@ export default class UserForm extends React.Component {
         //   console.log('USERFORM email: ', data.email);
           this.props.handleUpdate(data.email);
         //   console.log('PATCH: ',data);
-          
         })
         .catch((error) => {
           console.log('PATCH: ',error)
         });
       }
-
-    handleUserClick(key) {
-        this.setState({
-            // clicked: true,
-            role: key
-        })
-        // console.log(key);
-    }
 
     saveUser() {
         if (this.state.username !== "" && this.state.role !== "") {
@@ -57,19 +46,12 @@ export default class UserForm extends React.Component {
         return( 
             <div className="userForm ">
                 <div className="form-group">
-                    <label>Vänligen ange din roll:</label>
+                    <label>Vänligen ange din roll<br/> För tillfället är det endast möjligt att registrera hushåll.</label>
                 </div>
-                {this.state.clicked === true ?
                 <div className="form-group">
-                    {/* <UserButton className="clicked" text={'Användare'} /> */}
+                    <UserButton className="btn2" key={'user'} text={'Hushåll'} />
                     <UserButton className="clicked" text={'Admin'} /> 
-                </div> 
-                : 
-                <div className="form-group">
-                    <UserButton onClick={() => this.handleUserClick('user')} key={'user'} text={'Användare'} />
-                    <UserButton className="clicked" text={'Admin'} /> 
-                    {/* <UserButton onClick={() => this.handleUserClick('admin')} key={'admin'} text={'Admin'} />  */}
-                </div>}
+                </div>
                     <div className="form-group">
                         <label>och ditt användarnamn (email):</label>
                     </div>

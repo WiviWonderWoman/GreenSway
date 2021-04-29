@@ -22,7 +22,6 @@ export default class Overview extends React.Component {
                     background='lightgray' 
                     startAngle={270} 
                     radius={25} 
-                    // viewBoxSize= {[100,50]}
                     center= {[55,50]} 
                     lineWidth={30} 
                     lengthAngle={360}

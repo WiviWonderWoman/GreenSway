@@ -11,7 +11,6 @@ export default class App extends React.Component {
         this.state = {
             // clicked: false,
             newUser: true,
-            isAdmin: false,
             redirected: false,
             userId: 0,
             organic: 0,
@@ -84,12 +83,6 @@ export default class App extends React.Component {
             this.setState({
                 newUser: false
             })
-            // if (this.state.role === 'admin') {
-            //     // console.log('App role: ', this.props.role)
-            //         this.setState({
-            //         isAdmin: true
-            //     })
-            // }
         }
         this.setState({
             clicked: true
@@ -102,7 +95,6 @@ export default class App extends React.Component {
             email: email,
             clicked: true,
             newUser: false,
-            role: 'user'
         })
         // console.log('App state email: ',this.state.email);
     }
@@ -127,8 +119,7 @@ export default class App extends React.Component {
         return(
             this.state.newUser !== true ? 
             <>
-                <Header id={this.state.userId} chartData={chartData} username={name} role={this.state.role}  clicked={this.state.clicked}/>
-                {/* fractions={this.props.fractions} */}
+                <Header id={this.state.userId} chartData={chartData} username={name} clicked={this.state.clicked}/>
                 <Footer />
             </>
             : this.state.clicked !== true ?
@@ -139,7 +130,6 @@ export default class App extends React.Component {
             :
             <>
                 <UserForm handleUpdate={(email) => this.handleUpdate(email)} user={this.state.userId} userServices={this.props.userServices} /> 
-                {/* fractions={this.props.fractions} */}
                 <Footer />
             </>
                 

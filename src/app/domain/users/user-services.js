@@ -7,9 +7,8 @@ export class UserServices {
 
             let id = JSON.parse(localStorage.getItem('id'));
             let username = JSON.parse(localStorage.getItem('username'));
-            let role = JSON.parse(localStorage.getItem('role'));
             
-            let user = { id: id, username: username, role: role}
+            let user = { id: id, username: username}
             return user;
         }
         else {
@@ -17,10 +16,9 @@ export class UserServices {
         }
     }
     
-    saveUser(id, username, key) {
+    saveUser(id, username) {
         localStorage.setItem('id', JSON.stringify(id))
         localStorage.setItem('username', JSON.stringify(username))
-        localStorage.setItem('role', JSON.stringify(key))
         // console.log('localStorage: ',localStorage)
     }
 }

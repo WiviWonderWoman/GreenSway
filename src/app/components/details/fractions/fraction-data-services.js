@@ -17,7 +17,7 @@ export class FractionDataService {
     getFractionBySource(source) {
         this.loadData();
         const fraction = this.allFractions.find((f) => f.source === source);
-        console.log('Found FRACTION: ', fraction)
+        // console.log('Found FRACTION: ', fraction)
         return fraction;
     }
 }

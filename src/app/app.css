@@ -78,7 +78,9 @@ button {
     font-weight: bold;
     box-shadow: 0 2px 8px 0 rgb(250, 247, 247), 0 1px 10px 0 rgb(250, 247, 247);
   }
-
+table {
+  width: 100%;
+}
 .intro {
   float: right;
   color:  rgb(7, 196, 7);

@@ -6,11 +6,11 @@ export default class Header extends React.Component {
 
     constructor(props) {
         super(props);
-        this.state = {}
     }
 
     render() {
         return(
+            // returning user : new user
             <> {this.props.clicked === true || this.props.newUser === false ?
             <header>
                 <Logo text={'GreenSway'} className={'mini-container'} />

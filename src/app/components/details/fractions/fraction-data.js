@@ -1,3 +1,5 @@
+
+//Mock-data for fractios (represents one garbagehouse)
 export let fractions = [
     {
         id: 'ow01',

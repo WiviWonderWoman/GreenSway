@@ -8,7 +8,7 @@ export class UserServices {
             let id = JSON.parse(localStorage.getItem('id'));
             let username = JSON.parse(localStorage.getItem('username'));
             
-            let user = { id: id, username: username}
+            let user = { id: id, username: username};
             return user;
         }
         else {
@@ -17,8 +17,7 @@ export class UserServices {
     }
     
     saveUser(id, username) {
-        localStorage.setItem('id', JSON.stringify(id))
-        localStorage.setItem('username', JSON.stringify(username))
-        // console.log('localStorage: ',localStorage)
+        localStorage.setItem('id', JSON.stringify(id));
+        localStorage.setItem('username', JSON.stringify(username));
     }
 }

@@ -12,20 +12,14 @@ export default class NavBar extends React.Component {
             isClicked: false
         }
     }
+
     handleClick(source) {
-        // console.log('NavBars handleClick. SOURCE ' + source);
         const fractionDataService = new FractionDataService();
-        const fraction = fractionDataService.getFractionBySource(source)
-        // console.log('NavBars handleClick. FRACTION ' + fraction);
+        const fraction = fractionDataService.getFractionBySource(source);
         this.setState({
             isClicked: true,
             fraction: fraction
         });
-    }
-
-    //TODO: get chart data ???
-    componentDidMount() {
-
     }
 
     render () {
@@ -34,7 +28,6 @@ export default class NavBar extends React.Component {
             <>
                 <nav className="flex.container">
                     <ul className="nav-list">
-                        {this.props.children}
                         <FractionButton onClick={(source) => this.handleClick(source)}/>
                     </ul>
                 </nav>
@@ -43,7 +36,6 @@ export default class NavBar extends React.Component {
             <>
                 <nav className="flex.container">
                     <ul className="nav-list">
-                        {this.props.children}
                         <FractionButton onClick={(source) => this.handleClick(source)}/>
                     </ul>
                 </nav>

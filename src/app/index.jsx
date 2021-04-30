@@ -1,8 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import './app.css';
+import "./app.css";
 import App from "./components/common/app";
-import { UserServices } from "./utils/user-services";
+import { UserServices } from "./services/user-services";
 
 const userServices = new UserServices();
 const user = userServices.checkLocalStorage();

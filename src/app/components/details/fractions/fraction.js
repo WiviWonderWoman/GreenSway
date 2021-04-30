@@ -1,4 +1,4 @@
-
+//model class for fractions
 export class Fraction {
 
     constructor(id, source, name, price) {

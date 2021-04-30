@@ -13,7 +13,9 @@ import Overview from "../overview/overview";
 export default class Menu extends React.Component {
 
     render() {
+        //variable for readability
         const id = this.props.id;
+
         return(
             <Router>
                 <nav className="flex.container">
@@ -51,6 +53,6 @@ export default class Menu extends React.Component {
                     </Switch>
                 </main>
             </Router>
-        )
+        );
     }
 }

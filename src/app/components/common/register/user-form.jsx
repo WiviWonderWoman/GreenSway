@@ -15,17 +15,14 @@ export default class UserForm extends React.Component {
     handleUsernameChange = (event) => {
        this.setState({        
         username: event.target.value,
-        }) 
-        // console.log('handleUsernameChange: ' + this.props.user)
+        }); // console.log('handleUsernameChange: ' + this.props.user)
     }
 
     setUserEmail(id, email) {
         Caller.patch(`/${id}`, {email: email})
         .then(res => {
-          const data = res.data;
-        //   console.log('USERFORM email: ', data.email);
+          const data = res.data; //console.log('PATCH: ',data);
           this.props.handleUpdate(data.email);
-        //   console.log('PATCH: ',data);
         })
         .catch((error) => {
           console.log('PATCH: ',error)
@@ -34,12 +31,11 @@ export default class UserForm extends React.Component {
 
     saveUser() {
         if (this.state.username !== "" && this.state.role !== "") {
-
+            //save to localStorage
             this.props.userServices.saveUser(this.props.user, this.state.username, this.state.role);
-
+            //save (PATCH) to API
             this.setUserEmail(this.props.user, this.state.username);
         }
-        // console.log('localStorage: ', localStorage);
     }
 
     render() {

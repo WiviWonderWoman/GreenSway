@@ -43,8 +43,6 @@ Anropas från
 * för att uppdatera email på den nya användaren, ```PATCH(/id, {email: email})``` 
 #### table.jsx
 * för att hämta användarens data för fraktioner, ```GET(/id)``` och visa aktuella kostnader
-#### home
-* för att kontrollera att id parametern i URL:en stämmer med hämtad användare, ```GET(/id)```
 #### Exempel:
 ```
 {

@@ -16,15 +16,15 @@ export default class Table extends React.Component {
         }
     }
     componentDidMount() {
-        
+        //check the URL
         const param = window.location.hash;
+        //split string at /
         const splitted = param.split("/");
-        // console.log(splitted);
-        this.getUser(splitted[2])
+        //get user with id-param
+        this.getUser(splitted[2]);
     }
 
     getUser(id) {
-        console.log('id: ', id)
         Caller.get(`/${id}`, {})
         .then(res => {
             const user = res.data;
@@ -43,7 +43,7 @@ export default class Table extends React.Component {
     }
 
     render() {
-        // console.log('Table source: ', this.props.fraction)
+        //variables for readability
         const name = this.props.fraction.name;
         const amount = this.state[this.props.fraction.source];
         const price = this.props.fraction.price;

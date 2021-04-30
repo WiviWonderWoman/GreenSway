@@ -3,7 +3,7 @@ import { PieChart } from 'react-minimal-pie-chart';
 
 export default class Overview extends React.Component {
     render() {
-        console.log('Overview data: ',this.props.chartData.organic);
+        //data for PieChart
         let household =  [ 
             {title: 'Organiskt', value: this.props.chartData.organic * 2, color: ' #4CAF50'},
             {title: 'Tidningar', value: this.props.chartData.newspaper * 2, color: ' rgb(122, 108, 78)'},
@@ -36,6 +36,6 @@ export default class Overview extends React.Component {
                     labelPosition={112}   
                 />
             </div>
-        )
+        );
     }
 }

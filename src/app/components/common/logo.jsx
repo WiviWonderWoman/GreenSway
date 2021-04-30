@@ -5,6 +5,7 @@ export default class Logo extends React.Component {
 
     render() {
         return(
+             // returning user : new user
             this.props.className === 'mini-container' ?
             <div className={this.props.className}>
                 <div className="container"> 
@@ -16,6 +17,6 @@ export default class Logo extends React.Component {
                  <img src={logo} className="App-logo" alt="recycle-logo"/>
                  <button className={this.props.className} onClick={this.props.onClick}>{this.props.text}</button>
             </div>
-        )
+        );
     }
 }

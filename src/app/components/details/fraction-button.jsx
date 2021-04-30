@@ -8,7 +8,7 @@ export default class FractionButton extends React.Component {
     }
 
     handleClick(source) {
-        this.props.onClick(source)
+        this.props.onClick(source);
     }
 
     render() {

@@ -28,7 +28,7 @@ export default class Table extends React.Component {
         Caller.get(`/${id}`, {})
         .then(res => {
             const user = res.data;
-            console.log('USER: ',user);
+            // console.log('USER: ',user);
             this.setState({
                 organic: user.organic,
                 newspaper: user.newspaper,
@@ -48,26 +48,31 @@ export default class Table extends React.Component {
         const amount = this.state[this.props.fraction.source];
         const price = this.props.fraction.price;
         const total = amount * price;
+        const className = this.props.fraction.id;
 
         return(
-            <div> 
-            <h1>{name}</h1>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Antal</th>
-                            <th>Pris</th>
-                            <th>Totalt</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                       <tr>
-                           <td>{amount}</td>
-                           <td>{price}</td>
-                           <td>{total}</td>
-                       </tr>
-                   </tbody>
-               </table>
+            <div className="flex.container">
+                <div className="nav-list">
+                    <div className={className}> 
+                        <h2>{name}</h2>
+                            <table >
+                                <thead>
+                                    <tr>
+                                        <th>Antal</th>
+                                        <th>Pris</th>
+                                        <th>Totalt</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>{amount}</td>
+                                    <td>{price}</td>
+                                    <td>{total}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
             </div>
         );
     }

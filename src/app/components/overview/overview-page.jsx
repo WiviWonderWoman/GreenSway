@@ -1,7 +1,7 @@
 import React from "react";
 import { PieChart } from 'react-minimal-pie-chart';
 
-export default class Overview extends React.Component {
+export default class OverviewPage extends React.Component {
     render() {
         //data for PieChart
         let household =  [ 

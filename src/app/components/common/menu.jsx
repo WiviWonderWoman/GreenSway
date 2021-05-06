@@ -5,10 +5,10 @@ import {
     Route,
     Link
   } from "react-router-dom";
-import Details from "../details/details";
-import Home from "../home/home";
-import KeyId from "../key-id/key-id";
-import Overview from "../overview/overview";
+import DetailsPage from "../details/details-page";
+import HomePage from "../home/home-page";
+import KeyIdPage from "../key-id/key-id-page";
+import OverviewPage from "../overview/overview-page";
 
 export default class Menu extends React.Component {
 
@@ -39,16 +39,16 @@ export default class Menu extends React.Component {
                 <main>
                     <Switch>
                         <Route exact path={`/`}>
-                            <Home/>
+                            <HomePage/>
                         </Route>
                         <Route exact path={`/overview/${id}`}>
-                            <Overview chartData={this.props.chartData}/>
+                            <OverviewPage chartData={this.props.chartData}/>
                         </Route>
                         <Route exact path={`/details/${id}`}>
-                            <Details username={this.props.username} />
+                            <DetailsPage username={this.props.username} />
                         </Route>
                         <Route exact path={`/key-id/${id}`}>
-                            <KeyId/>
+                            <KeyIdPage/>
                         </Route>
                     </Switch>
                 </main>

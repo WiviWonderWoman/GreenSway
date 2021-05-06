@@ -1,6 +1,6 @@
 import React from "react";
 
-export default class KeyId extends React.Component {
+export default class KeyIdPage extends React.Component {
     render() {
         return( 
             <>

@@ -7,7 +7,7 @@ export default class UserForm extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            clicked: false,
+            // clicked: false,
             username: '',
         };
     }

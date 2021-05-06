@@ -1,6 +1,8 @@
 import React from "react";
 import UserButton from "./user-button";
 import Caller from "../../../services/caller";
+import PropTypes from "prop-types";
+import UserServices from "../../../services/user-services";
 
 export default class UserForm extends React.Component {
     
@@ -60,4 +62,11 @@ export default class UserForm extends React.Component {
             </div> 
         );
     }
+}
+UserForm.propTypes = {
+    handleUpdate: PropTypes.func,
+    userServices: PropTypes.instanceOf(UserServices),
+    user: PropTypes.number,
+
+
 }

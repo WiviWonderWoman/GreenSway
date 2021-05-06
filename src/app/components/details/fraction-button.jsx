@@ -1,5 +1,6 @@
 import React from "react";
 import { FractionDataService } from "./fractions/fraction-data-services";
+import PropTypes from "prop-types";
 
 export default class FractionButton extends React.Component {
 
@@ -29,4 +30,7 @@ export default class FractionButton extends React.Component {
             <li key={element.id} onClick={() => this.handleClick(element.source)}><button className={element.id}>{element.name}</button></li>)
         );
     }
+}
+FractionButton.propTypes = {
+    onClick: PropTypes.func
 }

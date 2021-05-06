@@ -7,7 +7,7 @@ export default class KeyIdPage extends React.Component {
                 <div className="container">
                 <div className="user">
                         <h1>Digital Nyckel & Id</h1>
-                        <p>Funktionallitet (endast till mobil-app) kommer innom kort.</p>
+                        <p>Funktionallitet (endast till mobil-app) kommer inom kort.</p>
                     </div>
                     <i className="fas fa-key" />
                 </div>

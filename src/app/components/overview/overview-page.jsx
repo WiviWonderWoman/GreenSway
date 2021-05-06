@@ -1,5 +1,6 @@
 import React from "react";
 import { PieChart } from 'react-minimal-pie-chart';
+import PropTypes from "prop-types";
 
 export default class OverviewPage extends React.Component {
     render() {
@@ -38,4 +39,16 @@ export default class OverviewPage extends React.Component {
             </div>
         );
     }
+}
+
+OverviewPage.propTypes = {
+    chartData: PropTypes.exact({
+        organic: PropTypes.number,
+        newspaper:  PropTypes.number,
+        cardboard:  PropTypes.number,
+        glas:  PropTypes.number,
+        plastic:  PropTypes.number,
+        metal:  PropTypes.number,
+        residual:  PropTypes.number
+    })
 }

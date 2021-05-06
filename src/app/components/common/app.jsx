@@ -3,6 +3,8 @@ import UserForm from "./register/user-form";
 import Caller from "../../services/caller";
 import Header from "./header";
 import Footer from "./footer";
+import PropTypes from "prop-types";
+import {UserServices} from "../../services/user-services";
 
 export default class App extends React.Component {
 
@@ -134,3 +136,9 @@ export default class App extends React.Component {
         }
     }
 }
+App.propTypes = {
+    id: PropTypes.number,
+    username: PropTypes.string,
+    userServices: PropTypes.instanceOf(UserServices)
+}
+

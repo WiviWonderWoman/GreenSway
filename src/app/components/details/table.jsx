@@ -1,5 +1,6 @@
 import React from "react";
 import Caller from "../../services/caller";
+import PropTypes from "prop-types";
 
 export default class Table extends React.Component {
 
@@ -76,4 +77,15 @@ export default class Table extends React.Component {
             </div>
         );
     }
+}
+Table.propTypes = {
+    fraction: PropTypes.exact({
+        name: PropTypes.string,
+        source: PropTypes.string,
+        price: PropTypes.number,
+        id: PropTypes.string,
+        hatchOpen: PropTypes.bool,
+        isFull: PropTypes.bool
+    })
+    
 }

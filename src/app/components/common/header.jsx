@@ -1,6 +1,8 @@
 import React from "react";
 import Logo from "./logo";
 import Menu from "./menu";
+import PropTypes from "prop-types";
+import { UserServices } from "../../services/user-services";
 
 export default class Header extends React.Component {
 
@@ -23,4 +25,23 @@ export default class Header extends React.Component {
             </>
         )
     }
+}
+
+Header.propTypes = {
+    clicked: PropTypes.bool,
+    newUser: PropTypes.bool,
+    id: PropTypes.number,
+    chartData: PropTypes.exact({
+        organic: PropTypes.number,
+        newspaper:  PropTypes.number,
+        cardboard:  PropTypes.number,
+        glas:  PropTypes.number,
+        plastic:  PropTypes.number,
+        metal:  PropTypes.number,
+        residual:  PropTypes.number
+    }),
+    username: PropTypes.string,
+    handleClick: PropTypes.func,
+    userServices: PropTypes.instanceOf(UserServices)
+
 }

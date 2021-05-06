@@ -1,5 +1,6 @@
 import React from "react";
 import logo from "./images/recycle.png";
+import PropTypes from "prop-types";
 
 export default class Logo extends React.Component {
 
@@ -19,4 +20,10 @@ export default class Logo extends React.Component {
             </div>
         );
     }
+}
+
+Logo.propTypes = {
+    className: PropTypes.string,
+    onClick: PropTypes.func,
+    text: PropTypes.string
 }

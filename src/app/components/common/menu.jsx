@@ -9,6 +9,7 @@ import DetailsPage from "../details/details-page";
 import HomePage from "../home/home-page";
 import KeyIdPage from "../key-id/key-id-page";
 import OverviewPage from "../overview/overview-page";
+import PropTypes from "prop-types";
 
 export default class Menu extends React.Component {
 
@@ -55,4 +56,17 @@ export default class Menu extends React.Component {
             </Router>
         );
     }
+}
+Menu.propTypes = {
+    id: PropTypes.number,
+    username: PropTypes.string,
+    chartData: PropTypes.exact({
+        organic: PropTypes.number,
+        newspaper:  PropTypes.number,
+        cardboard:  PropTypes.number,
+        glas:  PropTypes.number,
+        plastic:  PropTypes.number,
+        metal:  PropTypes.number,
+        residual:  PropTypes.number
+    })
 }

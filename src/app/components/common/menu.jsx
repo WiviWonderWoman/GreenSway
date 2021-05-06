@@ -22,7 +22,7 @@ export default class Menu extends React.Component {
                     <span className="intro">VÄLKOMMEN: {this.props.username} !</span><br/>
                     <ul className="nav-list">
                     <li>
-                        <Link to={`/home/${id}`}><button>Hem</button></Link>
+                        <Link to={`/`}><button>Hem</button></Link>
                     </li>
                     <li>
                         <Link to={`/overview/${id}`}><button>Min översikt</button></Link>
@@ -38,7 +38,7 @@ export default class Menu extends React.Component {
                 </nav>
                 <main>
                     <Switch>
-                        <Route exact path={`/home/${id}`}>
+                        <Route exact path={`/`}>
                             <Home/>
                         </Route>
                         <Route exact path={`/overview/${id}`}>

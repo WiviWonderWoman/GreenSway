@@ -4,6 +4,6 @@ import NavBar from "./nav-bar";
 export default class DetailsPage extends React.Component {
 
     render() {
-        return(<NavBar />);
+        return (<NavBar chartData={this.props.chartData} />);
     }
 }

@@ -4,7 +4,7 @@ import Caller from "../../services/caller";
 import Header from "./header";
 import Footer from "./footer";
 import PropTypes from "prop-types";
-import {UserServices} from "../../services/user-services";
+import { UserServices } from "../../services/user-services";
 
 export default class App extends React.Component {
 
@@ -18,51 +18,51 @@ export default class App extends React.Component {
 
     getUser(id) {
         Caller.get(`/${id}`, {})
-        .then(res => {
-            const user = res.data;
-            this.setState({
-                userId: user.id,
-                organic: user.organic,
-                newspaper: user.newspaper,
-                cardboard: user.cardboard,
-                glas: user.glas,
-                plastic: user.plastic,
-                metal: user.metal,
-                residual: user.residual,
-                email: user.email
-            }); // console.log('OLD state.user: ',this.state.userId);
+            .then(res => {
+                const user = res.data;
+                this.setState({
+                    userId: user.id,
+                    organic: user.organic,
+                    newspaper: user.newspaper,
+                    cardboard: user.cardboard,
+                    glas: user.glas,
+                    plastic: user.plastic,
+                    metal: user.metal,
+                    residual: user.residual,
+                    email: user.email
+                }); // console.log('OLD state.user: ',this.state.userId);
             })
-        .catch(error => console.log(error));
+            .catch(error => console.log(error));
     }
 
     getNewUser() {
         Caller.get(`?email`, {})
-        .then(res => {
-            const newUser = res.data[0];
-            console.log('newUser: ',newUser);
-            this.setState({
-                userId: newUser.id,
-                organic: newUser.organic,
-                newspaper: newUser.newspaper,
-                cardboard: newUser.cardboard,
-                glas: newUser.glas,
-                plastic: newUser.plastic,
-                metal: newUser.metal,
-                residual: newUser.residual
-            }); // console.log('NEW state.user: ',this.state.userId);
-        })
-        .catch(error => console.log(error));
+            .then(res => {
+                const newUser = res.data[0];
+                console.log('newUser: ', newUser);
+                this.setState({
+                    userId: newUser.id,
+                    organic: newUser.organic,
+                    newspaper: newUser.newspaper,
+                    cardboard: newUser.cardboard,
+                    glas: newUser.glas,
+                    plastic: newUser.plastic,
+                    metal: newUser.metal,
+                    residual: newUser.residual
+                }); // console.log('NEW state.user: ',this.state.userId);
+            })
+            .catch(error => console.log(error));
     }
-    
+
     componentDidMount() {
-        if(this.props.id !== undefined) {
+        if (this.props.id !== undefined) {
 
             this.getUser(this.props.id);
 
             this.setState({
                 newUser: false
             });
-        } 
+        }
         else {
             this.getNewUser();
 
@@ -70,17 +70,17 @@ export default class App extends React.Component {
                 newUser: true
             });
         }
-    } 
-    
+    }
+
     //handleClick on the logo, only shows for new users
     handleClick() {
         this.setState({
             clicked: true
-        }); 
+        });
     }
 
     handleUpdate(email) {
-        console.log('App received email: ',email);
+        console.log('App received email: ', email);
         this.setState({
             email: email,
             newUser: false,
@@ -102,34 +102,34 @@ export default class App extends React.Component {
         //variable for readability
         //doublecheck the username/email
         let name;
-        if(this.props.username !== undefined) {
+        if (this.props.username !== undefined) {
             name = this.props.username;
         } else {
             name = this.state.email;
         }
 
         // Logo shows if new user and button not clicked
-        if(this.state.newUser === true && this.state.clicked === false) {
-            return(
-            <>
-                <Header handleClick={() => this.handleClick()} id={this.state.userId} chartData={chartData} username={name} clicked={this.state.clicked}/>
-                <Footer />
-            </>
+        if (this.state.newUser === true && this.state.clicked === false) {
+            return (
+                <>
+                    <Header handleClick={() => this.handleClick()} id={this.state.userId} chartData={chartData} username={name} clicked={this.state.clicked} />
+                    <Footer />
+                </>
             );
         }
         // UserForm shows if new user and button is clicked
         else if (this.state.newUser === true && this.state.clicked === true) {
-            return(
+            return (
                 <>
-                    <UserForm handleUpdate={(email) => this.handleUpdate(email)} user={this.state.userId} userServices={this.props.userServices} /> 
+                    <UserForm handleUpdate={(email) => this.handleUpdate(email)} user={this.state.userId} userServices={this.props.userServices} />
                     <Footer />
                 </>
             );
         }
         else if (this.state.newUser !== true) {
-            return(
+            return (
                 <>
-                    <Header  id={this.state.userId} chartData={chartData} username={name} newUser={this.state.newUser}/>
+                    <Header id={this.state.userId} chartData={chartData} username={name} newUser={this.state.newUser} />
                     <Footer />
                 </>
             );
@@ -139,6 +139,6 @@ export default class App extends React.Component {
 App.propTypes = {
     id: PropTypes.number,
     username: PropTypes.string,
-    userServices: PropTypes.instanceOf(UserServices)
+    userServices: PropTypes.object
 }
 

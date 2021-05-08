@@ -7,7 +7,7 @@ export default class NavBar extends React.Component {
 
     constructor(props) {
         super(props);
-        this.state= {
+        this.state = {
             fraction: {},
             isClicked: false
         }
@@ -22,27 +22,27 @@ export default class NavBar extends React.Component {
         });
     }
 
-    render () {
-        return(
+    render() {
+        return (
             this.state.isClicked !== true ?
-            <>
-                <nav className="flex.container">
-                    <ul className="nav-list">
-                        <FractionButton onClick={(source) => this.handleClick(source)}/>
-                    </ul>
-                </nav>
-            </>
+                <>
+                    <nav className="flex.container">
+                        <ul className="nav-list">
+                            <FractionButton onClick={(source) => this.handleClick(source)} />
+                        </ul>
+                    </nav>
+                </>
                 :
-            <>
-                <nav className="flex.container">
-                    <ul className="nav-list">
-                        <FractionButton onClick={(source) => this.handleClick(source)}/>
-                    </ul>
-                </nav>
-                <div>
-                    <Table fraction={this.state.fraction}/>
-                </div> 
-            </>
+                <>
+                    <nav className="flex.container">
+                        <ul className="nav-list">
+                            <FractionButton onClick={(source) => this.handleClick(source)} />
+                        </ul>
+                    </nav>
+                    <div>
+                        <Table chartData={this.props.chartData} fraction={this.state.fraction} />
+                    </div>
+                </>
         );
     }
 }

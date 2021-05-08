@@ -1,10 +1,8 @@
 import React from "react";
 import UserForm from "./register/user-form";
-import Caller from "../../services/caller";
 import Header from "./header";
 import Footer from "./footer";
 import PropTypes from "prop-types";
-import { UserServices } from "../../services/user-services";
 
 export default class App extends React.Component {
 
@@ -17,41 +15,30 @@ export default class App extends React.Component {
     }
 
     getUser(id) {
-        Caller.get(`/${id}`, {})
-            .then(res => {
-                const user = res.data;
-                this.setState({
-                    userId: user.id,
-                    organic: user.organic,
-                    newspaper: user.newspaper,
-                    cardboard: user.cardboard,
-                    glas: user.glas,
-                    plastic: user.plastic,
-                    metal: user.metal,
-                    residual: user.residual,
-                    email: user.email
-                }); // console.log('OLD state.user: ',this.state.userId);
-            })
-            .catch(error => console.log(error));
+        this.props.userServices.getUserById(id, (user) => this.setState({
+            userId: user.id,
+            organic: user.organic,
+            newspaper: user.newspaper,
+            cardboard: user.cardboard,
+            glas: user.glas,
+            plastic: user.plastic,
+            metal: user.metal,
+            residual: user.residual,
+            email: user.email
+        }));
     }
 
     getNewUser() {
-        Caller.get(`?email`, {})
-            .then(res => {
-                const newUser = res.data[0];
-                console.log('newUser: ', newUser);
-                this.setState({
-                    userId: newUser.id,
-                    organic: newUser.organic,
-                    newspaper: newUser.newspaper,
-                    cardboard: newUser.cardboard,
-                    glas: newUser.glas,
-                    plastic: newUser.plastic,
-                    metal: newUser.metal,
-                    residual: newUser.residual
-                }); // console.log('NEW state.user: ',this.state.userId);
-            })
-            .catch(error => console.log(error));
+        this.props.userServices.getNewUser((newUser) => this.setState({
+            userId: newUser.id,
+            organic: newUser.organic,
+            newspaper: newUser.newspaper,
+            cardboard: newUser.cardboard,
+            glas: newUser.glas,
+            plastic: newUser.plastic,
+            metal: newUser.metal,
+            residual: newUser.residual
+        }));
     }
 
     componentDidMount() {
@@ -121,7 +108,7 @@ export default class App extends React.Component {
         else if (this.state.newUser === true && this.state.clicked === true) {
             return (
                 <>
-                    <UserForm handleUpdate={(email) => this.handleUpdate(email)} user={this.state.userId} userServices={this.props.userServices} />
+                    <UserForm handleUpdate={(email) => this.handleUpdate(email)} userId={this.state.userId} userServices={this.props.userServices} />
                     <Footer />
                 </>
             );

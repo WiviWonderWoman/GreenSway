@@ -1,15 +1,13 @@
 import React from "react";
 import UserButton from "./user-button";
-import Caller from "../../../services/caller";
-import PropTypes, { object } from "prop-types";
-import UserServices from "../../../services/user-services";
+import PropTypes from "prop-types";
 
 export default class UserForm extends React.Component {
 
     constructor(props) {
         super(props);
         this.state = {
-            // clicked: false,
+            // isClicked: false,
             username: '',
         };
     }
@@ -20,24 +18,17 @@ export default class UserForm extends React.Component {
         }); // console.log('handleUsernameChange: ' + this.props.user)
     }
 
-    setUserEmail(id, email) {
-        Caller.patch(`/${id}`, { email: email })
-            .then(res => {
-                const data = res.data; //console.log('PATCH: ',data);
-                this.props.handleUpdate(data.email);
-            })
-            .catch((error) => {
-                console.log('PATCH: ', error)
-            });
-    }
-
     saveUser() {
         if (this.state.username !== "" && this.state.role !== "") {
             //save to localStorage
-            this.props.userServices.saveUser(this.props.user, this.state.username, this.state.role);
+            this.props.userServices.saveUser(this.props.userId, this.state.username, this.state.role);
             //save (PATCH) to API
-            this.setUserEmail(this.props.user, this.state.username);
+            console.log(this.props.userId, this.state.username);
+            this.props.userServices.setUserEmail(this.props.userId, this.state.username, (email) => this.props.handleUpdate(email));
         }
+        // this.setState({
+        //     isClicked: true
+        // });
     }
 
     render() {
@@ -45,7 +36,7 @@ export default class UserForm extends React.Component {
             <div className="userForm ">
 
                 <div className="form-group">
-                    <label>och ditt användarnamn (email):</label>
+                    <label>Ange ditt användarnamn (email):</label>
                 </div>
                 <div className="form-group">
                     <input type="text" value={this.state.username} onChange={this.handleUsernameChange} />
@@ -58,7 +49,7 @@ export default class UserForm extends React.Component {
                     {/* <UserButton className="clicked" text={'Admin'} />  */}
                 </div>
                 <div className="form-group">
-                    <label>Registrera ny användare:<br /></label>
+                    <label>eller registrera ny användare här:<br /></label>
                 </div>
                 <div className="form-group">
                     <button onClick={() => this.saveUser()}>SPARA</button>
@@ -69,8 +60,6 @@ export default class UserForm extends React.Component {
 }
 UserForm.propTypes = {
     handleUpdate: PropTypes.func,
-    userServices: object,
-    user: PropTypes.number,
-
-
+    userServices: PropTypes.object,
+    userId: PropTypes.number,
 }

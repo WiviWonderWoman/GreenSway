@@ -57,7 +57,7 @@ i {
   font-size: 1000%;
 }
 button {
-  width: 200px;
+  width: 175px;
   border: solid 1px black;
   border-radius: 10px;
   box-shadow: none;
@@ -79,8 +79,9 @@ button {
     box-shadow: 0 2px 8px 0 rgb(250, 247, 247), 0 1px 10px 0 rgb(250, 247, 247);
   }
 table {
-  width: 100%;
+  width: 500px;
 }
+
 .intro {
   float: right;
   color:  rgb(7, 196, 7);
@@ -153,11 +154,20 @@ table {
     cursor: default;
   }
 
-.pie-chart {
+.overview {
   margin: auto;
+  display: flex;
+  width: 100%;
+}
+.pie-chart {
+  margin: 10px;
   position:relative;
   width: 50%;
   background-color: cornsilk;
+  display: flex;
+  color: black;
+  /* text-align: center;
+  justify-content: center; */
 }
 /* residual waste button */
 .rw01 {
@@ -172,7 +182,25 @@ table {
   margin: 10px;
   cursor: pointer;
 }
+.el {
+  background-color: darkred; 
+  border: solid 1px black;
+  border-radius: 10px;
+  box-shadow: none;
+  padding: 15px ;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 10px;
+  cursor: pointer;
+}
   .rw01:hover {
+    background-color:rgb(245, 47, 40);
+    color: black;
+    text-align: center;
+    box-shadow: 0 2px 8px 0 rgb(250, 247, 247), 0 1px 10px 0 rgb(250, 247, 247);
+  }
+  .el:hover {
     background-color:rgb(245, 47, 40);
     color: black;
     text-align: center;
@@ -210,7 +238,25 @@ table {
   margin: 10px;
   cursor: pointer;
 }
+.wat {
+  background-color: navy;
+  border: solid 1px black;
+  border-radius: 10px;
+  box-shadow: none;
+  padding: 15px ;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 10px;
+  cursor: pointer;
+}
   .cp01:hover {
+    background-color: rgb(51, 104, 250);
+    color: black;
+    text-align: center;
+    box-shadow: 0 2px 8px 0 rgb(250, 247, 247), 0 1px 10px 0 rgb(250, 247, 247);
+  }
+  .wat:hover {
     background-color: rgb(51, 104, 250);
     color: black;
     text-align: center;

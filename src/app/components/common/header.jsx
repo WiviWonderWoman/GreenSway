@@ -11,17 +11,17 @@ export default class Header extends React.Component {
     }
 
     render() {
-        return(
+        return (
             // returning user : new user
             <> {this.props.clicked === true || this.props.newUser === false ?
-            <header>
-                <Logo text={'GreenSway'} className={'mini-container'} />
-                <Menu id={this.props.id} chartData={this.props.chartData} username={this.props.username} />    
-            </header> 
-            :
-            <header>
-                <Logo text={'Klicka här!'} className={'btn'} onClick={this.props.handleClick} username={this.props.username} userServices={this.props.userServices} />
-            </header>}
+                <header>
+                    <Logo text={'GreenSway'} className={'mini-container'} />
+                    <Menu id={this.props.id} chartData={this.props.chartData} username={this.props.username} />
+                </header>
+                :
+                <header>
+                    <Logo text={'Klicka här!'} className={'btn'} onClick={this.props.handleClick} username={this.props.username} userServices={this.props.userServices} />
+                </header>}
             </>
         )
     }
@@ -33,12 +33,14 @@ Header.propTypes = {
     id: PropTypes.number,
     chartData: PropTypes.exact({
         organic: PropTypes.number,
-        newspaper:  PropTypes.number,
-        cardboard:  PropTypes.number,
-        glas:  PropTypes.number,
-        plastic:  PropTypes.number,
-        metal:  PropTypes.number,
-        residual:  PropTypes.number
+        newspaper: PropTypes.number,
+        cardboard: PropTypes.number,
+        glas: PropTypes.number,
+        plastic: PropTypes.number,
+        metal: PropTypes.number,
+        residual: PropTypes.number,
+        electricity: PropTypes.number,
+        water: PropTypes.number
     }),
     username: PropTypes.string,
     handleClick: PropTypes.func,

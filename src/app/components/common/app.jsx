@@ -24,7 +24,9 @@ export default class App extends React.Component {
             plastic: user.plastic,
             metal: user.metal,
             residual: user.residual,
-            email: user.email
+            email: user.email,
+            electricity: user.electricity,
+            water: user.water
         }));
     }
 
@@ -37,7 +39,9 @@ export default class App extends React.Component {
             glas: newUser.glas,
             plastic: newUser.plastic,
             metal: newUser.metal,
-            residual: newUser.residual
+            residual: newUser.residual,
+            electricity: user.electricity,
+            water: user.water
         }));
     }
 
@@ -85,6 +89,8 @@ export default class App extends React.Component {
             plastic: this.state.plastic,
             metal: this.state.metal,
             residual: this.state.residual,
+            electricity: this.state.electricity,
+            water: this.state.water
         };
         //variable for readability
         //doublecheck the username/email

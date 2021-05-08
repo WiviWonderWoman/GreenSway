@@ -67,6 +67,8 @@ Menu.propTypes = {
         glas: PropTypes.number,
         plastic: PropTypes.number,
         metal: PropTypes.number,
-        residual: PropTypes.number
+        residual: PropTypes.number,
+        electricity: PropTypes.number,
+        water: PropTypes.number
     })
 }

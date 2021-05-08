@@ -9,16 +9,24 @@ export default class NavBar extends React.Component {
         super(props);
         this.state = {
             fraction: {},
-            isClicked: false
+            isClicked: false,
+            consumtion: ''
         }
     }
 
-    handleClick(source) {
+    handleFractionClick(source) {
         const fractionDataService = new FractionDataService();
         const fraction = fractionDataService.getFractionBySource(source);
         this.setState({
             isClicked: true,
             fraction: fraction
+        });
+    }
+
+    handleConsumptionClick(key) {
+        this.setState({
+            isClicked: true,
+            consumtion: key
         });
     }
 
@@ -28,7 +36,7 @@ export default class NavBar extends React.Component {
                 <>
                     <nav className="flex.container">
                         <ul className="nav-list">
-                            <FractionButton onClick={(source) => this.handleClick(source)} />
+                            <FractionButton onClick={(source) => this.handleFractionClick(source)} />
                         </ul>
                     </nav>
                 </>
@@ -36,11 +44,11 @@ export default class NavBar extends React.Component {
                 <>
                     <nav className="flex.container">
                         <ul className="nav-list">
-                            <FractionButton onClick={(source) => this.handleClick(source)} />
+                            <FractionButton chartData={this.props.chartData} onClick={(source) => this.handleFractionClick(source)} />
                         </ul>
                     </nav>
                     <div>
-                        <Table chartData={this.props.chartData} fraction={this.state.fraction} />
+                        <Table chartData={this.props.chartData} fraction={this.state.fraction} consumtion={this.state.consumtion} />
                     </div>
                 </>
         );

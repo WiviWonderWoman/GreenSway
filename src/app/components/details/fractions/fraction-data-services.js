@@ -1,5 +1,5 @@
-import {fractions} from "./fraction-data.js";
-import {Fraction} from "./fraction.js";
+import { fractions } from "./fraction-data.js";
+import { Fraction } from "./fraction.js";
 
 export class FractionDataService {
 
@@ -9,7 +9,7 @@ export class FractionDataService {
 
     loadData() {
         for (const f of fractions) {
-            let fraction = new Fraction(f.id, f.source, f.name, f.price)
+            let fraction = new Fraction(f.id, f.source, f.name, f.price, f.max, f.unit)
             this.allFractions.push(fraction);
         }
     }

@@ -18,33 +18,33 @@ export default class Table extends React.Component {
         const className = this.props.fraction.id;
 
         return (
-            <div className="flex.container">
-                <div className="nav-list">
-                    <div className={className}>
-                        <h2>{name}</h2>
-                        <table >
-                            <thead>
-                                <tr>
-                                    <th>Förbrukat</th>
-                                    <th>av</th>
-                                    <th>max.</th>
-                                    <th>pris/st.</th>
-                                    <th>Totalt</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>{amount} {unit}</td>
-                                    <td>/</td>
-                                    <td>{max} {unit}</td>
-                                    <td>{price} :-</td>
-                                    <td>{total}</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
+            // <div className="flex.container">
+            // <div className="nav-list">
+            <div className={className}>
+                <h2>{name}</h2>
+                <table >
+                    <thead>
+                        <tr>
+                            <th>Förbrukat</th>
+                            <th>av</th>
+                            <th>max.</th>
+                            <th>pris/st.</th>
+                            <th>Totalt</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>{amount} {unit}</td>
+                            <td>/</td>
+                            <td>{max} {unit}</td>
+                            <td>{price} :-</td>
+                            <td>{total}</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
+            // </div>
+            // </div>
         );
     }
 }

@@ -47,6 +47,8 @@ body {
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  width: 80%;
+  margin:auto;
 }
 header {
   height: 20%;
@@ -57,32 +59,40 @@ i {
   font-size: 1000%;
 }
 button {
-  width: 175px;
+  width: auto;
+
+  /* width: 175px; */
   border: solid 1px black;
   border-radius: 10px;
   box-shadow: none;
   background-color: #282c34;
   color: white;
-  padding: 15px ;
+  padding: 10px ;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 16px;
-  margin: 10px;
+  /* font-size: 16px; */
+  /* margin: 10px; */
   cursor: pointer;
 }
   button:hover {
     background-color: rgb(7, 196, 7);
     color: black;
     text-align: center;
-    font-weight: bold;
+    /* font-weight: bold; */
     box-shadow: 0 2px 8px 0 rgb(250, 247, 247), 0 1px 10px 0 rgb(250, 247, 247);
   }
-table {
-  width: 500px;
+
+main {
+  width: 100%;
 }
 
+#root {
+  width: 80%;
+  margin: auto;
+}
 .intro {
+  margin-left: 20%;
   float: right;
   color:  rgb(7, 196, 7);
 }
@@ -96,19 +106,22 @@ table {
     color:rgb(51, 255, 0);
   }
 
+/* .dropdown {
+  align-content: center;
+} */
 .flex.container {
   margin: auto;
   display: flex;
 }
   .nav-list{
-    width: 100%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: left;
   }
     .nav-list li {
-      flex-grow: 1;
+      /* flex-grow: 1; */
       list-style: none;
+      margin: 10px;
     }
 
 .mini-container {
@@ -140,6 +153,7 @@ table {
   color:  rgb(7, 196, 7);
   margin: auto;
   text-align: center;
+  width: 100%;
 }
 
 .clicked {
@@ -158,6 +172,7 @@ table {
   margin: auto;
   display: flex;
   width: 100%;
+  height: 500px;
 }
 .pie-chart {
   margin: 10px;
@@ -169,30 +184,42 @@ table {
   /* text-align: center;
   justify-content: center; */
 }
+.spacer {
+  height: 500px;
+  padding-left: 200px;
+  width: 60%;
+  justify-content: center;
+}
+table {
+  width: 100%;
+  font-size: calc(10px + 2vmin);
+}
 /* residual waste button */
 .rw01 {
   background-color: darkred; 
   border: solid 1px black;
   border-radius: 10px;
   box-shadow: none;
-  padding: 15px ;
+  /* padding: 15px ; */
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  margin: 10px;
+  /* margin: 10px; */
   cursor: pointer;
+  width:100%;
 }
 .el {
   background-color: darkred; 
   border: solid 1px black;
   border-radius: 10px;
   box-shadow: none;
-  padding: 15px ;
+  /* padding: 15px ; */
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  margin: 10px;
+  /* margin: 10px; */
   cursor: pointer;
+  width:100%;
 }
   .rw01:hover {
     background-color:rgb(245, 47, 40);
@@ -212,12 +239,16 @@ table {
   border: solid 1px black;
   border-radius: 10px;
   box-shadow: none;
-  padding: 15px ;
+  /* padding: 15px ; */
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  margin: 10px;
+  /* margin: 10px; */
   cursor: pointer;
+  width:100%;
+}
+.ow01 div {
+  width: 50%;
 }
   .ow01:hover {
     background-color: rgba(99, 255, 9, 0.959);
@@ -231,24 +262,26 @@ table {
   border: solid 1px black;
   border-radius: 10px;
   box-shadow: none;
-  padding: 15px ;
+  /* padding: 15px ; */
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  margin: 10px;
+  /* margin: 10px; */
   cursor: pointer;
+  width:100%;
 }
 .wat {
   background-color: navy;
   border: solid 1px black;
   border-radius: 10px;
   box-shadow: none;
-  padding: 15px ;
+  /* padding: 15px ; */
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  margin: 10px;
+  /* margin: 10px; */
   cursor: pointer;
+  width:100%;
 }
   .cp01:hover {
     background-color: rgb(51, 104, 250);
@@ -268,12 +301,13 @@ table {
   border: solid 1px black;
   border-radius: 10px;
   box-shadow: none;
-  padding: 15px ;
+  /* padding: 15px ; */
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  margin: 10px;
+  /* margin: 10px; */
   cursor: pointer;
+  width:100%;
 }
   .pp01:hover {
     background-color: orange;
@@ -287,12 +321,13 @@ table {
   border: solid 1px black;
   border-radius: 10px;
   box-shadow: none;
-  padding: 15px ;
+  /* padding: 15px ; */
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  margin: 10px;
+  /* margin: 10px; */
   cursor: pointer;
+  width:100%;
 }
   .mp01:hover {
     background-color: gray;
@@ -307,12 +342,13 @@ table {
   border: solid 1px black;
   border-radius: 10px;
   box-shadow: none;
-  padding: 15px ;
+  /* padding: 15px ; */
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  margin: 10px;
+  /* margin: 10px; */
   cursor: pointer;
+  width:100%;
 }
   .gp01:hover {
     background-color:whitesmoke;
@@ -327,12 +363,13 @@ table {
   border: solid 1px black;
   border-radius: 10px;
   box-shadow: none;
-  padding: 15px ;
+  /* padding: 15px ; */
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  margin: 10px;
+  /* margin: 10px; */
   cursor: pointer;
+  width:100%;
 }
   .n01:hover {
     background-color: rgb(122, 108, 78);

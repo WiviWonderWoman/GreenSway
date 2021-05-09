@@ -20,8 +20,10 @@ export default class Menu extends React.Component {
         return (
             <Router>
                 <nav className="flex.container">
-                    <span className="intro">VÄLKOMMEN: {this.props.username} !</span><br />
+
                     <ul className="nav-list">
+
+
                         <li>
                             <Link to={`/`}><button>Hem</button></Link>
                         </li>
@@ -34,6 +36,10 @@ export default class Menu extends React.Component {
                         <li>
                             <Link to={`/key-id/${id}`}><button>Nyckel & Id</button></Link>
                         </li>
+                        <span className="intro">
+                            VÄLKOMMEN: {this.props.username} !
+                         </span>
+
                     </ul>
 
                 </nav>

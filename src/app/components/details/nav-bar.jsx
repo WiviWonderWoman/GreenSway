@@ -37,39 +37,34 @@ export default class NavBar extends React.Component {
                     <nav className="flex.container">
                         <div className="nav-list">
                             <div className="dropdown">
-                                <h5>Välj önskad fraktion i menyn nedanför:</h5>
+                                <h5 className="user">Välj önskad fraktion i menyn nedanför:</h5>
                                 <button className="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                                     Fraktioner
                                 </button>
-
                                 <ul className="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton1">
                                     <FractionButton className="dropdown-item" onClick={(source) => this.handleFractionClick(source)} />
                                 </ul>
-
                             </div>
                             <div className="spacer"></div>
                         </div>
                     </nav>
-
                 </>
                 :
                 <>
                     <nav className="flex.container">
                         <div className="nav-list">
                             <div className="dropdown">
-                                <h5>Välj önskad fraktion i menyn nedanför:</h5>
+                                <h5 className="user">Välj önskad fraktion i menyn nedanför:</h5>
                                 <button className="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                                     Fraktioner
                                 </button>
-
                                 <ul className="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton1">
                                     <FractionButton className="dropdown-item" chartData={this.props.chartData} onClick={(source) => this.handleFractionClick(source)} />
                                 </ul>
-
                             </div>
                         </div>
                     </nav>
-                    <div className="spacer">
+                    <div className="table-spacer">
                         <Table chartData={this.props.chartData} fraction={this.state.fraction} consumtion={this.state.consumtion} />
                     </div>
                 </>

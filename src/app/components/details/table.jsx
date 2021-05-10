@@ -18,33 +18,28 @@ export default class Table extends React.Component {
         const className = this.props.fraction.id;
 
         return (
-            // <div className="flex.container">
-            // <div className="nav-list">
-            <div className={className}>
-                <h2>{name}</h2>
-                <table >
-                    <thead>
-                        <tr>
-                            <th>Förbrukat</th>
-                            <th>av</th>
-                            <th>max.</th>
-                            <th>pris/st.</th>
-                            <th>Totalt</th>
-                        </tr>
-                    </thead>
+            <div id={className} className="table-responsive">
+                {/* <h5>{name}</h5> table-striped*/}
+                <table className="table align-middle table-dark caption-top">
+                    <caption id={className}>{name}</caption>
                     <tbody>
                         <tr>
+                            <td scope="col">Förbrukat</td>
+                            <td scope="col" class="table-active">av</td>
+                            <td scope="col" class="table-active">max.</td>
+                            <td scope="col" class="table-active">pris/st.</td>
+                            <td scope="col">Kostnad</td>
+                        </tr>
+                        <tr>
                             <td>{amount} {unit}</td>
-                            <td>/</td>
-                            <td>{max} {unit}</td>
-                            <td>{price} :-</td>
+                            <td class="table-active">/</td>
+                            <td class="table-active">{max} {unit}</td>
+                            <td class="table-active">{price} :-</td>
                             <td>{total}</td>
                         </tr>
                     </tbody>
                 </table>
             </div>
-            // </div>
-            // </div>
         );
     }
 }

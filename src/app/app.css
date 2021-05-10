@@ -12,6 +12,12 @@
     transform: rotate(360deg);
   }
 }
+table {
+  font-size: xx-large;
+}
+.table-active {
+  color: gray;
+}
 .container {
   margin: auto;
   position:relative;
@@ -37,7 +43,9 @@
     .container .btn:hover {
       background-color: rgb(7, 196, 7);
     }
-    
+.navbar-nav {
+  flex-grow: 1;
+}    
 
 body {
   background-color: #282c34;
@@ -51,9 +59,7 @@ body {
   width: 100%;
   margin:auto;
 }
-/* header {
-  height: 20%;
-} */
+
 i {
   border-radius: 10%;
   color: rgba(99, 255, 9, 0.959);
@@ -61,8 +67,6 @@ i {
 }
 button {
   width: auto;
-
-  /* width: 175px; */
   border: solid 1px black;
   border-radius: 10px;
   box-shadow: none;
@@ -72,15 +76,12 @@ button {
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  /* font-size: 16px; */
-  /* margin: 10px; */
   cursor: pointer;
 }
   button:hover {
     background-color: rgb(7, 196, 7);
     color: black;
     text-align: center;
-    /* font-weight: bold; */
     box-shadow: 0 2px 8px 0 rgb(250, 247, 247), 0 1px 10px 0 rgb(250, 247, 247);
   }
 
@@ -91,28 +92,59 @@ main {
     flex-grow: 1;
     justify-content: center;
 }
-
 #root {
-  width: 100%;
+  width: 80%;
   margin: auto;
 }
 .intro {
   margin: auto;
+  padding-right: 2%;
   float: right;
-  color:  rgb(7, 196, 7);
+  /* color:  rgb(7, 196, 7); */
+  font-size: large;
 }
-
+.menu-link {
+  color: rgb(7, 196, 7);
+}
+.menu-link:hover {
+  color:rgb(51, 255, 0);
+}
+#dropdownMenuButton1 {
+  width: auto;
+  border: solid 1px black;
+  border-radius: 10px;
+  box-shadow: none;
+  background-color: #282c34;
+  color: white;
+  padding: 10px ;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+}
+#dropdownMenuButton1:hover {
+  background-color: rgb(7, 196, 7);
+    color: black;
+    text-align: center;
+    box-shadow: 0 2px 8px 0 rgb(250, 247, 247), 0 1px 10px 0 rgb(250, 247, 247);
+} 
 #copy {
   text-align: center;
+  background-color:  #282c34;
+  padding-left: 25%;
+  padding-right: 25%;
+  font-size: small;
 }
   #copy  span {
     font-family: 'Tangerine', cursive;
     font-size: xx-large;
     color:rgb(51, 255, 0);
+    padding: 0px;
   }
 nav {
   width: 100%;
 }
+
 .flex.container {
   margin: auto;
   display: flex;
@@ -120,11 +152,9 @@ nav {
   .nav-list{
     margin-left: 5%;
     display: flex;
-    /* flex-wrap: wrap; */
     justify-content: left;
   }
     .nav-list li {
-      /* flex-grow: 1; */
       list-style: none;
       margin: 10px;
     }
@@ -147,10 +177,9 @@ nav {
   border: none;
   border-radius: 5px;
   text-align: center;
+  box-shadow: 0 2px 8px 0 rgb(250, 247, 247), 0 1px 10px 0 rgb(250, 247, 247);
 }
   .minicontainer button:hover {
-    color: black;
-    box-shadow: none;
     cursor: default;
   }
 
@@ -202,78 +231,89 @@ nav {
   margin: 10px;
   position:relative;
   width: 50%;
-  background-color: cornsilk;
+  background-color: black;
   display: flex;
   color: black;
-  /* text-align: center;
-  justify-content: center; */
 }
+
 .spacer {
   height: 500px;
-  /* padding-left: 200px; */
-  width: 50%;
-  /* justify-content: left; */
+}
+.table-spacer {
+  height: 420px;
+}
 
-}
-table {
-  width: 100%;
-  font-size: calc(10px + 2vmin);
-}
-/* residual waste button */
 .rw01 {
   background-color: darkred; 
   border: solid 1px black;
   border-radius: 10px;
   box-shadow: none;
-  /* padding: 15px ; */
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  /* margin: 10px; */
   cursor: pointer;
   width:100%;
 }
-.el {
+.rw01:hover {
+  background-color:rgb(245, 47, 40);
+  color: black;
+  text-align: center;
+  box-shadow: 0 2px 8px 0 rgb(250, 247, 247), 0 1px 10px 0 rgb(250, 247, 247);
+}
+#rw01 {
   background-color: darkred; 
   border: solid 1px black;
+  color: whitesmoke;
+  box-shadow: 0 2px 8px 0 rgb(250, 247, 247), 0 1px 10px 0 rgb(250, 247, 247);
+  border-radius: 10px;
+  text-align: center;
+}
+.el {
+  background-color: rgb(235, 220, 90); 
+  border: solid 1px black;
+  color: black;
   border-radius: 10px;
   box-shadow: none;
-  /* padding: 15px ; */
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  /* margin: 10px; */
   cursor: pointer;
   width:100%;
 }
-  .rw01:hover {
-    background-color:rgb(245, 47, 40);
-    color: black;
-    text-align: center;
-    box-shadow: 0 2px 8px 0 rgb(250, 247, 247), 0 1px 10px 0 rgb(250, 247, 247);
-  }
+
   .el:hover {
-    background-color:rgb(245, 47, 40);
+    background-color:yellow;
     color: black;
     text-align: center;
     box-shadow: 0 2px 8px 0 rgb(250, 247, 247), 0 1px 10px 0 rgb(250, 247, 247);
   }
+#el {
+  background-color: rgb(235, 220, 90); 
+  border: solid 1px black;
+  box-shadow: 0 2px 8px 0 rgb(250, 247, 247), 0 1px 10px 0 rgb(250, 247, 247);
+  color: black;
+  border-radius: 10px;
+  text-align: center;
+}
 /* organic waste button */
 .ow01 {
   background-color: #4CAF50; 
   border: solid 1px black;
   border-radius: 10px;
-  box-shadow: none;
-  /* padding: 15px ; */
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  /* margin: 10px; */
   cursor: pointer;
   width:100%;
 }
-.ow01 div {
-  width: 50%;
+#ow01{
+  background-color: #4CAF50; 
+  border: solid 1px black;
+  color: black;
+  box-shadow: 0 2px 8px 0 rgb(250, 247, 247), 0 1px 10px 0 rgb(250, 247, 247);
+  border-radius: 10px;
+  text-align: center;
+
 }
   .ow01:hover {
     background-color: rgba(99, 255, 9, 0.959);
@@ -287,50 +327,61 @@ table {
   border: solid 1px black;
   border-radius: 10px;
   box-shadow: none;
-  /* padding: 15px ; */
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  /* margin: 10px; */
   cursor: pointer;
   width:100%;
 }
-.wat {
+.cp01:hover {
+  background-color: rgb(51, 104, 250);
+  color: black;
+  text-align: center;
+  box-shadow: 0 2px 8px 0 rgb(250, 247, 247), 0 1px 10px 0 rgb(250, 247, 247);
+}
+#cp01 {
   background-color: navy;
+  border: solid 1px black;
+  color: whitesmoke;
+  box-shadow: 0 2px 8px 0 rgb(250, 247, 247), 0 1px 10px 0 rgb(250, 247, 247);
+  border-radius: 10px;
+  text-align: center;
+}
+.wat {
+  background-color: skyblue;
   border: solid 1px black;
   border-radius: 10px;
   box-shadow: none;
-  /* padding: 15px ; */
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  /* margin: 10px; */
   cursor: pointer;
   width:100%;
 }
-  .cp01:hover {
-    background-color: rgb(51, 104, 250);
-    color: black;
-    text-align: center;
-    box-shadow: 0 2px 8px 0 rgb(250, 247, 247), 0 1px 10px 0 rgb(250, 247, 247);
-  }
+
   .wat:hover {
-    background-color: rgb(51, 104, 250);
+    background-color: turquoise;
     color: black;
     text-align: center;
     box-shadow: 0 2px 8px 0 rgb(250, 247, 247), 0 1px 10px 0 rgb(250, 247, 247);
   }
+#wat {
+  background-color: skyblue;
+  border: solid 1px black;
+  color: black;
+  box-shadow: 0 2px 8px 0 rgb(250, 247, 247), 0 1px 10px 0 rgb(250, 247, 247);
+  border-radius: 10px;
+  text-align: center;
+}
 /* plastic button */
 .pp01 {
   background-color: orangered; 
   border: solid 1px black;
   border-radius: 10px;
   box-shadow: none;
-  /* padding: 15px ; */
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  /* margin: 10px; */
   cursor: pointer;
   width:100%;
 }
@@ -340,17 +391,23 @@ table {
     text-align: center;
     box-shadow: 0 2px 8px 0 rgb(250, 247, 247), 0 1px 10px 0 rgb(250, 247, 247);
   }
+#pp01 {
+  background-color: orangered; 
+  border: solid 1px black;
+  color: black;
+  box-shadow: 0 2px 8px 0 rgb(250, 247, 247), 0 1px 10px 0 rgb(250, 247, 247);
+  border-radius: 10px;
+  text-align: center;
+}
 /* metal button */
 .mp01 {
   background-color: rgb(56, 55, 55); 
   border: solid 1px black;
   border-radius: 10px;
   box-shadow: none;
-  /* padding: 15px ; */
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  /* margin: 10px; */
   cursor: pointer;
   width:100%;
 }
@@ -360,6 +417,14 @@ table {
     text-align: center;
     box-shadow: 0 2px 8px 0 rgb(250, 247, 247), 0 1px 10px 0 rgb(250, 247, 247);
   }
+#mp01 {
+  background-color: rgb(56, 55, 55); 
+  border: solid 1px black;
+  color: whitesmoke;
+  box-shadow: 0 2px 8px 0 rgb(250, 247, 247), 0 1px 10px 0 rgb(250, 247, 247);
+  border-radius: 10px;
+  text-align: center;
+}
 /* glas button */
 .gp01 {
   background-color: rgba(245, 245, 245, 0.425); 
@@ -367,11 +432,9 @@ table {
   border: solid 1px black;
   border-radius: 10px;
   box-shadow: none;
-  /* padding: 15px ; */
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  /* margin: 10px; */
   cursor: pointer;
   width:100%;
 }
@@ -382,17 +445,23 @@ table {
     text-align: center;
     box-shadow: 0 2px 8px 0 rgb(250, 247, 247), 0 1px 10px 0 rgb(250, 247, 247);
   }
+#gp01 {
+  background-color: rgba(245, 245, 245, 0.425); 
+  border: solid 1px black;
+  color: black;
+  box-shadow: 0 2px 8px 0 rgb(250, 247, 247), 0 1px 10px 0 rgb(250, 247, 247);
+  border-radius: 10px;
+  text-align: center;
+}
 /* newspaper button */
 .n01 {
   background-color: rgb(51, 22, 18); 
   border: solid 1px black;
   border-radius: 10px;
   box-shadow: none;
-  /* padding: 15px ; */
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  /* margin: 10px; */
   cursor: pointer;
   width:100%;
 }
@@ -401,5 +470,13 @@ table {
     color: black;
     text-align: center;
     box-shadow: 0 2px 8px 0 rgb(250, 247, 247), 0 1px 10px 0 rgb(250, 247, 247);
+  }
+#n01 {
+  background-color: rgb(51, 22, 18); 
+  border: solid 1px black;
+  color: whitesmoke;
+  box-shadow: 0 2px 8px 0 rgb(250, 247, 247), 0 1px 10px 0 rgb(250, 247, 247);
+  border-radius: 10px;
+  text-align: center;
   }
 

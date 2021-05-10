@@ -6,8 +6,8 @@ export default class LaudryChart extends React.Component {
 
     render() {
         let household = [
-            { title: 'Vatten', value: this.props.chartData.water * 2, color: ' navy' },
-            { title: 'El', value: this.props.chartData.electricity * 2, color: ' red' },
+            { title: 'Vatten', value: this.props.chartData.water * 2, color: ' turquoise' },
+            { title: 'El', value: this.props.chartData.electricity * 2, color: ' rgb(235, 220, 90)' },
         ];
         console.log(this.props.chartData)
         return (

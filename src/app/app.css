@@ -37,6 +37,7 @@
     .container .btn:hover {
       background-color: rgb(7, 196, 7);
     }
+    
 
 body {
   background-color: #282c34;
@@ -47,12 +48,12 @@ body {
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
-  width: 80%;
+  width: 100%;
   margin:auto;
 }
-header {
+/* header {
   height: 20%;
-}
+} */
 i {
   border-radius: 10%;
   color: rgba(99, 255, 9, 0.959);
@@ -85,14 +86,18 @@ button {
 
 main {
   width: 100%;
+  display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    justify-content: center;
 }
 
 #root {
-  width: 80%;
+  width: 100%;
   margin: auto;
 }
 .intro {
-  margin-left: 20%;
+  margin: auto;
   float: right;
   color:  rgb(7, 196, 7);
 }
@@ -105,17 +110,17 @@ main {
     font-size: xx-large;
     color:rgb(51, 255, 0);
   }
-
-/* .dropdown {
-  align-content: center;
-} */
+nav {
+  width: 100%;
+}
 .flex.container {
   margin: auto;
   display: flex;
 }
   .nav-list{
+    margin-left: 5%;
     display: flex;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     justify-content: left;
   }
     .nav-list li {
@@ -129,6 +134,25 @@ main {
   position:relative;
   max-width: 200px;
 }
+.mini-container button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: rgb(7, 196, 7);
+  color: black;
+  font-size: 15px;
+  padding: 0px 20px 0px 20px  ;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+}
+  .minicontainer button:hover {
+    color: black;
+    box-shadow: none;
+    cursor: default;
+  }
 
 .userForm {
   margin: auto;
@@ -186,9 +210,10 @@ main {
 }
 .spacer {
   height: 500px;
-  padding-left: 200px;
-  width: 60%;
-  justify-content: center;
+  /* padding-left: 200px; */
+  width: 50%;
+  /* justify-content: left; */
+
 }
 table {
   width: 100%;

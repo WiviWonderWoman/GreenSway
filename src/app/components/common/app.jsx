@@ -40,8 +40,8 @@ export default class App extends React.Component {
             plastic: newUser.plastic,
             metal: newUser.metal,
             residual: newUser.residual,
-            electricity: user.electricity,
-            water: user.water
+            electricity: newUser.electricity,
+            water: newUser.water
         }));
     }
 

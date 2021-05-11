@@ -26,6 +26,8 @@ Används för att visuallisera användarens "förbrukning" som ett cirkeldiagram
 
 ### [react-router-dom](https://www.npmjs.com/package/react-router-dom)
 Används för att navigara mellan "sidor", genom fejk URL möjliggörs att gå fram och bak i webbläsarhistoriken.
+
+### [prop-types](https://www.npmjs.com/package/proptypes)
 ________________________________________________________________________________________________________________________________________________________________________________
 ## Tjänster
 

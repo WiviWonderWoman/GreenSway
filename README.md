@@ -28,6 +28,10 @@ Används för att visuallisera användarens "förbrukning" som ett cirkeldiagram
 Används för att navigara mellan "sidor", genom fejk URL möjliggörs att gå fram och bak i webbläsarhistoriken.
 
 ### [prop-types](https://www.npmjs.com/package/proptypes)
+
+### [react-redux](https://www.npmjs.com/package/react-redux)
+
+### [redux-toolkit](https://www.npmjs.com/package/@reduxjs/toolkit)
 ________________________________________________________________________________________________________________________________________________________________________________
 ## Tjänster
 

@@ -3,9 +3,10 @@ import UserForm from "../../features/user/user-form";
 import Header from "./header";
 import Footer from "./footer";
 import PropTypes from "prop-types";
+import { connect } from "react-redux";
+import { setEmailAsync } from "../../features/user/user-slice";
 
-
-export default class App extends React.Component {
+export class App extends React.Component {
 
     constructor() {
         super();
@@ -15,53 +16,19 @@ export default class App extends React.Component {
         }
     }
 
-    // getUser(id) {
-    //     this.props.userServices.getUserById(id, (user) => this.setState({
-    //         userId: user.id,
-    //         organic: user.organic,
-    //         newspaper: user.newspaper,
-    //         cardboard: user.cardboard,
-    //         glas: user.glas,
-    //         plastic: user.plastic,
-    //         metal: user.metal,
-    //         residual: user.residual,
-    //         email: user.email,
-    //         electricity: user.electricity,
-    //         water: user.water
-    //     }));
-    // }
-
-    // getNewUser() {
-    //     this.props.userServices.getNewUser((newUser) => this.setState({
-    //         userId: newUser.id,
-    //         organic: newUser.organic,
-    //         newspaper: newUser.newspaper,
-    //         cardboard: newUser.cardboard,
-    //         glas: newUser.glas,
-    //         plastic: newUser.plastic,
-    //         metal: newUser.metal,
-    //         residual: newUser.residual,
-    //         electricity: newUser.electricity,
-    //         water: newUser.water
-    //     }));
-    // }
-
     componentDidMount() {
-        // if (this.props.id !== undefined) {
-
-        //     this.getUser(this.props.id);
-
-        //     this.setState({
-        //         newUser: false
-        //     });
-        // }
-        // else {
-        //     this.getNewUser();
-
-        //     this.setState({
-        //         newUser: true
-        //     });
-        // }
+        if (this.props.id !== undefined) {
+            console.log('this.props.id: ', this.props.id)
+            this.setState({
+                newUser: false
+            });
+        }
+        else {
+            // console.log('USER ID I APP: ', this.props.newId)
+            this.setState({
+                newUser: true
+            });
+        }
     }
 
     //handleClick on the logo, only shows for new users
@@ -72,7 +39,13 @@ export default class App extends React.Component {
     }
 
     handleUpdate(email) {
-        console.log('App received email: ', email);
+        console.log('App received email: ', email, 'Id: ', this.props.newId);
+        //save to localStorage
+        // this.props.userServices.saveUser(this.props.newId, email);
+        //save (PATCH) to API
+        // console.log(this.props.userId, this.state.username);
+        this.props.dispatch(setEmailAsync(this.props.newId, email));
+        // this.props.userServices.setUserEmail(this.props.userId, this.state.username, (email) => this.props.handleUpdate(email));
         this.setState({
             email: email,
             newUser: false,
@@ -83,15 +56,15 @@ export default class App extends React.Component {
         //variable for readability
         //object to pass down as props to Overview and PieChart
         const chartData = {
-            organic: this.state.organic,
-            newspaper: this.state.newspaper,
-            cardboard: this.state.cardboard,
-            glas: this.state.glas,
-            plastic: this.state.plastic,
-            metal: this.state.metal,
-            residual: this.state.residual,
-            electricity: this.state.electricity,
-            water: this.state.water
+            organic: this.props.organic,
+            newspaper: this.props.newspaper,
+            cardboard: this.props.cardboard,
+            glas: this.props.glas,
+            plastic: this.props.plastic,
+            metal: this.props.metal,
+            residual: this.props.residual,
+            electricity: this.props.electricity,
+            water: this.props.water
         };
         //variable for readability
         //doublecheck the username/email
@@ -102,11 +75,12 @@ export default class App extends React.Component {
             name = this.state.email;
         }
 
+
         // Logo shows if new user and button not clicked
         if (this.state.newUser === true && this.state.clicked === false) {
             return (
                 <>
-                    <Header handleClick={() => this.handleClick()} id={this.state.userId} chartData={chartData} username={name} clicked={this.state.clicked} />
+                    <Header handleClick={() => this.handleClick()} id={this.props.newId} chartData={chartData} username={name} clicked={this.state.clicked} />
                     <Footer />
                 </>
             );
@@ -115,7 +89,7 @@ export default class App extends React.Component {
         else if (this.state.newUser === true && this.state.clicked === true) {
             return (
                 <>
-                    <UserForm handleUpdate={(email) => this.handleUpdate(email)} userId={this.state.userId} userServices={this.props.userServices} />
+                    <UserForm handleUpdate={(email) => this.handleUpdate(email)} userId={this.props.newId} userServices={this.props.userServices} />
                     <Footer />
                 </>
             );
@@ -123,16 +97,26 @@ export default class App extends React.Component {
         else if (this.state.newUser !== true) {
             return (
                 <>
-                    <Header id={this.state.userId} chartData={chartData} username={name} newUser={this.state.newUser} />
+                    <Header id={this.props.id} chartData={chartData} username={name} newUser={this.state.newUser} />
                     <Footer />
                 </>
             );
         }
     }
 }
-App.propTypes = {
-    id: PropTypes.number,
-    username: PropTypes.string,
-    userServices: PropTypes.object
+// App.propTypes = {
+//     id: PropTypes.number,
+//     username: PropTypes.string,
+//     userServices: PropTypes.object
+// }
+function mapStateToProps(state) {
+    // console.log('mapStateToProps: ', state.user.user)
+    return { newId: state.user.user.id }
 }
+// function mapDispatchToProps(dispatch) {
+//     return {
+//         setEmailAsync: (id, email) => dispatch(setEmailAsync(id, email))
+//     }
+// }, mapDispatchToProps
 
+export default connect(mapStateToProps)(App)

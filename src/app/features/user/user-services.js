@@ -26,7 +26,7 @@ export class UserServices {
         return Caller.get(`/${id}`, {})
             .then(res => {
                 const user = res.data;
-                console.log('Fetched user in UserService : ', user);
+                // console.log('Fetched user in UserService : ', user);
                 callback(user)
                 return user
             })
@@ -37,7 +37,7 @@ export class UserServices {
         return Caller.get(`?email`, {})
             .then(res => {
                 const newUser = res.data[0];
-                console.log('newUser: ', newUser);
+                // console.log('newUser: ', newUser);
                 callback(newUser)
                 return (newUser)
             })
@@ -47,9 +47,11 @@ export class UserServices {
     setUserEmail(id, email, callback) {
         Caller.patch(`/${id}`, { email: email })
             .then(res => {
-                const data = res.data; //console.log('PATCH: ',data);
-                // console.log(data);
+                const data = res.data;
+                console.log('PATCH: ', res.data);
+                console.log('UserService: ', data.email);
                 callback(data.email);
+                return (data.email)
             })
             .catch((error) => {
                 console.log('PATCH: ', error)

@@ -19,12 +19,9 @@ export default class UserForm extends React.Component {
     }
 
     saveUser() {
-        if (this.state.username !== "" && this.state.role !== "") {
-            //save to localStorage
-            this.props.userServices.saveUser(this.props.userId, this.state.username, this.state.role);
-            //save (PATCH) to API
-            console.log(this.props.userId, this.state.username);
-            this.props.userServices.setUserEmail(this.props.userId, this.state.username, (email) => this.props.handleUpdate(email));
+        if (this.state.username !== "") {
+            this.props.handleUpdate(this.state.username)
+
         }
         // this.setState({
         //     isClicked: true

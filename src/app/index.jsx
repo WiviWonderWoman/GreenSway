@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./app.css";
-import App from "./components/common/app";
+import ConnectedApp from "./components/common/app";
 import { UserServices } from "./features/user/user-services";
 import store from "./store";
 import { Provider } from "react-redux";
@@ -24,6 +24,8 @@ if (user !== null || undefined) {
 let root = document.getElementById("root");
 ReactDOM.render(
     <Provider store={store}>
-        <App user={user} id={id} username={username} userServices={userServices} />
+        <ConnectedApp user={user} id={id} username={username} userServices={userServices} />
     </Provider>
     , root);
+
+

@@ -1,8 +1,9 @@
 import React from "react";
-import UserForm from "./register/user-form";
+import UserForm from "../../features/user/user-form";
 import Header from "./header";
 import Footer from "./footer";
 import PropTypes from "prop-types";
+
 
 export default class App extends React.Component {
 
@@ -14,53 +15,53 @@ export default class App extends React.Component {
         }
     }
 
-    getUser(id) {
-        this.props.userServices.getUserById(id, (user) => this.setState({
-            userId: user.id,
-            organic: user.organic,
-            newspaper: user.newspaper,
-            cardboard: user.cardboard,
-            glas: user.glas,
-            plastic: user.plastic,
-            metal: user.metal,
-            residual: user.residual,
-            email: user.email,
-            electricity: user.electricity,
-            water: user.water
-        }));
-    }
+    // getUser(id) {
+    //     this.props.userServices.getUserById(id, (user) => this.setState({
+    //         userId: user.id,
+    //         organic: user.organic,
+    //         newspaper: user.newspaper,
+    //         cardboard: user.cardboard,
+    //         glas: user.glas,
+    //         plastic: user.plastic,
+    //         metal: user.metal,
+    //         residual: user.residual,
+    //         email: user.email,
+    //         electricity: user.electricity,
+    //         water: user.water
+    //     }));
+    // }
 
-    getNewUser() {
-        this.props.userServices.getNewUser((newUser) => this.setState({
-            userId: newUser.id,
-            organic: newUser.organic,
-            newspaper: newUser.newspaper,
-            cardboard: newUser.cardboard,
-            glas: newUser.glas,
-            plastic: newUser.plastic,
-            metal: newUser.metal,
-            residual: newUser.residual,
-            electricity: newUser.electricity,
-            water: newUser.water
-        }));
-    }
+    // getNewUser() {
+    //     this.props.userServices.getNewUser((newUser) => this.setState({
+    //         userId: newUser.id,
+    //         organic: newUser.organic,
+    //         newspaper: newUser.newspaper,
+    //         cardboard: newUser.cardboard,
+    //         glas: newUser.glas,
+    //         plastic: newUser.plastic,
+    //         metal: newUser.metal,
+    //         residual: newUser.residual,
+    //         electricity: newUser.electricity,
+    //         water: newUser.water
+    //     }));
+    // }
 
     componentDidMount() {
-        if (this.props.id !== undefined) {
+        // if (this.props.id !== undefined) {
 
-            this.getUser(this.props.id);
+        //     this.getUser(this.props.id);
 
-            this.setState({
-                newUser: false
-            });
-        }
-        else {
-            this.getNewUser();
+        //     this.setState({
+        //         newUser: false
+        //     });
+        // }
+        // else {
+        //     this.getNewUser();
 
-            this.setState({
-                newUser: true
-            });
-        }
+        //     this.setState({
+        //         newUser: true
+        //     });
+        // }
     }
 
     //handleClick on the logo, only shows for new users

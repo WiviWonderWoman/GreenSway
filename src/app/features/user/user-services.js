@@ -1,4 +1,4 @@
-import Caller from "./caller";
+import Caller from "./user-caller";
 
 export class UserServices {
 
@@ -23,21 +23,23 @@ export class UserServices {
     }
 
     getUserById(id, callback) {
-        Caller.get(`/${id}`, {})
+        return Caller.get(`/${id}`, {})
             .then(res => {
                 const user = res.data;
-                console.log('user: ', user);
+                console.log('Fetched user in UserService : ', user);
                 callback(user)
+                return user
             })
             .catch(error => console.log(error));
     }
 
     getNewUser(callback) {
-        Caller.get(`?email`, {})
+        return Caller.get(`?email`, {})
             .then(res => {
                 const newUser = res.data[0];
                 console.log('newUser: ', newUser);
                 callback(newUser)
+                return (newUser)
             })
             .catch(error => console.log(error));
     }

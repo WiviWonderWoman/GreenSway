@@ -41,13 +41,13 @@ export default class UserForm extends React.Component {
                 <div className="form-group">
                     <input type="text" value={this.state.username} onChange={this.handleUsernameChange} />
                 </div>
-                <div className="form-group">
+                {/* <div className="form-group">
                     <label>Har du redan registrerat dig?<br /></label>
                 </div>
                 <div className="form-group">
                     <UserButton className="btn2" key={'user'} text={'Logga in'} />
-                    {/* <UserButton className="clicked" text={'Admin'} />  */}
-                </div>
+                    <UserButton className="clicked" text={'Admin'} /> 
+                </div> */}
                 <div className="form-group">
                     <label>eller registrera ny användare här:<br /></label>
                 </div>

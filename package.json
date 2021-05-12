@@ -30,5 +30,12 @@
     "react-minimal-pie-chart": "^8.2.0",
     "react-redux": "^7.2.4",
     "react-router-dom": "^5.2.0"
-  }
+  },
+  "browserslist": [
+    "last 3 and_chr versions",
+    "last 3 chrome versions",
+    "last 3 opera versions",
+    "last 3 ios_saf versions",
+    "last 3 safari versions"
+  ]
 }

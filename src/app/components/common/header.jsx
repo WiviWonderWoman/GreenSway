@@ -2,7 +2,7 @@ import React from "react";
 import Logo from "./logo";
 import Menu from "./menu";
 import PropTypes from "prop-types";
-import { UserServices } from "../../services/user-services";
+import { UserServices } from "../../features/user/user-services";
 
 export default class Header extends React.Component {
 

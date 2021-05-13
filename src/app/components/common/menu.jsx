@@ -11,6 +11,7 @@ import KeyIdPage from "../key-id/key-id-page";
 import ConnectedOverviewPage from "../overview/overview-page";
 import PropTypes from "prop-types";
 import Logo from "./logo";
+import LaudryPage from "../../features/laudry/laudry-page";
 
 export default class Menu extends React.Component {
 
@@ -38,10 +39,13 @@ export default class Menu extends React.Component {
                                     <Link to={`/`} className="nav-item nav-link"><p className="menu-link">Hem</p></Link>
                                 </div>
                                 <div className="navbar-nav">
-                                    <Link to={`/overview/${id}`} className="nav-item nav-link"><p className="menu-link">Min översikt</p></Link>
+                                    <Link to={`/laundry/${id}`} className="nav-item nav-link"><p className="menu-link">Boka tvättstuga</p></Link>
                                 </div>
                                 <div className="navbar-nav">
-                                    <Link to={`/details/${id}`} className="nav-item nav-link"><p className="menu-link">Min förbrukning</p></Link>
+                                    <Link to={`/overview/${id}`} className="nav-item nav-link"><p className="menu-link">Förbrukning</p></Link>
+                                </div>
+                                <div className="navbar-nav">
+                                    <Link to={`/details/${id}`} className="nav-item nav-link"><p className="menu-link">Kostnad</p></Link>
                                 </div>
                                 <div className="navbar-nav">
                                     <Link to={`/key-id/${id}`} className="nav-item nav-link"><p className="menu-link">Nyckel & Id</p></Link>
@@ -55,6 +59,9 @@ export default class Menu extends React.Component {
                     <Switch>
                         <Route exact path={`/`}>
                             <HomePage />
+                        </Route>
+                        <Route exact path={`/laundry/${id}`}>
+                            <LaudryPage />
                         </Route>
                         <Route exact path={`/overview/${id}`}>
                             <ConnectedOverviewPage />

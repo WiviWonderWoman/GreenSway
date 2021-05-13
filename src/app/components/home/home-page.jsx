@@ -1,6 +1,5 @@
 import React from "react";
 
-
 export default class HomePage extends React.Component {
 
     render() {
@@ -13,6 +12,7 @@ export default class HomePage extends React.Component {
                     <p>Kommunikation med hyresvärd:</p>
                     <p>felanmälan, driftinformation, rapportera status på städning</p>
                 </div>
+
             </div>
         );
     }

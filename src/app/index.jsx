@@ -6,6 +6,7 @@ import ConnectedApp from "./components/app";
 import { UserServices } from "./features/user/user-services";
 import store from "./store";
 import { getUserByIdAsync, getNewUserAsync } from "./features/user/user-slice";
+import ErrorBoundry from "./components/error-boundry";
 
 const userServices = new UserServices();
 const user = userServices.checkLocalStorage();
@@ -25,11 +26,13 @@ if (user !== null || undefined) {
     userServices.saveUser(id, username);
 }
 
-
 let root = document.getElementById("root");
 ReactDOM.render(
+
     <Provider store={store}>
-        <ConnectedApp />
+        <ErrorBoundry>
+            <ConnectedApp />
+        </ErrorBoundry>
     </Provider>
     , root);
 

@@ -32,6 +32,8 @@ Används för att navigara mellan "sidor", genom fejk URL möjliggörs att gå f
 ### [react-redux](https://www.npmjs.com/package/react-redux)
 
 ### [redux-toolkit](https://www.npmjs.com/package/@reduxjs/toolkit)
+
+### [react-calendar](https://www.npmjs.com/package/react-calendar)
 ________________________________________________________________________________________________________________________________________________________________________________
 ## Tjänster
 
@@ -43,7 +45,7 @@ Anropas från
 #### app.jsx 
 * för att hämta användaren, ```GET(/id)``` 
 * eller ny användare (första med tom email, jag ser till att det finns ett antal att testa på), ```GET(?email)```
-#### PS: Ni får gärna "städa upp" ✔️ era registrerade emails efterhand, tex via Postman (```PATCH(/id, {email: ""})```), tack! 🤗 D.S 
+
 * sparar även förbruknings-data och skicka neråt till PieChart (för att möjliggöra animering)
 #### user-form.jsx
 * för att uppdatera email på den nya användaren, ```PATCH(/id, {email: email})``` 
@@ -65,6 +67,8 @@ Anropas från
 }
 ```
 (garbagehouse är tänkt att användas för admins att kunna se statistik för ett helt sophus.)
+
+  PS: Ni får gärna "städa upp" ✔️ era registrerade emails efterhand, tex via Postman (```PATCH(/id, {email: ""})```), tack! 🤗 D.S 
 
 
 ________________________________________________________________________________________________________________________________________________________________________________

@@ -1,12 +1,12 @@
 import React from "react";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
-import NavBar from "./nav-bar";
+import DropDown from "./drop-down";
 
 export class DetailsPage extends React.Component {
 
     render() {
-        return (<NavBar chartData={this.props.chartData} />);
+        return (<DropDown chartData={this.props.chartData} />);
     }
 }
 DetailsPage.propTypes = {
@@ -23,7 +23,6 @@ DetailsPage.propTypes = {
     })
 }
 function mapStateToProps(state) {
-    console.log('mapStateToProps: ', state.user.user.organic, ' ', state.user.user.water)
     return {
         chartData: {
             organic: state.user.user.organic,

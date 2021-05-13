@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
-import UserForm from "../../features/user/user-form";
+import UserForm from "../features/user/user-form";
 import Header from "./header";
 import Footer from "./footer";
 
@@ -49,10 +49,6 @@ export class App extends React.Component {
     }
 
     render() {
-        console.log('FROM STORE this.props.id: ', this.props.id);
-        console.log('FROM STORE this.props.email: ', this.props.email);
-
-
         // Logo shows if new user and button not clicked 
         // this.state.newUser === true && 
         if (this.state.clicked === false) {
@@ -87,7 +83,6 @@ App.propTypes = {
     username: PropTypes.string,
 }
 function mapStateToProps(state) {
-    console.log('mapStateToProps: ', state.user.user.id, ' ', state.user.user.email)
     return {
         id: state.user.user.id,
         email: state.user.user.email

@@ -5,13 +5,13 @@ import {
     Route,
     Link
 } from "react-router-dom";
-import ConnectedDetailsPage from "../details/details-page";
-import HomePage from "../home/home-page";
-import KeyIdPage from "../key-id/key-id-page";
-import ConnectedOverviewPage from "../overview/overview-page";
 import PropTypes from "prop-types";
 import Logo from "./logo";
-import LaudryPage from "../../features/laudry/laudry-page";
+import HomePage from "./home-page";
+import LaudryPage from "../features/laudry/laudry-page";
+import ConnectedOverviewPage from "../features/charts/overview-page";
+import ConnectedDetailsPage from "../features/fractions/details-page";
+import KeyIdPage from "../features/key-id/key-id-page";
 
 export default class Menu extends React.Component {
 

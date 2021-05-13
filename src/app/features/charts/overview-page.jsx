@@ -14,7 +14,7 @@ export class OverviewPage extends React.Component {
                         <WasteChart chartData={this.props.chartData} />
                     </div>
                     <div className="pie-chart">
-                        <LaudryChart chartData={this.props.chartData} />
+                        <LaudryChart water={this.props.water} electricity={this.props.electricity} />
                     </div>
                 </div>
             </>
@@ -31,12 +31,12 @@ OverviewPage.propTypes = {
         plastic: PropTypes.number,
         metal: PropTypes.number,
         residual: PropTypes.number,
-        electricity: PropTypes.number,
-        water: PropTypes.number
-    })
+    }),
+    electricity: PropTypes.number,
+    water: PropTypes.number
 }
+
 function mapStateToProps(state) {
-    console.log('mapStateToProps: ', state.user.user.organic, ' ', state.user.user.water)
     return {
         chartData: {
             organic: state.user.user.organic,
@@ -46,9 +46,9 @@ function mapStateToProps(state) {
             plastic: state.user.user.plastic,
             metal: state.user.user.metal,
             residual: state.user.user.residual,
-            electricity: state.user.user.electricity,
-            water: state.user.user.water
-        }
+        },
+        electricity: state.user.user.electricity,
+        water: state.user.user.water
     }
 }
 

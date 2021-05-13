@@ -2,9 +2,9 @@ import React from "react";
 import PropTypes from "prop-types";
 import FractionButton from "./fraction-button";
 import Table from "./table";
-import { FractionDataService } from "./fractions/fraction-data-services";
+import { FractionDataService } from "./fraction-data-services";
 
-export default class NavBar extends React.Component {
+export default class DropDown extends React.Component {
 
     constructor(props) {
         super(props);
@@ -81,7 +81,7 @@ export default class NavBar extends React.Component {
         );
     }
 }
-NavBar.propTypes = {
+DropDown.propTypes = {
     chartData: PropTypes.exact({
         organic: PropTypes.number,
         newspaper: PropTypes.number,

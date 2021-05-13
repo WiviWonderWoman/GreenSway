@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import FractionButton from "./fraction-button";
 import Table from "./table";
 import { FractionDataService } from "./fractions/fraction-data-services";
@@ -9,8 +10,9 @@ export default class NavBar extends React.Component {
         super(props);
         this.state = {
             fraction: {},
+            allFractions: [],
             isClicked: false,
-            consumtion: ''
+            consumtionKey: ''
         }
     }
 
@@ -26,7 +28,15 @@ export default class NavBar extends React.Component {
     handleConsumptionClick(key) {
         this.setState({
             isClicked: true,
-            consumtion: key
+            consumtionKey: key
+        });
+    }
+    componentDidMount() {
+        const fractionDataService = new FractionDataService();
+        fractionDataService.loadData();
+        const allFractions = fractionDataService.allFractions;
+        this.setState({
+            allFractions: allFractions
         });
     }
 
@@ -42,7 +52,7 @@ export default class NavBar extends React.Component {
                                     Fraktioner
                                 </button>
                                 <ul className="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton1">
-                                    <FractionButton className="dropdown-item" onClick={(source) => this.handleFractionClick(source)} />
+                                    <FractionButton allFractions={this.state.allFractions} className="dropdown-item" onClick={(source) => this.handleFractionClick(source)} />
                                 </ul>
                             </div>
                             <div className="spacer"></div>
@@ -59,15 +69,28 @@ export default class NavBar extends React.Component {
                                     Fraktioner
                                 </button>
                                 <ul className="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton1">
-                                    <FractionButton className="dropdown-item" chartData={this.props.chartData} onClick={(source) => this.handleFractionClick(source)} />
+                                    <FractionButton allFractions={this.state.allFractions} className="dropdown-item" onClick={(source) => this.handleFractionClick(source)} />
                                 </ul>
                             </div>
                         </div>
                     </nav>
                     <div className="table-spacer">
-                        <Table chartData={this.props.chartData} fraction={this.state.fraction} consumtion={this.state.consumtion} />
+                        <Table chartData={this.props.chartData} fraction={this.state.fraction} />
                     </div>
                 </>
         );
     }
+}
+NavBar.propTypes = {
+    chartData: PropTypes.exact({
+        organic: PropTypes.number,
+        newspaper: PropTypes.number,
+        cardboard: PropTypes.number,
+        glas: PropTypes.number,
+        plastic: PropTypes.number,
+        metal: PropTypes.number,
+        residual: PropTypes.number,
+        electricity: PropTypes.number,
+        water: PropTypes.number
+    })
 }

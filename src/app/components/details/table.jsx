@@ -1,5 +1,5 @@
 import React from "react";
-import PropTypes, { string } from "prop-types";
+import PropTypes from "prop-types";
 
 export default class Table extends React.Component {
 
@@ -19,22 +19,21 @@ export default class Table extends React.Component {
 
         return (
             <div id={className} className="table-responsive">
-                {/* <h5>{name}</h5> table-striped*/}
                 <table className="table align-middle table-dark caption-top">
                     <caption id={className}>{name}</caption>
                     <tbody>
                         <tr>
                             <td scope="col">Förbrukat</td>
-                            <td scope="col" class="table-active">av</td>
-                            <td scope="col" class="table-active">max.</td>
-                            <td scope="col" class="table-active">pris/st.</td>
+                            <td scope="col" className="table-active">av</td>
+                            <td scope="col" className="table-active">max.</td>
+                            <td scope="col" className="table-active">pris/st.</td>
                             <td scope="col">Kostnad</td>
                         </tr>
                         <tr>
                             <td>{amount} {unit}</td>
-                            <td class="table-active">/</td>
-                            <td class="table-active">{max} {unit}</td>
-                            <td class="table-active">{price} :-</td>
+                            <td className="table-active">/</td>
+                            <td className="table-active">{max} {unit}</td>
+                            <td className="table-active">{price} :-</td>
                             <td>{total}</td>
                         </tr>
                     </tbody>
@@ -55,7 +54,6 @@ Table.propTypes = {
         hatchOpen: PropTypes.bool,
         isFull: PropTypes.bool
     }),
-    cosumption: string,
     chartData: PropTypes.exact({
         organic: PropTypes.number,
         newspaper: PropTypes.number,

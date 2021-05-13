@@ -34,6 +34,7 @@ table {
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     background-color:#282c34;
+    color: rgb(7, 196, 7) ;
     font-size: 25px;
     padding: 16px 30px;
     border: none;
@@ -42,6 +43,7 @@ table {
   }
     .container .btn:hover {
       background-color: rgb(7, 196, 7);
+      color: #282c34;
     }
 .navbar-nav {
   flex-grow: 1;

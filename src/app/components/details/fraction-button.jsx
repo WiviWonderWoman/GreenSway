@@ -6,33 +6,34 @@ export default class FractionButton extends React.Component {
 
     constructor(props) {
         super(props);
-        this.state = {
-            allFractions: []
-        }
+        // this.state = {
+        //     allFractions: []
+        // }
     }
 
     handleClick(source) {
         this.props.onClick(source);
     }
 
-    componentDidMount() {
-        const fractionDataService = new FractionDataService();
-        fractionDataService.loadData();
-        const allFractions = fractionDataService.allFractions;
-        this.setState({
-            allFractions: allFractions
-        });
-    }
+    // componentDidMount() {
+    //     const fractionDataService = new FractionDataService();
+    //     fractionDataService.loadData();
+    //     const allFractions = fractionDataService.allFractions;
+    //     this.setState({
+    //         allFractions: allFractions
+    //     });
+    // }
 
     render() {
         return (
             <>
-                {this.state.allFractions.map((element) =>
+                {this.props.allFractions.map((element) =>
                     <li key={element.id} onClick={() => this.handleClick(element.source)}><button className={element.id}>{element.name}</button></li>)}
             </>
         );
     }
 }
 FractionButton.propTypes = {
+    allFractions: PropTypes.array,
     onClick: PropTypes.func
 }

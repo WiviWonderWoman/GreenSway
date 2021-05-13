@@ -5,10 +5,10 @@ import {
     Route,
     Link
 } from "react-router-dom";
-import DetailsPage from "../details/details-page";
+import ConnectedDetailsPage from "../details/details-page";
 import HomePage from "../home/home-page";
 import KeyIdPage from "../key-id/key-id-page";
-import OverviewPage from "../overview/overview-page";
+import ConnectedOverviewPage from "../overview/overview-page";
 import PropTypes from "prop-types";
 import Logo from "./logo";
 
@@ -17,7 +17,6 @@ export default class Menu extends React.Component {
     render() {
         //variable for readability
         const id = this.props.id;
-
         return (
             <Router>
                 <Logo text={'GreenSway'} className={'mini-container'} />
@@ -58,10 +57,10 @@ export default class Menu extends React.Component {
                             <HomePage />
                         </Route>
                         <Route exact path={`/overview/${id}`}>
-                            <OverviewPage chartData={this.props.chartData} />
+                            <ConnectedOverviewPage />
                         </Route>
                         <Route exact path={`/details/${id}`}>
-                            <DetailsPage username={this.props.username} chartData={this.props.chartData} />
+                            <ConnectedDetailsPage />
                         </Route>
                         <Route exact path={`/key-id/${id}`}>
                             <KeyIdPage />
@@ -75,15 +74,4 @@ export default class Menu extends React.Component {
 Menu.propTypes = {
     id: PropTypes.number,
     username: PropTypes.string,
-    chartData: PropTypes.exact({
-        organic: PropTypes.number,
-        newspaper: PropTypes.number,
-        cardboard: PropTypes.number,
-        glas: PropTypes.number,
-        plastic: PropTypes.number,
-        metal: PropTypes.number,
-        residual: PropTypes.number,
-        electricity: PropTypes.number,
-        water: PropTypes.number
-    })
 }

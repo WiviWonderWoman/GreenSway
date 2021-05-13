@@ -1,13 +1,13 @@
 import React from "react";
-import UserButton from "./user-button";
 import PropTypes from "prop-types";
+
+// import UserButton from "./user-button";
 
 export default class UserForm extends React.Component {
 
     constructor(props) {
         super(props);
         this.state = {
-            // isClicked: false,
             username: '',
         };
     }
@@ -15,7 +15,7 @@ export default class UserForm extends React.Component {
     handleUsernameChange = (event) => {
         this.setState({
             username: event.target.value,
-        }); // console.log('handleUsernameChange: ' + this.props.user)
+        });
     }
 
     saveUser() {
@@ -23,9 +23,6 @@ export default class UserForm extends React.Component {
             this.props.handleUpdate(this.state.username)
 
         }
-        // this.setState({
-        //     isClicked: true
-        // });
     }
 
     render() {
@@ -57,6 +54,4 @@ export default class UserForm extends React.Component {
 }
 UserForm.propTypes = {
     handleUpdate: PropTypes.func,
-    userServices: PropTypes.object,
-    userId: PropTypes.number,
 }

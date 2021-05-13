@@ -2,7 +2,6 @@ import React from "react";
 import Logo from "./logo";
 import Menu from "./menu";
 import PropTypes from "prop-types";
-import { UserServices } from "../../features/user/user-services";
 
 export default class Header extends React.Component {
 
@@ -15,7 +14,7 @@ export default class Header extends React.Component {
             // returning user : new user
             <> {this.props.clicked === true || this.props.newUser === false ?
                 <header>
-                    <Menu id={this.props.id} chartData={this.props.chartData} username={this.props.username} />
+                    <Menu id={this.props.id} username={this.props.username} />
                     <hr></hr>
                 </header>
                 :
@@ -31,19 +30,6 @@ Header.propTypes = {
     clicked: PropTypes.bool,
     newUser: PropTypes.bool,
     id: PropTypes.number,
-    chartData: PropTypes.exact({
-        organic: PropTypes.number,
-        newspaper: PropTypes.number,
-        cardboard: PropTypes.number,
-        glas: PropTypes.number,
-        plastic: PropTypes.number,
-        metal: PropTypes.number,
-        residual: PropTypes.number,
-        electricity: PropTypes.number,
-        water: PropTypes.number
-    }),
     username: PropTypes.string,
-    handleClick: PropTypes.func,
-    userServices: PropTypes.instanceOf(UserServices)
-
+    handleClick: PropTypes.func
 }

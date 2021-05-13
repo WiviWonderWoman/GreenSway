@@ -1,10 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import { Provider } from "react-redux";
 import "./app.css";
 import ConnectedApp from "./components/common/app";
 import { UserServices } from "./features/user/user-services";
 import store from "./store";
-import { Provider } from "react-redux";
 import { getUserByIdAsync, getNewUserAsync } from "./features/user/user-slice";
 
 const userServices = new UserServices();
@@ -17,14 +17,19 @@ if (user !== null || undefined) {
     username = user.username;
     store.dispatch(getUserByIdAsync(id));
 } else {
-    store.dispatch(getNewUserAsync());
+    // store.dispatch(getNewUserAsync());
+    store.dispatch(getUserByIdAsync(1));
+    id = 1;
+    username = 'demo@greensway.com';
+    // save to localStorage
+    userServices.saveUser(id, username);
 }
 
 
 let root = document.getElementById("root");
 ReactDOM.render(
     <Provider store={store}>
-        <ConnectedApp user={user} id={id} username={username} userServices={userServices} />
+        <ConnectedApp />
     </Provider>
     , root);
 

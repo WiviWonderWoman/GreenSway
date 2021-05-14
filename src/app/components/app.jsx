@@ -21,11 +21,13 @@ class App extends React.Component {
                 newUser: false
             });
         }
-        // else if (this.props.userId === undefined) {
-        //     this.setState({
-        //         newUser: true
-        //     });
-        // }
+        else if (this.props.userId === undefined) {
+
+            console.log(this.props.email);
+            this.setState({
+                newUser: true
+            });
+        }
     }
 
     //handleClick on the logo, only shows for new users
@@ -41,7 +43,7 @@ class App extends React.Component {
         // this.props.userServices.saveUser(this.props.id, email);
         // //save (PATCH) to API
         // this.props.setEmailAsync(this.props.id, email);
-        // this.props.userServices.setUserEmail(this.props.userId, this.state.username, (email) => this.props.handleUpdate(email));
+        // this.props.userServices.setUserEmail(this.props.id, { email }, (email) => console.log(email));
         this.setState({
             email: email,
             newUser: false,
@@ -95,5 +97,4 @@ function mapStateToProps(state) {
 //         setEmailAsync: (id, email) => dispatch(setEmailAsync(id, email))
 //     }
 // }, mapDispatchToProps
-
 export default connect(mapStateToProps)(App)

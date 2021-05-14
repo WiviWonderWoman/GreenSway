@@ -9,7 +9,6 @@ export default class LaudryPage extends React.Component {
                 <div className="user">
                     <Booking />
                 </div>
-
             </div>
         );
     }

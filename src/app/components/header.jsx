@@ -5,10 +5,6 @@ import PropTypes from "prop-types";
 
 export default class Header extends React.Component {
 
-    constructor(props) {
-        super(props);
-    }
-
     render() {
         return (
             // returning user : new user
@@ -19,7 +15,7 @@ export default class Header extends React.Component {
                 </header>
                 :
                 <header>
-                    <Logo text={'Klicka här!'} className={'btn'} onClick={this.props.handleClick} username={this.props.username} userServices={this.props.userServices} />
+                    <Logo text={'Klicka här!'} className={'btn'} onClick={this.props.handleClick} />
                 </header>}
             </>
         )

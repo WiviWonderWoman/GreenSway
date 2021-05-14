@@ -3,10 +3,6 @@ import PropTypes from "prop-types";
 
 export default class FractionButton extends React.Component {
 
-    constructor(props) {
-        super(props);
-    }
-
     handleClick(source) {
         this.props.onClick(source);
     }

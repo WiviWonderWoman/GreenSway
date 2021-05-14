@@ -11,7 +11,6 @@ export default class HomePage extends React.Component {
                     <p>Kommunikation med hyresvärd:</p>
                     <p>felanmälan, driftinformation, rapportera status på städning</p>
                 </div>
-
             </div>
         );
     }

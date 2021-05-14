@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-export default class UserButton extends React.Component {
+export default class ReuseButton extends React.Component {
 
     render() {
         return (<button className={this.props.className} onClick={this.props.onClick}>{this.props.text}</button>);

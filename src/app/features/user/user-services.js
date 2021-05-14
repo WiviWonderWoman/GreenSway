@@ -44,17 +44,17 @@ export class UserServices {
             .catch(error => console.log(error));
     }
 
-    // setUserEmail(id, email, callback) {
-    //     Caller.patch(`/${id}`, { email: email })
-    //         .then(res => {
-    //             const data = res.data;
-    //             console.log('PATCH: ', res.data);
-    //             console.log('UserService: ', data.email);
-    //             callback(data.email);
-    //             return (data.email)
-    //         })
-    //         .catch((error) => {
-    //             console.log('PATCH: ', error)
-    //         });
-    // }
+    setUserEmail(id, email, callback) {
+        Caller.patch(`/${id}`, { email: email })
+            .then(res => {
+                const data = res.data;
+                console.log('PATCH: ', res.data);
+                console.log('UserService: ', data.email);
+                callback(data.email);
+                return (data.email)
+            })
+            .catch((error) => {
+                console.log('PATCH: ', error)
+            });
+    }
 }

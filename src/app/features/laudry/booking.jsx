@@ -6,8 +6,8 @@ export function Booking() {
     return (
         <Calendar
             onChange={onChange}
-            // showWeekNumbers
             value={value}
-            onClickDay={(value) => console.log('New date is: ', value)} />
+            onClickDay={(value) => console.log('New date is: ', value)}
+        />
     )
 }

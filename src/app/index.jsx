@@ -15,7 +15,6 @@ let username;
 
 if (user !== null || undefined) {
     id = user.id;
-    username = user.username;
     store.dispatch(getUserByIdAsync(id));
 } else {
     // store.dispatch(getNewUserAsync());
@@ -27,6 +26,7 @@ if (user !== null || undefined) {
 }
 
 let root = document.getElementById("root");
+
 ReactDOM.render(
 
     <Provider store={store}>

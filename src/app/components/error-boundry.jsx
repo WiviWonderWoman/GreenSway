@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import FallBackMessage from "./fallback-message";
 
 export default class ErrorBoundry extends React.Component {
@@ -38,4 +39,8 @@ export default class ErrorBoundry extends React.Component {
         }
         return this.props.children;
     }
+}
+
+ErrorBoundry.propTypes = {
+    handleClick: PropTypes.func,
 }

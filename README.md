@@ -28,12 +28,16 @@ Används för att visuallisera användarens "förbrukning" som ett cirkeldiagram
 Används för att navigara mellan "sidor", genom fejk URL möjliggörs att gå fram och bak i webbläsarhistoriken.
 
 ### [prop-types](https://www.npmjs.com/package/proptypes)
+Används för att validera (dokumentera) mina komponenters props.
 
 ### [react-redux](https://www.npmjs.com/package/react-redux)
+Används för tillståndshantering.
 
 ### [redux-toolkit](https://www.npmjs.com/package/@reduxjs/toolkit)
+Används för att underlätt tillståndshanteringen.
 
 ### [react-calendar](https://www.npmjs.com/package/react-calendar)
+Används för att integrera en kalendervy med "inbyggd" formatering och språkinställningar.
 ________________________________________________________________________________________________________________________________________________________________________________
 ## Tjänster
 
@@ -49,8 +53,6 @@ Anropas från
 * sparar även förbruknings-data och skicka neråt till PieChart (för att möjliggöra animering)
 #### user-form.jsx
 * för att uppdatera email på den nya användaren, ```PATCH(/id, {email: email})``` 
-#### table.jsx
-* för att hämta användarens data för fraktioner, ```GET(/id)``` och visa aktuella kostnader
 #### Exempel:
 ```
 {

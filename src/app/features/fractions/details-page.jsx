@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import PropTypes from "prop-types";
 import DropDown from "./drop-down";
 
-export class DetailsPage extends React.Component {
+class DetailsPage extends React.Component {
 
     render() {
         return (<DropDown chartData={this.props.chartData} />);

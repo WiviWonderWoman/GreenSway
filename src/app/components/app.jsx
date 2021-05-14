@@ -5,7 +5,7 @@ import UserForm from "../features/user/user-form";
 import Header from "./header";
 import Footer from "./footer";
 
-export class App extends React.Component {
+class App extends React.Component {
 
     constructor() {
         super();
@@ -16,12 +16,12 @@ export class App extends React.Component {
     }
 
     componentDidMount() {
-        if (this.props.id === undefined) {
+        if (this.props.userId !== undefined) {
             this.setState({
                 newUser: false
             });
         }
-        // else if (this.props.id === undefined) {
+        // else if (this.props.userId === undefined) {
         //     this.setState({
         //         newUser: true
         //     });
@@ -40,7 +40,7 @@ export class App extends React.Component {
         // //save to localStorage
         // this.props.userServices.saveUser(this.props.id, email);
         // //save (PATCH) to API
-        // this.props.dispatch(setEmailAsync(this.props.id, email));
+        // this.props.setEmailAsync(this.props.id, email);
         // this.props.userServices.setUserEmail(this.props.userId, this.state.username, (email) => this.props.handleUpdate(email));
         this.setState({
             email: email,
@@ -54,7 +54,7 @@ export class App extends React.Component {
         if (this.state.clicked === false) {
             return (
                 <>
-                    <Header handleClick={() => this.handleClick()} username={this.props.email} clicked={this.state.clicked} />
+                    <Header handleClick={() => this.handleClick()} username={this.props.email} id={this.props.id} clicked={this.state.clicked} />
                     <Footer />
                 </>
             );
@@ -79,6 +79,7 @@ export class App extends React.Component {
     }
 }
 App.propTypes = {
+    userId: PropTypes.number,
     id: PropTypes.number,
     username: PropTypes.string,
 }

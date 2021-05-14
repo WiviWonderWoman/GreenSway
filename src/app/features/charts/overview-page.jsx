@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import WasteChart from './waste-chart';
 import LaudryChart from "./laudry-chart";
 
-export class OverviewPage extends React.Component {
+class OverviewPage extends React.Component {
 
     render() {
         return (

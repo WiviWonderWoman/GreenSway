@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { Provider } from "react-redux";
 import "./app.css";
-import ConnectedApp from "./components/app";
+import App from "./components/app";
 import { UserServices } from "./features/user/user-services";
 import store from "./store";
 import { getUserByIdAsync, getNewUserAsync } from "./features/user/user-slice";
@@ -31,7 +31,7 @@ ReactDOM.render(
 
     <Provider store={store}>
         <ErrorBoundry>
-            <ConnectedApp />
+            <App userId={id} />
         </ErrorBoundry>
     </Provider>
     , root);

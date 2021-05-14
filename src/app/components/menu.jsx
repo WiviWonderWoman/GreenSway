@@ -9,8 +9,8 @@ import PropTypes from "prop-types";
 import Logo from "./logo";
 import HomePage from "./home-page";
 import LaudryPage from "../features/laudry/laudry-page";
-import ConnectedOverviewPage from "../features/charts/overview-page";
-import ConnectedDetailsPage from "../features/fractions/details-page";
+import OverviewPage from "../features/charts/overview-page";
+import DetailsPage from "../features/fractions/details-page";
 import KeyIdPage from "../features/key-id/key-id-page";
 
 export default class Menu extends React.Component {
@@ -36,7 +36,7 @@ export default class Menu extends React.Component {
                         <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
                             <div className="navbar-nav me-auto mb-2 mb-lg-0">
                                 <div className="navbar-nav">
-                                    <Link to={`/${id}`} className="nav-item nav-link"><p className="menu-link">Hem</p></Link>
+                                    <Link to={`/home/${id}`} className="nav-item nav-link"><p className="menu-link">Hem</p></Link>
                                 </div>
                                 <div className="navbar-nav">
                                     <Link to={`/laundry/${id}`} className="nav-item nav-link"><p className="menu-link">Boka tvättstuga</p></Link>
@@ -57,17 +57,17 @@ export default class Menu extends React.Component {
                 <hr />
                 <main>
                     <Switch>
-                        <Route exact path={`/${id}`}>
+                        <Route exact path={`/home/${id}`}>
                             <HomePage />
                         </Route>
                         <Route exact path={`/laundry/${id}`}>
                             <LaudryPage />
                         </Route>
                         <Route exact path={`/overview/${id}`}>
-                            <ConnectedOverviewPage />
+                            <OverviewPage />
                         </Route>
                         <Route exact path={`/details/${id}`}>
-                            <ConnectedDetailsPage />
+                            <DetailsPage />
                         </Route>
                         <Route exact path={`/key-id/${id}`}>
                             <KeyIdPage />

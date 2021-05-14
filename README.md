@@ -54,16 +54,18 @@ Anropas från
 #### Exempel:
 ```
 {
-        "id": 1,
-        "glas": 19,
-        "email": "",
-        "metal": 28,
-        "organic": 50,
-        "plastic": 34,
-        "residual": 19,
-        "cardboard": 24,
-        "newspaper": 30,
-        "garbagehouse": "1-003"
+  "id": 1,
+  "glas": 19,
+  "email": "demo@greensway.com",
+  "metal": 28,
+  "water": 29,
+  "organic": 50,
+  "plastic": 34,
+  "residual": 19,
+  "cardboard": 24,
+  "newspaper": 30,
+  "electricity": 17,
+  "garbagehouse": "1-003"
 }
 ```
 (garbagehouse är tänkt att användas för admins att kunna se statistik för ett helt sophus.)

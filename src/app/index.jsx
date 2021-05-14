@@ -3,9 +3,9 @@ import ReactDOM from "react-dom";
 import { Provider } from "react-redux";
 import "./app.css";
 import App from "./components/app";
-import { UserServices } from "./features/user/user-services";
-import store from "./store";
-import { getUserByIdAsync, getNewUserAsync } from "./features/user/user-slice";
+// import { UserServices } from "./features/user/user-services";
+import applicationStore from "./state/store";
+// import { getUserByIdAsync, getNewUserAsync } from "./features/user/user-slice";
 import ErrorBoundry from "./components/error-boundry";
 
 const userServices = new UserServices();
@@ -29,7 +29,7 @@ let root = document.getElementById("root");
 
 ReactDOM.render(
 
-    <Provider store={store}>
+    <Provider store={applicationStore}>
         <ErrorBoundry>
             <App userId={id} />
         </ErrorBoundry>

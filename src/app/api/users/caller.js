@@ -1,7 +1,7 @@
 import axios from 'axios';
 
-const caller = axios.create({
+const Caller = axios.create({
     baseURL: 'https://retoolapi.dev/BOnmI8/greenswayusers'
 });
 
-export default caller;
+export default Caller;

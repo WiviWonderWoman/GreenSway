@@ -50,8 +50,8 @@ class App extends React.Component {
 
     render() {
         // Logo shows if new user and button not clicked 
-        // this.state.newUser === true && 
-        if (this.state.clicked === false) {
+        //  
+        if (this.state.newUser === true && this.state.clicked === false) {
             return (
                 <>
                     <Header handleClick={() => this.handleClick()} username={this.props.email} id={this.props.id} clicked={this.state.clicked} />
@@ -68,7 +68,8 @@ class App extends React.Component {
                 </>
             );
         }
-        else if (this.state.newUser !== true && this.state.clicked === true) {
+        // && this.state.clicked === true
+        else if (this.state.newUser !== true) {
             return (
                 <>
                     <Header id={this.props.id} username={this.props.email} newUser={this.state.newUser} />

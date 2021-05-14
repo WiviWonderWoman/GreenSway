@@ -25,9 +25,15 @@ export default class ErrorBoundry extends React.Component {
     }
 
     render() {
+        const messageData = {
+            header: 'HOPPSAN!',
+            body: 'Något gick fel',
+            footer: '',
+            button: 'Försök igen'
+        }
         if (this.state.hasError) {
             return (
-                <FallBackMessage handleClick={() => this.handleClick()} />
+                <FallBackMessage handleClick={() => this.handleClick()} header={messageData.header} body={messageData.body} footer='' button={messageData.button} />
             )
         }
         return this.props.children;

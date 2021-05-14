@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 export default class FallBackMessage extends React.Component {
 
@@ -28,16 +29,25 @@ export default class FallBackMessage extends React.Component {
             <div className={modalDisplay}>
                 <div className="modal-content">
                     <div className="modal-header">
-                        <h2>HOPPSAN!</h2>
+                        <h2>{this.props.header}</h2>
                     </div>
                     <div className="modal-body">
-                        <p>Något gick fel</p>
+                        <p>{this.props.body}</p>
                     </div>
                     <div className="modal-footer">
-                        <button className="close" onClick={() => this.handleClick()}><h3>Försök igen</h3></button>
+                        <h3>{this.props.footer}</h3>
+                        <button className="close" onClick={() => this.handleClick()}>{this.props.button}</button>
                     </div>
                 </div>
             </div>
         )
     }
+}
+
+FallBackMessage.propTypes = {
+    header: PropTypes.string,
+    body: PropTypes.string,
+    footer: PropTypes.string,
+    button: PropTypes.string,
+    handleClick: PropTypes.func
 }

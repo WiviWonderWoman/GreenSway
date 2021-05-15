@@ -36,6 +36,9 @@ Används för tillståndshantering.
 ### [redux-toolkit](https://www.npmjs.com/package/@reduxjs/toolkit)
 Används för att underlätt tillståndshanteringen.
 
+### [redux-thunk](https://www.npmjs.com/package/redux-thunk)
+Används för att kunna dispatcha funktioner
+
 ### [react-calendar](https://www.npmjs.com/package/react-calendar)
 Används för att integrera en kalendervy med "inbyggd" formatering och språkinställningar.
 ________________________________________________________________________________________________________________________________________________________________________________

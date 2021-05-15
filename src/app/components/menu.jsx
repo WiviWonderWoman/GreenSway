@@ -8,10 +8,10 @@ import {
 import PropTypes from "prop-types";
 import Logo from "./logo";
 import HomePage from "./home-page";
-import LaudryPage from "../features/laudry/laudry-page";
-import OverviewPage from "../features/charts/overview-page";
-import DetailsPage from "../features/fractions/details-page";
-import KeyIdPage from "../features/key-id/key-id-page";
+import LaudryPage from "./laudry/laudry-page";
+import OverviewPage from "./charts/overview-page";
+import DetailsPage from "./fractions/details-page";
+import KeyIdPage from "./key-id-page";
 
 export default class Menu extends React.Component {
 

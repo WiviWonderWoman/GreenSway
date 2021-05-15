@@ -1,9 +1,15 @@
 import React from "react";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
-import UserForm from "../features/user/user-form";
+import UserForm from "./user-form";
 import Header from "./header";
 import Footer from "./footer";
+import { checkLocalStorage } from "../api";
+import {
+    setUserEmail,
+    getUserById,
+    getNewUser
+} from "../state/actions/api";
 
 class App extends React.Component {
 
@@ -16,14 +22,15 @@ class App extends React.Component {
     }
 
     componentDidMount() {
-        if (this.props.userId !== undefined) {
+        const user = checkLocalStorage();
+        if (user !== null || undefined) {
+            this.props.getUser(user.id);
             this.setState({
                 newUser: false
             });
         }
-        else if (this.props.userId === undefined) {
-
-            console.log(this.props.email);
+        else {
+            this.props.getNewUser();
             this.setState({
                 newUser: true
             });
@@ -42,8 +49,7 @@ class App extends React.Component {
         // //save to localStorage
         // this.props.userServices.saveUser(this.props.id, email);
         // //save (PATCH) to API
-        // this.props.setEmailAsync(this.props.id, email);
-        // this.props.userServices.setUserEmail(this.props.id, { email }, (email) => console.log(email));
+        this.props.setEmail(this.props.id, email);
         this.setState({
             email: email,
             newUser: false,
@@ -86,15 +92,18 @@ App.propTypes = {
     id: PropTypes.number,
     username: PropTypes.string,
 }
-function mapStateToProps(state) {
+const mapStateToProps = (state) => {
+    console.log('redux state: ', state);
     return {
-        id: state.user.user.id,
-        email: state.user.user.email
+        id: state.user.id,
+        email: state.user.email
     }
 }
-// function mapDispatchToProps(dispatch) {
-//     return {
-//         setEmailAsync: (id, email) => dispatch(setEmailAsync(id, email))
-//     }
-// }, mapDispatchToProps
-export default connect(mapStateToProps)(App)
+const mapDispatchToProps = (dispatch) => {
+    return {
+        getUser: (id) => dispatch(getUserById(id)),
+        getNewUser: () => dispatch(getNewUser()),
+        setEmail: (id, email) => dispatch(setUserEmail(id, email)),
+    }
+}
+export default connect(mapStateToProps, mapDispatchToProps)(App)

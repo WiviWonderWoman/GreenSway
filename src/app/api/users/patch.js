@@ -4,9 +4,9 @@ export async function setUserEmailAsync(id, email) {
     try {
         const response = await Caller.patch(`/${id}`, { email: email });
 
-        // if (!response.ok) {
-        //     throw Error(response.statusText);
-        // }
+        if (response.status !== 200) {
+            throw Error(response.statusText);
+        }
         const user = response.data;
         return user;
     }

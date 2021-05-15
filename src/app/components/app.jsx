@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
-import UserForm from "../features/user/user-form";
+import UserForm from "./user-form";
 import Header from "./header";
 import Footer from "./footer";
 import { checkLocalStorage } from "../api";

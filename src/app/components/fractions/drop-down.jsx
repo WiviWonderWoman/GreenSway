@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import FractionButton from "./fraction-button";
 import Table from "./table";
-import { FractionDataService } from "./fraction-data-services";
+import { FractionDataService } from "../../features/fractions/fraction-data-services";
 
 export default class DropDown extends React.Component {
 

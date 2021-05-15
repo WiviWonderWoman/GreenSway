@@ -4,9 +4,9 @@ export async function getUserByIdAsync(id) {
     try {
         const response = await Caller.get(`/${id}`, {});
         console.log(response);
-        // if (!response.ok) {
-        //     throw Error(response.statusText);
-        // }
+        if (response.status !== 200) {
+            throw Error(response.statusText);
+        }
         const user = response.data;
         console.log(user);
         return user;
@@ -23,9 +23,9 @@ export async function getNewUserAsync() {
         console.log(response);
         const newUser = response.data[0];
         console.log(newUser);
-        // if (!response.ok) {
-        //     throw Error(response.statusText);
-        // }
+        if (response.status !== 200) {
+            throw Error(response.statusText);
+        }
         return newUser;
     }
     catch (err) {

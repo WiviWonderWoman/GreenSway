@@ -1,13 +1,14 @@
 import Caller from "./caller";
 
-export async function getUserById(id) {
+export async function getUserByIdAsync(id) {
     try {
         const response = await Caller.get(`/${id}`, {});
-
-        if (!response.ok) {
-            throw Error(response.statusText);
-        }
+        console.log(response);
+        // if (!response.ok) {
+        //     throw Error(response.statusText);
+        // }
         const user = response.data;
+        console.log(user);
         return user;
     }
     catch (error) {
@@ -16,18 +17,19 @@ export async function getUserById(id) {
     }
 }
 
-export async function getNewUser() {
+export async function getNewUserAsync() {
     try {
         const response = await Caller.get(`?email`, {});
-
-        if (!response.ok) {
-            throw Error(response.statusText);
-        }
+        console.log(response);
         const newUser = response.data[0];
+        console.log(newUser);
+        // if (!response.ok) {
+        //     throw Error(response.statusText);
+        // }
         return newUser;
     }
-    catch (error) {
-        console.error("err'd ", error)
+    catch (err) {
+        console.error("err'd ", err)
         throw ({ message: 'Failed to get new user' });
     }
 }

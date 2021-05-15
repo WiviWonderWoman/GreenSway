@@ -22,18 +22,18 @@ DetailsPage.propTypes = {
         water: PropTypes.number
     })
 }
-function mapStateToProps(state) {
+const mapStateToProps = (state) => {
     return {
         chartData: {
-            organic: state.user.user.organic,
-            newspaper: state.user.user.newspaper,
-            cardboard: state.user.user.cardboard,
-            glas: state.user.user.glas,
-            plastic: state.user.user.plastic,
-            metal: state.user.user.metal,
-            residual: state.user.user.residual,
-            electricity: state.user.user.electricity,
-            water: state.user.user.water
+            organic: state.user.organic,
+            newspaper: state.user.newspaper,
+            cardboard: state.user.cardboard,
+            glas: state.user.glas,
+            plastic: state.user.plastic,
+            metal: state.user.metal,
+            residual: state.user.residual,
+            electricity: state.user.electricity,
+            water: state.user.water
         }
     }
 }

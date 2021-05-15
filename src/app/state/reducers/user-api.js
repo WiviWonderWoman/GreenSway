@@ -1,7 +1,7 @@
 
-export function loadedUser(state = {}, action) {
+export function apiFetchUserSuccess(state = {}, action) {
     switch (action.type) {
-        case 'LOADED_USER':
+        case 'API_FETCH_USER_SUCCESS':
             return action.user;
         default:
             return state;

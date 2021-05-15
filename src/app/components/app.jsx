@@ -9,7 +9,7 @@ import {
     setUserEmail,
     getUserById,
     getNewUser
-} from "../state/actions/api";
+} from "../state/actions";
 
 class App extends React.Component {
 

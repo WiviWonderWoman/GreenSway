@@ -11,7 +11,7 @@ export default class FractionButton extends React.Component {
         return (
             <>
                 {this.props.allFractions.map((element) =>
-                    <li key={element.id} onClick={() => this.handleClick(element.source)}><button className={element.id}>{element.name}</button></li>)}
+                    <li key={element.id} onClick={() => this.handleClick(element.source)}><button className={element.fractionId}>{element.name}</button></li>)}
             </>
         );
     }

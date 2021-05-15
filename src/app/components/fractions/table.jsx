@@ -15,7 +15,7 @@ export default class Table extends React.Component {
         const price = this.props.fraction.price;
         const unit = this.props.fraction.unit;
         const total = amount * price + ' :-';
-        const className = this.props.fraction.id;
+        const className = this.props.fraction.fractionId;
 
         return (
             <div id={className} className="table-responsive">
@@ -50,9 +50,11 @@ Table.propTypes = {
         price: PropTypes.number,
         max: PropTypes.number,
         unit: PropTypes.string,
-        id: PropTypes.string,
+        id: PropTypes.number,
+        fractionId: PropTypes.string,
         hatchOpen: PropTypes.bool,
-        isFull: PropTypes.bool
+        isFull: PropTypes.bool,
+        garbagehouse: PropTypes.string
     }),
     chartData: PropTypes.exact({
         organic: PropTypes.number,

@@ -1,6 +1,8 @@
 import { combineReducers } from "redux";
-import { loadedUser } from "./api";
+import { apiFetchUserSuccess } from "./user-api";
+import { apiFetchFractionsSuccess } from "./fraction-api";
 
 export default combineReducers({
-    user: loadedUser,
+    user: apiFetchUserSuccess,
+    fractions: apiFetchFractionsSuccess
 });

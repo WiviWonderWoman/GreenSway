@@ -1,24 +1,23 @@
 import React from "react";
+import { connect } from "react-redux";
 import PropTypes from "prop-types";
 import FractionButton from "./fraction-button";
 import Table from "./table";
-import { FractionDataService } from "../../features/fractions/fraction-data-services";
+import { getFractions } from "../../state/actions";
 
-export default class DropDown extends React.Component {
+
+class DropDown extends React.Component {
 
     constructor(props) {
         super(props);
         this.state = {
             fraction: {},
-            allFractions: [],
-            isClicked: false,
-            consumtionKey: ''
+            isClicked: false
         }
     }
 
     handleFractionClick(source) {
-        const fractionDataService = new FractionDataService();
-        const fraction = fractionDataService.getFractionBySource(source);
+        const fraction = this.props.fractions.find((f) => f.source === source);
         this.setState({
             isClicked: true,
             fraction: fraction
@@ -31,13 +30,9 @@ export default class DropDown extends React.Component {
             consumtionKey: key
         });
     }
+
     componentDidMount() {
-        const fractionDataService = new FractionDataService();
-        fractionDataService.loadData();
-        const allFractions = fractionDataService.allFractions;
-        this.setState({
-            allFractions: allFractions
-        });
+        this.props.getFractions(this.props.garbagehouse);
     }
 
     render() {
@@ -52,7 +47,7 @@ export default class DropDown extends React.Component {
                                     Fraktioner
                                 </button>
                                 <ul className="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton1">
-                                    <FractionButton allFractions={this.state.allFractions} className="dropdown-item" onClick={(source) => this.handleFractionClick(source)} />
+                                    <FractionButton allFractions={this.props.fractions} className="dropdown-item" onClick={(source) => this.handleFractionClick(source)} />
                                 </ul>
                             </div>
                             <div className="spacer"></div>
@@ -69,7 +64,7 @@ export default class DropDown extends React.Component {
                                     Fraktioner
                                 </button>
                                 <ul className="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton1">
-                                    <FractionButton allFractions={this.state.allFractions} className="dropdown-item" onClick={(source) => this.handleFractionClick(source)} />
+                                    <FractionButton allFractions={this.props.fractions} className="dropdown-item" onClick={(source) => this.handleFractionClick(source)} />
                                 </ul>
                             </div>
                         </div>
@@ -82,6 +77,7 @@ export default class DropDown extends React.Component {
     }
 }
 DropDown.propTypes = {
+    garbagehouse: PropTypes.string,
     chartData: PropTypes.exact({
         organic: PropTypes.number,
         newspaper: PropTypes.number,
@@ -92,5 +88,31 @@ DropDown.propTypes = {
         residual: PropTypes.number,
         electricity: PropTypes.number,
         water: PropTypes.number
-    })
+    }),
+    fractions: PropTypes.array
 }
+const mapStateToProps = (state) => {
+    return {
+        garbagehouse: state.user.garbagehouse,
+        chartData: {
+            organic: state.user.organic,
+            newspaper: state.user.newspaper,
+            cardboard: state.user.cardboard,
+            glas: state.user.glas,
+            plastic: state.user.plastic,
+            metal: state.user.metal,
+            residual: state.user.residual,
+            electricity: state.user.electricity,
+            water: state.user.water
+        },
+        fractions: state.fractions
+    }
+}
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+        getFractions: (garbagehouse) => dispatch(getFractions(garbagehouse))
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(DropDown)

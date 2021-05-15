@@ -15,7 +15,6 @@ export function checkLocalStorage() {
 }
 
 export function saveUser(id, username) {
-    console.log('SaveUser: ', id, username)
     localStorage.setItem('id', JSON.stringify(id));
     localStorage.setItem('username', JSON.stringify(username));
 }

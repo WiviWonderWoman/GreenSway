@@ -3,12 +3,11 @@ import Caller from "./caller";
 export async function getUserByIdAsync(id) {
     try {
         const response = await Caller.get(`/${id}`, {});
-        console.log(response);
+
         if (response.status !== 200) {
             throw Error(response.statusText);
         }
         const user = response.data;
-        console.log(user);
         return user;
     }
     catch (error) {
@@ -20,12 +19,11 @@ export async function getUserByIdAsync(id) {
 export async function getNewUserAsync() {
     try {
         const response = await Caller.get(`?email`, {});
-        console.log(response);
-        const newUser = response.data[0];
-        console.log(newUser);
+
         if (response.status !== 200) {
             throw Error(response.statusText);
         }
+        const newUser = response.data[0];
         return newUser;
     }
     catch (err) {

@@ -102,7 +102,6 @@ main {
   margin: auto;
   padding-right: 2%;
   float: right;
-  /* color:  rgb(7, 196, 7); */
   font-size: large;
 }
 .menu-link {
@@ -133,8 +132,6 @@ main {
 #copy {
   text-align: center;
   background-color:  #282c34;
-  padding-left: 25%;
-  padding-right: 25%;
   font-size: small;
 }
   #copy  span {
@@ -142,6 +139,11 @@ main {
     font-size: xx-large;
     color:rgb(51, 255, 0);
     padding: 0px;
+  }
+  #copy  h1 {
+    font-family: 'Tangerine', cursive;
+    font-size: 5em;
+    color:rgb(51, 255, 0);
   }
 nav {
   width: 100%;
@@ -163,8 +165,9 @@ nav {
 
 .mini-container {
   margin: auto;
-  position:relative;
-  max-width: 200px;
+  /* position:relative; */
+  justify-content: center;
+  max-width: 180px;
 }
 .mini-container button {
   position: absolute;
@@ -239,10 +242,11 @@ nav {
 }
 
 .spacer {
-  height: 500px;
+  height: 550px;
 }
 .table-spacer {
-  height: 420px;
+  min-height: 475px;
+  max-height: 550px;
 }
 
 .rw {

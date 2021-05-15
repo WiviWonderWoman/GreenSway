@@ -7,7 +7,7 @@ export default class ReuseButton extends React.Component {
         return (<button className={this.props.className} onClick={this.props.onClick}>{this.props.text}</button>);
     }
 }
-UserButton.propTypes = {
+ReuseButton.propTypes = {
     className: PropTypes.string,
     onClick: PropTypes.func,
     text: PropTypes.string

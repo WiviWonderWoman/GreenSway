@@ -21,11 +21,10 @@ export default class Menu extends React.Component {
         return (
             <Router>
                 <Logo text={'GreenSway'} className={'mini-container'} />
+                <hr />
                 <span className="intro">
                     VÄLKOMMEN: {this.props.username}!
                 </span>
-                <br />
-                <hr></hr>
                 <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
                     <div className="container-fluid">
                         <div >
@@ -35,6 +34,7 @@ export default class Menu extends React.Component {
                         </div>
                         <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
                             <div className="navbar-nav me-auto mb-2 mb-lg-0">
+
                                 <div className="navbar-nav">
                                     <Link to={`/${id}`} className="nav-item nav-link"><p className="menu-link">Hem</p></Link>
                                 </div>

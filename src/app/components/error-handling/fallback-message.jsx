@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import ReuseButton from "../reuse-button";
 
 export default class FallBackMessage extends React.Component {
 
@@ -10,7 +11,6 @@ export default class FallBackMessage extends React.Component {
         }
     }
     handleClick() {
-        console.log('FM: click');
         this.setState({
             hide: true
         })
@@ -36,7 +36,7 @@ export default class FallBackMessage extends React.Component {
                     </div>
                     <div className="modal-footer">
                         <h3>{this.props.footer}</h3>
-                        <button className="close" onClick={() => this.handleClick()}>{this.props.button}</button>
+                        <ReuseButton className="close" onClick={() => this.handleClick()} text={this.props.button} />
                     </div>
                 </div>
             </div>

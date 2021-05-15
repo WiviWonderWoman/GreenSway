@@ -18,7 +18,6 @@ export default class ErrorBoundry extends React.Component {
     }
 
     handleClick() {
-        console.log('EB: click');
         this.setState({
             hasError: false
         })

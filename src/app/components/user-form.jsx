@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import ReuseButton from "./reuse-button";
 
 export default class UserForm extends React.Component {
 
@@ -37,7 +38,7 @@ export default class UserForm extends React.Component {
                     <label>eller registrera ny användare här:<br /></label>
                 </div>
                 <div className="form-group">
-                    <button onClick={() => this.saveUser()}>SPARA</button>
+                    <ReuseButton onClick={() => this.saveUser()} text='SPARA' />
                 </div>
             </div>
         );

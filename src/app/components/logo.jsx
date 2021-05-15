@@ -1,6 +1,7 @@
 import React from "react";
 import logo from "../images/recycle.png";
 import PropTypes from "prop-types";
+import ReuseButton from "./reuse-button";
 
 export default class Logo extends React.Component {
 
@@ -11,13 +12,15 @@ export default class Logo extends React.Component {
                 <div className={this.props.className}>
                     <div className="container">
                         <img src={logo} className="App-logo" alt="recycle-logo" />
-                        <button className={this.props.className} id="copy" ><span>{this.props.text}</span></button>
+                    </div>
+                    <div id="copy">
+                        <h1 >{this.props.text}</h1>
                     </div>
                 </div>
                 :
                 <div className="container">
                     <img src={logo} className="App-logo" alt="recycle-logo" />
-                    <button className={this.props.className} onClick={this.props.onClick}>{this.props.text}</button>
+                    <ReuseButton className={this.props.className} onClick={this.props.onClick} text={this.props.text} />
                 </div>
         );
     }

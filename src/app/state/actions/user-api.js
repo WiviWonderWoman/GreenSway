@@ -30,7 +30,7 @@ export function getUserById(id) {
             dispatch(apiIsLoadingUser(false));
         }
         catch (error) {
-            dispatch(apiFetchUserError(error.errorMessage));
+            dispatch(apiFetchUserError(error.message));
         }
     };
 }

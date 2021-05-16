@@ -65,6 +65,14 @@ class App extends React.Component {
     }
 
     render() {
+
+        if (this.props.hasError) {
+            return (<h1>ERROR</h1>)
+
+        }
+        if (this.props.isLoading) {
+            return (<h1>LADDAR!</h1>)
+        }
         //variable for readability
         const id = this.props.id;
         // Logo shows if new user and button not clicked 
@@ -134,7 +142,10 @@ const mapStateToProps = (state) => {
     console.log('redux state: ', state);
     return {
         id: state.user.id,
-        email: state.user.email
+        email: state.user.email,
+        isLoading: state.apiIsLoading,
+        hasError: state.hasError,
+        // errorMessage: state.hasError.message
     }
 }
 const mapDispatchToProps = (dispatch) => {

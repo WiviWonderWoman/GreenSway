@@ -1,8 +1,12 @@
 import { combineReducers } from "redux";
-import { apiFetchUserSuccess } from "./user-api";
-import { apiFetchFractionsSuccess } from "./fraction-api";
+import { apiFetchUserSuccess, apiFetchUserError, apiIsLoadingUser } from "./user-api";
+import { apiFetchFractionsSuccess, apiFetchFractionsError, apiIsLoadingFractions } from "./fraction-api";
 
 export default combineReducers({
     user: apiFetchUserSuccess,
-    fractions: apiFetchFractionsSuccess
+    apiFetchUserError,
+    apiIsLoadingUser,
+    fractions: apiFetchFractionsSuccess,
+    apiFetchFractionsError,
+    apiIsLoadingFractions
 });

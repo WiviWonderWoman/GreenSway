@@ -30,7 +30,7 @@ export function getFractions(garbagehouse) {
             dispatch(apiIsLoadingFractions(false));
         }
         catch (error) {
-            dispatch(apiFetchFractionError(error.errorMessage));
+            dispatch(apiFetchFractionsError(error.errorMessage));
         }
     };
 }

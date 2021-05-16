@@ -43,14 +43,13 @@ class DropDown extends React.Component {
                         <div className="nav-list">
                             <div className="dropdown">
                                 <h5 className="user">Välj önskad fraktion i menyn nedanför:</h5>
-                                <button className="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                <button className="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
                                     Fraktioner
                                 </button>
-                                <ul className="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton1">
+                                <ul className="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton">
                                     <FractionsButton allFractions={this.props.fractions} className="dropdown-item" onClick={(source) => this.handleFractionClick(source)} />
                                 </ul>
                             </div>
-                            <div className="spacer"></div>
                         </div>
                     </nav>
                 </>
@@ -60,18 +59,17 @@ class DropDown extends React.Component {
                         <div className="nav-list">
                             <div className="dropdown">
                                 <h5 className="user">Välj önskad fraktion i menyn nedanför:</h5>
-                                <button className="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                <button className="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
                                     Fraktioner
                                 </button>
-                                <ul className="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton1">
+                                <ul className="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton">
                                     <FractionsButton allFractions={this.props.fractions} className="dropdown-item" onClick={(source) => this.handleFractionClick(source)} />
                                 </ul>
                             </div>
                         </div>
                     </nav>
-                    <div className="table-spacer">
-                        <Table chartData={this.props.chartData} fraction={this.state.fraction} />
-                    </div>
+                    <Table chartData={this.props.chartData} fraction={this.state.fraction} />
+
                 </>
         );
     }

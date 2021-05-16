@@ -12,42 +12,32 @@
     transform: rotate(360deg);
   }
 }
-table {
-  font-size: xx-large;
-}
-.table-active {
-  color: gray;
-}
-.container {
-  margin: auto;
-  position:relative;
-  max-width: 400px;
-}
-  .container img {
-    width: 100%;
-    height: auto;
+/*media rules for h1 size on smaller screens*/
+@media only screen and (max-width: 800px) {
+  #root {
+    font-size: 0.8em;
   }
-  .container .btn {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    background-color:#282c34;
-    color: rgb(7, 196, 7) ;
-    font-size: 25px;
-    padding: 16px 30px;
-    border: none;
-    border-radius: 5px;
-    text-align: center;
+}
+@media only screen and (max-width: 700px) {
+  #root {
+    font-size: 0.7em;
   }
-    .container .btn:hover {
-      background-color: rgb(7, 196, 7);
-      color: #282c34;
-    }
-.navbar-nav {
-  flex-grow: 1;
-}    
+}
+@media only screen and (max-width: 600px) {
+  #root {
+    font-size: 0.6em;
+  }
+}
+@media only screen and (max-width: 500px) {
+  #root {
+    font-size: 0.5em;
+  }
+}
+@media only screen and (max-width: 400px) {
+  #root {
+    font-size: 0.4em;
+  }
+}
 
 body {
   background-color: #282c34;
@@ -62,11 +52,11 @@ body {
   margin:auto;
 }
 
-i {
-  border-radius: 10%;
-  color: rgba(99, 255, 9, 0.959);
-  font-size: 1000%;
+#root {
+  width: 80%;
+  margin: auto;
 }
+
 button {
   width: auto;
   border: solid 1px black;
@@ -86,108 +76,49 @@ button {
     text-align: center;
     box-shadow: 0 2px 8px 0 rgb(250, 247, 247), 0 1px 10px 0 rgb(250, 247, 247);
   }
-
-main {
-  width: 100%;
-  display: flex;
-    flex-wrap: wrap;
-    flex-grow: 1;
-    justify-content: center;
-}
-#root {
-  width: 80%;
+.container {
   margin: auto;
+  position:relative;
+  max-width: 400px;
 }
-.intro {
-  margin: auto;
-  padding-right: 2%;
-  float: right;
-  font-size: large;
-}
-.menu-link {
-  color: rgb(7, 196, 7);
-}
-.menu-link:hover {
-  color:rgb(51, 255, 0);
-}
-#dropdownMenuButton1 {
-  width: auto;
-  border: solid 1px black;
-  border-radius: 10px;
-  box-shadow: none;
-  background-color: #282c34;
-  color: white;
-  padding: 10px ;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  cursor: pointer;
-}
-#dropdownMenuButton1:hover {
-  background-color: rgb(7, 196, 7);
-    color: black;
+  .container img {
+    width: 100%;
+    height: auto;
+  }
+  .container .btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color:#282c34;
+    color: rgb(7, 196, 7) ;
+    font-size: 2em;
+    padding: 16px 30px;
+    border: none;
+    border-radius: 5px;
     text-align: center;
-    box-shadow: 0 2px 8px 0 rgb(250, 247, 247), 0 1px 10px 0 rgb(250, 247, 247);
-} 
+  }
+    .container .btn:hover {
+      background-color: rgb(7, 196, 7);
+      color: #282c34;
+    }
+
 #copy {
   text-align: center;
   background-color:  #282c34;
-  font-size: small;
 }
   #copy  span {
     font-family: 'Tangerine', cursive;
-    font-size: xx-large;
     color:rgb(51, 255, 0);
     padding: 0px;
   }
   #copy  h1 {
     font-family: 'Tangerine', cursive;
-    font-size: 5em;
+    font-size: 3em;
     color:rgb(51, 255, 0);
   }
-nav {
-  width: 100%;
-}
-
-.flex.container {
-  margin: auto;
-  display: flex;
-}
-  .nav-list{
-    margin-left: 5%;
-    display: flex;
-    justify-content: left;
-  }
-    .nav-list li {
-      list-style: none;
-      margin: 10px;
-    }
-
-.mini-container {
-  margin: auto;
-  /* position:relative; */
-  justify-content: center;
-  max-width: 180px;
-}
-.mini-container button {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  background-color: rgb(7, 196, 7);
-  color: black;
-  font-size: 15px;
-  padding: 0px 20px 0px 20px  ;
-  border: none;
-  border-radius: 5px;
-  text-align: center;
-  box-shadow: 0 2px 8px 0 rgb(250, 247, 247), 0 1px 10px 0 rgb(250, 247, 247);
-}
-  .minicontainer button:hover {
-    cursor: default;
-  }
-
+  
 .userForm {
   margin: auto;
   padding: 10px;
@@ -207,6 +138,35 @@ nav {
     border-radius: 10px;
   }
 
+.mini-container {
+  margin: auto;
+  /* position:relative; */
+  justify-content: center;
+  max-width: 180px;
+}
+nav {
+  width: 100%;
+}
+.navbar-nav {
+  flex-grow: 1;
+}
+.menu-link {
+  color: rgb(7, 196, 7);
+}
+.menu-link:hover {
+  color:rgb(51, 255, 0);
+}
+
+.intro {
+  margin: auto;
+  padding-right: 2%;
+  float: right;
+}
+
+.spacer {
+ min-height: 500px;
+ width: 100%;
+}
 .user {
   color:  rgb(7, 196, 7);
   margin: auto;
@@ -214,359 +174,66 @@ nav {
   width: 100%;
 }
 
-.clicked {
-  background-color: rgb(32, 2, 2);
+.flex.container {
+  margin: auto;
+  display: flex;
+}
+  .nav-list{
+    display: flex;
+    justify-content: left;
+  }
+    .nav-list li {
+      list-style: none;
+      margin: 10px;
+    }
+    
+#dropdownMenuButton {
+  width: auto;
+  border: solid 1px black;
+  border-radius: 10px;
+  box-shadow: none;
+  background-color: #282c34;
+  color: white;
+  padding: 10px ;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  margin:10%;
+}
+#dropdownMenuButton:hover {
+  background-color: rgb(7, 196, 7);
+    color: black;
+    text-align: center;
+    box-shadow: 0 2px 8px 0 rgb(250, 247, 247), 0 1px 10px 0 rgb(250, 247, 247);
+}
+
+.table-active {
   color: gray;
 }
-  .clicked:hover {
-    background-color: rgb(32, 2, 2);
-    color: gray;
-    font-weight: normal;
-    box-shadow: none;
-    cursor: default;
-  }
-
-.overview {
+.table-responsive {
+  width: 60%;
   margin: auto;
-  display: flex;
+}
+.table {
   width: 100%;
-  height: 500px;
-}
-.pie-chart {
-  margin: 10px;
-  position:relative;
-  width: 50%;
-  background-color: black;
-  display: flex;
-  color: black;
 }
 
-.spacer {
-  height: 550px;
-}
-.table-spacer {
-  min-height: 475px;
-  max-height: 550px;
+i {
+  border-radius: 10%;
+  color: rgba(99, 255, 9, 0.959);
+  font-size: 1000%;
 }
 
-.rw {
-  background-color: darkred; 
-  border: solid 1px black;
-  border-radius: 10px;
-  box-shadow: none;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  cursor: pointer;
-  width:100%;
-}
-.rw:hover {
-  background-color:rgb(245, 47, 40);
-  color: black;
-  text-align: center;
-  box-shadow: 0 2px 8px 0 rgb(250, 247, 247), 0 1px 10px 0 rgb(250, 247, 247);
-}
-#rw {
-  background-color: darkred; 
-  border: solid 1px black;
-  color: whitesmoke;
-  box-shadow: 0 2px 8px 0 rgb(250, 247, 247), 0 1px 10px 0 rgb(250, 247, 247);
-  border-radius: 10px;
-  text-align: center;
-}
-.el {
-  background-color: rgb(235, 220, 90); 
-  border: solid 1px black;
-  color: black;
-  border-radius: 10px;
-  box-shadow: none;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  cursor: pointer;
-  width:100%;
-}
 
-  .el:hover {
-    background-color:yellow;
-    color: black;
-    text-align: center;
-    box-shadow: 0 2px 8px 0 rgb(250, 247, 247), 0 1px 10px 0 rgb(250, 247, 247);
-  }
-#el {
-  background-color: rgb(235, 220, 90); 
-  border: solid 1px black;
-  box-shadow: 0 2px 8px 0 rgb(250, 247, 247), 0 1px 10px 0 rgb(250, 247, 247);
-  color: black;
-  border-radius: 10px;
-  text-align: center;
-}
-/* organic waste button */
-.ow {
-  background-color: #4CAF50; 
-  border: solid 1px black;
-  border-radius: 10px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  cursor: pointer;
-  width:100%;
-}
-#ow{
-  background-color: #4CAF50; 
-  border: solid 1px black;
-  color: black;
-  box-shadow: 0 2px 8px 0 rgb(250, 247, 247), 0 1px 10px 0 rgb(250, 247, 247);
-  border-radius: 10px;
-  text-align: center;
 
-}
-  .ow:hover {
-    background-color: rgba(99, 255, 9, 0.959);
-    color: black;
-    text-align: center;
-    box-shadow: 0 2px 8px 0 rgb(250, 247, 247), 0 1px 10px 0 rgb(250, 247, 247);
-  }
-/* cardboard button */
-.cp {
-  background-color: navy;
-  border: solid 1px black;
-  border-radius: 10px;
-  box-shadow: none;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  cursor: pointer;
-  width:100%;
-}
-.cp:hover {
-  background-color: rgb(51, 104, 250);
-  color: black;
-  text-align: center;
-  box-shadow: 0 2px 8px 0 rgb(250, 247, 247), 0 1px 10px 0 rgb(250, 247, 247);
-}
-#cp {
-  background-color: navy;
-  border: solid 1px black;
-  color: whitesmoke;
-  box-shadow: 0 2px 8px 0 rgb(250, 247, 247), 0 1px 10px 0 rgb(250, 247, 247);
-  border-radius: 10px;
-  text-align: center;
-}
-.wat {
-  background-color: skyblue;
-  border: solid 1px black;
-  border-radius: 10px;
-  box-shadow: none;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  cursor: pointer;
-  width:100%;
-}
 
-  .wat:hover {
-    background-color: turquoise;
-    color: black;
-    text-align: center;
-    box-shadow: 0 2px 8px 0 rgb(250, 247, 247), 0 1px 10px 0 rgb(250, 247, 247);
-  }
-#wat {
-  background-color: skyblue;
-  border: solid 1px black;
-  color: black;
-  box-shadow: 0 2px 8px 0 rgb(250, 247, 247), 0 1px 10px 0 rgb(250, 247, 247);
-  border-radius: 10px;
-  text-align: center;
-}
-/* plastic button */
-.pp {
-  background-color: orangered; 
-  border: solid 1px black;
-  border-radius: 10px;
-  box-shadow: none;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  cursor: pointer;
-  width:100%;
-}
-  .pp:hover {
-    background-color: orange;
-    color: black;
-    text-align: center;
-    box-shadow: 0 2px 8px 0 rgb(250, 247, 247), 0 1px 10px 0 rgb(250, 247, 247);
-  }
-#pp {
-  background-color: orangered; 
-  border: solid 1px black;
-  color: black;
-  box-shadow: 0 2px 8px 0 rgb(250, 247, 247), 0 1px 10px 0 rgb(250, 247, 247);
-  border-radius: 10px;
-  text-align: center;
-}
-/* metal button */
-.mp {
-  background-color: rgb(56, 55, 55); 
-  border: solid 1px black;
-  border-radius: 10px;
-  box-shadow: none;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  cursor: pointer;
-  width:100%;
-}
-  .mp:hover {
-    background-color: gray;
-    color: black;
-    text-align: center;
-    box-shadow: 0 2px 8px 0 rgb(250, 247, 247), 0 1px 10px 0 rgb(250, 247, 247);
-  }
-#mp {
-  background-color: rgb(56, 55, 55); 
-  border: solid 1px black;
-  color: whitesmoke;
-  box-shadow: 0 2px 8px 0 rgb(250, 247, 247), 0 1px 10px 0 rgb(250, 247, 247);
-  border-radius: 10px;
-  text-align: center;
-}
-/* glas button */
-.gp {
-  background-color: rgba(245, 245, 245, 0.425); 
-  opacity: 70%;
-  border: solid 1px black;
-  border-radius: 10px;
-  box-shadow: none;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  cursor: pointer;
-  width:100%;
-}
-  .gp:hover {
-    background-color:whitesmoke;
-    opacity: 100%;
-    color: black;
-    text-align: center;
-    box-shadow: 0 2px 8px 0 rgb(250, 247, 247), 0 1px 10px 0 rgb(250, 247, 247);
-  }
-#gp {
-  background-color: rgba(245, 245, 245, 0.425); 
-  border: solid 1px black;
-  color: black;
-  box-shadow: 0 2px 8px 0 rgb(250, 247, 247), 0 1px 10px 0 rgb(250, 247, 247);
-  border-radius: 10px;
-  text-align: center;
-}
-/* newspaper button */
-.np {
-  background-color: rgb(51, 22, 18); 
-  border: solid 1px black;
-  border-radius: 10px;
-  box-shadow: none;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  cursor: pointer;
-  width:100%;
-}
-  .np:hover {
-    background-color: rgb(122, 108, 78);
-    color: black;
-    text-align: center;
-    box-shadow: 0 2px 8px 0 rgb(250, 247, 247), 0 1px 10px 0 rgb(250, 247, 247);
-  }
-#np{
-  background-color: rgb(51, 22, 18); 
-  border: solid 1px black;
-  color: whitesmoke;
-  box-shadow: 0 2px 8px 0 rgb(250, 247, 247), 0 1px 10px 0 rgb(250, 247, 247);
-  border-radius: 10px;
-  text-align: center;
-  }
-/* The Modal (background) */
-.modal {
-  display: block; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  padding-top: 100px; /* Location of the box */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-  justify-content: center;
-}
-.modal-hidden {
-  display: none;
-}
 
-/* Modal Content/Box */
-.modal-content {
-  background-color: #fefefe;
-  color: black;
-  margin: auto; /* 15% from the top and centered */
-  padding: 20px;
-  border: 1px solid #888;
-  width: 50%; /* Could be more or less, depending on screen size */
-  justify-content: center;
-}
 
-/* The Close Button */
-.close {
-  color: #aaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-}
 
-.close:hover,
-.close:focus {
-  color: black;
-  text-decoration: none;
-  cursor: pointer;
-}
-/* Modal Header */
-.modal-header {
-  padding: 2px 16px;
-  background-color: darkred;
-  color: white;
-  justify-content: center;
-}
 
-/* Modal Body */
-.modal-body {
-  padding: 2px 16px;
-  display: flex;
-  justify-content: center;
-}
 
-/* Modal Footer */
-.modal-footer {
-  padding: 2px 16px;
-  background-color: darkred;
-  color: white;
-  justify-content: center;
-}
 
-/* Modal Content */
-.modal-content {
-  position: relative;
-  background-color: #fefefe;
-  margin: auto;
-  padding: 0;
-  border: 1px solid #888;
-  width: 80%;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
-  animation-name: animatetop;
-  animation-duration: 0.4s
-}
 
-/* Add Animation */
-@keyframes animatetop {
-  from {top: -300px; opacity: 0}
-  to {top: 0; opacity: 1}
-}
+
+

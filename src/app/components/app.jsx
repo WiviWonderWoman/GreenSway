@@ -1,4 +1,9 @@
 import React from "react";
+import {
+    HashRouter as Router,
+    Switch,
+    Route
+} from "react-router-dom";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
 import UserForm from "./user-form";
@@ -10,6 +15,13 @@ import {
     getUserById,
     getNewUser
 } from "../state/actions";
+import Content from "./content";
+import HomePage from "./home-page";
+import LaudryPage from "./laudry/laudry-page";
+import OverviewPage from "./charts/overview-page";
+import DetailsPage from "./fractions/details-page";
+import KeyIdPage from "./key-id-page";
+import Logo from "./logo";
 
 class App extends React.Component {
 
@@ -45,10 +57,6 @@ class App extends React.Component {
     }
 
     handleUpdate(email) {
-        // console.log('App received email: ', email, 'Id: ', this.props.id);
-        // //save to localStorage
-        // this.props.userServices.saveUser(this.props.id, email);
-        // //save (PATCH) to API
         this.props.setEmail(this.props.id, email);
         this.setState({
             email: email,
@@ -57,6 +65,8 @@ class App extends React.Component {
     }
 
     render() {
+        //variable for readability
+        const id = this.props.id;
         // Logo shows if new user and button not clicked 
         //  
         if (this.state.newUser === true && this.state.clicked === false) {
@@ -71,8 +81,15 @@ class App extends React.Component {
         else if (this.state.newUser === true && this.state.clicked === true) {
             return (
                 <>
-                    <UserForm handleUpdate={(email) => this.handleUpdate(email)} />
+
+                    {/* <Header id={this.props.id} username={this.props.email} newUser={this.state.newUser} /> */}
+                    <Logo text={'GreenSway'} className={'mini-container'} />
+                    <hr />
+                    <Content>
+                        <UserForm handleUpdate={(email) => this.handleUpdate(email)} />
+                    </Content>
                     <Footer />
+
                 </>
             );
         }
@@ -80,8 +97,29 @@ class App extends React.Component {
         else if (this.state.newUser !== true) {
             return (
                 <>
-                    <Header id={this.props.id} username={this.props.email} newUser={this.state.newUser} />
-                    <Footer />
+                    <Router>
+                        <Header id={this.props.id} username={this.props.email} newUser={this.state.newUser} />
+                        <Content>
+                            <Switch>
+                                <Route exact path={`/${id}`}>
+                                    <HomePage />
+                                </Route>
+                                <Route exact path={`/laundry/${id}`}>
+                                    <LaudryPage />
+                                </Route>
+                                <Route exact path={`/overview/${id}`}>
+                                    <OverviewPage />
+                                </Route>
+                                <Route exact path={`/details/${id}`}>
+                                    <DetailsPage />
+                                </Route>
+                                <Route exact path={`/key-id/${id}`}>
+                                    <KeyIdPage />
+                                </Route>
+                            </Switch>
+                        </Content>
+                        <Footer />
+                    </Router>
                 </>
             );
         }

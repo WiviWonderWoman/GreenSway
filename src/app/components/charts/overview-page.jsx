@@ -3,6 +3,8 @@ import { connect } from "react-redux";
 import PropTypes from "prop-types";
 import WasteChart from './waste-chart';
 import LaudryChart from "./laudry-chart";
+import "./overview.css";
+
 
 class OverviewPage extends React.Component {
 

@@ -1,6 +1,7 @@
 import React from "react";
 import { PieChart } from 'react-minimal-pie-chart';
 import PropTypes from "prop-types";
+// import "chart.css";
 
 export default class WasteChart extends React.Component {
 

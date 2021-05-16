@@ -1,17 +1,8 @@
 import React from "react";
-import {
-    HashRouter as Router,
-    Switch,
-    Route,
-    Link
-} from "react-router-dom";
+import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import Logo from "./logo";
-import HomePage from "./home-page";
-import LaudryPage from "./laudry/laudry-page";
-import OverviewPage from "./charts/overview-page";
-import DetailsPage from "./fractions/details-page";
-import KeyIdPage from "./key-id-page";
+
 
 export default class Menu extends React.Component {
 
@@ -19,7 +10,7 @@ export default class Menu extends React.Component {
         //variable for readability
         const id = this.props.id;
         return (
-            <Router>
+            <>
                 <Logo text={'GreenSway'} className={'mini-container'} />
                 <hr />
                 <span className="intro">
@@ -55,26 +46,7 @@ export default class Menu extends React.Component {
                     </div>
                 </nav>
                 <hr />
-                <main>
-                    <Switch>
-                        <Route exact path={`/${id}`}>
-                            <HomePage />
-                        </Route>
-                        <Route exact path={`/laundry/${id}`}>
-                            <LaudryPage />
-                        </Route>
-                        <Route exact path={`/overview/${id}`}>
-                            <OverviewPage />
-                        </Route>
-                        <Route exact path={`/details/${id}`}>
-                            <DetailsPage />
-                        </Route>
-                        <Route exact path={`/key-id/${id}`}>
-                            <KeyIdPage />
-                        </Route>
-                    </Switch>
-                </main>
-            </Router>
+            </>
         );
     }
 }

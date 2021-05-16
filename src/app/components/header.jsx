@@ -11,7 +11,6 @@ export default class Header extends React.Component {
             <> {this.props.clicked === true || this.props.newUser === false ?
                 <header>
                     <Menu id={this.props.id} username={this.props.username} />
-                    <hr />
                 </header>
                 :
                 <header>

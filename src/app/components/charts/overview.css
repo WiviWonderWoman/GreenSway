@@ -1,0 +1,14 @@
+.overview {
+    margin: auto;
+    display: flex;
+    flex: auto ;
+    width: 100%;
+    height: 500px;
+  }
+  .pie-chart {
+    margin: 10px;
+    position:relative;
+    width: 50%;
+    background-color: black;
+    color: black;
+  }

@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import ReuseButton from "../reuse-button";
+import "./fallback.css";
 
 export default class FallBackMessage extends React.Component {
 

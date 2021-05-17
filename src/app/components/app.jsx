@@ -66,11 +66,6 @@ class App extends React.Component {
 
     render() {
 
-        if (this.props.errorMessage !== "") {
-            console.log('INDEX: ', this.props.errorMessage)
-            return (<h1>ERROR {this.props.errorMessage}</h1>)
-
-        }
         if (this.props.isLoading) {
             return (<h1>LADDAR!</h1>)
         }
@@ -78,59 +73,63 @@ class App extends React.Component {
         const id = this.props.id;
         // Logo shows if new user and button not clicked 
         //  
-        if (this.state.newUser === true && this.state.clicked === false) {
-            return (
-                <>
-                    <Header handleClick={() => this.handleClick()} username={this.props.email} id={this.props.id} clicked={this.state.clicked} />
-                    <Footer />
-                </>
-            );
-        }
-        // UserForm shows if new user and button is clicked
-        else if (this.state.newUser === true && this.state.clicked === true) {
-            return (
-                <>
+        if (this.props.errorMessage === null) {
 
-                    {/* <Header id={this.props.id} username={this.props.email} newUser={this.state.newUser} /> */}
-                    <Logo text={'GreenSway'} className={'mini-container'} />
-                    <hr />
-                    <Content>
-                        <UserForm handleUpdate={(email) => this.handleUpdate(email)} />
-                    </Content>
-                    <Footer />
 
-                </>
-            );
-        }
-        // && this.state.clicked === true
-        else if (this.state.newUser !== true) {
-            return (
-                <>
-                    <Router>
-                        <Header id={this.props.id} username={this.props.email} newUser={this.state.newUser} />
+            if (this.state.newUser === true && this.state.clicked === false) {
+                return (
+                    <>
+                        <Header handleClick={() => this.handleClick()} username={this.props.email} id={this.props.id} clicked={this.state.clicked} />
+                        <Footer />
+                    </>
+                );
+            }
+            // UserForm shows if new user and button is clicked
+            else if (this.state.newUser === true && this.state.clicked === true) {
+                return (
+                    <>
+
+                        {/* <Header id={this.props.id} username={this.props.email} newUser={this.state.newUser} /> */}
+                        <Logo text={'GreenSway'} className={'mini-container'} />
+                        <hr />
                         <Content>
-                            <Switch>
-                                <Route exact path={`/${id}`}>
-                                    <HomePage />
-                                </Route>
-                                <Route exact path={`/laundry/${id}`}>
-                                    <LaudryPage />
-                                </Route>
-                                <Route exact path={`/overview/${id}`}>
-                                    <OverviewPage />
-                                </Route>
-                                <Route exact path={`/details/${id}`}>
-                                    <DetailsPage />
-                                </Route>
-                                <Route exact path={`/key-id/${id}`}>
-                                    <KeyIdPage />
-                                </Route>
-                            </Switch>
+                            <UserForm handleUpdate={(email) => this.handleUpdate(email)} />
                         </Content>
                         <Footer />
-                    </Router>
-                </>
-            );
+
+                    </>
+                );
+            }
+            // && this.state.clicked === true
+            else if (this.state.newUser !== true) {
+                return (
+                    <>
+                        <Router>
+                            <Header id={this.props.id} username={this.props.email} newUser={this.state.newUser} />
+                            <Content>
+                                <Switch>
+                                    <Route exact path={`/`}>
+                                        <HomePage />
+                                    </Route>
+                                    <Route exact path={`/laundry/${id}`}>
+                                        <LaudryPage />
+                                    </Route>
+                                    <Route exact path={`/overview/${id}`}>
+                                        <OverviewPage />
+                                    </Route>
+                                    <Route exact path={`/details/${id}`}>
+                                        <DetailsPage />
+                                    </Route>
+                                    <Route exact path={`/key-id/${id}`}>
+                                        <KeyIdPage />
+                                    </Route>
+                                </Switch>
+                            </Content>
+                            <Footer />
+                        </Router>
+                    </>
+                );
+            }
         }
     }
 }

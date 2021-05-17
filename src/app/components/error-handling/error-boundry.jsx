@@ -24,11 +24,13 @@ class ErrorBoundry extends React.Component {
         })
         this.props.handleClick;
     }
-    componentDidMount() {
-        this.setState({
-            hasError: true
-        })
-    }
+    // componentDidMount() {
+    //     if (this.props.userErrorMessage !== null) {
+    //         this.setState({
+    //             hasError: true
+    //         })
+    //     }
+    // }
 
     render() {
         const messageData = {
@@ -38,7 +40,7 @@ class ErrorBoundry extends React.Component {
             button: 'Försök igen'
         }
 
-        if (this.state.hasError) {
+        if (this.state.hasError || this.props.userErrorMessage !== null) {
             return (
                 <FallBackMessage handleClick={() => this.handleClick()} header={messageData.header} body={messageData.body} footer='' button={messageData.button} />
             )

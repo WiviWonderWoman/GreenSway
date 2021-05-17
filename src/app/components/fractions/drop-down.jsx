@@ -42,7 +42,7 @@ class DropDown extends React.Component {
 
             return (
                 <>
-                    <ErrorBoundry />
+                    {/* <ErrorBoundry /> */}
                     <h1>ERROR {this.props.errorMessage}</h1>
                 </>
             )

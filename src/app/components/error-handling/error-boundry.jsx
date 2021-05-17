@@ -11,27 +11,15 @@ class ErrorBoundry extends React.Component {
         };
     }
     static getDerivedStateFromError(error) {
+        console.log(error);
         return { hasError: true }
     }
-
-    componentDidCatch(error) {
-        console.log(error);
-    }
-
     handleClick() {
         this.setState({
             hasError: false
         })
         this.props.handleClick;
     }
-    // componentDidMount() {
-    //     if (this.props.userErrorMessage !== null) {
-    //         this.setState({
-    //             hasError: true
-    //         })
-    //     }
-    // }
-
     render() {
         const messageData = {
             header: 'Hoppsan!',
@@ -39,7 +27,6 @@ class ErrorBoundry extends React.Component {
             footer: '',
             button: 'Försök igen'
         }
-
         if (this.state.hasError || this.props.userErrorMessage !== '' || this.props.fractionErrorMessage !== '') {
             return (
                 <FallBackMessage handleClick={() => this.handleClick()} header={messageData.header} body={messageData.body} footer='' button={messageData.button} />
@@ -48,22 +35,20 @@ class ErrorBoundry extends React.Component {
         return this.props.children;
     }
 }
-
 ErrorBoundry.propTypes = {
     handleClick: PropTypes.func,
 }
-
 const mapStateToProps = (state) => {
     console.log('redux state: ', state);
     return {
-
         userErrorMessage: state.userErrorMessage,
         fractionErrorMessage: state.fractionErrorMessage
     }
 }
-const mapDispatchToProps = (dispatch) => {
-    return {
+//TODO: dispatch function to reset errorMessage
+// const mapDispatchToProps = (dispatch) => {
+//     return {
 
-    }
-}
-export default connect(mapStateToProps, mapDispatchToProps)(ErrorBoundry)
+//     }
+// }, mapDispatchToProps
+export default connect(mapStateToProps)(ErrorBoundry)

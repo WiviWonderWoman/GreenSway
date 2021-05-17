@@ -6,7 +6,6 @@ import Table from "./table";
 import { getFractions } from "../../state/actions";
 import errorBoundry from "../error-handling/error-boundry";
 
-
 class DropDown extends React.Component {
 
     constructor(props) {
@@ -37,10 +36,6 @@ class DropDown extends React.Component {
     }
 
     render() {
-
-        if (this.props.isLoading) {
-            return (<h1>LADDAR!</h1>)
-        }
         if (this.props.errorMessage === '') {
             return (
                 this.state.isClicked !== true ?
@@ -85,17 +80,7 @@ DropDown.propTypes = {
     isLoading: PropTypes.bool,
     errorMessage: PropTypes.string,
     garbagehouse: PropTypes.string,
-    chartData: PropTypes.exact({
-        organic: PropTypes.number,
-        newspaper: PropTypes.number,
-        cardboard: PropTypes.number,
-        glas: PropTypes.number,
-        plastic: PropTypes.number,
-        metal: PropTypes.number,
-        residual: PropTypes.number,
-        electricity: PropTypes.number,
-        water: PropTypes.number
-    }),
+    chartData: PropTypes.object,
     fractions: PropTypes.array
 }
 const mapStateToProps = (state) => {
@@ -117,11 +102,9 @@ const mapStateToProps = (state) => {
         fractions: state.fractions
     }
 }
-
 const mapDispatchToProps = (dispatch) => {
     return {
         getFractions: (garbagehouse) => dispatch(getFractions(garbagehouse))
     }
 }
-
 export default connect(mapStateToProps, mapDispatchToProps)(DropDown)

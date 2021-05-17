@@ -10,20 +10,16 @@ export default class UserForm extends React.Component {
             username: '',
         };
     }
-
     handleUsernameChange = (event) => {
         this.setState({
             username: event.target.value,
         });
     }
-
     saveUser() {
         if (this.state.username !== "") {
             this.props.handleUpdate(this.state.username)
-
         }
     }
-
     render() {
         return (
             <div className="userForm ">
@@ -44,7 +40,6 @@ export default class UserForm extends React.Component {
         );
     }
 }
-
 UserForm.propTypes = {
     handleUpdate: PropTypes.func,
 }

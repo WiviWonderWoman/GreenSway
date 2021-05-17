@@ -33,7 +33,7 @@ MenuLinks.propTypes = {
     id: PropTypes.number,
 }
 const mapStateToProps = (state) => {
-    console.log('redux state: ', state);
+    // console.log('redux state: ', state);
     return {
         id: state.user.id,
     }

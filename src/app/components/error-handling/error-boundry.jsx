@@ -39,7 +39,7 @@ ErrorBoundry.propTypes = {
     handleClick: PropTypes.func,
 }
 const mapStateToProps = (state) => {
-    console.log('redux state: ', state);
+    // console.log('redux state: ', state);
     return {
         userErrorMessage: state.userErrorMessage,
         fractionErrorMessage: state.fractionErrorMessage

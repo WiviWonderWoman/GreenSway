@@ -50,7 +50,7 @@ Menu.propTypes = {
     isLoadingFraction: PropTypes.bool,
 }
 const mapStateToProps = (state) => {
-    console.log('redux state: ', state);
+    // console.log('redux state: ', state);
     return {
         username: state.user.email,
         isLoadingUser: state.apiIsLoadingUser,

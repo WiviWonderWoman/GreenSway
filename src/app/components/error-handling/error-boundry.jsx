@@ -1,8 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { connect } from "react-redux";
 import FallBackMessage from "./fallback-message";
 
-export default class ErrorBoundry extends React.Component {
+class ErrorBoundry extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
@@ -23,15 +24,23 @@ export default class ErrorBoundry extends React.Component {
         })
         this.props.handleClick;
     }
+    // componentDidMount() {
+    //     if (this.props.userErrorMessage !== null) {
+    //         this.setState({
+    //             hasError: true
+    //         })
+    //     }
+    // }
 
     render() {
         const messageData = {
-            header: 'HOPPSAN!',
-            body: 'Något gick fel',
+            header: 'Hoppsan!',
+            body: 'Det inträffade ett fel: ' + this.props.userErrorMessage + this.props.fractionErrorMessage,
             footer: '',
             button: 'Försök igen'
         }
-        if (this.state.hasError) {
+
+        if (this.state.hasError || this.props.userErrorMessage !== '' || this.props.fractionErrorMessage !== '') {
             return (
                 <FallBackMessage handleClick={() => this.handleClick()} header={messageData.header} body={messageData.body} footer='' button={messageData.button} />
             )
@@ -43,3 +52,18 @@ export default class ErrorBoundry extends React.Component {
 ErrorBoundry.propTypes = {
     handleClick: PropTypes.func,
 }
+
+const mapStateToProps = (state) => {
+    console.log('redux state: ', state);
+    return {
+
+        userErrorMessage: state.userErrorMessage,
+        fractionErrorMessage: state.fractionErrorMessage
+    }
+}
+const mapDispatchToProps = (dispatch) => {
+    return {
+
+    }
+}
+export default connect(mapStateToProps, mapDispatchToProps)(ErrorBoundry)

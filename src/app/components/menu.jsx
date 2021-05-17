@@ -27,7 +27,7 @@ export default class Menu extends React.Component {
                             <div className="navbar-nav me-auto mb-2 mb-lg-0">
 
                                 <div className="navbar-nav">
-                                    <Link to={`/${id}`} className="nav-item nav-link"><p className="menu-link">Hem</p></Link>
+                                    <Link to={`/`} className="nav-item nav-link"><p className="menu-link">Hem</p></Link>
                                 </div>
                                 <div className="navbar-nav">
                                     <Link to={`/laundry/${id}`} className="nav-item nav-link"><p className="menu-link">Boka tvättstuga</p></Link>

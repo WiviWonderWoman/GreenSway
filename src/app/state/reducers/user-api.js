@@ -1,4 +1,23 @@
 
+export function apiFetchUserError(state = '', action) {
+    switch (action.type) {
+        case 'API_FETCH_USER_ERROR':
+            return action.errorMessage;
+        default:
+            return state;
+    }
+}
+
+export function apiIsLoadingUser(state = false, action) {
+    switch (action.type) {
+        case 'API_IS-LOADING_USER':
+            return action.isLoading;
+        default:
+            return state;
+    }
+
+}
+
 export function apiFetchUserSuccess(state = {}, action) {
     switch (action.type) {
         case 'API_FETCH_USER_SUCCESS':
@@ -7,3 +26,4 @@ export function apiFetchUserSuccess(state = {}, action) {
             return state;
     }
 }
+

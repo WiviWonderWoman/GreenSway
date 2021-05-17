@@ -1,6 +1,7 @@
 import { setUserEmailAsync, getNewUserAsync, getUserByIdAsync, saveUser } from "../../api";
 
 export function apiFetchUserError(errorMessage) {
+    console.log('ACTION: ', errorMessage)
     return {
         type: 'API_FETCH_USER_ERROR',
         errorMessage: errorMessage
@@ -30,7 +31,7 @@ export function getUserById(id) {
             dispatch(apiIsLoadingUser(false));
         }
         catch (error) {
-            dispatch(apiFetchUserError(error.errorMessage));
+            dispatch(apiFetchUserError(error.message));
         }
     };
 }

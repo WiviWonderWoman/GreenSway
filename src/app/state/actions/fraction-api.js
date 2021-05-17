@@ -1,6 +1,7 @@
 import { getFractionsAsync } from "../../api";
 
 export function apiFetchFractionsError(errorMessage) {
+    console.log('ACTION: ', errorMessage)
     return {
         type: 'API_FETCH_FRACTIONS_ERROR',
         errorMessage: errorMessage
@@ -30,7 +31,7 @@ export function getFractions(garbagehouse) {
             dispatch(apiIsLoadingFractions(false));
         }
         catch (error) {
-            dispatch(apiFetchFractionError(error.errorMessage));
+            dispatch(apiFetchFractionsError(error.message));
         }
     };
 }

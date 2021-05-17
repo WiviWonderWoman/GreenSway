@@ -73,7 +73,7 @@ class App extends React.Component {
         const id = this.props.id;
         // Logo shows if new user and button not clicked 
         //  
-        if (this.props.errorMessage === null) {
+        if (this.props.errorMessage === '') {
 
 
             if (this.state.newUser === true && this.state.clicked === false) {

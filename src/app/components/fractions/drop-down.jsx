@@ -37,56 +37,48 @@ class DropDown extends React.Component {
     }
 
     render() {
-        if (this.props.errorMessage !== "") {
-            console.log('INDEX: ', this.props.errorMessage)
 
-            return (
-                <>
-                    {/* <ErrorBoundry /> */}
-                    <h1>ERROR {this.props.errorMessage}</h1>
-                </>
-            )
-
-        }
         if (this.props.isLoading) {
             return (<h1>LADDAR!</h1>)
         }
-        return (
-            this.state.isClicked !== true ?
-                <>
-                    <nav className="flex.container">
-                        <div className="nav-list">
-                            <div className="dropdown">
-                                <h5 className="user">Välj önskad fraktion i menyn nedanför:</h5>
-                                <button className="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
-                                    Fraktioner
+        if (this.props.errorMessage === '') {
+            return (
+                this.state.isClicked !== true ?
+                    <>
+                        <nav className="flex.container">
+                            <div className="nav-list">
+                                <div className="dropdown">
+                                    <h5 className="user">Välj önskad fraktion i menyn nedanför:</h5>
+                                    <button className="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Fraktioner
                                 </button>
-                                <ul className="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton">
-                                    <FractionsButton allFractions={this.props.fractions} className="dropdown-item" onClick={(source) => this.handleFractionClick(source)} />
-                                </ul>
+                                    <ul className="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton">
+                                        <FractionsButton allFractions={this.props.fractions} className="dropdown-item" onClick={(source) => this.handleFractionClick(source)} />
+                                    </ul>
+                                </div>
                             </div>
-                        </div>
-                    </nav>
-                </>
-                :
-                <>
-                    <nav className="flex.container">
-                        <div className="nav-list">
-                            <div className="dropdown">
-                                <h5 className="user">Välj önskad fraktion i menyn nedanför:</h5>
-                                <button className="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
-                                    Fraktioner
+                        </nav>
+                    </>
+                    :
+                    <>
+                        <nav className="flex.container">
+                            <div className="nav-list">
+                                <div className="dropdown">
+                                    <h5 className="user">Välj önskad fraktion i menyn nedanför:</h5>
+                                    <button className="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Fraktioner
                                 </button>
-                                <ul className="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton">
-                                    <FractionsButton allFractions={this.props.fractions} className="dropdown-item" onClick={(source) => this.handleFractionClick(source)} />
-                                </ul>
+                                    <ul className="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton">
+                                        <FractionsButton allFractions={this.props.fractions} className="dropdown-item" onClick={(source) => this.handleFractionClick(source)} />
+                                    </ul>
+                                </div>
                             </div>
-                        </div>
-                    </nav>
-                    <Table chartData={this.props.chartData} fraction={this.state.fraction} />
+                        </nav>
+                        <Table chartData={this.props.chartData} fraction={this.state.fraction} />
 
-                </>
-        );
+                    </>
+            );
+        }
     }
 }
 DropDown.propTypes = {

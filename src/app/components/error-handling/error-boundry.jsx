@@ -35,12 +35,12 @@ class ErrorBoundry extends React.Component {
     render() {
         const messageData = {
             header: 'Hoppsan!',
-            body: 'Det inträffade ett fel: ' + this.props.userErrorMessage,
+            body: 'Det inträffade ett fel: ' + this.props.userErrorMessage + this.props.fractionErrorMessage,
             footer: '',
             button: 'Försök igen'
         }
 
-        if (this.state.hasError || this.props.userErrorMessage !== null) {
+        if (this.state.hasError || this.props.userErrorMessage !== '' || this.props.fractionErrorMessage !== '') {
             return (
                 <FallBackMessage handleClick={() => this.handleClick()} header={messageData.header} body={messageData.body} footer='' button={messageData.button} />
             )

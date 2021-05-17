@@ -4,7 +4,6 @@ import { connect } from "react-redux";
 import FallBackMessage from "./fallback-message";
 
 class ErrorBoundry extends React.Component {
-
     constructor(props) {
         super(props)
         this.state = {
@@ -40,7 +39,7 @@ ErrorBoundry.propTypes = {
     handleClick: PropTypes.func,
 }
 const mapStateToProps = (state) => {
-    console.log('redux state: ', state);
+    // console.log('redux state: ', state);
     return {
         userErrorMessage: state.userErrorMessage,
         fractionErrorMessage: state.fractionErrorMessage

@@ -4,6 +4,7 @@ import PropTypes from "prop-types";
 import FractionsButton from "./fractions-button";
 import Table from "./table";
 import { getFractions } from "../../state/actions";
+import errorBoundry from "../error-handling/error-boundry";
 
 class DropDown extends React.Component {
 

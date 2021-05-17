@@ -49,7 +49,7 @@ class App extends React.Component {
     }
     render() {
         // Logo shows if new user and button not clicked 
-        if (this.props.errorMessage === '') {
+        if (this.props.userErrorMessage === '' && this.props.fractionErrorMessage === '') {
             if (this.state.newUser === true && this.state.clicked === false) {
                 return (
                     <>
@@ -64,9 +64,9 @@ class App extends React.Component {
                     <>
                         <Logo text={'GreenSway'} className={'mini-container'} />
                         <hr />
-                        <Content>
+                        <div className='spacer'>
                             <UserForm handleUpdate={(email) => this.handleUpdate(email)} />
-                        </Content>
+                        </div>
                         <Footer />
                     </>
                 );
@@ -87,18 +87,35 @@ class App extends React.Component {
     }
 }
 App.propTypes = {
+    user: PropTypes.exact({
+        id: PropTypes.number,
+        "glas": PropTypes.number,
+        "email": PropTypes.string,
+        "metal": PropTypes.number,
+        "water": PropTypes.number,
+        "organic": PropTypes.number,
+        "plastic": PropTypes.number,
+        "residual": PropTypes.number,
+        "cardboard": PropTypes.number,
+        "newspaper": PropTypes.number,
+        "electricity": PropTypes.number,
+        "garbagehouse": PropTypes.string
+    }),
     id: PropTypes.number,
     username: PropTypes.string,
     isLoading: PropTypes.bool,
-    errorMessage: PropTypes.string
+    userErrorMessage: PropTypes.string,
+    fractionErrorMessage: PropTypes.string
 }
 const mapStateToProps = (state) => {
-    console.log('redux state: ', state);
+    // console.log('redux state: ', state);
     return {
+        user: state.user,
         id: state.user.id,
         email: state.user.email,
         isLoading: state.apiIsLoadingUser,
-        errorMessage: state.userErrorMessage,
+        userErrorMessage: state.userErrorMessage,
+        fractionErrorMessage: state.fractionErrorMessage,
     }
 }
 const mapDispatchToProps = (dispatch) => {

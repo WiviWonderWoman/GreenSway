@@ -1,8 +1,8 @@
 
-export function apiFetchFractionsError(state = false, action) {
+export function apiFetchFractionsError(state = '', action) {
     switch (action.type) {
         case 'API_FETCH_FRACTIONS_ERROR':
-            return action.hasErrrored;
+            return action.errorMessage;
         default:
             return state;
     }

@@ -36,6 +36,14 @@ class DropDown extends React.Component {
     }
 
     render() {
+        if (this.props.errorMessage !== "") {
+            console.log('INDEX: ', this.props.errorMessage)
+            return (<h1>ERROR {this.props.errorMessage}</h1>)
+
+        }
+        if (this.props.isLoading) {
+            return (<h1>LADDAR!</h1>)
+        }
         return (
             this.state.isClicked !== true ?
                 <>
@@ -75,6 +83,8 @@ class DropDown extends React.Component {
     }
 }
 DropDown.propTypes = {
+    isLoading: PropTypes.bool,
+    errorMessage: PropTypes.string,
     garbagehouse: PropTypes.string,
     chartData: PropTypes.exact({
         organic: PropTypes.number,
@@ -91,6 +101,8 @@ DropDown.propTypes = {
 }
 const mapStateToProps = (state) => {
     return {
+        isLoading: state.apiIsLoadingFractions,
+        errorMessage: state.fractionErrorMessage,
         garbagehouse: state.user.garbagehouse,
         chartData: {
             organic: state.user.organic,

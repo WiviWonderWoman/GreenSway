@@ -66,8 +66,9 @@ class App extends React.Component {
 
     render() {
 
-        if (this.props.hasError) {
-            return (<h1>ERROR</h1>)
+        if (this.props.errorMessage !== "") {
+            console.log('INDEX: ', this.props.errorMessage)
+            return (<h1>ERROR {this.props.errorMessage}</h1>)
 
         }
         if (this.props.isLoading) {
@@ -137,14 +138,16 @@ App.propTypes = {
     userId: PropTypes.number,
     id: PropTypes.number,
     username: PropTypes.string,
+    isLoading: PropTypes.bool,
+    errorMessage: PropTypes.string
 }
 const mapStateToProps = (state) => {
     console.log('redux state: ', state);
     return {
         id: state.user.id,
         email: state.user.email,
-        isLoading: state.apiIsLoading,
-        hasError: state.hasError,
+        isLoading: state.apiIsLoadingUser,
+        errorMessage: state.userErrorMessage,
         // errorMessage: state.hasError.message
     }
 }

@@ -4,9 +4,9 @@ import { apiFetchFractionsSuccess, apiFetchFractionsError, apiIsLoadingFractions
 
 export default combineReducers({
     user: apiFetchUserSuccess,
-    apiFetchUserError,
+    userErrorMessage: apiFetchUserError,
     apiIsLoadingUser,
     fractions: apiFetchFractionsSuccess,
-    apiFetchFractionsError,
+    fractionErrorMessage: apiFetchFractionsError,
     apiIsLoadingFractions
 });

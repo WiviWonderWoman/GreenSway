@@ -1,8 +1,8 @@
 
-export function apiFetchUserError(state = false, action) {
+export function apiFetchUserError(state = '', action) {
     switch (action.type) {
         case 'API_FETCH_USER_ERROR':
-            return action.hasError;
+            return action.errorMessage;
         default:
             return state;
     }

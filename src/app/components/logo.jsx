@@ -1,6 +1,6 @@
 import React from "react";
-import logo from "../images/recycle.png";
 import PropTypes from "prop-types";
+import logo from "../images/recycle.png";
 import ReuseButton from "./reuse-button";
 
 export default class Logo extends React.Component {
@@ -25,9 +25,9 @@ export default class Logo extends React.Component {
         );
     }
 }
-
 Logo.propTypes = {
     className: PropTypes.string,
     onClick: PropTypes.func,
-    text: PropTypes.string
+    text: PropTypes.string,
+    email: PropTypes.string,
 }

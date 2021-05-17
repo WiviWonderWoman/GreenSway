@@ -1,7 +1,6 @@
 import React from "react";
-import { PieChart } from 'react-minimal-pie-chart';
 import PropTypes from "prop-types";
-// import "chart.css";
+import { PieChart } from 'react-minimal-pie-chart';
 
 export default class WasteChart extends React.Component {
 
@@ -41,15 +40,6 @@ export default class WasteChart extends React.Component {
         )
     }
 }
-
 WasteChart.propTypes = {
-    chartData: PropTypes.exact({
-        organic: PropTypes.number,
-        newspaper: PropTypes.number,
-        cardboard: PropTypes.number,
-        glas: PropTypes.number,
-        plastic: PropTypes.number,
-        metal: PropTypes.number,
-        residual: PropTypes.number
-    })
+    chartData: PropTypes.object
 }

@@ -1,10 +1,9 @@
 import React from "react";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
+import "./overview.css";
 import WasteChart from './waste-chart';
 import LaudryChart from "./laudry-chart";
-import "./overview.css";
-
 
 class OverviewPage extends React.Component {
 
@@ -23,21 +22,11 @@ class OverviewPage extends React.Component {
         );
     }
 }
-
 OverviewPage.propTypes = {
-    chartData: PropTypes.exact({
-        organic: PropTypes.number,
-        newspaper: PropTypes.number,
-        cardboard: PropTypes.number,
-        glas: PropTypes.number,
-        plastic: PropTypes.number,
-        metal: PropTypes.number,
-        residual: PropTypes.number,
-    }),
+    chartData: PropTypes.object,
     electricity: PropTypes.number,
     water: PropTypes.number
 }
-
 const mapStateToProps = (state) => {
     return {
         chartData: {
@@ -53,5 +42,4 @@ const mapStateToProps = (state) => {
         water: state.user.water
     }
 }
-
 export default connect(mapStateToProps)(OverviewPage)

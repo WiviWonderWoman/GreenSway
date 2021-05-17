@@ -1,7 +1,6 @@
 import React from "react";
-import { PieChart } from 'react-minimal-pie-chart';
 import PropTypes from "prop-types";
-// import "chart.css";
+import { PieChart } from 'react-minimal-pie-chart';
 
 export default class LaudryChart extends React.Component {
 
@@ -34,7 +33,6 @@ export default class LaudryChart extends React.Component {
         )
     }
 }
-
 LaudryChart.propTypes = {
     electricity: PropTypes.number,
     water: PropTypes.number

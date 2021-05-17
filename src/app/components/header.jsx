@@ -1,7 +1,7 @@
 import React from "react";
+import PropTypes from "prop-types";
 import Logo from "./logo";
 import Menu from "./menu";
-import PropTypes from "prop-types";
 
 export default class Header extends React.Component {
 
@@ -10,7 +10,7 @@ export default class Header extends React.Component {
             // returning user : new user
             <> {this.props.clicked === true || this.props.newUser === false ?
                 <header>
-                    <Menu id={this.props.id} username={this.props.username} />
+                    <Menu />
                 </header>
                 :
                 <header>
@@ -20,11 +20,8 @@ export default class Header extends React.Component {
         )
     }
 }
-
 Header.propTypes = {
     clicked: PropTypes.bool,
     newUser: PropTypes.bool,
-    id: PropTypes.number,
-    username: PropTypes.string,
     handleClick: PropTypes.func
 }

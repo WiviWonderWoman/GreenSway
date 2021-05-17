@@ -5,11 +5,9 @@ export default class LaudryPage extends React.Component {
 
     render() {
         return (
-            // <div className="spacer"></div>
             <div className="user">
                 <Booking />
             </div>
-
         );
     }
 }

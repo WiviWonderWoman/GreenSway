@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
-import ReuseButton from "../reuse-button";
 import "./fallback.css";
+import ReuseButton from "../reuse-button";
 
 export default class FallBackMessage extends React.Component {
 
@@ -17,7 +17,6 @@ export default class FallBackMessage extends React.Component {
         })
         this.props.handleClick();
     }
-
     render() {
         let modalDisplay;
         if (this.state.hide) {
@@ -25,7 +24,6 @@ export default class FallBackMessage extends React.Component {
         } else {
             modalDisplay = 'modal'
         }
-
         return (
             <div className={modalDisplay}>
                 <div className="modal-content">
@@ -44,7 +42,6 @@ export default class FallBackMessage extends React.Component {
         )
     }
 }
-
 FallBackMessage.propTypes = {
     header: PropTypes.string,
     body: PropTypes.string,

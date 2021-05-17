@@ -14,25 +14,28 @@ class Content extends React.Component {
         //variable for readability
         const id = this.props.id;
         return (
-            <div className="spacer">
-                <Switch>
-                    <Route exact path={`/`}>
-                        <HomePage />
-                    </Route>
-                    <Route exact path={`/laundry/${id}`}>
-                        <LaudryPage />
-                    </Route>
-                    <Route exact path={`/overview/${id}`}>
-                        <OverviewPage />
-                    </Route>
-                    <Route exact path={`/details/${id}`}>
-                        <DetailsPage />
-                    </Route>
-                    <Route exact path={`/key-id/${id}`}>
-                        <KeyIdPage />
-                    </Route>
-                </Switch>
-            </div>
+            <>
+                <div className="spacer">
+                    <Switch>
+                        <Route exact path={`/`}>
+                            <HomePage />
+                        </Route>
+                        <Route exact path={`/laundry/${id}`}>
+                            <LaudryPage />
+                        </Route>
+                        <Route exact path={`/overview/${id}`}>
+                            <OverviewPage />
+                        </Route>
+                        <Route exact path={`/details/${id}`}>
+                            <DetailsPage />
+                        </Route>
+                        <Route exact path={`/key-id/${id}`}>
+                            <KeyIdPage />
+                        </Route>
+                    </Switch>
+                </div>
+                <hr />
+            </>
         )
     }
 }

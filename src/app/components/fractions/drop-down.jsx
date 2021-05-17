@@ -4,6 +4,7 @@ import PropTypes from "prop-types";
 import FractionsButton from "./fractions-button";
 import Table from "./table";
 import { getFractions } from "../../state/actions";
+import errorBoundry from "../error-handling/error-boundry";
 
 
 class DropDown extends React.Component {
@@ -38,7 +39,13 @@ class DropDown extends React.Component {
     render() {
         if (this.props.errorMessage !== "") {
             console.log('INDEX: ', this.props.errorMessage)
-            return (<h1>ERROR {this.props.errorMessage}</h1>)
+
+            return (
+                <>
+                    <ErrorBoundry />
+                    <h1>ERROR {this.props.errorMessage}</h1>
+                </>
+            )
 
         }
         if (this.props.isLoading) {

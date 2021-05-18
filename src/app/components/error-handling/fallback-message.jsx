@@ -12,10 +12,11 @@ export default class FallBackMessage extends React.Component {
         }
     }
     handleClick() {
+        console.log('KLICK FM');
+        this.props.handleClick();
         this.setState({
             hide: true
         })
-        this.props.handleClick();
     }
     render() {
         let modalDisplay;
@@ -44,6 +45,7 @@ export default class FallBackMessage extends React.Component {
 }
 FallBackMessage.propTypes = {
     header: PropTypes.string,
+    // className: PropTypes.string,
     body: PropTypes.string,
     footer: PropTypes.string,
     button: PropTypes.string,

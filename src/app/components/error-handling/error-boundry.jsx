@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
+import { reset } from "../../state/actions";
 import FallBackMessage from "./fallback-message";
 
 class ErrorBoundry extends React.Component {
@@ -15,10 +16,13 @@ class ErrorBoundry extends React.Component {
         return { hasError: true }
     }
     handleClick() {
+        console.log('KLICK EB');
+        this.props.resetError();
+
         this.setState({
             hasError: false
         })
-        this.props.handleClick;
+
     }
     render() {
         const messageData = {
@@ -27,7 +31,7 @@ class ErrorBoundry extends React.Component {
             footer: '',
             button: 'Försök igen'
         }
-        if (this.state.hasError || this.props.userErrorMessage !== '' || this.props.fractionErrorMessage !== '') {
+        if (this.state.hasError || this.props.userHasError) {
             return (
                 <FallBackMessage handleClick={() => this.handleClick()} header={messageData.header} body={messageData.body} footer='' button={messageData.button} />
             )
@@ -39,16 +43,17 @@ ErrorBoundry.propTypes = {
     handleClick: PropTypes.func,
 }
 const mapStateToProps = (state) => {
-    // console.log('redux state: ', state);
+    console.log('redux state: ', state);
     return {
         userErrorMessage: state.userErrorMessage,
-        fractionErrorMessage: state.fractionErrorMessage
+        fractionErrorMessage: state.fractionErrorMessage,
+        userHasError: state.userHasError
     }
 }
 //TODO: dispatch function to reset errorMessage
-// const mapDispatchToProps = (dispatch) => {
-//     return {
-
-//     }
-// }, mapDispatchToProps
-export default connect(mapStateToProps)(ErrorBoundry)
+const mapDispatchToProps = (dispatch) => {
+    return {
+        resetError: () => dispatch(reset())
+    }
+}
+export default connect(mapStateToProps, mapDispatchToProps)(ErrorBoundry)

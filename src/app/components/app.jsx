@@ -9,6 +9,7 @@ import Logo from "./logo";
 import UserForm from "./user-form";
 import Header from "./header";
 import Footer from "./footer";
+import ErrorBoundry from "./error-handling/error-boundry";
 
 class App extends React.Component {
 
@@ -49,57 +50,61 @@ class App extends React.Component {
     }
     render() {
         // Logo shows if new user and button not clicked 
-        if (this.props.userErrorMessage === '' && this.props.fractionErrorMessage === '') {
-            if (this.state.newUser === true && this.state.clicked === false) {
-                return (
-                    <>
-                        <Header handleClick={() => this.handleClick()} clicked={this.state.clicked} />
-                        <Footer />
-                    </>
-                );
-            }
-            // UserForm shows if new user and button is clicked
-            else if (this.state.newUser === true && this.state.clicked === true) {
-                return (
-                    <>
-                        <Logo text={'GreenSway'} className={'mini-container'} />
-                        <hr />
-                        <div className='spacer'>
-                            <UserForm handleUpdate={(email) => this.handleUpdate(email)} />
-                        </div>
-                        <Footer />
-                    </>
-                );
-            }
-            // && this.state.clicked === true
-            else if (this.state.newUser !== true) {
-                return (
-                    <>
-                        <Router>
-                            <Header newUser={this.state.newUser} />
-                            <Content />
-                            <Footer />
-                        </Router>
-                    </>
-                );
-            }
+        // if (this.props.userErrorMessage === '' && this.props.fractionErrorMessage === '') {
+        if (this.state.newUser === true && this.state.clicked === false) {
+            return (
+                <>
+                    <Header handleClick={() => this.handleClick()} clicked={this.state.clicked} />
+                    <Footer />
+                </>
+            );
         }
+        // UserForm shows if new user and button is clicked
+        else if (this.state.newUser === true && this.state.clicked === true) {
+            return (
+                <>
+
+                    <Logo text={'GreenSway'} className={'mini-container'} />
+                    <hr />
+                    <div className='spacer'>
+                        <UserForm handleUpdate={(email) => this.handleUpdate(email)} />
+                    </div>
+                    <Footer />
+
+                </>
+            );
+        }
+        // && this.state.clicked === true
+        else if (this.state.newUser !== true) {
+            return (
+                <>
+                    <Router>
+                        <Header newUser={this.state.newUser} />
+                        <ErrorBoundry>
+                            <Content />
+                        </ErrorBoundry>
+                        <Footer />
+                    </Router>
+                </>
+            );
+        }
+        // }
     }
 }
 App.propTypes = {
     user: PropTypes.exact({
         id: PropTypes.number,
-        "glas": PropTypes.number,
-        "email": PropTypes.string,
-        "metal": PropTypes.number,
-        "water": PropTypes.number,
-        "organic": PropTypes.number,
-        "plastic": PropTypes.number,
-        "residual": PropTypes.number,
-        "cardboard": PropTypes.number,
-        "newspaper": PropTypes.number,
-        "electricity": PropTypes.number,
-        "garbagehouse": PropTypes.string
+        glas: PropTypes.number,
+        email: PropTypes.string,
+        metal: PropTypes.number,
+        water: PropTypes.number,
+        organic: PropTypes.number,
+        plastic: PropTypes.number,
+        residual: PropTypes.number,
+        cardboard: PropTypes.number,
+        newspaper: PropTypes.number,
+        electricity: PropTypes.number,
+        garbagehouse: PropTypes.string
     }),
     id: PropTypes.number,
     username: PropTypes.string,

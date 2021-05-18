@@ -8,25 +8,21 @@ export default class FallBackMessage extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            hide: false
+            hide: false,
+            class: 'modal'
         }
     }
     handleClick() {
         console.log('KLICK FM');
         this.props.handleClick();
         this.setState({
-            hide: true
+            hide: true,
+            class: 'modal-hidden'
         })
     }
     render() {
-        let modalDisplay;
-        if (this.state.hide) {
-            modalDisplay = 'modal-hidden'
-        } else {
-            modalDisplay = 'modal'
-        }
         return (
-            <div className={modalDisplay}>
+            <div className={this.state.class}>
                 <div className="modal-content">
                     <div className="modal-header">
                         <h2>{this.props.header}</h2>
@@ -45,7 +41,6 @@ export default class FallBackMessage extends React.Component {
 }
 FallBackMessage.propTypes = {
     header: PropTypes.string,
-    // className: PropTypes.string,
     body: PropTypes.string,
     footer: PropTypes.string,
     button: PropTypes.string,

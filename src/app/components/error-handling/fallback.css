@@ -1,10 +1,7 @@
 /* The Modal (background) */
 .modal {
     display: block; 
-    position: fixed; 
-    /* z-index: 1;  */
     padding-top: 200px; 
-    justify-content: center;
     background-color: rgba(128, 128, 128, 0.466);
   }
   .modal-hidden {
@@ -12,13 +9,11 @@
   }
     /* Modal Content */
     .modal-content {
-      position: relative;
       background-color:whitesmoke;
       margin: auto;
-      padding: 0;
       border: 2px solid rgb(75, 2, 2);
       width: fit-content;
-      box-shadow:5px 5px 8px rgba(230, 228, 228), 10px 10px 8px  rgb(206, 205, 205, 0.8), 15px 15px 8px rgb(206, 205, 205, 0.6);
+      box-shadow:5px 5px 8px rgba(230, 228, 228), 10px 10px 8px  rgb(206, 205, 205, 0.8);
       animation-name: animatetop;
       animation-duration: 1s;
       animation-timing-function:ease-in-out;
@@ -29,7 +24,6 @@
       90% {bottom: 50px; opacity: 1;}
       100% {bottom: 0; opacity: 1}
     }
-
   /* Modal Header */
   .modal-header {
     background-color: darkred;
@@ -37,15 +31,12 @@
     color: whitesmoke;
     justify-content: center;
   }
-  
   /* Modal Body */
   .modal-body {
-    padding: 2px 16px;
     display: flex;
     justify-content: center;
     color: black;
   }
-  
   /* Modal Footer */
   .modal-footer {
     padding: 2px 16px;
@@ -53,7 +44,18 @@
     border: 1px solid rgb(75, 2, 2);
     color: whitesmoke;
     justify-content: center;
+    
   }
-  
-
-  
+  /* Model button */
+  .close {
+    width: fit-content;
+    box-shadow: none;
+    background-color: rgb(75, 2, 2);
+    color: whitesmoke;
+    cursor: pointer;
+  }
+  .close:hover {
+    background-color: whitesmoke;
+    color:  rgb(75, 2, 2);
+    text-align: center;
+  }

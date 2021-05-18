@@ -16,18 +16,15 @@ class ErrorBoundry extends React.Component {
         return { hasError: true }
     }
     handleClick() {
-        console.log('KLICK EB');
         this.props.resetError();
-
         this.setState({
             hasError: false
         })
-
     }
     render() {
         const messageData = {
-            header: 'Hoppsan!',
-            body: 'Det inträffade ett fel: ' + this.props.userErrorMessage + this.props.fractionErrorMessage,
+            header: 'Hoppsan! Det inträffade ett fel:',
+            body: this.props.userErrorMessage + this.props.fractionErrorMessage,
             footer: '',
             button: 'Försök igen'
         }

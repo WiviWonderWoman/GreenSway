@@ -13,7 +13,6 @@ export default class FallBackMessage extends React.Component {
         }
     }
     handleClick() {
-        console.log('KLICK FM');
         this.props.handleClick();
         this.setState({
             hide: true,

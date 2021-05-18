@@ -5,6 +5,7 @@
     /* z-index: 1;  */
     padding-top: 200px; 
     justify-content: center;
+    background-color: rgba(128, 128, 128, 0.466);
   }
   .modal-hidden {
     display: none;
@@ -16,7 +17,7 @@
       margin: auto;
       padding: 0;
       border: 2px solid rgb(75, 2, 2);
-      width: 80%;
+      width: fit-content;
       box-shadow:5px 5px 8px rgba(230, 228, 228), 10px 10px 8px  rgb(206, 205, 205, 0.8), 15px 15px 8px rgb(206, 205, 205, 0.6);
       animation-name: animatetop;
       animation-duration: 1s;

@@ -11,9 +11,9 @@ let root = document.getElementById("root");
 ReactDOM.render(
 
     <Provider store={applicationStore}>
-        <ErrorBoundry>
-            <App />
-        </ErrorBoundry>
+        {/* <ErrorBoundry> */}
+        <App />
+        {/* </ErrorBoundry> */}
     </Provider>
     , root);
 

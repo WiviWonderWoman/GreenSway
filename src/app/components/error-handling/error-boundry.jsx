@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
-import { reset } from "../../state/actions";
+import { resetUser, resetFractions } from "../../state/actions";
 import FallBackMessage from "./fallback-message";
 
 class ErrorBoundry extends React.Component {
@@ -16,19 +16,20 @@ class ErrorBoundry extends React.Component {
         return { hasError: true }
     }
     handleClick() {
-        this.props.resetError();
+        this.props.resetUserError();
+        this.props.resetFractionError();
         this.setState({
             hasError: false
-        })
+        });
     }
     render() {
         const messageData = {
             header: 'Hoppsan! Det inträffade ett fel:',
-            body: this.props.userErrorMessage + this.props.fractionErrorMessage,
+            body: this.props.userErrorMessage + this.props.fractionsErrorMessage,
             footer: '',
             button: 'Försök igen'
         }
-        if (this.state.hasError || this.props.userHasError) {
+        if (this.state.hasError || this.props.userHasError || this.props.fractionsHasError) {
             return (
                 <FallBackMessage handleClick={() => this.handleClick()} header={messageData.header} body={messageData.body} footer='' button={messageData.button} />
             )
@@ -40,17 +41,20 @@ ErrorBoundry.propTypes = {
     handleClick: PropTypes.func,
 }
 const mapStateToProps = (state) => {
-    console.log('redux state: ', state);
+    // console.log('redux state: ', state);
     return {
+        garbagehouse: state.user.garbagehouse,
         userErrorMessage: state.userErrorMessage,
-        fractionErrorMessage: state.fractionErrorMessage,
-        userHasError: state.userHasError
+        fractionsErrorMessage: state.fractionsErrorMessage,
+        userHasError: state.userHasError,
+        fractionsHasError: state.fractionsHasError
     }
 }
 //TODO: dispatch function to reset errorMessage
 const mapDispatchToProps = (dispatch) => {
     return {
-        resetError: () => dispatch(reset())
+        resetUserError: () => dispatch(resetUser()),
+        resetFractionError: () => dispatch(resetFractions())
     }
 }
 export default connect(mapStateToProps, mapDispatchToProps)(ErrorBoundry)

@@ -50,7 +50,6 @@ class App extends React.Component {
     }
     render() {
         // Logo shows if new user and button not clicked 
-        // if (this.props.userErrorMessage === '' && this.props.fractionErrorMessage === '') {
         if (this.state.newUser === true && this.state.clicked === false) {
             return (
                 <>
@@ -88,7 +87,6 @@ class App extends React.Component {
                 </>
             );
         }
-        // }
     }
 }
 App.propTypes = {
@@ -104,7 +102,7 @@ App.propTypes = {
         cardboard: PropTypes.number,
         newspaper: PropTypes.number,
         electricity: PropTypes.number,
-        garbagehouse: PropTypes.string
+        garbagehouse: PropTypes.number
     }),
     id: PropTypes.number,
     username: PropTypes.string,
@@ -113,7 +111,6 @@ App.propTypes = {
     fractionErrorMessage: PropTypes.string
 }
 const mapStateToProps = (state) => {
-    // console.log('redux state: ', state);
     return {
         user: state.user,
         id: state.user.id,

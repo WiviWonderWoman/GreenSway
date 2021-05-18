@@ -1,6 +1,6 @@
 import { combineReducers } from "redux";
 import { apiFetchUserSuccess, apiFetchUserError, apiIsLoadingUser, userHasError } from "./user-api";
-import { apiFetchFractionsSuccess, apiFetchFractionsError, apiIsLoadingFractions } from "./fraction-api";
+import { apiFetchFractionsSuccess, apiFetchFractionsError, apiIsLoadingFractions, fractionsHasError } from "./fraction-api";
 
 export default combineReducers({
     user: apiFetchUserSuccess,
@@ -8,6 +8,7 @@ export default combineReducers({
     apiIsLoadingUser,
     userHasError,
     fractions: apiFetchFractionsSuccess,
-    fractionErrorMessage: apiFetchFractionsError,
-    apiIsLoadingFractions
+    fractionsErrorMessage: apiFetchFractionsError,
+    apiIsLoadingFractions,
+    fractionsHasError
 });

@@ -1,4 +1,13 @@
 
+export function fractionsHasError(state = false, action) {
+    switch (action.type) {
+        case 'FRACTIONS_HAS_ERROR':
+            return action.hasError;
+        default:
+            return state;
+    }
+}
+
 export function apiFetchFractionsError(state = '', action) {
     switch (action.type) {
         case 'API_FETCH_FRACTIONS_ERROR':

@@ -30,15 +30,20 @@ export function apiFetchUserSuccess(user) {
     };
 }
 
-export function reset() {
+export function resetUser() {
     // console.log('reset: ');
     return (dispatch) => {
         dispatch(apiFetchUserError(''));
         dispatch(userHasError(false));
         dispatch(apiIsLoadingUser(false));
-        const user = checkLocalStorage();
-        const id = user.id
-        dispatch(getUserById(id));
+        try {
+            const user = checkLocalStorage();
+            const id = user.id
+            dispatch(getUserById(id));
+        } catch (error) {
+            dispatch(userHasError(true));
+            dispatch(apiFetchUserError(error.message));
+        }
     }
 }
 

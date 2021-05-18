@@ -4,7 +4,6 @@ import PropTypes from "prop-types";
 import FractionsButton from "./fractions-button";
 import Table from "./table";
 import { getFractions } from "../../state/actions";
-import errorBoundry from "../error-handling/error-boundry";
 
 class DropDown extends React.Component {
 
@@ -24,69 +23,58 @@ class DropDown extends React.Component {
         });
     }
 
-    handleConsumptionClick(key) {
-        this.setState({
-            isClicked: true,
-            consumtionKey: key
-        });
-    }
-
     componentDidMount() {
         this.props.getFractions(this.props.garbagehouse);
     }
 
     render() {
-        if (this.props.errorMessage === '') {
-            return (
-                this.state.isClicked !== true ?
-                    <>
-                        <nav className="flex.container">
-                            <div className="nav-list">
-                                <div className="dropdown">
-                                    <h5 className="user">Välj önskad fraktion i menyn nedanför:</h5>
-                                    <button className="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
-                                        Fraktioner
+        return (
+            this.state.isClicked !== true ?
+                <>
+                    <nav className="flex.container">
+                        <div className="nav-list">
+                            <div className="dropdown">
+                                <h5 className="user">Välj önskad fraktion i menyn nedanför:</h5>
+                                <button className="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Fraktioner
                                 </button>
-                                    <ul className="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton">
-                                        <FractionsButton allFractions={this.props.fractions} className="dropdown-item" onClick={(source) => this.handleFractionClick(source)} />
-                                    </ul>
-                                </div>
+                                <ul className="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton">
+                                    <FractionsButton className="dropdown-item" onClick={(source) => this.handleFractionClick(source)} />
+                                </ul>
                             </div>
-                        </nav>
-                    </>
-                    :
-                    <>
-                        <nav className="flex.container">
-                            <div className="nav-list">
-                                <div className="dropdown">
-                                    <h5 className="user">Välj önskad fraktion i menyn nedanför:</h5>
-                                    <button className="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
-                                        Fraktioner
+                        </div>
+                    </nav>
+                </>
+                :
+                <>
+                    <nav className="flex.container">
+                        <div className="nav-list">
+                            <div className="dropdown">
+                                <h5 className="user">Välj önskad fraktion i menyn nedanför:</h5>
+                                <button className="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Fraktioner
                                 </button>
-                                    <ul className="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton">
-                                        <FractionsButton allFractions={this.props.fractions} className="dropdown-item" onClick={(source) => this.handleFractionClick(source)} />
-                                    </ul>
-                                </div>
+                                <ul className="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton">
+                                    <FractionsButton className="dropdown-item" onClick={(source) => this.handleFractionClick(source)} />
+                                </ul>
                             </div>
-                        </nav>
-                        <Table chartData={this.props.chartData} fraction={this.state.fraction} />
+                        </div>
+                    </nav>
+                    <Table chartData={this.props.chartData} fraction={this.state.fraction} />
 
-                    </>
-            );
-        }
+                </>
+        );
     }
 }
 DropDown.propTypes = {
     isLoading: PropTypes.bool,
     errorMessage: PropTypes.string,
-    garbagehouse: PropTypes.string,
+    garbagehouse: PropTypes.number,
     chartData: PropTypes.object,
     fractions: PropTypes.array
 }
 const mapStateToProps = (state) => {
     return {
-        isLoading: state.apiIsLoadingFractions,
-        errorMessage: state.fractionErrorMessage,
         garbagehouse: state.user.garbagehouse,
         chartData: {
             organic: state.user.organic,
@@ -99,6 +87,7 @@ const mapStateToProps = (state) => {
             electricity: state.user.electricity,
             water: state.user.water
         },
+        fractionHasError: state.fractionHasError,
         fractions: state.fractions
     }
 }

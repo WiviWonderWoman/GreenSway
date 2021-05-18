@@ -4,6 +4,7 @@ import PropTypes from "prop-types";
 import Logo from "./logo";
 import Loading from "./loading";
 import MenuLinks from "./menu-links";
+import ErrorBoundry from "./error-handling/error-boundry";
 
 class Menu extends React.Component {
 
@@ -22,9 +23,11 @@ class Menu extends React.Component {
                         <Logo text={'GreenSway'} className={'mini-container'} />
                 }
                 <hr />
-                <span className="intro">
-                    VÄLKOMMEN: {this.props.username}!
+                <ErrorBoundry>
+                    <span className="intro">
+                        VÄLKOMMEN: {this.props.username}!
                 </span>
+                </ErrorBoundry>
                 <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
                     <div className="container-fluid">
                         <div >

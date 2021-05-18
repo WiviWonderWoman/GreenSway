@@ -1,4 +1,12 @@
-import { setUserEmailAsync, getNewUserAsync, getUserByIdAsync, saveUser } from "../../api";
+import { setUserEmailAsync, getNewUserAsync, getUserByIdAsync, saveUser, checkLocalStorage } from "../../api";
+
+export function userHasError(hasError) {
+    console.log('ACTION: USER_HAS_ERROR')
+    return {
+        type: 'USER_HAS_ERROR',
+        hasError: hasError
+    };
+}
 
 export function apiFetchUserError(errorMessage) {
     console.log('ACTION: ', errorMessage)
@@ -22,6 +30,18 @@ export function apiFetchUserSuccess(user) {
     };
 }
 
+export function reset() {
+    // console.log('reset: ');
+    return (dispatch) => {
+        dispatch(apiFetchUserError(''));
+        dispatch(userHasError(false));
+        dispatch(apiIsLoadingUser(false));
+        const user = checkLocalStorage();
+        const id = user.id
+        dispatch(getUserById(id));
+    }
+}
+
 export function getUserById(id) {
     return async (dispatch) => {
         dispatch(apiIsLoadingUser(true));
@@ -31,6 +51,7 @@ export function getUserById(id) {
             dispatch(apiIsLoadingUser(false));
         }
         catch (error) {
+            dispatch(userHasError(true));
             dispatch(apiFetchUserError(error.message));
         }
     };
@@ -46,6 +67,7 @@ export function getNewUser() {
             dispatch(apiIsLoadingUser(false));
         }
         catch (error) {
+            dispatch(userHasError(true));
             dispatch(apiFetchUserError(error.errorMessage));
         }
     };
@@ -62,6 +84,7 @@ export function setUserEmail(id, email) {
             dispatch(apiIsLoadingUser(false));
         }
         catch (error) {
+            dispatch(userHasError(true));
             dispatch(apiFetchUserError(error.errorMessage));
         }
     };

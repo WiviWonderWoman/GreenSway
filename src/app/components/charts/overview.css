@@ -12,3 +12,8 @@
     background-color: black;
     color: black;
   }
+  .loading {
+    margin: auto;
+    background-color: black;
+    justify-content: center;
+  }

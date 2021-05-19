@@ -4,10 +4,25 @@ import PropTypes from "prop-types";
 import "./overview.css";
 import WasteChart from './waste-chart';
 import LaudryChart from "./laudry-chart";
+import Loading from "../loading";
 
 class OverviewPage extends React.Component {
 
     render() {
+        if (this.props.isloading) {
+            return (
+                <>
+                    <div className="overview">
+                        <div className="loading">
+                            <Loading />
+                        </div>
+                        <div className="loading">
+                            <Loading />
+                        </div>
+                    </div>
+                </>
+            );
+        }
         return (
             <>
                 <div className="overview">
@@ -25,10 +40,13 @@ class OverviewPage extends React.Component {
 OverviewPage.propTypes = {
     chartData: PropTypes.object,
     electricity: PropTypes.number,
+    isloading: PropTypes.bool,
     water: PropTypes.number
 }
 const mapStateToProps = (state) => {
+    console.log(state)
     return {
+        isloading: state.apiIsLoadingUser,
         chartData: {
             organic: state.user.organic,
             newspaper: state.user.newspaper,

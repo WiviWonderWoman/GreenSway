@@ -29,10 +29,10 @@ export default class Modal extends React.Component {
     }
 }
 Modal.propTypes = {
-    className: PropTypes.string,
-    header: PropTypes.string,
     body: PropTypes.string,
-    footer: PropTypes.string,
     button: PropTypes.string,
+    className: PropTypes.string,
+    footer: PropTypes.string,
+    header: PropTypes.string,
     onClick: PropTypes.func
 }

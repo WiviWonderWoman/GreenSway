@@ -1,9 +1,8 @@
 import React from "react";
-import { connect } from "react-redux";
 import PropTypes from "prop-types";
 import ReuseButton from "../reuse-button";
 
-class FractionsButton extends React.Component {
+export default class FractionsButton extends React.Component {
 
     handleClick(source) {
         this.props.onClick(source);
@@ -19,12 +18,7 @@ class FractionsButton extends React.Component {
     }
 }
 FractionsButton.propTypes = {
+    className: PropTypes.string,
     allFractions: PropTypes.array,
-    onClick: PropTypes.func
+    onClick: PropTypes.func,
 }
-const mapStateToProps = (state) => {
-    return {
-        allFractions: state.fractions,
-    }
-}
-export default connect(mapStateToProps)(FractionsButton)

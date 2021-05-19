@@ -9,7 +9,7 @@ import Logo from "./logo";
 import UserForm from "./user-form";
 import Header from "./header";
 import Footer from "./footer";
-import ErrorBoundry from "./error-handling/error-boundry";
+import ApiErrorBoundry from "./error-handling/api-error-boundry";
 
 class App extends React.Component {
 
@@ -79,9 +79,9 @@ class App extends React.Component {
                 <>
                     <Router>
                         <Header newUser={this.state.newUser} />
-                        <ErrorBoundry>
+                        <ApiErrorBoundry>
                             <Content />
-                        </ErrorBoundry>
+                        </ApiErrorBoundry>
                         <Footer />
                     </Router>
                 </>
@@ -90,34 +90,16 @@ class App extends React.Component {
     }
 }
 App.propTypes = {
-    user: PropTypes.exact({
-        id: PropTypes.number,
-        glas: PropTypes.number,
-        email: PropTypes.string,
-        metal: PropTypes.number,
-        water: PropTypes.number,
-        organic: PropTypes.number,
-        plastic: PropTypes.number,
-        residual: PropTypes.number,
-        cardboard: PropTypes.number,
-        newspaper: PropTypes.number,
-        electricity: PropTypes.number,
-        garbagehouse: PropTypes.number
-    }),
     id: PropTypes.number,
-    username: PropTypes.string,
-    isLoading: PropTypes.bool,
-    userErrorMessage: PropTypes.string,
-    fractionErrorMessage: PropTypes.string
+    email: PropTypes.string,
+    getUser: PropTypes.func,
+    getNewUser: PropTypes.func,
+    setEmail: PropTypes.func,
 }
 const mapStateToProps = (state) => {
     return {
-        user: state.user,
         id: state.user.id,
         email: state.user.email,
-        isLoading: state.apiIsLoadingUser,
-        userErrorMessage: state.userErrorMessage,
-        fractionErrorMessage: state.fractionErrorMessage,
     }
 }
 const mapDispatchToProps = (dispatch) => {

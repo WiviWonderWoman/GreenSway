@@ -29,5 +29,4 @@ Logo.propTypes = {
     className: PropTypes.string,
     onClick: PropTypes.func,
     text: PropTypes.string,
-    email: PropTypes.string,
 }

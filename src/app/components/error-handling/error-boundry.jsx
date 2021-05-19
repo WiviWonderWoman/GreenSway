@@ -1,60 +1,52 @@
 import React from "react";
-import PropTypes from "prop-types";
-import { connect } from "react-redux";
-import { resetUser, resetFractions } from "../../state/actions";
 import FallBackMessage from "./fallback-message";
 
-class ErrorBoundry extends React.Component {
+export default class ErrorBoundry extends React.Component {
+
     constructor(props) {
-        super(props)
+        super(props);
         this.state = {
-            hasError: false
+            hasError: false,
+            errorMessage: ''
         };
     }
+
     static getDerivedStateFromError(error) {
-        console.log(error);
-        return { hasError: true }
+        return {
+            hasError: true,
+            errorMessage: error.message
+        };
     }
+
+    componentDidCatch(error, errorInfo) {
+        console.log(error.message);
+    }
+
     handleClick() {
-        this.props.resetUserError();
-        this.props.resetFractionError();
         this.setState({
             hasError: false
         });
     }
+
     render() {
         const messageData = {
-            header: 'Hoppsan! Det inträffade ett fel:',
-            body: this.props.userErrorMessage + this.props.fractionsErrorMessage,
+            header: this.state.errorMessage,
+            body: 'Det inträffade ett oväntat fel',
             footer: '',
             button: 'Försök igen'
         }
-        if (this.state.hasError || this.props.userHasError || this.props.fractionsHasError) {
+        if (this.state.hasError) {
+            // You can render any custom fallback UI
             return (
-                <FallBackMessage show={this.state.hasError} handleClick={() => this.handleClick()} header={messageData.header} body={messageData.body} footer='' button={messageData.button} />
+                <FallBackMessage
+                    show={this.state.hasError}
+                    handleClick={() => this.handleClick()}
+                    header={messageData.header}
+                    body={messageData.body}
+                    button={messageData.button}
+                />
             )
         }
         return this.props.children;
     }
 }
-ErrorBoundry.propTypes = {
-    handleClick: PropTypes.func,
-}
-const mapStateToProps = (state) => {
-    // console.log('redux state: ', state);
-    return {
-        garbagehouse: state.user.garbagehouse,
-        userErrorMessage: state.userErrorMessage,
-        fractionsErrorMessage: state.fractionsErrorMessage,
-        userHasError: state.userHasError,
-        fractionsHasError: state.fractionsHasError
-    }
-}
-//TODO: dispatch function to reset errorMessage
-const mapDispatchToProps = (dispatch) => {
-    return {
-        resetUserError: () => dispatch(resetUser()),
-        resetFractionError: () => dispatch(resetFractions())
-    }
-}
-export default connect(mapStateToProps, mapDispatchToProps)(ErrorBoundry)

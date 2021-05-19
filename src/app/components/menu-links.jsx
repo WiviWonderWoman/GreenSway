@@ -6,6 +6,7 @@ import PropTypes from "prop-types";
 class MenuLinks extends React.Component {
 
     render() {
+        //TODO: fix url param! || remove id
         //variable for readability
         const id = this.props.id;
         return (

@@ -29,7 +29,6 @@ export default class WasteChart extends React.Component {
                 data={household}
                 reveal={50}
                 label={({ dataEntry }) => dataEntry.title + ' ' + Math.round(dataEntry.percentage) + '%'}
-                // label={({ dataEntry }) => dataEntry.title}
                 labelStyle={(index) => ({
                     fill: household[index].color,
                     fontSize: '3px',

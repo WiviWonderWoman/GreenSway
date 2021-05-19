@@ -12,7 +12,7 @@ export default class FallBackMessage extends React.Component {
 
         return (
 
-            !this.props.show ?
+            this.props.show ?
                 <Modal className='modal' header={this.props.header} body={this.props.body} footer={this.props.footer} onClick={() => this.handleClick()} button={this.props.button}></Modal>
                 :
                 <Modal className='modal-hidden' header={this.props.header} body={this.props.body} footer={this.props.footer} onClick={() => this.handleClick()} button={this.props.button}></Modal>
@@ -21,9 +21,10 @@ export default class FallBackMessage extends React.Component {
     }
 }
 FallBackMessage.propTypes = {
-    header: PropTypes.string,
     body: PropTypes.string,
-    footer: PropTypes.string,
     button: PropTypes.string,
-    handleClick: PropTypes.func
+    footer: PropTypes.string,
+    handleClick: PropTypes.func,
+    header: PropTypes.string,
+    show: PropTypes.bool,
 }

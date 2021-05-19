@@ -39,7 +39,7 @@ class DropDown extends React.Component {
                                     Fraktioner
                                 </button>
                                 <ul className="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton">
-                                    <FractionsButton className="dropdown-item" onClick={(source) => this.handleFractionClick(source)} />
+                                    <FractionsButton className="dropdown-item" allFractions={this.props.fractions} onClick={(source) => this.handleFractionClick(source)} />
                                 </ul>
                             </div>
                         </div>
@@ -55,7 +55,7 @@ class DropDown extends React.Component {
                                     Fraktioner
                                 </button>
                                 <ul className="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton">
-                                    <FractionsButton className="dropdown-item" onClick={(source) => this.handleFractionClick(source)} />
+                                    <FractionsButton className="dropdown-item" allFractions={this.props.fractions} onClick={(source) => this.handleFractionClick(source)} />
                                 </ul>
                             </div>
                         </div>
@@ -67,11 +67,10 @@ class DropDown extends React.Component {
     }
 }
 DropDown.propTypes = {
-    isLoading: PropTypes.bool,
-    errorMessage: PropTypes.string,
     garbagehouse: PropTypes.number,
     chartData: PropTypes.object,
-    fractions: PropTypes.array
+    fractions: PropTypes.array,
+    getFractions: PropTypes.func,
 }
 const mapStateToProps = (state) => {
     return {
@@ -87,7 +86,6 @@ const mapStateToProps = (state) => {
             electricity: state.user.electricity,
             water: state.user.water
         },
-        fractionHasError: state.fractionHasError,
         fractions: state.fractions
     }
 }

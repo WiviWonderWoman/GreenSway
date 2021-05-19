@@ -7,9 +7,14 @@ export default class HomePage extends React.Component {
             <div className="spacer">
                 <div className="user">
                     <h1>Innehåll under utveckling.</h1>
+                    <hr></hr>
                     <h2>Kommande features: </h2>
-                    <p>Kommunikation med hyresvärd:</p>
-                    <p>felanmälan, driftinformation, rapportera status på städning</p>
+                    <p>+ Kommunikation med hyresvärd:</p>
+                    <ul className='home-list'>
+                        <li>- driftinformation </li>
+                        <li>- felanmälan</li>
+                        <li>- städrapportering</li>
+                    </ul>
                 </div>
             </div>
         );

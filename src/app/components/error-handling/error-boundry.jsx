@@ -31,7 +31,7 @@ class ErrorBoundry extends React.Component {
         }
         if (this.state.hasError || this.props.userHasError || this.props.fractionsHasError) {
             return (
-                <FallBackMessage handleClick={() => this.handleClick()} header={messageData.header} body={messageData.body} footer='' button={messageData.button} />
+                <FallBackMessage show={this.state.hasError} handleClick={() => this.handleClick()} header={messageData.header} body={messageData.body} footer='' button={messageData.button} />
             )
         }
         return this.props.children;

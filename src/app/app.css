@@ -83,10 +83,12 @@ button {
     }
 
 #copy {
+  font-size: smaller;
   text-align: center;
   background-color:  #282c34;
 }
   #copy  span {
+    font-size: xx-large;
     font-family: 'Tangerine', cursive;
     color:rgb(51, 255, 0);
     padding: 0px;
@@ -139,10 +141,14 @@ nav {
   margin: auto;
   padding-right: 2%;
   float: right;
+  font-size: smaller;
 }
-
+.home-list {
+  list-style: none;
+}
 .spacer {
  min-height: 500px;
+ height: fit-content;
  width: 100%;
 }
 

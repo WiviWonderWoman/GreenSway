@@ -1,19 +1,14 @@
 import React from "react";
 import { Switch, Route } from "react-router-dom";
-import { connect } from "react-redux";
-import PropTypes from "prop-types";
 import HomePage from "./home-page";
 import LaudryPage from "./laudry/laudry-page";
 import OverviewPage from "./charts/overview-page";
 import DetailsPage from "./fractions/details-page";
 import KeyIdPage from "./key-id-page";
 
-class Content extends React.Component {
+export default class Content extends React.Component {
 
     render() {
-        //TODO: fix url param! || remove id
-        //variable for readability
-        const id = this.props.id;
         return (
             <>
                 <div className="spacer">
@@ -21,16 +16,16 @@ class Content extends React.Component {
                         <Route exact path={`/`}>
                             <HomePage />
                         </Route>
-                        <Route exact path={`/laundry/${id}`}>
+                        <Route exact path={`/laundry`}>
                             <LaudryPage />
                         </Route>
-                        <Route exact path={`/overview/${id}`}>
+                        <Route exact path={`/overview`}>
                             <OverviewPage />
                         </Route>
-                        <Route exact path={`/details/${id}`}>
+                        <Route exact path={`/details`}>
                             <DetailsPage />
                         </Route>
-                        <Route exact path={`/key-id/${id}`}>
+                        <Route exact path={`/key-id`}>
                             <KeyIdPage />
                         </Route>
                     </Switch>
@@ -40,13 +35,3 @@ class Content extends React.Component {
         )
     }
 }
-Content.propTypes = {
-    id: PropTypes.number,
-}
-const mapStateToProps = (state) => {
-    // console.log('redux state: ', state);
-    return {
-        id: state.user.id,
-    }
-}
-export default connect(mapStateToProps)(Content)

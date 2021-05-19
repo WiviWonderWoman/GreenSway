@@ -5,23 +5,10 @@ import { resetUser, resetFractions } from "../../state/actions";
 import FallBackMessage from "./fallback-message";
 
 class ApiErrorBoundry extends React.Component {
-    constructor(props) {
-        super(props)
-        this.state = {
-            hasError: false
-        };
-    }
-
-    static getDerivedStateFromError(error) {
-        return { hasError: true }
-    }
 
     handleClick() {
         this.props.resetUserError();
         this.props.resetFractionError();
-        this.setState({
-            hasError: false
-        });
     }
 
     render() {
@@ -31,10 +18,10 @@ class ApiErrorBoundry extends React.Component {
             footer: '',
             button: 'Försök igen'
         }
-        if (this.state.hasError || this.props.userHasError || this.props.fractionsHasError) {
+        if (this.props.userHasError || this.props.fractionsHasError) {
             return (
                 <FallBackMessage
-                    show={!this.state.hasError}
+                    show={true}
                     handleClick={() => this.handleClick()}
                     header={messageData.header}
                     body={messageData.body}

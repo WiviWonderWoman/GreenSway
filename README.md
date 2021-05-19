@@ -18,6 +18,12 @@ Troligtvis öppnas **[localhost: 1234](http://localhost:1234)**(/index.html) aut
 ________________________________________________________________________________________________________________________________________________________________________________
 ## Externa bibliotek
 
+### [react](https://www.npmjs.com/package/react)
+Används för att bygga de komponenter som applikationens UI består av
+
+### [react-dom](https://www.npmjs.com/package/react-dom)
+Används för att kunna rendera react komponenterna
+
 ### [axios](https://www.npmjs.com/package/axios)
 Används för att smidigare kunna göra avgränsade HTTP-anrop utan att behöva tänka på JSON format.
 
@@ -33,14 +39,15 @@ Används för att validera (dokumentera) mina komponenters props.
 ### [react-redux](https://www.npmjs.com/package/react-redux)
 Används för tillståndshantering.
 
-### [redux-toolkit](https://www.npmjs.com/package/@reduxjs/toolkit)
-Används för att underlätt tillståndshanteringen.
-
 ### [redux-thunk](https://www.npmjs.com/package/redux-thunk)
 Används för att kunna dispatcha funktioner
 
 ### [react-calendar](https://www.npmjs.com/package/react-calendar)
 Används för att integrera en kalendervy med "inbyggd" formatering och språkinställningar.
+
+### Dependencies som inte används ännu:
+  #### [redux-toolkit](https://www.npmjs.com/package/@reduxjs/toolkit)
+  Kan används för att underlätt tillståndshanteringen.
 ________________________________________________________________________________________________________________________________________________________________________________
 ## Tjänster
 Jag har skapat tre mock-API: med hjälp av [retool](https://retool.com/api-generator/) men för tillfället används bara två.

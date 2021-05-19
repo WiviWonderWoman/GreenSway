@@ -77,113 +77,109 @@ Anropas från
 #### Exempel:
 ```
 [
-    {
+   {
         "id": 1,
-        "max": 90,
-        "name": "Organisktavfall",
-        "unit": "kg",
-        "price": 0.5,
-        "isFull": false,
-        "source": "organic",
-        "hatchOpen": false,
-        "fractionId": "ow",
-        "garbagehouse": "1-001"
-    },
-    {
-        "id": 2,
-        "max": 50,
-        "name": "Tidningar",
-        "unit": "kg",
-        "price": 0.5,
-        "isFull": true,
-        "source": "newspaper",
-        "hatchOpen": false,
-        "fractionId": "np",
-        "garbagehouse": "1-001"
-    },
-    {
-        "id": 3,
-        "max": 50,
-        "name": "Pappförpackningar",
-        "unit": "kg",
-        "price": 0.5,
-        "isFull": false,
-        "source": "cardboard",
-        "hatchOpen": true,
-        "fractionId": "cp",
-        "garbagehouse": "1-001"
-    },
-    {
-        "id": 4,
-        "max": 50,
-        "name": "Glasförpackningar",
-        "unit": "kg",
-        "price": 0.5,
-        "isFull": false,
-        "source": "glas",
-        "hatchOpen": false,
-        "fractionId": "gp",
-        "garbagehouse": "1-001"
-    },
-    {
-        "id": 5,
-        "max": 35,
-        "name": "Plastförpackningar",
-        "unit": "kg",
-        "price": 1,
-        "isFull": true,
-        "source": "plastic",
-        "hatchOpen": false,
-        "fractionId": "pp",
-        "garbagehouse": "1-001"
-    },
-    {
-        "id": 6,
-        "max": 50,
-        "name": "Metallförpackningar",
-        "unit": "kg",
-        "price": 0.5,
-        "isFull": false,
-        "source": "metal",
-        "hatchOpen": false,
-        "fractionId": "mp",
-        "garbagehouse": "1-001"
-    },
-    {
-        "id": 7,
-        "max": 35,
-        "name": "Restavfall",
-        "unit": "kg",
-        "price": 5,
-        "isFull": false,
-        "source": "residual",
-        "hatchOpen": false,
-        "fractionId": "rw",
-        "garbagehouse": "1-001"
-    },
-    {
-        "id": 8,
-        "max": 50,
-        "name": "Vatten",
-        "unit": "kbm",
-        "price": 2,
-        "isFull": false,
-        "source": "water",
-        "hatchOpen": false,
-        "fractionId": "wat",
-        "garbagehouse": "1-001"
-    },
-    {
-        "id": 9,
-        "max": 50,
-        "name": "El",
-        "unit": "kWh",
-        "price": 3,
-        "isFull": false,
-        "source": "electricity",
-        "hatchOpen": false,
-        "fractionId": "el",
-        "garbagehouse": "1-001"
+        "allFractions": [
+            {
+                "max": 90,
+                "name": "Organisktavfall",
+                "unit": "kg",
+                "price": 0.5,
+                "isFull": false,
+                "source": "organic",
+                "hatchOpen": false,
+                "fractionId": "ow",
+                "garbagehouse": "1-001"
+            },
+            {
+                "max": 50,
+                "name": "Tidningar",
+                "unit": "kg",
+                "price": 0.5,
+                "isFull": true,
+                "source": "newspaper",
+                "hatchOpen": false,
+                "fractionId": "np",
+                "garbagehouse": "1-001"
+            },
+            {
+                "max": 50,
+                "name": "Pappförpackningar",
+                "unit": "kg",
+                "price": 0.5,
+                "isFull": false,
+                "source": "cardboard",
+                "hatchOpen": true,
+                "fractionId": "cp",
+                "garbagehouse": "1-001"
+            },
+            {
+                "max": 50,
+                "name": "Glasförpackningar",
+                "unit": "kg",
+                "price": 0.5,
+                "isFull": false,
+                "source": "glas",
+                "hatchOpen": false,
+                "fractionId": "gp",
+                "garbagehouse": "1-001"
+            },
+            {
+                "max": 35,
+                "name": "Plastförpackningar",
+                "unit": "kg",
+                "price": 1,
+                "isFull": true,
+                "source": "plastic",
+                "hatchOpen": false,
+                "fractionId": "pp",
+                "garbagehouse": "1-001"
+            },
+            {
+                "max": 50,
+                "name": "Metallförpackningar",
+                "unit": "kg",
+                "price": 0.5,
+                "isFull": false,
+                "source": "metal",
+                "hatchOpen": false,
+                "fractionId": "mp",
+                "garbagehouse": "1-001"
+            },
+            {
+                "max": 35,
+                "name": "Restavfall",
+                "unit": "kg",
+                "price": 5,
+                "isFull": false,
+                "source": "residual",
+                "hatchOpen": false,
+                "fractionId": "rw",
+                "garbagehouse": "1-001"
+            },
+            {
+                "max": 50,
+                "name": "Vatten",
+                "unit": "kbm",
+                "price": 2,
+                "isFull": false,
+                "source": "water",
+                "hatchOpen": false,
+                "fractionId": "wat",
+                "garbagehouse": "1-001"
+            },
+            {
+                "max": 50,
+                "name": "El",
+                "unit": "kWh",
+                "price": 3,
+                "isFull": false,
+                "source": "electricity",
+                "hatchOpen": false,
+                "fractionId": "el",
+                "garbagehouse": "1-001"
+            }
+        ]
     }
 ]
 ```

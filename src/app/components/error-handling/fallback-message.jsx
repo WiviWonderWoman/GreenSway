@@ -1,7 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import "./fallback.css";
-import Modal from "../modal";
+import Modal from "../modal/modal";
 /** 
  * @component FallBackMessage is a stateless component, that displays an UI-fallback.
  */

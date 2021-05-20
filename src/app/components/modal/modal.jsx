@@ -1,15 +1,16 @@
 import React from "react";
 import PropTypes from "prop-types";
+import "./modal.css";
 /** 
  * @component Modal is a stateless reusable react class-component. A modal that can easily be modified through styling. 
- * For example to hide Modal just add suffix className with '-hidden'. 
- * @example styling: ./errorhandling/fallback.css or ./laundry/laundry.css
+ * To hide Modal just add suffix className with '-hidden'. 
+ * @example default styling: ./modal.css
 */
 export default class Modal extends React.Component {
 
     render() {
         /**
-         * @typedef  for styling individual parts of the 
+         * @typedef for styling individual parts of the modal
          * @type {Object} style
          * @property {string} body
          * @property {string} button

@@ -2,7 +2,10 @@ import React from "react";
 import PropTypes from "prop-types";
 import logo from "../images/recycle.png";
 import ReuseButton from "./reuse-button";
-
+/** 
+ * @class @component
+ * @classdesc stateless component for the spinning logo-image 
+ */
 export default class Logo extends React.Component {
 
     render() {
@@ -26,7 +29,16 @@ export default class Logo extends React.Component {
     }
 }
 Logo.propTypes = {
+    /**
+     * Sets style depending on newUser
+     */
     className: PropTypes.string,
+    /**
+     * Handel clicks on Logo
+     */
     onClick: PropTypes.func,
+    /**
+     * Text on button
+     */
     text: PropTypes.string,
 }

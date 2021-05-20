@@ -1,10 +1,23 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { PieChart } from 'react-minimal-pie-chart';
-
+/** 
+ * @class @component
+ * @classdesc stateless component for displaying a pie-chart of users comsumption of garbage fractions,
+ *  with react-minimal-pie-chart function-components: 
+ * @PieChart
+ */
 export default class WasteChart extends React.Component {
 
     render() {
+        /**
+        * An Array of data-objects that the PieChart needs to render.
+        * @typedef  
+        * @property {string} title
+        * @property  {number} value
+        * @property  {color} string
+        * @description value is doubled so that only 50% shows and the fractions doesn't float together.
+         */
         let household = [
             { title: 'Organiskt', value: this.props.chartData.organic * 2, color: ' rgba(99, 255, 9, 0.959)' },
             { title: 'Tidningar', value: this.props.chartData.newspaper * 2, color: ' rgb(122, 108, 78)' },
@@ -40,5 +53,8 @@ export default class WasteChart extends React.Component {
     }
 }
 WasteChart.propTypes = {
+    /**
+     * Object with data for users consumption of garbage fractions
+     */
     chartData: PropTypes.object
 }

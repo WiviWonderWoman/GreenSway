@@ -4,17 +4,31 @@ import PropTypes from "prop-types";
 import FractionsButton from "./fractions-button";
 import Table from "./table";
 import { getFractions } from "../../state/actions";
-
+/** 
+ * @class @component
+ * @classdesc DropDown stateful HOC component 
+ * for displaying a drop-down of fractiosButtons and tables with cost.
+ */
 class DropDown extends React.Component {
 
     constructor(props) {
         super(props);
         this.state = {
+            /**
+             * @param {bool} state.fraction 
+             * keeps track of clicked fraction
+             */
             fraction: {},
+            /**
+             * @param {bool} state.clicked 
+             * keeps track of click on button
+             */
             isClicked: false
         }
     }
-
+    /**
+     * @method that handles click on the fraction, finds the right fraction.
+     */
     handleFractionClick(source) {
         const fraction = this.props.fractions.find((f) => f.source === source);
         this.setState({
@@ -28,6 +42,11 @@ class DropDown extends React.Component {
     }
 
     render() {
+        /**
+         * @description
+         * Conditinal rendering:
+         * if button clicked 
+         */
         return (
             this.state.isClicked !== true ?
                 <>
@@ -67,9 +86,21 @@ class DropDown extends React.Component {
     }
 }
 DropDown.propTypes = {
+    /**
+     * Number representing what garbagehouse user belongs to
+     */
     garbagehouse: PropTypes.number,
+    /**
+     * Object with data that is passed to Table
+     */
     chartData: PropTypes.object,
+    /**
+     * All fractions from users garbagehouse
+     */
     fractions: PropTypes.array,
+    /**
+     * Gets fractions from users garbagehouse. Dispatches getFractions(garbagehouse). 
+     */
     getFractions: PropTypes.func,
 }
 const mapStateToProps = (state) => {

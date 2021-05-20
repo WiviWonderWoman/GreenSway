@@ -1,3 +1,4 @@
+/* table */
 @media screen and (max-width: 425px) {
   .table-responsive {
     font-size:4vw;
@@ -10,7 +11,7 @@
   margin: auto;
   width:fit-content;
 }
-
+/* drop-down */
 .flex.container {
   margin: auto;
   display: flex;
@@ -44,6 +45,12 @@
     text-align: center;
     box-shadow: 0 2px 8px 0 rgb(250, 247, 247), 0 1px 10px 0 rgb(250, 247, 247);
 }
+
+/*------------------------------------------------------------------------------------
+COLOR CODES FOR FRACTIONS; BUTTONS & TABLE 
+-------------------------------------------------------------------------------------*/
+
+/* residual waste */
 .rw {
     background-color: darkred; 
     border: solid 1px black;
@@ -61,222 +68,221 @@
     text-align: center;
     box-shadow: 0 2px 8px 0 rgb(250, 247, 247), 0 1px 10px 0 rgb(250, 247, 247);
   }
-  #rw {
-    background-color: darkred; 
-    border: solid 1px black;
-    color: whitesmoke;
-    box-shadow: 0 2px 8px 0 rgb(250, 247, 247), 0 1px 10px 0 rgb(250, 247, 247);
-    border-radius: 10px;
-    text-align: center;
-  }
-  .el {
-    background-color: rgb(235, 220, 90); 
-    border: solid 1px black;
-    color: black;
-    border-radius: 10px;
-    box-shadow: none;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    cursor: pointer;
-    width:100%;
-  }
-  
-    .el:hover {
+#rw {
+  background-color: darkred; 
+  border: solid 1px black;
+  color: whitesmoke;
+  box-shadow: 0 2px 8px 0 rgb(250, 247, 247), 0 1px 10px 0 rgb(250, 247, 247);
+  border-radius: 10px;
+  text-align: center;
+}
+/* residual waste */
+.el {
+  background-color: rgb(235, 220, 90); 
+  border: solid 1px black;
+  color: black;
+  border-radius: 10px;
+  box-shadow: none;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  width:100%;
+}
+  .el:hover {
       background-color:yellow;
       color: black;
       text-align: center;
       box-shadow: 0 2px 8px 0 rgb(250, 247, 247), 0 1px 10px 0 rgb(250, 247, 247);
-    }
-  #el {
-    background-color: rgb(235, 220, 90); 
-    border: solid 1px black;
-    box-shadow: 0 2px 8px 0 rgb(250, 247, 247), 0 1px 10px 0 rgb(250, 247, 247);
+  }
+#el {
+  background-color: rgb(235, 220, 90); 
+  border: solid 1px black;
+  box-shadow: 0 2px 8px 0 rgb(250, 247, 247), 0 1px 10px 0 rgb(250, 247, 247);
+  color: black;
+  border-radius: 10px;
+  text-align: center;
+}
+/* organic waste */
+.ow {
+  background-color: #4CAF50; 
+  border: solid 1px black;
+  border-radius: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  width:100%;
+}
+  .ow:hover {
+    background-color: rgba(99, 255, 9, 0.959);
     color: black;
-    border-radius: 10px;
     text-align: center;
-  }
-  /* organic waste button */
-  .ow {
-    background-color: #4CAF50; 
-    border: solid 1px black;
-    border-radius: 10px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    cursor: pointer;
-    width:100%;
-  }
-  #ow{
-    background-color: #4CAF50; 
-    border: solid 1px black;
-    color: black;
     box-shadow: 0 2px 8px 0 rgb(250, 247, 247), 0 1px 10px 0 rgb(250, 247, 247);
-    border-radius: 10px;
-    text-align: center;
-  
   }
-    .ow:hover {
-      background-color: rgba(99, 255, 9, 0.959);
-      color: black;
-      text-align: center;
-      box-shadow: 0 2px 8px 0 rgb(250, 247, 247), 0 1px 10px 0 rgb(250, 247, 247);
-    }
-  /* cardboard button */
-  .cp {
-    background-color: navy;
-    border: solid 1px black;
-    border-radius: 10px;
-    box-shadow: none;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    cursor: pointer;
-    width:100%;
-  }
+#ow{
+  background-color: #4CAF50; 
+  border: solid 1px black;
+  color: black;
+  box-shadow: 0 2px 8px 0 rgb(250, 247, 247), 0 1px 10px 0 rgb(250, 247, 247);
+  border-radius: 10px;
+  text-align: center;
+}
+/* cardboard */
+.cp {
+  background-color: navy;
+  border: solid 1px black;
+  border-radius: 10px;
+  box-shadow: none;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  width:100%;
+}
   .cp:hover {
     background-color: rgb(51, 104, 250);
     color: black;
     text-align: center;
     box-shadow: 0 2px 8px 0 rgb(250, 247, 247), 0 1px 10px 0 rgb(250, 247, 247);
   }
-  #cp {
-    background-color: navy;
-    border: solid 1px black;
-    color: whitesmoke;
-    box-shadow: 0 2px 8px 0 rgb(250, 247, 247), 0 1px 10px 0 rgb(250, 247, 247);
-    border-radius: 10px;
-    text-align: center;
-  }
-  .wat {
-    background-color: skyblue;
-    border: solid 1px black;
-    border-radius: 10px;
-    box-shadow: none;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    cursor: pointer;
-    width:100%;
-  }
-  
-    .wat:hover {
-      background-color: turquoise;
-      color: black;
-      text-align: center;
-      box-shadow: 0 2px 8px 0 rgb(250, 247, 247), 0 1px 10px 0 rgb(250, 247, 247);
-    }
-  #wat {
-    background-color: skyblue;
-    border: solid 1px black;
+#cp {
+  background-color: navy;
+  border: solid 1px black;
+  color: whitesmoke;
+  box-shadow: 0 2px 8px 0 rgb(250, 247, 247), 0 1px 10px 0 rgb(250, 247, 247);
+  border-radius: 10px;
+  text-align: center;
+}
+/* water */
+.wat {
+  background-color: skyblue;
+  border: solid 1px black;
+  border-radius: 10px;
+  box-shadow: none;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  width:100%;
+}
+  .wat:hover {
+    background-color: turquoise;
     color: black;
+    text-align: center;
     box-shadow: 0 2px 8px 0 rgb(250, 247, 247), 0 1px 10px 0 rgb(250, 247, 247);
-    border-radius: 10px;
-    text-align: center;
   }
-  /* plastic button */
-  .pp {
-    background-color: orangered; 
-    border: solid 1px black;
-    border-radius: 10px;
-    box-shadow: none;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    cursor: pointer;
-    width:100%;
-  }
-    .pp:hover {
-      background-color: orange;
-      color: black;
-      text-align: center;
-      box-shadow: 0 2px 8px 0 rgb(250, 247, 247), 0 1px 10px 0 rgb(250, 247, 247);
-    }
-  #pp {
-    background-color: orangered; 
-    border: solid 1px black;
+#wat {
+  background-color: skyblue;
+  border: solid 1px black;
+  color: black;
+  box-shadow: 0 2px 8px 0 rgb(250, 247, 247), 0 1px 10px 0 rgb(250, 247, 247);
+  border-radius: 10px;
+  text-align: center;
+}
+/* plastic */
+.pp {
+  background-color: orangered; 
+  border: solid 1px black;
+  border-radius: 10px;
+  box-shadow: none;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  width:100%;
+}
+  .pp:hover {
+    background-color: orange;
     color: black;
+    text-align: center;
     box-shadow: 0 2px 8px 0 rgb(250, 247, 247), 0 1px 10px 0 rgb(250, 247, 247);
-    border-radius: 10px;
-    text-align: center;
   }
-  /* metal button */
-  .mp {
-    background-color: rgb(56, 55, 55); 
-    border: solid 1px black;
-    border-radius: 10px;
-    box-shadow: none;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    cursor: pointer;
-    width:100%;
-  }
-    .mp:hover {
-      background-color: gray;
-      color: black;
-      text-align: center;
-      box-shadow: 0 2px 8px 0 rgb(250, 247, 247), 0 1px 10px 0 rgb(250, 247, 247);
-    }
-  #mp {
-    background-color: rgb(56, 55, 55); 
-    border: solid 1px black;
-    color: whitesmoke;
-    box-shadow: 0 2px 8px 0 rgb(250, 247, 247), 0 1px 10px 0 rgb(250, 247, 247);
-    border-radius: 10px;
-    text-align: center;
-  }
-  /* glas button */
-  .gp {
-    background-color: rgba(245, 245, 245, 0.425); 
-    opacity: 70%;
-    border: solid 1px black;
-    border-radius: 10px;
-    box-shadow: none;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    cursor: pointer;
-    width:100%;
-  }
-    .gp:hover {
-      background-color:whitesmoke;
-      opacity: 100%;
-      color: black;
-      text-align: center;
-      box-shadow: 0 2px 8px 0 rgb(250, 247, 247), 0 1px 10px 0 rgb(250, 247, 247);
-    }
-  #gp {
-    background-color: rgba(245, 245, 245, 0.425); 
-    border: solid 1px black;
+#pp {
+  background-color: orangered; 
+  border: solid 1px black;
+  color: black;
+  box-shadow: 0 2px 8px 0 rgb(250, 247, 247), 0 1px 10px 0 rgb(250, 247, 247);
+  border-radius: 10px;
+  text-align: center;
+}
+/* metal */
+.mp {
+  background-color: rgb(56, 55, 55); 
+  border: solid 1px black;
+  border-radius: 10px;
+  box-shadow: none;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  width:100%;
+}
+  .mp:hover {
+    background-color: gray;
     color: black;
+    text-align: center;
     box-shadow: 0 2px 8px 0 rgb(250, 247, 247), 0 1px 10px 0 rgb(250, 247, 247);
-    border-radius: 10px;
-    text-align: center;
   }
-  /* newspaper button */
-  .np {
-    background-color: rgb(51, 22, 18); 
-    border: solid 1px black;
-    border-radius: 10px;
-    box-shadow: none;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    cursor: pointer;
-    width:100%;
+#mp {
+  background-color: rgb(56, 55, 55); 
+  border: solid 1px black;
+  color: whitesmoke;
+  box-shadow: 0 2px 8px 0 rgb(250, 247, 247), 0 1px 10px 0 rgb(250, 247, 247);
+  border-radius: 10px;
+  text-align: center;
+}
+/* glas */
+.gp {
+  background-color: rgba(245, 245, 245, 0.425); 
+  opacity: 70%;
+  border: solid 1px black;
+  border-radius: 10px;
+  box-shadow: none;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  width:100%;
   }
-    .np:hover {
-      background-color: rgb(122, 108, 78);
-      color: black;
-      text-align: center;
-      box-shadow: 0 2px 8px 0 rgb(250, 247, 247), 0 1px 10px 0 rgb(250, 247, 247);
-    }
-  #np{
-    background-color: rgb(51, 22, 18); 
-    border: solid 1px black;
-    color: whitesmoke;
+  .gp:hover {
+    background-color:whitesmoke;
+    opacity: 100%;
+    color: black;
+    text-align: center;
     box-shadow: 0 2px 8px 0 rgb(250, 247, 247), 0 1px 10px 0 rgb(250, 247, 247);
-    border-radius: 10px;
+  }
+#gp {
+  background-color: rgba(245, 245, 245, 0.425); 
+  border: solid 1px black;
+  color: black;
+  box-shadow: 0 2px 8px 0 rgb(250, 247, 247), 0 1px 10px 0 rgb(250, 247, 247);
+  border-radius: 10px;
+  text-align: center;
+}
+/* newspaper button */
+.np {
+  background-color: rgb(51, 22, 18); 
+  border: solid 1px black;
+  border-radius: 10px;
+  box-shadow: none;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  width:100%;
+}
+  .np:hover {
+    background-color: rgb(122, 108, 78);
+    color: black;
     text-align: center;
-    }
+    box-shadow: 0 2px 8px 0 rgb(250, 247, 247), 0 1px 10px 0 rgb(250, 247, 247);
+  }
+#np{
+  background-color: rgb(51, 22, 18); 
+  border: solid 1px black;
+  color: whitesmoke;
+  box-shadow: 0 2px 8px 0 rgb(250, 247, 247), 0 1px 10px 0 rgb(250, 247, 247);
+  border-radius: 10px;
+  text-align: center;
+}

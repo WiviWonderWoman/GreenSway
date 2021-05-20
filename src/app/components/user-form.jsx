@@ -1,20 +1,35 @@
 import React from "react";
 import PropTypes from "prop-types";
 import ReuseButton from "./reuse-button";
-
+/** 
+ * @class @component 
+ * @classdesc App is a stateful controlled component, that displays a form and handels user input.
+ */
 export default class UserForm extends React.Component {
 
     constructor(props) {
         super(props);
         this.state = {
+            /**
+             * @param {string} state.username 
+             * User email
+             */
             username: '',
         };
     }
+    /**
+     * @event
+     * @method that handels updates to user email
+     * @param {event} event 
+     */
     handleUsernameChange = (event) => {
         this.setState({
             username: event.target.value,
         });
     }
+    /**
+     * @method that checks the input and sends it back to App's handleUpdate(email). 
+     */
     saveUser() {
         if (this.state.username !== "") {
             this.props.handleUpdate(this.state.username)
@@ -41,5 +56,8 @@ export default class UserForm extends React.Component {
     }
 }
 UserForm.propTypes = {
+    /**
+     * Sends input back to App's handleUpdate(email).  
+     */
     handleUpdate: PropTypes.func,
 }

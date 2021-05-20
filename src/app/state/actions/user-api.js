@@ -1,5 +1,15 @@
+/**
+ * @module /state/actions/users-api.js
+ * @despription Redux actions for users
+ */
 import { setUserEmailAsync, getNewUserAsync, getUserByIdAsync, saveUser, checkLocalStorage } from "../../api";
-
+/**
+ * @function Redux action
+ * @param {bool} hasError 
+ * @returns {Object} action
+ * @property { string } type 
+ * @property { bool } hasError
+ */
 export function userHasError(hasError) {
     console.log('ACTION: USER_HAS_ERROR')
     return {
@@ -7,7 +17,13 @@ export function userHasError(hasError) {
         hasError: hasError
     };
 }
-
+/**
+ * @function Redux action
+ * @param { string } errorMessage 
+ * @returns { Object } action
+ * @property { string } type 
+ * @property { string } errorMessage
+ */
 export function apiFetchUserError(errorMessage) {
     console.log('ACTION: ', errorMessage)
     return {
@@ -15,21 +31,36 @@ export function apiFetchUserError(errorMessage) {
         errorMessage: errorMessage
     };
 }
-
+/**
+ * @function Redux action
+ * @param { bool } hasError 
+ * @returns { Object } action
+ * @property { string } type 
+ * @property { bool } isLoading
+ */
 export function apiIsLoadingUser(isLoading) {
     return {
         type: 'API_IS-LOADING_USER',
         isLoading: isLoading
     };
 }
-
+/**
+ * @function Redux action
+ * @param { array } fractions 
+ * @returns { Object } action
+ * @property { string } type 
+ * @property { Object } user
+ */
 export function apiFetchUserSuccess(user) {
     return {
         type: 'API_FETCH_USER_SUCCESS',
         user
     };
 }
-
+/**
+ * @async
+ * @function prepare for another call after an error
+ */
 export function resetUser() {
     // console.log('reset: ');
     return (dispatch) => {
@@ -46,7 +77,11 @@ export function resetUser() {
         }
     }
 }
-
+/**
+ * @async
+ * @function dispatches getUserByIdAsync(id)
+ * @param {number} id
+ */
 export function getUserById(id) {
     return async (dispatch) => {
         dispatch(apiIsLoadingUser(true));
@@ -61,14 +96,16 @@ export function getUserById(id) {
         }
     };
 }
-
+/**
+ * @async
+ * @function dispatches getNewUserAsync()
+ */
 export function getNewUser() {
     return async (dispatch) => {
         dispatch(apiIsLoadingUser(true));
         try {
             const user = await getNewUserAsync();
             dispatch(apiFetchUserSuccess(user));
-
             dispatch(apiIsLoadingUser(false));
         }
         catch (error) {
@@ -77,13 +114,17 @@ export function getNewUser() {
         }
     };
 }
-
+/**
+ * @async
+ * @function dispatches setUserEmailAsync(id, email)
+ * @param {number} id
+ * @param {string} email
+ */
 export function setUserEmail(id, email) {
     return async (dispatch) => {
         dispatch(apiIsLoadingUser(true));
         try {
             const user = await setUserEmailAsync(id, email);
-            // console.log('ACTION: ', user);
             dispatch(apiFetchUserSuccess(user));
             saveUser(user.id, user.email);
             dispatch(apiIsLoadingUser(false));

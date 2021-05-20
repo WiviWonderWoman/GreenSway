@@ -1,6 +1,10 @@
-
 import Caller from "./caller";
-
+/**
+ * @async
+ * @function GET all fractions by garbagehouse
+ * @param {number} garbagehouse 
+ * @returns {Array} allFractions, an array with fraction-objects
+ */
 export async function getFractionsAsync(garbagehouse) {
     try {
         const response = await Caller.get(`/${garbagehouse}`, {});

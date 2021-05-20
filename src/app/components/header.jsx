@@ -2,7 +2,10 @@ import React from "react";
 import PropTypes from "prop-types";
 import Logo from "./logo";
 import Menu from "./menu";
-
+/** 
+ * @class  @component
+ * @classdesc stateless component for header content 
+ */
 export default class Header extends React.Component {
 
     render() {
@@ -21,7 +24,16 @@ export default class Header extends React.Component {
     }
 }
 Header.propTypes = {
+    /**
+     * Is Logo clicked
+     */
     clicked: PropTypes.bool,
+    /**
+     * Is user new
+     */
     newUser: PropTypes.bool,
+    /**
+     * Handel clicks on Logo
+     */
     handleClick: PropTypes.func
 }

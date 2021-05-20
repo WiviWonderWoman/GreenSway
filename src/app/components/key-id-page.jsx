@@ -1,5 +1,8 @@
 import React from "react";
-
+/** 
+ * @class @component
+ * @classdesc stateless component for key-id-view content 
+ */
 export default class KeyIdPage extends React.Component {
     render() {
         return (
@@ -10,7 +13,10 @@ export default class KeyIdPage extends React.Component {
                         <hr></hr>
                         <h2>Kommande features: </h2>
                         <p>+ Digital Nyckel & Id</p>
-                        <p>- Funktionallitet (endast till mobil-app) kommer inom kort.</p>
+                        <ul className='home-list'>
+                            <li>- I mobil app: NFC-Funktionallitet</li>
+                            <li>- I Webbappen: Log över dina upplåsning av tvättstuga & sopkärl</li>
+                        </ul>
                         <i className="fas fa-key" />
                     </div>
                 </div>

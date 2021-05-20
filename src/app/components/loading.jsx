@@ -1,5 +1,8 @@
 import React from "react";
-
+/** 
+ * @class @component
+ * @classdesc stateless component for showing a loader while content from API is loading 
+ */
 export default class Loading extends React.Component {
     render() {
         return (

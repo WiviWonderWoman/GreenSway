@@ -2,6 +2,13 @@ import React, { useState } from 'react';
 import Calendar from 'react-calendar';
 // import "./laudry.css";
 // import Modal from "../modal";
+/** 
+ *  @component
+ * @desc Booking is a stateful function-component for displaying booking-calendar,
+ * with react-calendar component: 
+ * @Calendar
+ * @todo implement modal when clicking on day
+ */
 export function Booking() {
     const [value, onChange] = useState(new Date());
     return (

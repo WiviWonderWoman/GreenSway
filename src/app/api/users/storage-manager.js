@@ -1,4 +1,7 @@
-
+/**
+ * @function check localStorage for user
+ * @returns {Object} user, an object representing the new user
+ */
 export function checkLocalStorage() {
 
     if (localStorage.getItem('username') !== null || undefined) {
@@ -13,7 +16,11 @@ export function checkLocalStorage() {
         return null;
     }
 }
-
+/**
+ * @function save user to localStorage
+ * @param {number} id
+ * @param {string} username
+ */
 export function saveUser(id, username) {
     localStorage.setItem('id', JSON.stringify(id));
     localStorage.setItem('username', JSON.stringify(username));

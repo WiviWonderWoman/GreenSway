@@ -15,7 +15,6 @@ ReactDOM.render(
             <App />
         </ErrorBoundry>
     </Provider>
-
     , root);
 
 

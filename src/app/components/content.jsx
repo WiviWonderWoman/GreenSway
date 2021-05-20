@@ -5,7 +5,12 @@ import LaudryPage from "./laudry/laudry-page";
 import OverviewPage from "./charts/overview-page";
 import DetailsPage from "./fractions/details-page";
 import KeyIdPage from "./key-id-page";
-
+/** 
+ * @class @component
+ * @classdesc stateless component for main content, with react-router-dom components: 
+ * @Switch
+ * @Route 
+ */
 export default class Content extends React.Component {
 
     render() {

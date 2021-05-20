@@ -1,5 +1,10 @@
 import Caller from "./caller";
-
+/**
+ * @async
+ * @function GET user by id
+ * @param {number} id 
+ * @returns {Object} user, an object representing the user
+ */
 export async function getUserByIdAsync(id) {
     try {
         const response = await Caller.get(`/${id}`, {});
@@ -15,7 +20,11 @@ export async function getUserByIdAsync(id) {
         throw ({ message: 'Failed to get user by id' });
     }
 }
-
+/**
+ * @async
+ * @function GET new user 
+ * @returns {Object} user, an object representing the new user
+ */
 export async function getNewUserAsync() {
     try {
         const response = await Caller.get(`?email`, {});

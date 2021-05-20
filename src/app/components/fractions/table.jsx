@@ -1,26 +1,27 @@
 import React from "react";
 import PropTypes from "prop-types";
-
+/** 
+ * @component Table stateless component 
+ * for displaying a table with consumption and cost per fraction.
+ */
 export default class Table extends React.Component {
 
-    constructor(props) {
-        super(props);
-    }
-
     render() {
-        //variables for readability
-        const name = this.props.fraction.name;
-        const amount = this.props.chartData[this.props.fraction.source] / 5;
-        const max = this.props.fraction.max / 5;
-        const price = this.props.fraction.price;
-        const unit = this.props.fraction.unit;
-        const total = amount * price + ' :-';
-        const className = this.props.fraction.fractionId;
+        //An object that computes and provides the table with data.
+        const data = {
+            name: this.props.fraction.name,
+            amount: this.props.chartData[this.props.fraction.source] / 5,
+            max: this.props.fraction.max / 5,
+            price: this.props.fraction.price,
+            unit: this.props.fraction.unit,
+            total: amount * price + ' :-',
+            className: this.props.fraction.fractionId
+        }
 
         return (
-            <div id={className} className="table-responsive">
+            <div id={data.className} className="table-responsive">
                 <table className="table align-middle table-dark caption-top">
-                    <caption id={className}>{name}</caption>
+                    <caption id={data.className}>{data.name}</caption>
                     <tbody>
                         <tr>
                             <td scope="col">Förbrukat</td>
@@ -30,11 +31,11 @@ export default class Table extends React.Component {
                             <td scope="col">Kostnad</td>
                         </tr>
                         <tr>
-                            <td>{amount} {unit}</td>
+                            <td>{data.amount} {data.unit}</td>
                             <td className="table-active">/</td>
-                            <td className="table-active">{max} {unit}</td>
-                            <td className="table-active">{price} :-</td>
-                            <td>{total}</td>
+                            <td className="table-active">{data.max} {data.unit}</td>
+                            <td className="table-active">{data.price} :-</td>
+                            <td>{data.total}</td>
                         </tr>
                     </tbody>
                 </table>

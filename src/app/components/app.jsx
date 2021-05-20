@@ -10,7 +10,9 @@ import UserForm from "./user-form";
 import Header from "./header";
 import Footer from "./footer";
 import ApiErrorBoundry from "./error-handling/api-error-boundry";
-
+/** 
+ * @component App is a stateful HOC component, the root component of the application.
+ */
 class App extends React.Component {
 
     constructor() {
@@ -20,6 +22,7 @@ class App extends React.Component {
             newUser: true,
         }
     }
+
     componentDidMount() {
         const user = checkLocalStorage();
         if (user !== null || undefined) {
@@ -35,12 +38,14 @@ class App extends React.Component {
             });
         }
     }
-    //handleClick on the logo, only shows for new users
+    //handles click on the logo, so it only shows for new users
     handleClick() {
         this.setState({
             clicked: true
         });
     }
+
+    //handels updates to user email
     handleUpdate(email) {
         this.props.setEmail(this.props.id, email);
         this.setState({
@@ -49,7 +54,7 @@ class App extends React.Component {
         });
     }
     render() {
-        // Logo shows if new user and button not clicked 
+        //Conditinal rendering: if new user and button not clicked 
         if (this.state.newUser === true && this.state.clicked === false) {
             return (
                 <>
@@ -58,7 +63,7 @@ class App extends React.Component {
                 </>
             );
         }
-        // UserForm shows if new user and button is clicked
+        // Conditinal rendering: if new user and button is clicked 
         else if (this.state.newUser === true && this.state.clicked === true) {
             return (
                 <>
@@ -73,7 +78,7 @@ class App extends React.Component {
                 </>
             );
         }
-        // && this.state.clicked === true
+        //Conditinal rendering: if not new user 
         else if (this.state.newUser !== true) {
             return (
                 <>
@@ -90,10 +95,10 @@ class App extends React.Component {
     }
 }
 App.propTypes = {
-    id: PropTypes.number,
     email: PropTypes.string,
     getUser: PropTypes.func,
     getNewUser: PropTypes.func,
+    id: PropTypes.number,
     setEmail: PropTypes.func,
 }
 const mapStateToProps = (state) => {

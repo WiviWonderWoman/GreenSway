@@ -1,6 +1,8 @@
 import React from "react";
 import FallBackMessage from "./fallback-message";
-
+/** 
+ * @component ErrorBoundry is a stateful component, an error boundry that handels any unexpected errors.
+ */
 export default class ErrorBoundry extends React.Component {
 
     constructor(props) {
@@ -10,18 +12,18 @@ export default class ErrorBoundry extends React.Component {
             errorMessage: ''
         };
     }
-
+    //handles catches errors and message.
     static getDerivedStateFromError(error) {
         return {
             hasError: true,
             errorMessage: error.message
         };
     }
-
+    //logs error in console.
     componentDidCatch(error, errorInfo) {
-        console.log(error.message);
+        console.log(error, errorInfo);
     }
-
+    //handles click on the fallback-message, and resets hasError.
     handleClick() {
         this.setState({
             hasError: false
@@ -35,8 +37,8 @@ export default class ErrorBoundry extends React.Component {
             footer: '',
             button: 'Försök igen'
         }
+        //Conditinal rendering: if this.state.hasError 
         if (this.state.hasError) {
-            // You can render any custom fallback UI
             return (
                 <FallBackMessage
                     show={this.state.hasError}

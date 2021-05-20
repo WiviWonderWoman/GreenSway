@@ -4,7 +4,10 @@ import PropTypes from "prop-types";
 import FractionsButton from "./fractions-button";
 import Table from "./table";
 import { getFractions } from "../../state/actions";
-
+/** 
+ * @component DropDown stateful HOC component 
+ * for displaying a drop-down of fractiosButtons and tables with cost.
+ */
 class DropDown extends React.Component {
 
     constructor(props) {
@@ -14,7 +17,7 @@ class DropDown extends React.Component {
             isClicked: false
         }
     }
-
+    //handles click on the fraction, finds the right fraction.
     handleFractionClick(source) {
         const fraction = this.props.fractions.find((f) => f.source === source);
         this.setState({
@@ -28,6 +31,7 @@ class DropDown extends React.Component {
     }
 
     render() {
+        //Conditinal rendering: if button clicked 
         return (
             this.state.isClicked !== true ?
                 <>

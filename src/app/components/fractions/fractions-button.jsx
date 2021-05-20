@@ -1,9 +1,13 @@
 import React from "react";
 import PropTypes from "prop-types";
 import ReuseButton from "../reuse-button";
-
+/** 
+ * @component FractionsButton stateless component 
+ * for displaying ReUseButtons in the a drop-down, from an Array of fractions.
+ */
 export default class FractionsButton extends React.Component {
 
+    //handles click button
     handleClick(source) {
         this.props.onClick(source);
     }

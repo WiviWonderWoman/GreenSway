@@ -1,3 +1,4 @@
+/* div surrounding both piecharts */
 .overview {
     margin: auto;
     display: flex;
@@ -5,10 +6,17 @@
     width: 100%;
     height: 500px;
   }
+  /* div for each piecharts */
   .pie-chart {
     margin: 10px;
     position:relative;
     width: 50%;
     background-color: black;
     color: black;
+  }
+  /* div for loading */
+  .loading {
+    margin: auto;
+    background-color: black;
+    justify-content: center;
   }

@@ -2,12 +2,15 @@ import React from "react";
 import PropTypes from "prop-types";
 import logo from "../images/recycle.png";
 import ReuseButton from "./reuse-button";
-
+/** 
+ * @component Logo is a stateless component for the spinning logo-image 
+ */
 export default class Logo extends React.Component {
 
     render() {
         return (
-            // returning user : new user
+
+            // Conditinal rendering: returning user || new user
             this.props.className === 'mini-container' ?
                 <div className={this.props.className}>
                     <div className="container">

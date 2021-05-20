@@ -1,7 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
 import ReuseButton from "./reuse-button";
-
+/** 
+ * @component UserForm is a stateful controlled component, that displays a form and handels user input.
+ */
 export default class UserForm extends React.Component {
 
     constructor(props) {
@@ -10,11 +12,13 @@ export default class UserForm extends React.Component {
             username: '',
         };
     }
+    //handels updates to user email
     handleUsernameChange = (event) => {
         this.setState({
             username: event.target.value,
         });
     }
+    //checks the input and sends it back to App's handleUpdate(email). 
     saveUser() {
         if (this.state.username !== "") {
             this.props.handleUpdate(this.state.username)
@@ -23,7 +27,6 @@ export default class UserForm extends React.Component {
     render() {
         return (
             <div className="userForm ">
-
                 <div className="form-group">
                     <label>Ange ditt användarnamn (email):</label>
                 </div>

@@ -1,7 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { PieChart } from 'react-minimal-pie-chart';
-
+/** 
+ * @component LaudryChart is a stateless component for displaying a pie-chart of users comsumption of water and electricity,
+ *   with react-minimal-pie-chart function-components: PieChart
+ */
 export default class LaudryChart extends React.Component {
 
     render() {

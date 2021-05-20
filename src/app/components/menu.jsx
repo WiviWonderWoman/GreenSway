@@ -5,10 +5,13 @@ import Logo from "./logo";
 import Loading from "./loading";
 import MenuLinks from "./menu-links";
 import ApiErrorBoundry from "./error-handling/api-error-boundry";
-
+/** 
+ * @component stateless HOC component for navigation
+ */
 class Menu extends React.Component {
 
     render() {
+        //Conditinal rendering: if API call isLoading
         return (
             <>
                 {

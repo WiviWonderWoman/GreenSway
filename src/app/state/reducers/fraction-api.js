@@ -1,3 +1,7 @@
+/**
+ * @module /state/reducers/fraction-api.js
+ * @despription Redux reducer for fractions
+ */
 
 export function fractionsHasError(state = false, action) {
     switch (action.type) {

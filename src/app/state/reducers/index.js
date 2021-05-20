@@ -1,3 +1,7 @@
+/**
+ * @module 
+ * @despription Redux CombineReducer - rootReducer
+ */
 import { combineReducers } from "redux";
 import { apiFetchUserSuccess, apiFetchUserError, apiIsLoadingUser, userHasError } from "./user-api";
 import { apiFetchFractionsSuccess, apiFetchFractionsError, apiIsLoadingFractions, fractionsHasError } from "./fraction-api";

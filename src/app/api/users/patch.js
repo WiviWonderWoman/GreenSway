@@ -1,5 +1,11 @@
 import Caller from "./caller";
-
+/**
+ * @async
+ * @function PATCH email on new user.
+ * @param {number} id
+ * @param {string} email
+ * @returns {Object} user
+ */
 export async function setUserEmailAsync(id, email) {
     try {
         const response = await Caller.patch(`/${id}`, { email: email });

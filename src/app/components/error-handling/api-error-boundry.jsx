@@ -3,9 +3,12 @@ import { connect } from "react-redux";
 import PropTypes from "prop-types";
 import { resetUser, resetFractions } from "../../state/actions";
 import FallBackMessage from "./fallback-message";
-
+/** 
+ * @component ApiErrorBoundry is a stateless HOC component, an error boundry that handels error from API calls.
+ */
 class ApiErrorBoundry extends React.Component {
 
+    //handles click on the fallback-message, and attempts to resets errors
     handleClick() {
         this.props.resetUserError();
         this.props.resetFractionError();
@@ -18,6 +21,7 @@ class ApiErrorBoundry extends React.Component {
             footer: '',
             button: 'Försök igen'
         }
+        //Conditinal rendering: if API calls hasError 
         if (this.props.userHasError || this.props.fractionsHasError) {
             return (
                 <FallBackMessage
@@ -37,7 +41,6 @@ ApiErrorBoundry.propTypes = {
     children: PropTypes.element,
     fractionsErrorMessage: PropTypes.string,
     fractionsHasError: PropTypes.bool,
-    garbagehouse: PropTypes.number,
     resetFractionError: PropTypes.func,
     resetUserError: PropTypes.func,
     userErrorMessage: PropTypes.string,
@@ -46,7 +49,6 @@ ApiErrorBoundry.propTypes = {
 const mapStateToProps = (state) => {
     // console.log('redux state: ', state);
     return {
-        garbagehouse: state.user.garbagehouse,
         fractionsErrorMessage: state.fractionsErrorMessage,
         fractionsHasError: state.fractionsHasError,
         userErrorMessage: state.userErrorMessage,

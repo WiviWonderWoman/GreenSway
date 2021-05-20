@@ -1,7 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { PieChart } from 'react-minimal-pie-chart';
-
+/** 
+ * @component WasteChart is a stateless component for displaying a pie-chart of users comsumption of garbage fractions,
+ *  with react-minimal-pie-chart function-components: PieChart
+ */
 export default class WasteChart extends React.Component {
 
     render() {

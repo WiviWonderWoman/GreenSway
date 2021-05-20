@@ -3,7 +3,7 @@ import Caller from "./caller";
  * @async
  * @function GET all fractions by garbagehouse
  * @param {number} garbagehouse 
- * @returns {Array} allFractions, an array with fraction-objects
+ * @returns {Array} allFractions
  */
 export async function getFractionsAsync(garbagehouse) {
     try {

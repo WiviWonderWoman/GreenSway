@@ -22,8 +22,6 @@ export function fractionsHasError(hasError) {
  * @function Redux action
  * @param { string } errorMessage 
  * @returns { Object } action
- * @property { string } type 
- * @property { string } errorMessage
  */
 export function apiFetchFractionsError(errorMessage) {
     // console.log('ACTION: ', errorMessage)
@@ -36,8 +34,6 @@ export function apiFetchFractionsError(errorMessage) {
  * @function Redux action
  * @param { bool } hasError 
  * @returns { Object } action
- * @property { string } type 
- * @property { bool } isLoading
  */
 export function apiIsLoadingFractions(isLoading) {
     return {
@@ -49,8 +45,6 @@ export function apiIsLoadingFractions(isLoading) {
  * @function Redux action
  * @param { array } fractions 
  * @returns { Object } action
- * @property { string } type 
- * @property { aray } fractions
  */
 export function apiFetchFractionsSuccess(fractions) {
     // console.log('ACTION: API_FETCH_FRACTIONS_SUCCESS')

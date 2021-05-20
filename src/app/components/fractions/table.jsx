@@ -1,24 +1,13 @@
 import React from "react";
 import PropTypes from "prop-types";
 /** 
- * @class @component
- * @classdesc Table stateless component 
+ * @component Table stateless component 
  * for displaying a table with consumption and cost per fraction.
  */
 export default class Table extends React.Component {
 
     render() {
-        /**
-        * An object that computes and provides the table with data.
-        * @typedef  {Object} data
-        * @property {string} name 
-        * @property  {number} amount
-        * @property  {number} max
-        * @property  {number} price
-        * @property  {string} unit
-        * @property  {number} total
-        * @property  {string} className
-         */
+        //An object that computes and provides the table with data.
         const data = {
             name: this.props.fraction.name,
             amount: this.props.chartData[this.props.fraction.source] / 5,
@@ -56,9 +45,6 @@ export default class Table extends React.Component {
 }
 
 Table.propTypes = {
-    /**
-     * Fraction objekt
-     */
     fraction: PropTypes.exact({
         name: PropTypes.string,
         source: PropTypes.string,
@@ -71,9 +57,6 @@ Table.propTypes = {
         isFull: PropTypes.bool,
         garbagehouse: PropTypes.string
     }),
-    /**
-     * Users consumption objekt
-     */
     chartData: PropTypes.exact({
         organic: PropTypes.number,
         newspaper: PropTypes.number,

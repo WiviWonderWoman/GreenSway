@@ -1,8 +1,7 @@
 import React from "react";
 import { Booking } from "./booking";
 /** 
- * @class @component
- * @classdesc LaudryPage is a stateless component for displaying Booking and calendar.
+ * @component LaudryPage is a stateless component for displaying Booking and calendar.
  */
 export default class LaudryPage extends React.Component {
 

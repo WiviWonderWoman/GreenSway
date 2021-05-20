@@ -7,8 +7,6 @@ import { setUserEmailAsync, getNewUserAsync, getUserByIdAsync, saveUser, checkLo
  * @function Redux action
  * @param {bool} hasError 
  * @returns {Object} action
- * @property { string } type 
- * @property { bool } hasError
  */
 export function userHasError(hasError) {
     console.log('ACTION: USER_HAS_ERROR')
@@ -21,8 +19,6 @@ export function userHasError(hasError) {
  * @function Redux action
  * @param { string } errorMessage 
  * @returns { Object } action
- * @property { string } type 
- * @property { string } errorMessage
  */
 export function apiFetchUserError(errorMessage) {
     console.log('ACTION: ', errorMessage)
@@ -35,8 +31,6 @@ export function apiFetchUserError(errorMessage) {
  * @function Redux action
  * @param { bool } hasError 
  * @returns { Object } action
- * @property { string } type 
- * @property { bool } isLoading
  */
 export function apiIsLoadingUser(isLoading) {
     return {
@@ -48,8 +42,6 @@ export function apiIsLoadingUser(isLoading) {
  * @function Redux action
  * @param { array } fractions 
  * @returns { Object } action
- * @property { string } type 
- * @property { Object } user
  */
 export function apiFetchUserSuccess(user) {
     return {

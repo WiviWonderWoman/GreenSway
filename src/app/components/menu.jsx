@@ -6,17 +6,12 @@ import Loading from "./loading";
 import MenuLinks from "./menu-links";
 import ApiErrorBoundry from "./error-handling/api-error-boundry";
 /** 
- * @class @component
- * @classdesc stateless HOC component for main navigation
+ * @component stateless HOC component for navigation
  */
 class Menu extends React.Component {
 
     render() {
-        /**
-         * @description
-         * Conditinal rendering:
-         * if API call isLoading
-         */
+        //Conditinal rendering: if API call isLoading
         return (
             <>
                 {
@@ -56,17 +51,8 @@ class Menu extends React.Component {
     }
 }
 Menu.propTypes = {
-    /**
-     * User's email
-     */
     username: PropTypes.string,
-    /**
-     * Checks if API call isLoading
-     */
     isLoadingUser: PropTypes.bool,
-    /**
-     * Checks if API call isLoading
-     */
     isLoadingFraction: PropTypes.bool,
 }
 const mapStateToProps = (state) => {

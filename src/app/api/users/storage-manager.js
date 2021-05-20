@@ -1,6 +1,6 @@
 /**
  * @function check localStorage for user
- * @returns {Object} user, an object representing the new user
+ * @returns {Object} user
  */
 export function checkLocalStorage() {
 

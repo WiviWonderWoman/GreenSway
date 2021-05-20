@@ -6,17 +6,12 @@ import WasteChart from './waste-chart';
 import LaudryChart from "./laudry-chart";
 import Loading from "../loading";
 /** 
- * @class @component
- * @classdesc stateless HOC component for displaying pie-charts over users consumption.
+ * @component OverviewPage is a stateless HOC component for displaying pie-charts over users consumption.
  */
 class OverviewPage extends React.Component {
 
     render() {
-        /**
-         * @description
-         * Conditinal rendering:
-         * if API call isLoading
-         */
+        //Conditinal rendering: if API call isLoading
         if (this.props.isloading) {
             return (
                 <>
@@ -46,21 +41,9 @@ class OverviewPage extends React.Component {
     }
 }
 OverviewPage.propTypes = {
-    /**
-     * Object with data that is passed to WasteChart
-     */
     chartData: PropTypes.object,
-    /**
-     * Data that is passed to LaundryChart
-     */
     electricity: PropTypes.number,
-    /**
-     * Checks if API call isLoading
-     */
     isloading: PropTypes.bool,
-    /**
-     * Data that is passed to LaundryChart
-     */
     water: PropTypes.number
 }
 const mapStateToProps = (state) => {

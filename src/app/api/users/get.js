@@ -3,7 +3,7 @@ import Caller from "./caller";
  * @async
  * @function GET user by id
  * @param {number} id 
- * @returns {Object} user, an object representing the user
+ * @returns {Object} user
  */
 export async function getUserByIdAsync(id) {
     try {
@@ -23,7 +23,7 @@ export async function getUserByIdAsync(id) {
 /**
  * @async
  * @function GET new user 
- * @returns {Object} user, an object representing the new user
+ * @returns {Object} user
  */
 export async function getNewUserAsync() {
     try {

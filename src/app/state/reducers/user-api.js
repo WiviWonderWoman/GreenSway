@@ -2,6 +2,7 @@
  * @module /state/reducers/users-api.js
  * @despription Redux reducer for users
  */
+
 export function userHasError(state = false, action) {
     switch (action.type) {
         case 'USER_HAS_ERROR':

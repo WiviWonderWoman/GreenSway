@@ -2,22 +2,12 @@ import React from "react";
 import PropTypes from "prop-types";
 import { PieChart } from 'react-minimal-pie-chart';
 /** 
- * @class @component
- * @classdesc stateless component for displaying a pie-chart of users comsumption of water and electricity,
- *   with react-minimal-pie-chart function-components: 
- * @PieChart
+ * @component LaudryChart is a stateless component for displaying a pie-chart of users comsumption of water and electricity,
+ *   with react-minimal-pie-chart function-components: PieChart
  */
 export default class LaudryChart extends React.Component {
 
     render() {
-        /**
-        * An Array of data-objects that the PieChart needs to render.
-        * @typedef  
-        * @property {string} title
-        * @property  {number} value
-        * @property  {color} string
-        * @description value is doubled so that only 50% shows and the fractions doesn't float together.
-         */
         let household = [
             { title: 'Vatten', value: this.props.water * 2, color: ' turquoise' },
             { title: 'El', value: this.props.electricity * 2, color: ' rgb(235, 220, 90)' },
@@ -47,12 +37,6 @@ export default class LaudryChart extends React.Component {
     }
 }
 LaudryChart.propTypes = {
-    /**
-     * Users consumption of electricity
-     */
     electricity: PropTypes.number,
-    /**
-     * Users consumption of water
-     */
     water: PropTypes.number
 }

@@ -2,7 +2,8 @@ import React from "react";
 import PropTypes from "prop-types";
 import ReuseButton from "./reuse-button";
 /** 
- * @component UserForm is a stateful controlled component, that displays a form and handels user input.
+ * UserForm is a stateful controlled component, that displays a form and handels user input.
+ * @component 
  */
 export default class UserForm extends React.Component {
 

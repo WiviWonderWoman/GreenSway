@@ -3,7 +3,8 @@ import PropTypes from "prop-types";
 import logo from "../images/recycle.png";
 import ReuseButton from "./reuse-button";
 /** 
- * @component Logo is a stateless component for the spinning logo-image 
+ * Logo is a stateless component for the spinning logo-image 
+ * @component 
  */
 export default class Logo extends React.Component {
 

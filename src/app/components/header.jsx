@@ -3,7 +3,8 @@ import PropTypes from "prop-types";
 import Logo from "./logo";
 import Menu from "./menu";
 /** 
- * @component Header is a stateless component for header content 
+ * Header is a stateless component for header content 
+ * @component 
  */
 export default class Header extends React.Component {
 

@@ -1,7 +1,8 @@
 import React from "react";
 import FallBackMessage from "./fallback-message";
 /** 
- * @component ErrorBoundry is a stateful component, an error boundry that handels any unexpected errors.
+ * ErrorBoundry is a stateful component, an error boundry that handels any unexpected errors.
+ * @component 
  */
 export default class ErrorBoundry extends React.Component {
 

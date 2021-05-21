@@ -1,6 +1,7 @@
 import React from "react";
 /** 
- * @component KeyIdPage is a stateless component for key-id-view content 
+ * KeyIdPage is a stateless component for key-id-view content 
+ * @component 
  */
 export default class KeyIdPage extends React.Component {
     render() {

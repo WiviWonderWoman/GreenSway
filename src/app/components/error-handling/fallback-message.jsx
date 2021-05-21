@@ -2,7 +2,8 @@ import React from "react";
 import PropTypes from "prop-types";
 import Modal from "../modal/modal";
 /** 
- * @component FallBackMessage is a stateless component, that displays an UI-fallback.
+ * FallBackMessage is a stateless component, that displays an UI-fallback.
+ * @component 
  */
 export default class FallBackMessage extends React.Component {
 

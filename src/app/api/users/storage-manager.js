@@ -1,6 +1,5 @@
 /**
- * @function check localStorage for user
- * @returns {Object} user
+ * check localStorage for user
  */
 export function checkLocalStorage() {
 
@@ -17,7 +16,7 @@ export function checkLocalStorage() {
     }
 }
 /**
- * @function save user to localStorage
+ * save user to localStorage
  * @param {number} id
  * @param {string} username
  */

@@ -1,9 +1,8 @@
 import Caller from "./caller";
 /**
- * @async
- * @function GET all fractions by garbagehouse
+ * GET all fractions by garbagehouse
+ * @async 
  * @param {number} garbagehouse 
- * @returns {Array} allFractions
  */
 export async function getFractionsAsync(garbagehouse) {
     try {

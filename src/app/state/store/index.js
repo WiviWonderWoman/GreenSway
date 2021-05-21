@@ -1,6 +1,5 @@
 /**
- * @module 
- * @despription Redux Store
+ * Redux Store
  */
 import { createStore, applyMiddleware, compose } from "redux";
 import thunk from "redux-thunk";

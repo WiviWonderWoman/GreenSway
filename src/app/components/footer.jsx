@@ -1,6 +1,7 @@
 import React from "react";
 /** 
- * @component Footer is a stateless component for footer content 
+ * Footer is a stateless component for footer content 
+ * @component 
  */
 export default class Footer extends React.Component {
     render() {

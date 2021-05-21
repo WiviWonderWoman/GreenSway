@@ -1,7 +1,3 @@
-/**
- * @module /state/reducers/users-api.js
- * @despription Redux reducer for users
- */
 
 export function userHasError(state = false, action) {
     switch (action.type) {

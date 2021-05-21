@@ -25,7 +25,6 @@ class ApiErrorBoundry extends React.Component {
         if (this.props.userHasError || this.props.fractionsHasError) {
             return (
                 <FallBackMessage
-                    show={true}
                     handleClick={() => this.handleClick()}
                     header={messageData.header}
                     body={messageData.body}
@@ -38,7 +37,7 @@ class ApiErrorBoundry extends React.Component {
     }
 }
 ApiErrorBoundry.propTypes = {
-    children: PropTypes.element,
+    children: PropTypes.any,
     fractionsErrorMessage: PropTypes.string,
     fractionsHasError: PropTypes.bool,
     resetFractionError: PropTypes.func,

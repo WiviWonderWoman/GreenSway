@@ -23,12 +23,14 @@ class OverviewPage extends React.Component {
                             <Loading />
                         </div>
                     </div>
+                    <p className="user"><hr /><span>Kommande features:</span> Stapeldiagram per fraktioner över tid</p>
                 </>
             );
         }
         return (
             <>
                 <div className="overview">
+
                     <div className="pie-chart">
                         <WasteChart chartData={this.props.chartData} />
                     </div>
@@ -36,6 +38,7 @@ class OverviewPage extends React.Component {
                         <LaudryChart water={this.props.water} electricity={this.props.electricity} />
                     </div>
                 </div>
+                <p className="user"><hr /><span>Kommande features:</span> Stapeldiagram per fraktioner över tid</p>
             </>
         );
     }

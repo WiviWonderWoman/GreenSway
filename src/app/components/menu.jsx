@@ -6,7 +6,8 @@ import Loading from "./loading";
 import MenuLinks from "./menu-links";
 import ApiErrorBoundry from "./error-handling/api-error-boundry";
 /** 
- * @component stateless HOC component for navigation
+ * Menu is a stateless HOC component for navigation
+ * @component 
  */
 class Menu extends React.Component {
 
@@ -19,7 +20,6 @@ class Menu extends React.Component {
                         <div className='mini-container'>
                             <div className="container">
                                 <Loading />
-                                <h1 className="user">LADDAR...</h1>
                             </div>
                         </div>
                         :

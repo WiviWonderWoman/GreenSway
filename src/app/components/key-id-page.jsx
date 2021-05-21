@@ -1,6 +1,7 @@
 import React from "react";
 /** 
- * @component KeyIdPage is a stateless component for key-id-view content 
+ * KeyIdPage is a stateless component for key-id-view content 
+ * @component 
  */
 export default class KeyIdPage extends React.Component {
     render() {
@@ -8,9 +9,9 @@ export default class KeyIdPage extends React.Component {
             <>
                 <div className="spacer">
                     <div className="user">
-                        <h1>Innehåll under utveckling.</h1>
+                        <h1>Kommande features: </h1>
                         <hr></hr>
-                        <h2>Kommande features: </h2>
+
                         <p>+ Digital Nyckel & Id</p>
                         <ul className='home-list'>
                             <li>- I mobil app: NFC-Funktionallitet</li>

@@ -1,6 +1,7 @@
 import React from "react";
 /** 
- * @component HomePage is a stateless component for home-view content 
+ * HomePage is a stateless component for home-view content
+ * @component  
  */
 export default class HomePage extends React.Component {
 
@@ -8,11 +9,11 @@ export default class HomePage extends React.Component {
         return (
             <div className="spacer">
                 <div className="user">
-                    <h1>Innehåll under utveckling.</h1>
+                    <h1>Kommande features: </h1>
                     <hr />
-                    <h2>Kommande features: </h2>
                     <p>+ Kommunikation med hyresvärd:</p>
                     <ul className='home-list'>
+                        <li>- allmän information </li>
                         <li>- driftinformation </li>
                         <li>- felanmälan</li>
                         <li>- städrapportering</li>

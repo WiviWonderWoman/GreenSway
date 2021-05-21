@@ -1,7 +1,8 @@
 import React from "react";
 import { Booking } from "./booking";
 /** 
- * @component LaudryPage is a stateless component for displaying Booking and calendar.
+ * LaudryPage is a stateless component for displaying Booking and calendar.
+ * @component 
  */
 export default class LaudryPage extends React.Component {
 
@@ -9,6 +10,7 @@ export default class LaudryPage extends React.Component {
         return (
             <div className="user">
                 <Booking />
+                <p ><hr /><span>Kommande features:</span> Klick på dag aktiverar en pop-up med bokningsbara tider</p>
             </div>
         );
     }

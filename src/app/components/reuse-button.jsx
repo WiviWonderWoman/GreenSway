@@ -1,7 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 /** 
- * @component ReuseButton is a stateless reusable react class-component.
+ * ReuseButton is a stateless reusable react class-component.
+ * @component 
  */
 export default class ReuseButton extends React.Component {
 

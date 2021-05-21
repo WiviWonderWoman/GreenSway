@@ -1,7 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 /** 
- * @component MenuLinks is a stateless component for menu-links, with react-router-dom component: Link
+ * MenuLinks is a stateless component for menu-links, with react-router-dom component: Link
+ * @component 
  */
 export default class MenuLinks extends React.Component {
 

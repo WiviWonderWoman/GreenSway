@@ -1,15 +1,8 @@
-/**
- * @module /state/actions/fraction-api.js
- * @despription Redux actions for fractions
- */
 import { getFractionsAsync, checkLocalStorage, getUserByIdAsync } from "../../api";
 
 /**
- * @function Redux action
+ * Redux action
  * @param {bool} hasError 
- * @returns {Object} action
- * @property { string } type 
- * @property { bool } hasError
  */
 export function fractionsHasError(hasError) {
     // console.log('ACTION: FRACTIONS_HAS_ERROR')
@@ -19,9 +12,8 @@ export function fractionsHasError(hasError) {
     };
 }
 /**
- * @function Redux action
- * @param { string } errorMessage 
- * @returns { Object } action
+ * Redux action
+ * @param { string } errorMessage
  */
 export function apiFetchFractionsError(errorMessage) {
     // console.log('ACTION: ', errorMessage)
@@ -31,9 +23,8 @@ export function apiFetchFractionsError(errorMessage) {
     };
 }
 /**
- * @function Redux action
+ * Redux action
  * @param { bool } hasError 
- * @returns { Object } action
  */
 export function apiIsLoadingFractions(isLoading) {
     return {
@@ -42,9 +33,8 @@ export function apiIsLoadingFractions(isLoading) {
     };
 }
 /**
- * @function Redux action
+ * Redux action
  * @param { array } fractions 
- * @returns { Object } action
  */
 export function apiFetchFractionsSuccess(fractions) {
     // console.log('ACTION: API_FETCH_FRACTIONS_SUCCESS')
@@ -54,8 +44,8 @@ export function apiFetchFractionsSuccess(fractions) {
     };
 }
 /**
+ * Prepare for another call after an error
  * @async
- * @function prepare for another call after an error
  */
 export function resetFractions() {
     return async (dispatch) => {
@@ -77,8 +67,8 @@ export function resetFractions() {
     }
 }
 /**
+ * Dispatches getFractionsAsync(garbagehouse)
  * @async
- * @function dispatches getFractionsAsync(garbagehouse)
  * @param {number} garbagehouse
  */
 export function getFractions(garbagehouse) {

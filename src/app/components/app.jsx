@@ -11,7 +11,8 @@ import Header from "./header";
 import Footer from "./footer";
 import ApiErrorBoundry from "./error-handling/api-error-boundry";
 /** 
- * @component App is a stateful HOC component, the root component of the application.
+ * App is a stateful HOC component, the root component of the application.
+ * @component 
  */
 class App extends React.Component {
 

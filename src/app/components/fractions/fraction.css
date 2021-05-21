@@ -37,7 +37,7 @@
   text-decoration: none;
   display: inline-block;
   cursor: pointer;
-  margin:10%;
+  /* margin:10%; */
 }
 #dropdownMenuButton:hover {
   background-color: rgb(7, 196, 7);

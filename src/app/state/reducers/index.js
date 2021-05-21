@@ -1,6 +1,5 @@
 /**
- * @module 
- * @despription Redux CombineReducer - rootReducer
+ * Redux CombineReducer - rootReducer
  */
 import { combineReducers } from "redux";
 import { apiFetchUserSuccess, apiFetchUserError, apiIsLoadingUser, userHasError } from "./user-api";

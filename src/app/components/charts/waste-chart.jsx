@@ -25,8 +25,8 @@ export default class WasteChart extends React.Component {
                 animationEasing='ease-in-out'
                 background='lightgray'
                 startAngle={270}
-                radius={25}
-                center={[55, 50]}
+                radius={40}
+                center={[57, 50]}
                 lineWidth={30}
                 lengthAngle={360}
                 data={household}
@@ -34,7 +34,7 @@ export default class WasteChart extends React.Component {
                 label={({ dataEntry }) => dataEntry.title + ' ' + Math.round(dataEntry.percentage) + '%'}
                 labelStyle={(index) => ({
                     fill: household[index].color,
-                    fontSize: '3px',
+                    fontSize: 'calc(0.4px + 0.4vmin)',
                     fontFamily: 'sans-serif',
                 })}
                 labelPosition={112}

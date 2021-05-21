@@ -15,6 +15,7 @@ class OverviewPage extends React.Component {
         if (this.props.isloading) {
             return (
                 <>
+                    <p className="user"><span>Kommande features:</span> Stapeldiagram per fraktioner över tid<hr /></p>
                     <div className="overview">
                         <div className="loading">
                             <Loading />
@@ -28,7 +29,9 @@ class OverviewPage extends React.Component {
         }
         return (
             <>
+                <p className="user"><span>Kommande features:</span> Stapeldiagram per fraktioner över tid<hr /></p>
                 <div className="overview">
+
                     <div className="pie-chart">
                         <WasteChart chartData={this.props.chartData} />
                     </div>

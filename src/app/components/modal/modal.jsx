@@ -2,34 +2,44 @@ import React from "react";
 import PropTypes from "prop-types";
 import "./modal.css";
 /** 
- * @component Modal is a stateless reusable react class-component. A modal that can easily be modified through styling. 
- * To hide Modal just add suffix className with '-hidden'. 
+ * @component Modal is a stateless reusable react class-component, that can easily be modified through custom styling. 
+ * To hide the Modal when button is clicked the suffix '-hidden' is added to state.className. 
+ * This way you can use the Modal without any other functionality passed in through the prop onClick.
+ * If you prefer to use the Modal statless you kan use the additional prop 'className', 
+ * and still get the visable/invisable behavior by adding the suffix '-hidden' when passed in.
  * @example default styling: ./modal.css
 */
 export default class Modal extends React.Component {
 
+    constructor(props) {
+        super(props);
+        this.state = {
+            className: 'modal'
+        };
+    }
+    handleClick() {
+        this.setState({
+            className: 'modal-hidden'
+        });
+        if (this.props.onClick !== undefined) {
+            this.props.onClick();
+        }
+    }
     render() {
+
         /**
-         * @typedef for styling individual parts of the modal
-         * @type {Object} style
-         * @property {string} body
-         * @property {string} button
-         * @property {string} className 
-         * @property {string} content
-         * @property {string} header 
-         * @property {string} footer
+         * for styling individual parts of the modal
          */
         const style = {
-            className: this.props.className,
-            content: this.props.className + '-content',
-            header: this.props.className + '-header',
-            body: this.props.className + '-body',
-            footer: this.props.className + '-footer',
-            button: this.props.className + '-button'
-        }
+            content: this.state.className + '-content',
+            header: this.state.className + '-header',
+            body: this.state.className + '-body',
+            footer: this.state.className + '-footer',
+            button: this.state.className + '-button'
+        };
 
         return (
-            <div className={style.className} >
+            <div className={this.state.className} >
                 <div className={style.content}>
                     <div className={style.header}>
                         <h2>{this.props.header}</h2>
@@ -40,7 +50,7 @@ export default class Modal extends React.Component {
                     </div>
                     <div className={style.footer}>
                         <h3>{this.props.footer}</h3>
-                        <button className={style.button} onClick={this.props.onClick} >{this.props.button}</button>
+                        <button className={style.button} onClick={() => this.handleClick()} >{this.props.button}</button>
                     </div>
                 </div>
             </div>
@@ -61,7 +71,7 @@ Modal.propTypes = {
      */
     children: PropTypes.any,
     /**
-     * For styling the modal. Hide / visible
+     * Use to style if component is used stateless
      */
     className: PropTypes.string,
     /**
@@ -73,7 +83,7 @@ Modal.propTypes = {
      */
     header: PropTypes.string,
     /**
-     * Handels click on modal's button
+     * Allows the parent component to handel click on modal's button
      */
     onClick: PropTypes.func
 }

@@ -14,9 +14,9 @@ export default class Table extends React.Component {
             max: this.props.fraction.max / 5,
             price: this.props.fraction.price,
             unit: this.props.fraction.unit,
-            total: amount * price + ' :-',
             className: this.props.fraction.fractionId
         }
+        const total = data.amount * data.price + ' :-';
 
         return (
             <div id={data.className} className="table-responsive">
@@ -35,7 +35,7 @@ export default class Table extends React.Component {
                             <td className="table-active">/</td>
                             <td className="table-active">{data.max} {data.unit}</td>
                             <td className="table-active">{data.price} :-</td>
-                            <td>{data.total}</td>
+                            <td>{total}</td>
                         </tr>
                     </tbody>
                 </table>

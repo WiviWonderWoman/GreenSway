@@ -47,7 +47,6 @@ OverviewPage.propTypes = {
     water: PropTypes.number
 }
 const mapStateToProps = (state) => {
-    console.log(state)
     return {
         isloading: state.apiIsLoadingUser,
         chartData: {

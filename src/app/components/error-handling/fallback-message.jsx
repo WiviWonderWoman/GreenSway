@@ -12,12 +12,7 @@ export default class FallBackMessage extends React.Component {
     }
     render() {
         return (
-            //Conditinal rendering: if show  
-            this.props.show ?
-                <Modal className='modal' header={this.props.header} body={this.props.body} footer={this.props.footer} onClick={() => this.handleClick()} button={this.props.button}></Modal>
-                :
-                <Modal className='modal-hidden' header={this.props.header} body={this.props.body} footer={this.props.footer} onClick={() => this.handleClick()} button={this.props.button}></Modal>
-
+            <Modal header={this.props.header} body={this.props.body} footer={this.props.footer} onClick={() => this.handleClick()} button={this.props.button}></Modal>
         )
     }
 }

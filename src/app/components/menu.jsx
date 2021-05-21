@@ -20,7 +20,6 @@ class Menu extends React.Component {
                         <div className='mini-container'>
                             <div className="container">
                                 <Loading />
-                                <h1 className="user">LADDAR...</h1>
                             </div>
                         </div>
                         :

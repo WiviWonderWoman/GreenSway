@@ -3,8 +3,8 @@ import Calendar from 'react-calendar';
 // import "./laudry.css";
 // import Modal from "../modal";
 /** 
- *  @component Booking is a stateful function-component for displaying booking-calendar,
- * with react-calendar component: Calendar 
+ *  Booking is a stateful function-component for displaying booking-calendar, with react-calendar component: Calendar 
+ *  @component
  */
 export function Booking() {
     const [value, onChange] = useState(new Date());

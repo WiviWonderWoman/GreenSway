@@ -148,7 +148,6 @@ nav {
 }
 .spacer {
  min-height: 500px;
- height: fit-content;
  width: 100%;
 }
 
@@ -162,12 +161,12 @@ nav {
 i {
   border-radius: 10%;
   color: rgba(99, 255, 9, 0.959);
-  font-size: 1000%;
+  font-size: 600%;
 }
 
 .loader {
-  border: 16px solid #f3f3f3; /* Light grey */
-  border-top: 16px solid rgba(99, 255, 9, 0.959); /* Blue */
+  border: 16px solid #f3f3f3; 
+  border-top: 16px solid rgba(99, 255, 9, 0.959); 
   border-radius: 50%;
   width: 120px;
   height: 120px;

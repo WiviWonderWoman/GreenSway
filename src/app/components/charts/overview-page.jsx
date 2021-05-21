@@ -15,7 +15,6 @@ class OverviewPage extends React.Component {
         if (this.props.isloading) {
             return (
                 <>
-                    <p className="user"><span>Kommande features:</span> Stapeldiagram per fraktioner över tid<hr /></p>
                     <div className="overview">
                         <div className="loading">
                             <Loading />
@@ -24,12 +23,12 @@ class OverviewPage extends React.Component {
                             <Loading />
                         </div>
                     </div>
+                    <p className="user"><hr /><span>Kommande features:</span> Stapeldiagram per fraktioner över tid</p>
                 </>
             );
         }
         return (
             <>
-                <p className="user"><span>Kommande features:</span> Stapeldiagram per fraktioner över tid<hr /></p>
                 <div className="overview">
 
                     <div className="pie-chart">
@@ -39,6 +38,7 @@ class OverviewPage extends React.Component {
                         <LaudryChart water={this.props.water} electricity={this.props.electricity} />
                     </div>
                 </div>
+                <p className="user"><hr /><span>Kommande features:</span> Stapeldiagram per fraktioner över tid</p>
             </>
         );
     }

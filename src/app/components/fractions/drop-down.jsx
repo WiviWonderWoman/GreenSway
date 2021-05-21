@@ -38,7 +38,8 @@ class DropDown extends React.Component {
                     <nav className="flex.container">
                         <div className="nav-list">
                             <div className="dropdown">
-                                <h5 className="user">För detaljer / fraktion välj i menyn nedanför:</h5>
+                                <h3 className="user">Välj fraktion i menyn nedanför för att se detaljer:</h3>
+                                <hr />
                                 <button className="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
                                     Fraktioner
                                 </button>
@@ -64,7 +65,8 @@ class DropDown extends React.Component {
                     <nav className="flex.container">
                         <div className="nav-list">
                             <div className="dropdown">
-                                <h5 className="user">Välj önskad fraktion i menyn nedanför:</h5>
+                                <h3 className="user">Välj fraktion i menyn nedanför för att se detaljer:</h3>
+                                <hr />
                                 <button className="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
                                     Fraktioner
                                 </button>
@@ -75,7 +77,9 @@ class DropDown extends React.Component {
                         </div>
                     </nav>
                     <Table chartData={this.props.chartData} fraction={this.state.fraction} />
-
+                    <div className="user">
+                        <p ><br /><hr /><span>Kommande features:</span>  En översikt av totalkostnader med: månadsvy och årsvy</p>
+                    </div>
                 </>
         );
     }

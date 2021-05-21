@@ -1,6 +1,7 @@
 import React from "react";
 /** 
- * @component HomePage is a stateless component for home-view content 
+ * HomePage is a stateless component for home-view content
+ * @component  
  */
 export default class HomePage extends React.Component {
 

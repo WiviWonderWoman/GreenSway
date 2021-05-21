@@ -1,12 +1,7 @@
-/**
- * @module /state/actions/users-api.js
- * @despription Redux actions for users
- */
 import { setUserEmailAsync, getNewUserAsync, getUserByIdAsync, saveUser, checkLocalStorage } from "../../api";
 /**
- * @function Redux action
+ * Redux action
  * @param {bool} hasError 
- * @returns {Object} action
  */
 export function userHasError(hasError) {
     console.log('ACTION: USER_HAS_ERROR')
@@ -16,9 +11,8 @@ export function userHasError(hasError) {
     };
 }
 /**
- * @function Redux action
+ * Redux action
  * @param { string } errorMessage 
- * @returns { Object } action
  */
 export function apiFetchUserError(errorMessage) {
     console.log('ACTION: ', errorMessage)
@@ -28,9 +22,8 @@ export function apiFetchUserError(errorMessage) {
     };
 }
 /**
- * @function Redux action
+ * Redux action
  * @param { bool } hasError 
- * @returns { Object } action
  */
 export function apiIsLoadingUser(isLoading) {
     return {
@@ -39,9 +32,8 @@ export function apiIsLoadingUser(isLoading) {
     };
 }
 /**
- * @function Redux action
+ * Redux action
  * @param { array } fractions 
- * @returns { Object } action
  */
 export function apiFetchUserSuccess(user) {
     return {
@@ -50,8 +42,8 @@ export function apiFetchUserSuccess(user) {
     };
 }
 /**
+ *  Prepare for another call after an error
  * @async
- * @function prepare for another call after an error
  */
 export function resetUser() {
     // console.log('reset: ');
@@ -70,8 +62,8 @@ export function resetUser() {
     }
 }
 /**
+ * Dispatches getUserByIdAsync(id)
  * @async
- * @function dispatches getUserByIdAsync(id)
  * @param {number} id
  */
 export function getUserById(id) {
@@ -89,8 +81,8 @@ export function getUserById(id) {
     };
 }
 /**
+ * Dispatches getNewUserAsync()
  * @async
- * @function dispatches getNewUserAsync()
  */
 export function getNewUser() {
     return async (dispatch) => {
@@ -107,8 +99,8 @@ export function getNewUser() {
     };
 }
 /**
+ * Dispatches setUserEmailAsync(id, email)
  * @async
- * @function dispatches setUserEmailAsync(id, email)
  * @param {number} id
  * @param {string} email
  */

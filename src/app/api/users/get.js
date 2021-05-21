@@ -1,9 +1,8 @@
 import Caller from "./caller";
 /**
- * @async
- * @function GET user by id
+ * GET user by id
+ * @async 
  * @param {number} id 
- * @returns {Object} user
  */
 export async function getUserByIdAsync(id) {
     try {
@@ -21,9 +20,8 @@ export async function getUserByIdAsync(id) {
     }
 }
 /**
- * @async
- * @function GET new user 
- * @returns {Object} user
+ * GET new user
+ * @async 
  */
 export async function getNewUserAsync() {
     try {

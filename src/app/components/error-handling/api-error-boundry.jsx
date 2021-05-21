@@ -4,7 +4,8 @@ import PropTypes from "prop-types";
 import { resetUser, resetFractions } from "../../state/actions";
 import FallBackMessage from "./fallback-message";
 /** 
- * @component ApiErrorBoundry is a stateless HOC component, an error boundry that handels error from API calls.
+ * ApiErrorBoundry is a stateless HOC component, an error boundry that handels error from API calls.
+ * @component 
  */
 class ApiErrorBoundry extends React.Component {
 

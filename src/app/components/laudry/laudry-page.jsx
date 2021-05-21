@@ -10,7 +10,8 @@ export default class LaudryPage extends React.Component {
         return (
             <div className="user">
                 <Booking />
-                <p ><hr /><span>Kommande features:</span> Klick på dag aktiverar en pop-up med bokningsbara tider</p>
+                <hr />
+                <p ><span>Kommande features:</span> Klick på dag aktiverar en pop-up med bokningsbara tider</p>
             </div>
         );
     }

@@ -12,7 +12,7 @@ export default class HomePage extends React.Component {
             <div className="spacer">
                 <div className="user">
                     <Card />
-                    <h1>Kommande features: </h1>
+                    {/* <h1>Kommande features: </h1>
                     <hr />
                     <p>+ Kommunikation med hyresvärd:</p>
                     <ul className='home-list'>
@@ -20,7 +20,7 @@ export default class HomePage extends React.Component {
                         <li>- driftinformation </li>
                         <li>- felanmälan</li>
                         <li>- städrapportering</li>
-                    </ul>
+                    </ul> */}
                 </div>
             </div>
         );

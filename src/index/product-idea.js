@@ -1,13 +1,12 @@
-import { main } from "./index.js";
-import image1 from './images/pexels-markus-spiske-1089438.jpg';
-import image2 from './images/pexels-ready-made-3850452.jpg';
+import { header, main } from "./index.js";
 
 export function showProductIdea() {
 
+    header.innerHTML = `GreenSway`;
+
     main.innerHTML = `<div><h1>Produktidé</h1></div> 
     <div class="flex.container">
-    <div>
-        <div><img src="${image2}" alt="Mobile phone with recycling logo."></div>
+    <div id="div">
         <div><p>Min lösning för att uppnå syftet innefattar först och främst ett komplett mjukvarusystem, förpackat i en användarvänlig webb-app med funktionalitet som:</p></div>
             <ul><li>tillåter individuella mätningar och fakturering. Genom att extrahera schablonkostnaderna för sophantering, el- och vatten-förbrukning i tvättstugan från hyran och i stället fakturera hyresgästen för den verkliga kostnaden anser vi att balansen återställs.</li><br>
                 <li>använder digitala lås och identifiering för åtkomst till tvättstugor och miljöhus.</li><br>
@@ -20,8 +19,7 @@ export function showProductIdea() {
             </ul>
         </div>  
     </div>
-    <div><img src="${image1}" alt="Green light from digital characters."></div>
-    <div><p>För att få ut det mesta av systemet förespråkar jag även</p>
-        <ul><li>effektiviserad användning av allmänna utrymmen, eventuellt med en del ombyggnationer. Här finns det stort spelrum att skräddarsy lösningen ( jag ger ett exempel på detta under Affärsplan).</li></ul>
+    <div id="div"><p>För att få ut det mesta av systemet förespråkar jag även</p>
+        <ul><li>effektiviserad användning av allmänna utrymmen, eventuellt med en del ombyggnationer. Här finns det stort spelrum att skräddarsy lösningen ( jag ger ett exempel på detta i min Affärsplan).</li></ul>
     </div>`;
 }

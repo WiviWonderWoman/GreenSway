@@ -1,5 +1,5 @@
 import { header, main } from "./index.js";
-import file from "./files/GreenSway-Affärsplan.pdf"
+import buissnesplan from "./files/GreenSway-Affärsplan.pdf";
 
 export function showContactInformation() {
 
@@ -9,7 +9,7 @@ export function showContactInformation() {
     <div class="flex-container">
         <div id="div">
             <h3 class="contact">Läsa hela affärsplanen (pdf):</h3>
-            <sup id="icon"><a href="${file}" target=":_blank"><i class="far fa-file-alt"></i></a></sup>
+            <sup id="icon"><a href="${buissnesplan}" target=":_blank"><i class="far fa-file-alt"></i></a></sup>
         </div>
         <div id="div">
             <h3 class="contact">Kontakta mig via mail:</h3>

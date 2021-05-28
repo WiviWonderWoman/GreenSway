@@ -10,7 +10,7 @@ export default class UserForm extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            username: '',
+            username: 'demo@greensway.com',
         };
     }
     //handels updates to user email
@@ -29,13 +29,13 @@ export default class UserForm extends React.Component {
         return (
             <div className="userForm ">
                 <div className="form-group">
-                    <label>Ange ditt användarnamn (email):</label>
+                    <label className="demo"><p id="demo">Ange ditt användarnamn (email):</p>Exempel case:<br />LÅT STÅ!</label>
                 </div>
                 <div className="form-group">
                     <input type="text" value={this.state.username} onChange={this.handleUsernameChange} />
                 </div>
                 <div className="form-group">
-                    <label>eller registrera ny användare här:<br /></label>
+                    {/* <label><p id="copy">Ange ditt användarnamn (email):</p><br /></label> */}
                 </div>
                 <div className="form-group">
                     <ReuseButton onClick={() => this.saveUser()} text='SPARA' />

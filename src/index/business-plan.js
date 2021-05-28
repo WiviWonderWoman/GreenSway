@@ -6,7 +6,7 @@ export function showBuisnessPlan() {
 
     main.innerHTML = `<div id="div"><h1>Affärsplan</h1></div>    
     <div class="flex.container">
-        <div id="div"><p>Jag kallar min idé GreenSway.<br/><br/> Green som kan associeras med både miljö och med pengar och ”sway” (eng.) med betydelse: svänga eller inflytande. Namnet beskriver vad jag vill åstadkomma med min lösning eftersom det handlar om att återställa balansen gällande ansvar för kostnader och miljöpåverkan genom att ge individen större inflytande.</p></div>
+        <div id="div"><p>Jag kallar min idé <span id="copy"><span>GreenSway</span></span>. Green som kan associeras med både miljö och med pengar och ”sway” (eng.) med betydelse: svänga eller inflytande. Namnet beskriver vad jag vill åstadkomma med min lösning eftersom det handlar om att återställa balansen gällande ansvar för kostnader och miljöpåverkan genom att ge individen större inflytande.</p></div>
         <div id="div">
             <h2>Bakgrund & problemet</h2>
             
@@ -35,7 +35,9 @@ export function showBuisnessPlan() {
         </div>
     </div>
     <div id="div">
-        <div id="div"><h2>Lösning & Omfattning</h2></div>
+        <div id="div">
+        <h2>Lösning & Omfattning</h2>
+        </div>
             <p>Allt detta genom maximalt utnyttjande av allmänna utrymmen och ett webb-system som utvecklar befintligt bostadsbestånd till ett mer klimatsmart boende (mer detaljer om systemet hittar du under Projektidé).</p>
             <p>Systemet ska vara skalbart med ett digitalt bokningssystem för tvättstugan som även inkluderar digitala lås för tillträde vid bokad tid. Det ska även finnas funktionalitet som:</p>
             <ul>
@@ -43,6 +45,13 @@ export function showBuisnessPlan() {
                 <li>tillåter översikt och statistik för hyresgästen och även för bostadsbolaget att se total förbrukning.</li>
                 <li>kommunikation mellan hyresgäst och värden om tex felanmälan, driftuppehåll, rapportering angående bristfällig städning.</li>
             </ul>
+        </div>
+        <hr />
+        <div id="div">
+        <h3 class="user">Fotnot:</h3> 
+        <p class="user">Mer än halvägs in i utarbetandet av prototypen har jag blivit varse om att det är emot hyreslagen att extrahera avfallsomkostnader från hyran.
+        Efter att jag har fått kännedom om att Nordvästra Skånes Renhållnings AB nyligen (maj 2021) anordnat en <a href="https://nsr.se/workshop-teknisk-losning-for-matning-av-hushallsavfall/" target="_blank" id="link">workshop</a> för att ta fram en mjukvara för individuell avfallsmätning i flerfamiljshus har jag har valt att ändå fortsätta med projektet. 
+        Intresset för att hitta en lösning indikerar att behovet finns och att en ändring i lagen inte är omöjlig eller särkilt långt fram i tiden. Jag ser ljust på framtiden för mitt projekt och tänker utforska möjligheten att använda lösningen i bostadsrättsföreningar.</p> 
         </div>
     </div>`
 }

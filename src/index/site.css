@@ -61,6 +61,17 @@ h1, h2 {
     text-align: center;
     width: 100%;
   }
+.course {
+  color:  rgb(100, 199, 100);
+    margin: auto;
+    text-align: center;
+    width: 100%;
+}
+
+#link {
+  color: whitesmoke;
+}
+
 ul {
     list-style-image: url("https://mdn.mozillademos.org/files/11981/starsolid.gif");
     list-style-image: linear-gradient(to left bottom, green, rgb(51, 255, 0));
@@ -72,6 +83,12 @@ ul {
     color: rgb(7, 196, 7);
   }
   #menu:hover {
+    color:rgb(51, 255, 0);
+  }
+  #about {
+    color: rgb(7, 196, 7);
+  }
+  #about:hover {
     color:rgb(51, 255, 0);
   }
   #plan {

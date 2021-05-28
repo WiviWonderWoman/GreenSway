@@ -21,5 +21,11 @@ export function showProductIdea() {
     </div>
     <div id="div"><p>För att få ut det mesta av systemet förespråkar jag även</p>
         <ul><li>effektiviserad användning av allmänna utrymmen, eventuellt med en del ombyggnationer. Här finns det stort spelrum att skräddarsy lösningen ( jag ger ett exempel på detta i min Affärsplan).</li></ul>
+        </div>
+        <hr />
+        <div id="div"><h3 class="user">Fotnot:</h3> <p class="user">Mer än halvägs in i utarbetandet av prototypen har jag blivit varse om att det är emot hyreslagen att extrahera avfallsomkostnader från hyran.
+        Efter att jag har fått kännedom om att Nordvästra Skånes Renhållnings AB nyligen (maj 2021) anordnat en <a href="https://nsr.se/workshop-teknisk-losning-for-matning-av-hushallsavfall/" target="_blank" id="link">workshop</a> för att ta fram en mjukvara för individuell avfallsmätning i flerfamiljshus har jag har valt att ändå fortsätta med projektet. 
+        Intresset för att hitta en lösning indikerar att behovet finns och att en ändring i lagen inte är omöjlig eller särkilt långt fram i tiden. Jag ser ljust på framtiden för mitt projekt och tänker utforska möjligheten att använda lösningen i bostadsrättsföreningar.</p> 
+        </div>
     </div>`;
 }

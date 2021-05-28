@@ -99,6 +99,13 @@ button {
     color:rgb(51, 255, 0);
   }
   
+#demo {
+  color: lightslategray;
+}
+.demo {
+  color: red;
+}
+
 .userForm {
   margin: auto;
   padding: 10px;
@@ -106,15 +113,16 @@ button {
   margin: 2em auto;
   border: cornsilk solid 1px;
   padding: 1em;
+  width: 50%;
 }
   .form-group {
-    font-size: 1.5em;
+    /* font-size: 1.5em; */
     justify-content: center;
     text-align: center;
   }
   input {
-    font-size: 1em;
-    width: 100%;
+    /* font-size: 1em; */
+    width: 80%;
     border-radius: 10px;
   }
 

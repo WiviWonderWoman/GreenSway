@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Modal from "../modal/modal";
+import "./error.css";
 /** 
  * FallBackMessage is a stateless component, that displays an UI-fallback.
  * @component 
@@ -13,7 +14,7 @@ export default class FallBackMessage extends React.Component {
     }
     render() {
         return (
-            <Modal header={this.props.header} body={this.props.body} footer={this.props.footer} onClick={() => this.handleClick()} button={this.props.button}></Modal>
+            <Modal className="error-modal" header={this.props.header} body={this.props.body} footer={this.props.footer} onClick={() => this.handleClick()} button={this.props.button}></Modal>
         )
     }
 }

@@ -9,37 +9,7 @@ export default class Card extends React.Component {
             <>
                 <div className="row">
                     <div className="column">
-                        <div className="flip-card">
-                            <div className="flip-card-inner">
-                                <div className="flip-card-front">
-                                    <h1 className="user">Nyheter</h1>
-                                    <hr />
-                                    <img src={logo} alt="logo" style={{ width: 300, height: 300 }} />
-                                </div>
-                                <div className="flip-card-back">
-                                    <h1 className="user">Nyheter</h1>
-                                    <h2>Kv. App-Demo</h2>
-                                    <hr />
-                                    <p>Nu ska grillplatsen och lekutrustningen på innergården rustas upp inför sommaren. Arbetet pågår v. 22-23</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="column">
-                        <div className="flip-card">
-                            <div className="flip-card-inner">
-                                <div className="flip-card-front">
-                                    <h1 className="user">Driftinformation</h1>
-                                    <hr />
-                                    <img src={logo} alt="logo" style={{ width: 300, height: 300 }} />
-                                </div>
-                                <div className="flip-card-back">
-                                    <h1 className="user">Driftinformation</h1>
-                                    <h2>Kv. App-Demo</h2>
-                                    <hr />
-                                    <p>Förtillfället är tvättmaskin 1 ur funktion, reservdelar väntas 1/6.</p>
-                                </div>
-                            </div>
+                        <div style={{ width: 300, height: 150 }} >
                         </div>
                     </div>
                     <div className="column">
@@ -48,7 +18,8 @@ export default class Card extends React.Component {
                                 <div className="flip-card-front">
                                     <h1 className="user">Felanmälan</h1>
                                     <hr />
-                                    <img src={logo} alt="logo" style={{ width: 300, height: 300 }} />
+                                    {/* <img src={logo} alt="logo" style={{ width: 300, height: 300 }} /> */}
+                                    <i className="fas fa-exclamation-circle"></i>
                                 </div>
                                 <div className="flip-card-back">
                                     <h1 className="user">Felanmälan</h1>
@@ -64,20 +35,80 @@ export default class Card extends React.Component {
                         </div>
                     </div>
                     <div className="column">
+                        <div style={{ width: 300, height: 150 }} >
+                        </div>
+                    </div>
+                    <div className="column">
                         <div className="flip-card">
                             <div className="flip-card-inner">
                                 <div className="flip-card-front">
                                     <h1 className="user">Städrapport</h1>
                                     <hr />
-                                    <img src={logo} alt="logo" style={{ width: 300, height: 300 }} />
+                                    {/* <img src={logo} alt="logo" style={{ width: 300, height: 300 }} /> */}
+                                    <i className="fas fa-star"></i>
                                 </div>
                                 <div className="flip-card-back">
                                     <h1 className="user">Städrapport</h1>
                                     <h2>Kv. App-Demo</h2>
                                     <hr />
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt officiis modi repellendus nihil, culpa illum. Deserunt commodi perspiciatis neque aliquid voluptas dolorem blanditiis suscipit pariatur porro, temporibus nisi autem sint.</p>
+                                    <i className="fas fa-grin-stars" id="review0"></i>
+                                    <p></p>
+                                    <i className="fas fa-smile" id="review1"></i>
+                                    <p></p>
+                                    <i className="fas fa-meh" id="review2"></i>
+                                    <p></p>
+                                    <i className="fas fa-frown" id="review3"></i>
+                                    <p></p>
+                                    <i className="fas fa-angry" id="review4"></i>
+
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                </div>
+                <div className="row">
+                    <div className="column">
+                        <div className="flip-card">
+                            <div className="flip-card-inner">
+                                <div className="flip-card-front">
+                                    <h1 className="user">Nyheter</h1>
+                                    <hr />
+                                    <i className="fas fa-info-circle"></i>
+                                    {/* <img src={logo} alt="logo" style={{ width: 300, height: 300 }} /> */}
+                                </div>
+                                <div className="flip-card-back">
+                                    <h1 className="user">Nyheter</h1>
+                                    <h2>Kv. App-Demo</h2>
+                                    <hr />
+                                    <p>Nu ska grillplatsen och lekutrustningen på innergården rustas upp inför sommaren. Arbetet pågår v. 22-23</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="column">
+                        <div style={{ width: 300, height: 150 }} >
+                        </div>
+                    </div>
+                    <div className="column">
+                        <div className="flip-card">
+                            <div className="flip-card-inner">
+                                <div className="flip-card-front">
+                                    <h1 className="user">Driftinformation</h1>
+                                    <hr />
+                                    {/* <img src={logo} alt="logo" style={{ width: 300, height: 300 }} /> */}
+                                    <i className="fas fa-times"></i>
+                                </div>
+                                <div className="flip-card-back">
+                                    <h1 className="user">Driftinformation</h1>
+                                    <h2>Kv. App-Demo</h2>
+                                    <hr />
+                                    <p>Förtillfället är tvättmaskin 1 ur funktion, reservdelar väntas 1/6.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="column">
+                        <div style={{ width: 300, height: 150 }} >
                         </div>
                     </div>
                 </div>

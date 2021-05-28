@@ -143,16 +143,16 @@ ul {
       padding: 0px;
     }
 i {
-    border: cornsilk solid 2px;
+    border: whitesmoke solid 2px;
     border-radius: 10%;
     background-color:rgb(31, 141, 3);
-    color: cornsilk;
+    color: whitesmoke;
     font-size: 200%;
     flex-grow: 1;
     list-style: none;
 }
 i:hover {
-    background-color: cornsilk;
+    background-color: whitesmoke;
     color: rgb(47, 216, 5);
     border-color: rgb(31, 141, 3);
 }

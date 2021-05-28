@@ -26,11 +26,11 @@ class Menu extends React.Component {
                         <Logo text={'GreenSway'} className={'mini-container'} />
                 }
                 <hr />
-                <ApiErrorBoundry>
-                    <span className="intro">
-                        VÄLKOMMEN: {this.props.username}!
+                {/* <ApiErrorBoundry> */}
+                <span className="intro">
+                    VÄLKOMMEN: {this.props.username}!
                 </span>
-                </ApiErrorBoundry>
+                {/* </ApiErrorBoundry> */}
                 <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
                     <div className="container-fluid">
                         <div >

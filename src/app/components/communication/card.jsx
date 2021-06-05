@@ -1,6 +1,5 @@
 import React from "react";
 import "./card.css";
-import logo from "../../images/recycle.png";
 import ReuseButton from "../reuse-button";
 
 export default class Card extends React.Component {
@@ -18,7 +17,6 @@ export default class Card extends React.Component {
                                 <div className="flip-card-front">
                                     <h1 className="user">Felanmälan</h1>
                                     <hr />
-                                    {/* <img src={logo} alt="logo" style={{ width: 300, height: 300 }} /> */}
                                     <i className="fas fa-exclamation-circle"></i>
                                 </div>
                                 <div className="flip-card-back">
@@ -30,6 +28,9 @@ export default class Card extends React.Component {
                                     <ReuseButton text="Avslutade" />
                                     <p>Gör en ny:</p>
                                     <ReuseButton text="Felanmälan" />
+                                    <br/>
+                                    <br/>
+                                    <br/>
                                 </div>
                             </div>
                         </div>
@@ -44,7 +45,6 @@ export default class Card extends React.Component {
                                 <div className="flip-card-front">
                                     <h1 className="user">Städrapport</h1>
                                     <hr />
-                                    {/* <img src={logo} alt="logo" style={{ width: 300, height: 300 }} /> */}
                                     <i className="fas fa-star"></i>
                                 </div>
                                 <div className="flip-card-back">
@@ -60,7 +60,9 @@ export default class Card extends React.Component {
                                     <i className="fas fa-frown" id="review3"></i>
                                     <p></p>
                                     <i className="fas fa-angry" id="review4"></i>
-
+                                    <br/>
+                                    <br/>
+                                    <br/>
                                 </div>
                             </div>
                         </div>
@@ -74,13 +76,15 @@ export default class Card extends React.Component {
                                     <h1 className="user">Nyheter</h1>
                                     <hr />
                                     <i className="fas fa-info-circle"></i>
-                                    {/* <img src={logo} alt="logo" style={{ width: 300, height: 300 }} /> */}
                                 </div>
                                 <div className="flip-card-back">
                                     <h1 className="user">Nyheter</h1>
                                     <h2>Kv. App-Demo</h2>
                                     <hr />
                                     <p>Nu ska grillplatsen och lekutrustningen på innergården rustas upp inför sommaren. Arbetet pågår v. 22-23</p>
+                                    <br/>
+                                    <br/>
+                                    <br/>
                                 </div>
                             </div>
                         </div>
@@ -95,7 +99,6 @@ export default class Card extends React.Component {
                                 <div className="flip-card-front">
                                     <h1 className="user">Driftinformation</h1>
                                     <hr />
-                                    {/* <img src={logo} alt="logo" style={{ width: 300, height: 300 }} /> */}
                                     <i className="fas fa-times"></i>
                                 </div>
                                 <div className="flip-card-back">
@@ -103,6 +106,9 @@ export default class Card extends React.Component {
                                     <h2>Kv. App-Demo</h2>
                                     <hr />
                                     <p>Förtillfället är tvättmaskin 1 ur funktion, reservdelar väntas 1/6.</p>
+                                    <br/>
+                                    <br/>
+                                    <br/>
                                 </div>
                             </div>
                         </div>

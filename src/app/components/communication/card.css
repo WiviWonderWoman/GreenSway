@@ -17,7 +17,6 @@
       .column {
         width: 100%;
         display: block;
-        /* margin-bottom: 20px; */
       }
     }
   
@@ -35,7 +34,7 @@
   /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
   .flip-card {
     background-color: transparent;
-    /* width: 500; */
+    width: 300;
     height: fit-content;
     margin: 10%;
     perspective: 1000px; /* Remove this if you don't want the 3D effect */
@@ -45,6 +44,7 @@
   .flip-card-inner {
     position: relative;
     width: 100%;
+    
     height: fit-content;
     text-align: center;
     transition: transform 0.8s;

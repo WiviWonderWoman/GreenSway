@@ -16,7 +16,8 @@ export default class UserForm extends React.Component {
     //handels updates to user email
     handleUsernameChange = (event) => {
         this.setState({
-            username: event.target.value,
+            username: username
+            // event.target.value,
         });
     }
     //checks the input and sends it back to App's handleUpdate(email). 

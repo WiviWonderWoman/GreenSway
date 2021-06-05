@@ -11,7 +11,7 @@ export default class LaudryPage extends React.Component {
             <div className="user">
                 <Booking />
                 <hr />
-                <p ><span>Kommande features:</span> Klick på dag aktiverar en pop-up med bokningsbara tider</p>
+                <h3 style={{color: 'red'}}>Testa bokning genom klick på valfri dag och välj tid: 00.00 - 03.00 + BOKA.</h3><p ><span>Kommande features:</span><br/>Klick på valfri bokningsbar tid.</p>
             </div>
         );
     }

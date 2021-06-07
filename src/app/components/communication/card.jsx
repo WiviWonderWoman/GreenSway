@@ -1,7 +1,10 @@
 import React from "react";
+import PropTypes from "prop-types";
 import "./card.css";
 import ReuseButton from "../reuse-button";
-
+/** 
+ * @component Card is a stateless component for displaying information on home-page.
+ */
 export default class Card extends React.Component {
     render() {
         return (
@@ -121,4 +124,6 @@ export default class Card extends React.Component {
             </>
         )
     }
+}
+Card.propTypes = {
 }

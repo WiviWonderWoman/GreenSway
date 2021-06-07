@@ -12,6 +12,7 @@ export function Booking() {
     const [style, setStyle] = useState();
     const [date, displayDate] = useState();
 
+    //Conditinal rendering: if day is clicked 
     if (show === true) {
         return (
             <>

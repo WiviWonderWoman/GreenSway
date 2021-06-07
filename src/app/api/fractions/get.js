@@ -13,7 +13,7 @@ export async function getFractionsAsync(garbagehouse) {
         }
         const fractions = response.data;
         const allFractions = fractions.allFractions;
-        // console.log('GET: ', allFractions)
+        
         return allFractions;
     }
     catch (error) {

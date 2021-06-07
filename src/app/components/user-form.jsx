@@ -10,12 +10,14 @@ export default class UserForm extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
+            //--- DEMO CASE ---
             username: 'demo@greensway.com',
         };
     }
     //handels updates to user email
     handleUsernameChange = (event) => {
         this.setState({
+            //--- DEMO CASE ---
             username: username
             // event.target.value,
         });
@@ -30,12 +32,14 @@ export default class UserForm extends React.Component {
         return (
             <div className="userForm ">
                 <div className="form-group">
+                {/* --- DEMO CASE --- */}
                     <label className="demo"><p id="demo">Ange ditt användarnamn (email):</p>Exempel case:<br />LÅT STÅ!</label>
                 </div>
                 <div className="form-group">
                     <input type="text" value={this.state.username} onChange={this.handleUsernameChange} />
                 </div>
                 <div className="form-group">
+                {/* --- DEMO CASE --- */}
                     {/* <label><p id="copy">Ange ditt användarnamn (email):</p><br /></label> */}
                 </div>
                 <div className="form-group">

@@ -47,7 +47,6 @@ ApiErrorBoundry.propTypes = {
     userHasError: PropTypes.bool,
 }
 const mapStateToProps = (state) => {
-    // console.log('redux state: ', state);
     return {
         fractionsErrorMessage: state.fractionsErrorMessage,
         fractionsHasError: state.fractionsHasError,

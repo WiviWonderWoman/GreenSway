@@ -5,7 +5,6 @@ import { getFractionsAsync, checkLocalStorage, getUserByIdAsync } from "../../ap
  * @param {bool} hasError 
  */
 export function fractionsHasError(hasError) {
-    // console.log('ACTION: FRACTIONS_HAS_ERROR')
     return {
         type: 'FRACTIONS_HAS_ERROR',
         hasError: hasError
@@ -16,7 +15,6 @@ export function fractionsHasError(hasError) {
  * @param { string } errorMessage
  */
 export function apiFetchFractionsError(errorMessage) {
-    // console.log('ACTION: ', errorMessage)
     return {
         type: 'API_FETCH_FRACTIONS_ERROR',
         errorMessage: errorMessage
@@ -37,7 +35,6 @@ export function apiIsLoadingFractions(isLoading) {
  * @param { array } fractions 
  */
 export function apiFetchFractionsSuccess(fractions) {
-    // console.log('ACTION: API_FETCH_FRACTIONS_SUCCESS')
     return {
         type: 'API_FETCH_FRACTIONS_SUCCESS',
         fractions: fractions

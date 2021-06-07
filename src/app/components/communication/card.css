@@ -77,13 +77,13 @@
     color: white;
     transform: rotateY(180deg);
   }
+  /* Style for review-icons */
   #review0 {
     color:whitesmoke;
     font-size: 200%;
   }
   #review0:hover {
     color: rgba(99, 255, 9, 0.959);
-    /* font-size: 200%; */
   }
   #review1 {
     color:whitesmoke;
@@ -91,7 +91,6 @@
   }
   #review1:hover {
     color: rgba(181, 255, 9, 0.959);
-    /* font-size: 200%; */
   }
   #review2 {
     color:whitesmoke;
@@ -99,7 +98,6 @@
   }
   #review2:hover {
     color: yellow;
-    /* font-size: 200%; */
   }
   #review3 {
     color:whitesmoke;
@@ -107,7 +105,6 @@
   }
   #review3:hover {
     color: orange;
-    /* font-size: 200%; */
   }
   #review4 {
     color:whitesmoke;
@@ -115,5 +112,4 @@
   }
   #review4:hover {
     color: red;
-    /* font-size: 200%; */
   }

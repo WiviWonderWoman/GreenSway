@@ -33,6 +33,7 @@ class App extends React.Component {
             });
         }
         else {
+            //--- DEMO CASE ---
             this.props.getUser(1);
             // this.props.getNewUser();
             this.setState({

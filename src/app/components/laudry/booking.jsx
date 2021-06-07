@@ -41,6 +41,5 @@ export function Booking() {
                 onClickDay={(value) => { setShow(!show), displayDate(new Intl.DateTimeFormat('sv-SV').format(value)) }}
             />
         </>
-
     )
 }

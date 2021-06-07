@@ -191,8 +191,9 @@ Anropas från
 ]
 ```
 ________________________________________________________________________________________________________________________________________________________________________________
-#### 3. [https://retoolapi.dev/BOnmI8/greenswayusers](https://retoolapi.dev/BOnmI8/greenswayusers)
-Anger procentuellt hur fulla sopkärlen är.
+### Tjänster som inte används ännu:
+#### 3. [https://retoolapi.dev/CzwwKd/greenswaylandlord](https://retoolapi.dev/CzwwKd/greenswaylandlord)
+Anger hur fyllda sopkärlen är i procent.
 ##### Exempel:
 ```
 [

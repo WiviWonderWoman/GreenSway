@@ -26,11 +26,9 @@ class Menu extends React.Component {
                         <Logo text={'GreenSway'} className={'mini-container'} />
                 }
                 <hr />
-                <ApiErrorBoundry>
-                    <span className="intro">
-                        VÄLKOMMEN: {this.props.username}!
+                <span className="intro">
+                    VÄLKOMMEN: {this.props.username}!
                 </span>
-                </ApiErrorBoundry>
                 <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
                     <div className="container-fluid">
                         <div >
@@ -56,7 +54,6 @@ Menu.propTypes = {
     isLoadingFraction: PropTypes.bool,
 }
 const mapStateToProps = (state) => {
-    // console.log('redux state: ', state);
     return {
         username: state.user.email,
         isLoadingUser: state.apiIsLoadingUser,

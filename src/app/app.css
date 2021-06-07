@@ -99,6 +99,13 @@ button {
     color:rgb(51, 255, 0);
   }
   
+#demo {
+  color: lightslategray;
+}
+.demo {
+  color: red;
+}
+
 .userForm {
   margin: auto;
   padding: 10px;
@@ -106,15 +113,16 @@ button {
   margin: 2em auto;
   border: cornsilk solid 1px;
   padding: 1em;
+  width: 50%;
 }
   .form-group {
-    font-size: 1.5em;
+    /* font-size: 1.5em; */
     justify-content: center;
     text-align: center;
   }
   input {
-    font-size: 1em;
-    width: 100%;
+    /* font-size: 1em; */
+    width: 80%;
     border-radius: 10px;
   }
 
@@ -147,8 +155,8 @@ nav {
   list-style: none;
 }
 .spacer {
- min-height: 500px;
- /* height: fit-content; */
+ min-height: 600px;
+ height: fit-content;
  width: 100%;
 }
 
@@ -166,8 +174,8 @@ i {
 }
 
 .loader {
-  border: 16px solid #f3f3f3; /* Light grey */
-  border-top: 16px solid rgba(99, 255, 9, 0.959); /* Blue */
+  border: 16px solid #f3f3f3; 
+  border-top: 16px solid rgba(99, 255, 9, 0.959); 
   border-radius: 50%;
   width: 120px;
   height: 120px;

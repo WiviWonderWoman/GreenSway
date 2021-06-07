@@ -11,6 +11,7 @@
   margin: auto;
   width:fit-content;
 }
+
 /* drop-down */
 .flex.container {
   margin: auto;
@@ -24,7 +25,6 @@
       list-style: none;
       margin: 10px;
     }
-
 #dropdownMenuButton {
   width: auto;
   border: solid 1px black;
@@ -37,7 +37,6 @@
   text-decoration: none;
   display: inline-block;
   cursor: pointer;
-  /* margin:10%; */
 }
 #dropdownMenuButton:hover {
   background-color: rgb(7, 196, 7);
@@ -76,7 +75,7 @@ COLOR CODES FOR FRACTIONS; BUTTONS & TABLE
   border-radius: 10px;
   text-align: center;
 }
-/* residual waste */
+/* electricity */
 .el {
   background-color: rgb(235, 220, 90); 
   border: solid 1px black;
@@ -260,7 +259,7 @@ COLOR CODES FOR FRACTIONS; BUTTONS & TABLE
   border-radius: 10px;
   text-align: center;
 }
-/* newspaper button */
+/* newspaper */
 .np {
   background-color: rgb(51, 22, 18); 
   border: solid 1px black;

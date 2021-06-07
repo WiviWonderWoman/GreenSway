@@ -1,60 +1,73 @@
 /* The Modal (background) */
 .modal {
-    display: block; 
-    padding-top: 500px; 
-    background-color: rgba(128, 128, 128, 0.466);
+  padding-top: 400px;
+  display: block; 
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(128, 128, 128, 0.466);
   }
   .modal-hidden {
     display: none;
   }
+
     /* Modal Content */
     .modal-content {
       background-color:whitesmoke;
       margin: auto;
-      border: 2px solid rgb(75, 2, 2);
+      /* border: 2px solid ; */
       width: fit-content;
       box-shadow:5px 5px 8px rgba(230, 228, 228), 10px 10px 8px  rgb(206, 205, 205, 0.8);
       animation-name: animatetop;
       animation-duration: 1s;
       animation-timing-function:ease-in-out;
     }
+
     /* Animation */
     @keyframes animatetop {
       0% {bottom: -500px; opacity: 1}
       90% {bottom: 50px; opacity: 1;}
       100% {bottom: 0; opacity: 1}
     }
+
   /* Modal Header */
   .modal-header {
-    background-color: darkred;
-    border: 1px solid rgb(75, 2, 2);
+    /* background-color: ; */
+    /* border: 1px solid ; */
     color: whitesmoke;
     justify-content: center;
   }
+  
   /* Modal Body */
   .modal-body {
     display: flex;
     justify-content: center;
     color: black;
   }
+
   /* Modal Footer */
   .modal-footer {
     padding: 2px 16px;
-    background-color: darkred;
-    border: 1px solid rgb(75, 2, 2);
+    /* background-color: ; */
+    /* border: 1px solid ; */
     color: whitesmoke;
     justify-content: center;
   }
+
   /* Model button */
   .modal-button {
     width: fit-content;
     box-shadow: none;
-    background-color: rgb(75, 2, 2);
+    /* background-color: ;  */
     color: whitesmoke;
     cursor: pointer;
   }
   .modal-button:hover {
     background-color: whitesmoke;
-    color:  rgb(75, 2, 2);
+    /* color: ; */
     text-align: center;
   }

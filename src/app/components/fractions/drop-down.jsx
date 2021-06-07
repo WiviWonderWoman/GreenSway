@@ -51,12 +51,10 @@ class DropDown extends React.Component {
                         </div>
                     </nav>
                     <div className="user">
-                        <h2>Kommande features: </h2>
                         <hr />
-                        <p>+ En översikt av totalkostnader med:</p>
+                        <p ><span>Kommande features:</span></p>
                         <ul className='home-list'>
-                            <li>- månadsvy</li>
-                            <li>- årsvy </li>
+                            <li>- översikt av totalkostnader för månads- och årsvy</li>
                         </ul>
                     </div>
                 </>
@@ -77,9 +75,6 @@ class DropDown extends React.Component {
                         </div>
                     </nav>
                     <Table chartData={this.props.chartData} fraction={this.state.fraction} />
-                    <div className="user">
-                        <p ><br /><hr /><span>Kommande features:</span>  En översikt av totalkostnader med: månadsvy och årsvy</p>
-                    </div>
                 </>
         );
     }

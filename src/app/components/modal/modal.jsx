@@ -14,15 +14,24 @@ export default class Modal extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            className: 'modal'
+            className: ''
         };
     }
     handleClick() {
+        const name = this.props.className;
+        const hide = name + '-hidden';
         this.setState({
-            className: 'modal-hidden'
+            className: hide
         });
         if (this.props.onClick !== undefined) {
             this.props.onClick();
+        }
+    }
+    componentDidMount() {
+        if (this.props.className !== undefined) {
+            this.setState({
+                className: this.props.className
+            });
         }
     }
     render() {

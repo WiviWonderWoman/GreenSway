@@ -38,7 +38,9 @@ class OverviewPage extends React.Component {
                         <LaudryChart water={this.props.water} electricity={this.props.electricity} />
                     </div>
                 </div>
-                <p className="user"><hr /><span>Kommande features:</span> Stapeldiagram per fraktioner över tid</p>
+                <br />
+                <hr className="user" />
+                <p className="user"><span>Kommande features:</span> Stapeldiagram per fraktioner över tid</p>
             </>
         );
     }

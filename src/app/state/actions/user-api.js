@@ -4,7 +4,6 @@ import { setUserEmailAsync, getNewUserAsync, getUserByIdAsync, saveUser, checkLo
  * @param {bool} hasError 
  */
 export function userHasError(hasError) {
-    console.log('ACTION: USER_HAS_ERROR')
     return {
         type: 'USER_HAS_ERROR',
         hasError: hasError
@@ -15,7 +14,6 @@ export function userHasError(hasError) {
  * @param { string } errorMessage 
  */
 export function apiFetchUserError(errorMessage) {
-    console.log('ACTION: ', errorMessage)
     return {
         type: 'API_FETCH_USER_ERROR',
         errorMessage: errorMessage
@@ -46,7 +44,6 @@ export function apiFetchUserSuccess(user) {
  * @async
  */
 export function resetUser() {
-    // console.log('reset: ');
     return (dispatch) => {
         dispatch(apiFetchUserError(''));
         dispatch(userHasError(false));

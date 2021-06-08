@@ -1,0 +1,823 @@
+/* spinning logo. OBS! rip off React Logo!*/
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+body {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  width: 100%;
+  margin:auto;
+}
+
+#root {
+  width: 80%;
+  margin: auto;
+}
+
+button {
+  width: auto;
+  border: solid 1px black;
+  border-radius: 10px;
+  box-shadow: none;
+  background-color: #282c34;
+  color: white;
+  padding: 10px ;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+}
+  button:hover {
+    background-color: rgb(7, 196, 7);
+    color: black;
+    text-align: center;
+    box-shadow: 0 2px 8px 0 rgb(250, 247, 247), 0 1px 10px 0 rgb(250, 247, 247);
+  }
+.container {
+  margin: auto;
+  position:relative;
+  max-width: 400px;
+}
+  .container img {
+    width: 100%;
+    height: auto;
+  }
+  .container .btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color:#282c34;
+    color: rgb(7, 196, 7) ;
+    font-size: 2em;
+    padding: 16px 30px;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+  }
+    .container .btn:hover {
+      background-color: rgb(7, 196, 7);
+      color: #282c34;
+    }
+
+#copy {
+  font-size: smaller;
+  text-align: center;
+  background-color:  #282c34;
+}
+  #copy  span {
+    font-size: xx-large;
+    font-family: 'Tangerine', cursive;
+    color:rgb(51, 255, 0);
+    padding: 0px;
+  }
+  #copy  h1 {
+    font-family: 'Tangerine', cursive;
+    font-size: 3em;
+    color:rgb(51, 255, 0);
+  }
+  
+#demo {
+  color: lightslategray;
+}
+.demo {
+  color: red;
+}
+
+.userForm {
+  margin: auto;
+  padding: 10px;
+  justify-content: center;
+  margin: 2em auto;
+  border: cornsilk solid 1px;
+  padding: 1em;
+  width: 50%;
+}
+  .form-group {
+    /* font-size: 1.5em; */
+    justify-content: center;
+    text-align: center;
+  }
+  input {
+    /* font-size: 1em; */
+    width: 80%;
+    border-radius: 10px;
+  }
+
+.mini-container {
+  margin: auto;
+  /* position:relative; */
+  justify-content: center;
+  max-width: 180px;
+}
+nav {
+  width: 100%;
+}
+.navbar-nav {
+  flex-grow: 1;
+}
+.menu-link {
+  color: rgb(7, 196, 7);
+}
+.menu-link:hover {
+  color:rgb(51, 255, 0);
+}
+
+.intro {
+  margin: auto;
+  padding-right: 2%;
+  float: right;
+  font-size: smaller;
+}
+.home-list {
+  list-style: none;
+}
+.spacer {
+ min-height: 600px;
+ height: fit-content;
+ width: 100%;
+}
+
+.user {
+  color:  rgb(7, 196, 7);
+  margin: auto;
+  text-align: center;
+  width: 100%;
+}
+
+i {
+  border-radius: 10%;
+  color: rgba(99, 255, 9, 0.959);
+  font-size: 600%;
+}
+
+.loader {
+  border: 16px solid #f3f3f3; 
+  border-top: 16px solid rgba(99, 255, 9, 0.959); 
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+}
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  /* Float four columns side by side */
+  .column {
+    float: left;
+    width: 25%;
+    padding: 0 10px;
+  }
+    /* Responsive columns - one column layout (vertical) on small screens */
+    @media screen and (max-width: 600px) {
+      .column {
+        width: 100%;
+        display: block;
+      }
+    }
+  
+  /* Remove extra left and right margins, due to padding in columns */
+  .row {margin: 0 -5px;}
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+ 
+
+  /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+  .flip-card {
+    background-color: transparent;
+    width: 300;
+    height: fit-content;
+    margin: 10%;
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  }
+  
+  /* This container is needed to position the front and back side */
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    
+    height: fit-content;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
+  /* Do an horizontal flip when you move the mouse over the flip box container */
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  /* Position the front and back side */
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+  }
+  
+  /* Style the front side (fallback if image is missing) */
+  .flip-card-front {
+    background-color: #bbb;
+    color: black;
+  }
+  
+  /* Style the back side */
+  .flip-card-back {
+    background-color: green;
+    color: white;
+    transform: rotateY(180deg);
+  }
+  /* Style for review-icons */
+  #review0 {
+    color:whitesmoke;
+    font-size: 200%;
+  }
+  #review0:hover {
+    color: rgba(99, 255, 9, 0.959);
+  }
+  #review1 {
+    color:whitesmoke;
+    font-size: 200%;
+  }
+  #review1:hover {
+    color: rgba(181, 255, 9, 0.959);
+  }
+  #review2 {
+    color:whitesmoke;
+    font-size: 200%;
+  }
+  #review2:hover {
+    color: yellow;
+  }
+  #review3 {
+    color:whitesmoke;
+    font-size: 200%;
+  }
+  #review3:hover {
+    color: orange;
+  }
+  #review4 {
+    color:whitesmoke;
+    font-size: 200%;
+  }
+  #review4:hover {
+    color: red;
+  }
+/*TODO: implement style for modal when clicking on day*/
+/* The Modal (background) */
+.laundry-modal {
+  padding-top: 400px;
+  display: block; 
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(128, 128, 128, 0.466);
+
+  }
+  .laundry-modal-hidden {
+    display: none;
+  }
+    /* Modal Content */
+    .laundry-modal-content {
+      background-color:whitesmoke;
+      margin: auto;
+      border: 2px solid rgb(1, 44, 1);
+      width: fit-content;
+      box-shadow:5px 5px 8px rgba(230, 228, 228), 10px 10px 8px  rgb(206, 205, 205, 0.8);
+      animation-name: animatetop;
+      animation-duration: 1s;
+      animation-timing-function:ease-in-out;
+    }
+    /* Add Animation */
+    @keyframes animatetop {
+      0% {bottom: -500px; opacity: 1}
+      90% {bottom: 50px; opacity: 1;}
+      100% {bottom: 0; opacity: 1}
+    }
+  /* Modal Header */
+  .laundry-modal-header {
+    background-color: green;
+    border: 1px solid rgb(1, 44, 1);
+    color: whitesmoke;
+    justify-content: center;
+  }
+  /* Modal Body */
+  .laundry-modal-body {
+    display: flex;
+    justify-content: center;
+    color: black;
+  }
+  /* Modal Footer */
+  .laundry-modal-footer {
+    padding: 2px 16px;
+    background-color: green;
+    border: 1px solid rgb(1, 44, 1);
+    color: whitesmoke;
+    justify-content: center;
+  }
+  /* Model button */
+  .laundry-modal-button {
+    width: fit-content;
+    box-shadow: none;
+    background-color: rgb(1, 44, 1);
+    color: whitesmoke;
+    cursor: pointer;
+  }
+  .laundry-modal-button:hover {
+    background-color: whitesmoke;
+    color:  rgb(1, 44, 1);
+    text-align: center;
+  }
+/* The Modal (background) */
+.modal {
+  padding-top: 400px;
+  display: block; 
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(128, 128, 128, 0.466);
+  }
+  .modal-hidden {
+    display: none;
+  }
+
+    /* Modal Content */
+    .modal-content {
+      background-color:whitesmoke;
+      margin: auto;
+      /* border: 2px solid ; */
+      width: fit-content;
+      box-shadow:5px 5px 8px rgba(230, 228, 228), 10px 10px 8px  rgb(206, 205, 205, 0.8);
+      animation-name: animatetop;
+      animation-duration: 1s;
+      animation-timing-function:ease-in-out;
+    }
+
+    /* Animation */
+    @keyframes animatetop {
+      0% {bottom: -500px; opacity: 1}
+      90% {bottom: 50px; opacity: 1;}
+      100% {bottom: 0; opacity: 1}
+    }
+
+  /* Modal Header */
+  .modal-header {
+    /* background-color: ; */
+    /* border: 1px solid ; */
+    color: whitesmoke;
+    justify-content: center;
+  }
+  
+  /* Modal Body */
+  .modal-body {
+    display: flex;
+    justify-content: center;
+    color: black;
+  }
+
+  /* Modal Footer */
+  .modal-footer {
+    padding: 2px 16px;
+    /* background-color: ; */
+    /* border: 1px solid ; */
+    color: whitesmoke;
+    justify-content: center;
+  }
+
+  /* Model button */
+  .modal-button {
+    width: fit-content;
+    box-shadow: none;
+    /* background-color: ;  */
+    color: whitesmoke;
+    cursor: pointer;
+  }
+  .modal-button:hover {
+    background-color: whitesmoke;
+    /* color: ; */
+    text-align: center;
+  }
+/* div surrounding both piecharts */
+.overview {
+    margin: auto;
+    display: flex;
+    flex: auto ;
+    width: 100%;
+    height: 450px;
+  }
+  /* div for each piecharts */
+  .pie-chart {
+    margin: 5px;
+    position:relative;
+    width: 50%;
+    height: 100%;
+    background-color: black;
+    color: black;
+    justify-content: center;
+  }
+  /* div for loading */
+  .loading {
+    margin: auto;
+    background-color: black;
+    justify-content: center;
+  }
+  .user span {
+    font-weight: bold;
+  }
+/* table */
+@media screen and (max-width: 425px) {
+  .table-responsive {
+    font-size:4vw;
+  }
+} 
+.table-active {
+  color: gray;
+}
+.table-responsive {
+  margin: auto;
+  width:fit-content;
+}
+
+/* drop-down */
+.flex.container {
+  margin: auto;
+  display: flex;
+}
+  .nav-list{
+    display: flex;
+    justify-content: left;
+  }
+    .nav-list li {
+      list-style: none;
+      margin: 10px;
+    }
+#dropdownMenuButton {
+  width: auto;
+  border: solid 1px black;
+  border-radius: 10px;
+  box-shadow: none;
+  background-color: #282c34;
+  color: white;
+  padding: 10px ;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+}
+#dropdownMenuButton:hover {
+  background-color: rgb(7, 196, 7);
+    color: black;
+    text-align: center;
+    box-shadow: 0 2px 8px 0 rgb(250, 247, 247), 0 1px 10px 0 rgb(250, 247, 247);
+}
+
+/*------------------------------------------------------------------------------------
+COLOR CODES FOR FRACTIONS; BUTTONS & TABLE 
+-------------------------------------------------------------------------------------*/
+
+/* residual waste */
+.rw {
+    background-color: darkred; 
+    border: solid 1px black;
+    border-radius: 10px;
+    box-shadow: none;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    width:100%;
+  }
+  .rw:hover {
+    background-color:rgb(245, 47, 40);
+    color: black;
+    text-align: center;
+    box-shadow: 0 2px 8px 0 rgb(250, 247, 247), 0 1px 10px 0 rgb(250, 247, 247);
+  }
+#rw {
+  background-color: darkred; 
+  border: solid 1px black;
+  color: whitesmoke;
+  box-shadow: 0 2px 8px 0 rgb(250, 247, 247), 0 1px 10px 0 rgb(250, 247, 247);
+  border-radius: 10px;
+  text-align: center;
+}
+/* electricity */
+.el {
+  background-color: rgb(235, 220, 90); 
+  border: solid 1px black;
+  color: black;
+  border-radius: 10px;
+  box-shadow: none;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  width:100%;
+}
+  .el:hover {
+      background-color:yellow;
+      color: black;
+      text-align: center;
+      box-shadow: 0 2px 8px 0 rgb(250, 247, 247), 0 1px 10px 0 rgb(250, 247, 247);
+  }
+#el {
+  background-color: rgb(235, 220, 90); 
+  border: solid 1px black;
+  box-shadow: 0 2px 8px 0 rgb(250, 247, 247), 0 1px 10px 0 rgb(250, 247, 247);
+  color: black;
+  border-radius: 10px;
+  text-align: center;
+}
+/* organic waste */
+.ow {
+  background-color: #4CAF50; 
+  border: solid 1px black;
+  border-radius: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  width:100%;
+}
+  .ow:hover {
+    background-color: rgba(99, 255, 9, 0.959);
+    color: black;
+    text-align: center;
+    box-shadow: 0 2px 8px 0 rgb(250, 247, 247), 0 1px 10px 0 rgb(250, 247, 247);
+  }
+#ow{
+  background-color: #4CAF50; 
+  border: solid 1px black;
+  color: black;
+  box-shadow: 0 2px 8px 0 rgb(250, 247, 247), 0 1px 10px 0 rgb(250, 247, 247);
+  border-radius: 10px;
+  text-align: center;
+}
+/* cardboard */
+.cp {
+  background-color: navy;
+  border: solid 1px black;
+  border-radius: 10px;
+  box-shadow: none;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  width:100%;
+}
+  .cp:hover {
+    background-color: rgb(51, 104, 250);
+    color: black;
+    text-align: center;
+    box-shadow: 0 2px 8px 0 rgb(250, 247, 247), 0 1px 10px 0 rgb(250, 247, 247);
+  }
+#cp {
+  background-color: navy;
+  border: solid 1px black;
+  color: whitesmoke;
+  box-shadow: 0 2px 8px 0 rgb(250, 247, 247), 0 1px 10px 0 rgb(250, 247, 247);
+  border-radius: 10px;
+  text-align: center;
+}
+/* water */
+.wat {
+  background-color: skyblue;
+  border: solid 1px black;
+  border-radius: 10px;
+  box-shadow: none;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  width:100%;
+}
+  .wat:hover {
+    background-color: turquoise;
+    color: black;
+    text-align: center;
+    box-shadow: 0 2px 8px 0 rgb(250, 247, 247), 0 1px 10px 0 rgb(250, 247, 247);
+  }
+#wat {
+  background-color: skyblue;
+  border: solid 1px black;
+  color: black;
+  box-shadow: 0 2px 8px 0 rgb(250, 247, 247), 0 1px 10px 0 rgb(250, 247, 247);
+  border-radius: 10px;
+  text-align: center;
+}
+/* plastic */
+.pp {
+  background-color: orangered; 
+  border: solid 1px black;
+  border-radius: 10px;
+  box-shadow: none;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  width:100%;
+}
+  .pp:hover {
+    background-color: orange;
+    color: black;
+    text-align: center;
+    box-shadow: 0 2px 8px 0 rgb(250, 247, 247), 0 1px 10px 0 rgb(250, 247, 247);
+  }
+#pp {
+  background-color: orangered; 
+  border: solid 1px black;
+  color: black;
+  box-shadow: 0 2px 8px 0 rgb(250, 247, 247), 0 1px 10px 0 rgb(250, 247, 247);
+  border-radius: 10px;
+  text-align: center;
+}
+/* metal */
+.mp {
+  background-color: rgb(56, 55, 55); 
+  border: solid 1px black;
+  border-radius: 10px;
+  box-shadow: none;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  width:100%;
+}
+  .mp:hover {
+    background-color: gray;
+    color: black;
+    text-align: center;
+    box-shadow: 0 2px 8px 0 rgb(250, 247, 247), 0 1px 10px 0 rgb(250, 247, 247);
+  }
+#mp {
+  background-color: rgb(56, 55, 55); 
+  border: solid 1px black;
+  color: whitesmoke;
+  box-shadow: 0 2px 8px 0 rgb(250, 247, 247), 0 1px 10px 0 rgb(250, 247, 247);
+  border-radius: 10px;
+  text-align: center;
+}
+/* glas */
+.gp {
+  background-color: rgba(245, 245, 245, 0.425); 
+  opacity: 70%;
+  border: solid 1px black;
+  border-radius: 10px;
+  box-shadow: none;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  width:100%;
+  }
+  .gp:hover {
+    background-color:whitesmoke;
+    opacity: 100%;
+    color: black;
+    text-align: center;
+    box-shadow: 0 2px 8px 0 rgb(250, 247, 247), 0 1px 10px 0 rgb(250, 247, 247);
+  }
+#gp {
+  background-color: rgba(245, 245, 245, 0.425); 
+  border: solid 1px black;
+  color: black;
+  box-shadow: 0 2px 8px 0 rgb(250, 247, 247), 0 1px 10px 0 rgb(250, 247, 247);
+  border-radius: 10px;
+  text-align: center;
+}
+/* newspaper */
+.np {
+  background-color: rgb(51, 22, 18); 
+  border: solid 1px black;
+  border-radius: 10px;
+  box-shadow: none;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  width:100%;
+}
+  .np:hover {
+    background-color: rgb(122, 108, 78);
+    color: black;
+    text-align: center;
+    box-shadow: 0 2px 8px 0 rgb(250, 247, 247), 0 1px 10px 0 rgb(250, 247, 247);
+  }
+#np{
+  background-color: rgb(51, 22, 18); 
+  border: solid 1px black;
+  color: whitesmoke;
+  box-shadow: 0 2px 8px 0 rgb(250, 247, 247), 0 1px 10px 0 rgb(250, 247, 247);
+  border-radius: 10px;
+  text-align: center;
+}
+/* The Modal (background) */
+.error-modal {
+    padding-top: 400px;
+    display: block; 
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(128, 128, 128, 0.466);
+  }
+  .error-modal-hidden {
+    display: none;
+  }
+    /* Modal Content */
+    .error-modal-content {
+      background-color:whitesmoke;
+      margin: auto;
+      border: 2px solid rgb(75, 2, 2);
+      width: fit-content;
+      box-shadow:5px 5px 8px rgba(230, 228, 228), 10px 10px 8px  rgb(206, 205, 205, 0.8);
+      animation-name: animatetop;
+      animation-duration: 1s;
+      animation-timing-function:ease-in-out;
+    }
+    /* Animation */
+    @keyframes animatetop {
+      0% {bottom: -500px; opacity: 1}
+      90% {bottom: 50px; opacity: 1;}
+      100% {bottom: 0; opacity: 1}
+    }
+  /* Modal Header */
+  .error-modal-header {
+    background-color: darkred;
+    border: 1px solid rgb(75, 2, 2);
+    color: whitesmoke;
+    justify-content: center;
+  }
+  /* Modal Body */
+  .error-modal-body {
+    display: flex;
+    justify-content: center;
+    color: black;
+  }
+  /* Modal Footer */
+  .error-modal-footer {
+    padding: 2px 16px;
+    background-color: darkred;
+    border: 1px solid rgb(75, 2, 2);
+    color: whitesmoke;
+    justify-content: center;
+  }
+  /* Model button */
+  .error-modal-button {
+    width: fit-content;
+    box-shadow: none;
+    background-color: rgb(75, 2, 2);
+    color: whitesmoke;
+    cursor: pointer;
+  }
+  .error-modal-button:hover {
+    background-color: whitesmoke;
+    color:  rgb(75, 2, 2);
+    text-align: center;
+  }
+
+/*# sourceMappingURL=/app.cbfa7017.css.map */

@@ -234,7 +234,7 @@ COLOR CODES FOR FRACTIONS; BUTTONS & TABLE
 /* glas */
 .gp {
   background-color: rgba(245, 245, 245, 0.425); 
-  opacity: 70%;
+  /* opacity: 70%; */
   border: solid 1px black;
   border-radius: 10px;
   box-shadow: none;
@@ -246,7 +246,7 @@ COLOR CODES FOR FRACTIONS; BUTTONS & TABLE
   }
   .gp:hover {
     background-color:whitesmoke;
-    opacity: 100%;
+    /* opacity: 100%; */
     color: black;
     text-align: center;
     box-shadow: 0 2px 8px 0 rgb(250, 247, 247), 0 1px 10px 0 rgb(250, 247, 247);

@@ -319,4 +319,4 @@ module.exports="/GreenSway/recycle.17cf204b.png";
 },{"react":"HdMw","./fallback-message":"Uw0f"}],"yt7V":[function(require,module,exports) {
 "use strict";var e=n(require("react")),r=n(require("react-dom")),t=require("react-redux");require("./app.css");var u=n(require("./components/app")),a=n(require("./state/store")),l=n(require("./components/error-handling/error-boundry"));function n(e){return e&&e.__esModule?e:{default:e}}let d=document.getElementById("root");r.default.render(e.default.createElement(t.Provider,{store:a.default},e.default.createElement(l.default,null,e.default.createElement(u.default,null))),d);
 },{"react":"HdMw","react-dom":"X9zx","react-redux":"sYSi","./app.css":"vUZ9","./components/app":"ykWr","./state/store":"HTAn","./components/error-handling/error-boundry":"nnxn"}]},{},["yt7V"], null)
-//# sourceMappingURL=/GreenSway/app.72c8e920.js.map
+//# sourceMappingURL=/GreenSway/app.18efd1c5.js.map

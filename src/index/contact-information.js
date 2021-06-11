@@ -22,7 +22,7 @@ export function showContactInformation() {
         <pre class="user"><p>två mer yrkesrelaterade:                 och två lite mer privata:</p> </pre>
             <ul class="nav-list">
                 <li><a href="https://github.com/WiviWonderWoman" target="_blank"><i class="fab fa-github-alt"></i></a></li>
-                <li><a href="https://www.linkedin.com/in/wivianne-grapenholt-673b701b6/" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/wivianne-grapenholt" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
                 <li><a href="https://www.instagram.com/wivianne_grapenholt/" target="_blank"><i class="fab fa-instagram"></i></a></li>
                 <li><a href="https://www.facebook.com/wivi.grapenholt" target="_blank"><i class="fab fa-facebook"></i></a></li>
             </ul>

@@ -2,11 +2,7 @@
 🟢 My SPA product idea from business plan to MVP.🟢
 ________________________________________________________________________________________________________________________________________________________________________________
 ## Syfte 
-Inlämningsuppgifter 1 - 4 i kursen Dynamiska Webbsystem 2, Webbutvecklare inom .NET, YH-utbildning – mars-maj 2021
-1.  100/100 (G)
-2.  100/100 (G) 
-3. 92/100 (VG)
-4. 100/100 (VG)
+Webbutvecklare inom .NET, YH-utbildning – Vt. 2021. Inlämningsuppgifter i kursen Dynamiska Webbsystem 2 som bygger vidare på affärsidé framtagen i inlämningsuppgifter i kursen Affärsmannaskap för IT 
 ## Tekniker
 * SPA
 * React
@@ -26,6 +22,16 @@ I denna uppgift berörs framför allt läranderesultaten:
 * planera och genomföra en produktpresentation av ett programmeringsprojekt
 ### Kompetenser:
 * självständigt tillämpa lämpliga metoder för källkodshantering av mjukvaruprojekt
+## Poäng (Betyg)
+#### Dynamiska Webbsystem 2
+1.  100/100 (G)
+2.  100/100 (G) 
+3. 92/100 (VG)
+4. 100/100 (VG)
+#### Affärsmannaskap för IT 
+1.  100/100 (VG)
+2. 100/100 (VG)
+3. 100/100 (VG)
 ________________________________________________________________________________________________________________________________________________________________________________
 ## Instruktioner
 

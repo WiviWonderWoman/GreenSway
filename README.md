@@ -23,12 +23,14 @@ I denna uppgift berörs framför allt läranderesultaten:
 ### Kompetenser:
 * självständigt tillämpa lämpliga metoder för källkodshantering av mjukvaruprojekt
 #### Poäng (Betyg)
-* Dynamiska Webbsystem 2
+##### Dynamiska Webbsystem 2
 1. [Planering och förutsättningar](https://github.com/WiviWonderWoman/GreenSway/releases/tag/v1.0) 100/100 (G)
 2. [The proof of concept](https://github.com/WiviWonderWoman/GreenSway/releases/tag/v2.0) 100/100)(G) 
-3. [Från koncept till prototyp](https://github.com/WiviWonderWoman/GreenSway/releases/tag/v3.0) [Rapport](reports/reflection - från koncept till prototyp.pdf) 92/100 (VG)
-4. [A Minimum Viable Product](https://github.com/WiviWonderWoman/GreenSway/releases/tag/v4.0) [Rapport](reports/reflection - a Minimum Viable Product.pdf) 100/100 (VG)
-* Affärsmannaskap för IT 
+3. [Från koncept till prototyp](https://github.com/WiviWonderWoman/GreenSway/releases/tag/v3.0) 
+   * [Rapport](reports/koncept-prototyp.pdf) 92/100 (VG)
+5. [A Minimum Viable Product](https://github.com/WiviWonderWoman/GreenSway/releases/tag/v4.0) 
+   * [Rapport](reports/MVP.pdf) 100/100 (VG)
+##### Affärsmannaskap för IT 
 1. [Produktidé (affärsidé)](reports/Idébeskrivning.pdf) 100/100 (VG)
 2. [Effektiva team och gruppdynamik](reports/Effektiva-team-och-gruppdynamik.pdf) 100/100 (VG)
 3. [Affärsplan](src/index/files/GreenSway-Affärsplan.pdf) 100/100 (VG)

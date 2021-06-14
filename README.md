@@ -1,6 +1,32 @@
 # GreenSway
 🟢 My SPA product idea from business plan to MVP.🟢
 ________________________________________________________________________________________________________________________________________________________________________________
+## Syfte 
+Inlämningsuppgifter 1 - 4 i kursen Dynamiska Webbsystem 2, Webbutvecklare inom .NET, YH-utbildning – mars 2021
+1.  100/100 (G)
+2.  100/100 (G) 
+3. 92/100 (VG)
+4. 100/100 (VG)
+## Tekniker
+* SPA
+* React
+* Recat-Redux
+* HTML5
+* JavaScript
+* CSS3
+## Läranderesultaten
+I denna uppgift berörs framför allt läranderesultaten:
+### Kunskaper:
+* förklara användning av något eller några moderna klientramverk för webbapplikationer
+* redogöra för tekniker för att utveckla en ”Single Page Application” samt beskriva fördelar och utmaningar med angreppssättet
+* redogöra för olika former av lagring av data på klientsidan och beskriva deras användningsområden för webbutveckling
+### Färdigheter:
+* utveckla klientprogram med hjälp av modernt ramverk som nyttjar serverkommunikation med REST
+* skapa och manipulera dynamiska användargränssnitt i en webbapplikation
+* planera och genomföra en produktpresentation av ett programmeringsprojekt
+### Kompetenser:
+* självständigt tillämpa lämpliga metoder för källkodshantering av mjukvaruprojekt
+________________________________________________________________________________________________________________________________________________________________________________
 ## Instruktioner
 
 1. klona ner repot från GitHub :octocat:
@@ -16,7 +42,7 @@ ________________________________________________________________________________
 
 Troligtvis öppnas **[localhost: 1234](http://localhost:1234)**(/index.html) automatiskt i din förvalda webbläsare, du kommer vidare till app via länken i nav-baren eller lägg till: **/app.html** i webbläsarens adressfönster.
 ________________________________________________________________________________________________________________________________________________________________________________
-## Externa bibliotek
+## Dependencies
 
 ### [react](https://www.npmjs.com/package/react)
 Används för att bygga de komponenter som applikationens UI består av
@@ -98,83 +124,7 @@ Anropas från
                 "fractionId": "ow",
                 "garbagehouse": "1-001"
             },
-            {
-                "max": 50,
-                "name": "Tidningar",
-                "unit": "kg",
-                "price": 0.5,
-                "isFull": true,
-                "source": "newspaper",
-                "hatchOpen": false,
-                "fractionId": "np",
-                "garbagehouse": "1-001"
-            },
-            {
-                "max": 50,
-                "name": "Pappförpackningar",
-                "unit": "kg",
-                "price": 0.5,
-                "isFull": false,
-                "source": "cardboard",
-                "hatchOpen": true,
-                "fractionId": "cp",
-                "garbagehouse": "1-001"
-            },
-            {
-                "max": 50,
-                "name": "Glasförpackningar",
-                "unit": "kg",
-                "price": 0.5,
-                "isFull": false,
-                "source": "glas",
-                "hatchOpen": false,
-                "fractionId": "gp",
-                "garbagehouse": "1-001"
-            },
-            {
-                "max": 35,
-                "name": "Plastförpackningar",
-                "unit": "kg",
-                "price": 1,
-                "isFull": true,
-                "source": "plastic",
-                "hatchOpen": false,
-                "fractionId": "pp",
-                "garbagehouse": "1-001"
-            },
-            {
-                "max": 50,
-                "name": "Metallförpackningar",
-                "unit": "kg",
-                "price": 0.5,
-                "isFull": false,
-                "source": "metal",
-                "hatchOpen": false,
-                "fractionId": "mp",
-                "garbagehouse": "1-001"
-            },
-            {
-                "max": 35,
-                "name": "Restavfall",
-                "unit": "kg",
-                "price": 5,
-                "isFull": false,
-                "source": "residual",
-                "hatchOpen": false,
-                "fractionId": "rw",
-                "garbagehouse": "1-001"
-            },
-            {
-                "max": 50,
-                "name": "Vatten",
-                "unit": "kbm",
-                "price": 2,
-                "isFull": false,
-                "source": "water",
-                "hatchOpen": false,
-                "fractionId": "wat",
-                "garbagehouse": "1-001"
-            },
+            ... + 7 objekt ...
             {
                 "max": 50,
                 "name": "El",

@@ -22,13 +22,13 @@ I denna uppgift berörs framför allt läranderesultaten:
 * planera och genomföra en produktpresentation av ett programmeringsprojekt
 ### Kompetenser:
 * självständigt tillämpa lämpliga metoder för källkodshantering av mjukvaruprojekt
-## Poäng (Betyg)
-#### Dynamiska Webbsystem 2
-1.  100/100 (G)
-2.  100/100 (G) 
-3. 92/100 (VG)
-4. 100/100 (VG)
-#### Affärsmannaskap för IT 
+#### Poäng (Betyg)
+* Dynamiska Webbsystem 2
+1. [Planering och förutsättningar](https://github.com/WiviWonderWoman/GreenSway/releases/tag/v1.0) 100/100 (G)
+2. [The proof of concept](https://github.com/WiviWonderWoman/GreenSway/releases/tag/v2.0) 100/100)(G) 
+3. [Från koncept till prototyp](https://github.com/WiviWonderWoman/GreenSway/releases/tag/v3.0) 92/100 (VG)
+4. [A Minimum Viable Product](https://github.com/WiviWonderWoman/GreenSway/releases/tag/v4.0) 100/100 (VG)
+* Affärsmannaskap för IT 
 1.  100/100 (VG)
 2. 100/100 (VG)
 3. 100/100 (VG)

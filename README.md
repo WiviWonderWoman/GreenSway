@@ -30,7 +30,7 @@ I denna uppgift berörs framför allt läranderesultaten:
 4. [A Minimum Viable Product](https://github.com/WiviWonderWoman/GreenSway/releases/tag/v4.0) [Rapport](reports/reflection - a Minimum Viable Product.pdf) 100/100 (VG)
 * Affärsmannaskap för IT 
 1. [Produktidé (affärsidé)](reports/Idébeskrivning.pdf) 100/100 (VG)
-2. [Effektiva team och gruppdynamik](reports/Effektiva team och gruppdynamik.pdf) 100/100 (VG)
+2. [Effektiva team och gruppdynamik](reports/Effektiva-team-och-gruppdynamik.pdf) 100/100 (VG)
 3. [Affärsplan](src/index/files/GreenSway-Affärsplan.pdf) 100/100 (VG)
 ________________________________________________________________________________________________________________________________________________________________________________
 ## Instruktioner

@@ -2,7 +2,7 @@
 🟢 My SPA product idea from business plan to MVP.🟢
 ________________________________________________________________________________________________________________________________________________________________________________
 ## Syfte 
-Inlämningsuppgifter 1 - 4 i kursen Dynamiska Webbsystem 2, Webbutvecklare inom .NET, YH-utbildning – mars 2021
+Inlämningsuppgifter 1 - 4 i kursen Dynamiska Webbsystem 2, Webbutvecklare inom .NET, YH-utbildning – mars-maj 2021
 1.  100/100 (G)
 2.  100/100 (G) 
 3. 92/100 (VG)
